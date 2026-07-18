@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eSIM дёшево — сравнение тарифов для Турции, Таиланда, Бали и зимовок 2026</title>
+<meta name="description" content="Сравниваем цены на eSIM для популярных у русских направлений: Турция, Таиланд, Бали, Египет, ОАЭ, Вьетнам, Грузия, Шри-Ланка. Находим самые дешёвые тарифы за ГБ. Интернет в поездке без роуминга.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://esim.b3.gg/">
+<meta property="og:url" content="https://esim.b3.gg/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="eSIM дёшево — сравнение тарифов для зимовок и путешествий">
+<meta property="og:description" content="Самые дешёвые eSIM для Турции, Таиланда, Бали, Египта и других направлений. Сравнение цен за ГБ.">
+<meta property="og:locale" content="ru_RU">
+<style>
+  :root{
+    --bg:#0d1117; --card:#161b22; --card2:#1c2330; --line:#252c3a;
+    --text:#e8edf4; --muted:#93a1b5; --accent:#3ddc97; --accent2:#2bb87c;
+    --gold:#ffcc66; --pill:#20293a; --shadow:0 8px 30px rgba(0,0,0,.35);
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#f6f8fb; --card:#ffffff; --card2:#f0f4f9; --line:#e3e9f1;
+      --text:#141a22; --muted:#5a6879; --accent:#14a06a; --accent2:#0e8a5b;
+      --gold:#b8842a; --pill:#eef3f9; --shadow:0 8px 24px rgba(20,40,70,.08);
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 16px}
+  header{padding:34px 0 10px;text-align:center}
+  .logo{font-weight:800;font-size:26px;letter-spacing:-.5px}
+  .logo span{color:var(--accent)}
+  .tag{color:var(--muted);font-size:15px;margin-top:6px}
+  h1{font-size:30px;line-height:1.2;margin:26px 0 10px;text-align:center;letter-spacing:-.6px}
+  h1 em{color:var(--accent);font-style:normal}
+  .sub{text-align:center;color:var(--muted);font-size:16px;max-width:620px;margin:0 auto 6px}
+  .updated{text-align:center;color:var(--muted);font-size:13px;margin:14px 0 24px}
+  .updated b{color:var(--gold)}
+
+  .filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 26px}
+  .chip{border:1px solid var(--line);background:var(--pill);color:var(--text);
+    padding:8px 14px;border-radius:999px;font-size:14px;cursor:pointer;transition:.15s;user-select:none}
+  .chip:hover{border-color:var(--accent)}
+  .chip.active{background:var(--accent);color:#04150d;border-color:var(--accent);font-weight:600}
+
+  .country{background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:18px;margin-bottom:16px;box-shadow:var(--shadow)}
+  .chead{display:flex;align-items:center;gap:12px;margin-bottom:4px}
+  .flag{font-size:30px;line-height:1}
+  .cname{font-size:20px;font-weight:700}
+  .cnote{color:var(--muted);font-size:13px;margin:2px 0 14px}
+  .plans{display:grid;gap:10px}
+  .plan{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:12px;
+    background:var(--card2);border:1px solid var(--line);border-radius:13px;padding:12px 14px}
+  .plan.best{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+  .pleft .prov{font-weight:700;font-size:15px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .badge{font-size:11px;font-weight:700;background:var(--accent);color:#04150d;
+    padding:2px 8px;border-radius:999px;letter-spacing:.3px}
+  .pdet{color:var(--muted);font-size:13px;margin-top:2px}
+  .pgb{text-align:right;font-size:13px;color:var(--muted);white-space:nowrap}
+  .pgb b{color:var(--text);font-size:15px}
+  .buy{background:var(--accent);color:#04150d;text-decoration:none;font-weight:700;font-size:14px;
+    padding:10px 16px;border-radius:10px;white-space:nowrap;transition:.15s;text-align:center}
+  .buy:hover{background:var(--accent2)}
+  .buy.alt{background:transparent;color:var(--text);border:1px solid var(--line)}
+  .buy.alt:hover{border-color:var(--accent);color:var(--accent)}
+
+  .how{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin:30px 0}
+  .how h2{font-size:20px;margin-bottom:12px}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:8px}
+  .step{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:14px}
+  .step .n{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#04150d;
+    font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px;margin-bottom:8px}
+  .step p{font-size:14px;color:var(--muted)}
+  .step b{color:var(--text)}
+
+  .faq{margin:30px 0}
+  .faq h2{font-size:20px;margin-bottom:14px;text-align:center}
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+  summary{font-weight:600;cursor:pointer;font-size:15px;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";float:right;color:var(--accent);font-weight:800}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--muted);font-size:14px;margin-top:10px}
+
+  .disc{background:var(--card2);border:1px dashed var(--line);border-radius:12px;padding:14px 16px;
+    color:var(--muted);font-size:13px;margin:24px 0}
+  footer{text-align:center;color:var(--muted);font-size:13px;padding:26px 0 40px}
+  footer a{color:var(--accent);text-decoration:none}
+
+  @media(max-width:560px){
+    .plan{grid-template-columns:1fr auto;grid-template-areas:"l g" "l b";row-gap:8px}
+    .pleft{grid-area:l}.pgb{grid-area:g}.buy{grid-area:b}
+    h1{font-size:25px}
+  }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="logo">eSIM<span>дёшево</span></div>
+  <div class="tag">интернет в поездке без роуминга и переплат</div>
+</header>
+
+<main class="wrap">
+  <h1>Самые дешёвые <em>eSIM</em> для зимовок и путешествий</h1>
+  <p class="sub">Сравниваем цены за гигабайт по популярным у русских направлениям и показываем, где реально дешевле всего. Никаких салонов связи — eSIM ставится за 2 минуты прямо в телефоне.</p>
+  <div class="updated">Цены обновлены: <b id="upd">июль 2026</b> · ориентир, финальную цену проверяйте на сайте продавца</div>
+
+  <div class="filters" id="filters"></div>
+  <div id="list"></div>
+
+  <section class="how">
+    <h2>Как это работает</h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><p><b>Выбираете страну</b> и тариф с лучшей ценой за ГБ.</p></div>
+      <div class="step"><div class="n">2</div><p><b>Оплачиваете</b> картой на сайте — eSIM приходит на почту сразу.</p></div>
+      <div class="step"><div class="n">3</div><p><b>Сканируете QR-код</b> в настройках телефона (нужен eSIM-совместимый смартфон).</p></div>
+      <div class="step"><div class="n">4</div><p><b>Прилетаете</b> — интернет включается автоматически, роуминг не нужен.</p></div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Частые вопросы</h2>
+    <details><summary>Что такое eSIM и подойдёт ли мой телефон?</summary>
+      <p>eSIM — это «встроенная» SIM без пластика. Поддерживают iPhone XS и новее, большинство Samsung Galaxy S20+, Google Pixel 3+ и др. Проверить: Настройки → «Добавить eSIM». Если пункт есть — всё работает.</p></details>
+    <details><summary>Это дешевле роуминга моего оператора?</summary>
+      <p>Как правило в разы. Роуминг у российских операторов часто 300–700 ₽/день, а eSIM на неделю в Турции или Таиланде выходит в 2–5 раз дешевле за куда больший объём данных.</p></details>
+    <details><summary>Останется ли мой обычный номер?</summary>
+      <p>Да. eSIM работает второй линией: ваша основная SIM остаётся для звонков и СМС (банки, коды), а интернет идёт через eSIM. Роуминг на основной SIM выключаете, чтобы не списывали.</p></details>
+    <details><summary>Успею ли настроить до вылета?</summary>
+      <p>eSIM лучше купить и установить дома по Wi-Fi заранее — активируется она уже по прилёте автоматически. QR приходит на почту в течение пары минут после оплаты.</p></details>
+  </section>
+
+  <div class="disc" id="disc"></div>
+</main>
+
+<footer class="wrap">
+  <div>© 2026 eSIMдёшево · сравнение тарифов eSIM · <a href="#top">наверх</a></div>
+</footer>
+
+<script>
+/* ============================================================
+   КОНФИГ ПАРТНЁРСКИХ ССЫЛОК
+   Вставь сюда свои affiliate-ссылки после регистрации в партнёрках.
+   Пока стоят прямые ссылки на продавцов — замени на свои с меткой.
+   ============================================================ */
+const AFF = {
+  esimdog:  "https://esim.dog/?ref=ТВОЙ_ID",       // eSIM.dog — партнёрка (самые низкие цены)
+  airalo:   "https://airalo.tpx.lt/ТВОЙ_ID",        // Airalo Partners
+  saily:    "https://saily.com/?ref=ТВОЙ_ID",        // Saily (NordVPN)
+  yesim:    "https://yesim.app/?ref=ТВОЙ_ID",        // Yesim
+  esimcard: "https://esimcard.com/?ref=ТВОЙ_ID"      // eSIMCard (до 25% комиссии)
+};
+
+/* ============================================================
+   ДАННЫЕ ТАРИФОВ
+   size — ГБ, days — срок, price — $ (розница продавца), gb — цена за ГБ.
+   Первый в списке best:true = самый дешёвый = наш якорь.
+   Обновлять раз в 1–2 недели: цены на рынке двигаются.
+   ============================================================ */
+const DATA = [
+  {c:"Турция", flag:"🇹🇷", note:"Классика: пляжи, лечение зубов, релокация. Дешёвое направление.", plans:[
+    {prov:"eSIM.dog", best:true, size:10, days:30, price:8.9,  aff:"esimdog"},
+    {prov:"Saily",    size:10, days:30, price:15.9, aff:"saily"},
+    {prov:"Airalo",   size:10, days:30, price:20.0, aff:"airalo"},
+  ]},
+  {c:"Таиланд", flag:"🇹🇭", note:"Топ зимовки: Пхукет, Самуи, Паттайя, Чиангмай.", plans:[
+    {prov:"eSIM.dog", best:true, size:10, days:30, price:9.9,  aff:"esimdog"},
+    {prov:"Saily",    size:10, days:30, price:17.9, aff:"saily"},
+    {prov:"Airalo",   size:10, days:30, price:20.0, aff:"airalo"},
+  ]},
+  {c:"Бали / Индонезия", flag:"🇮🇩", note:"Зимовка №1 у диджитал-номадов: Чангу, Убуд, Улувату.", plans:[
+    {prov:"eSIM.dog", best:true, size:10, days:30, price:10.9, aff:"esimdog"},
+    {prov:"Yesim",    size:10, days:30, price:18.0, aff:"yesim"},
+    {prov:"Airalo",   size:10, days:30, price:21.0, aff:"airalo"},
+  ]},
+  {c:"Египет", flag:"🇪🇬", note:"Хургада и Шарм круглый год. Внимание: дорогое направление у всех.", plans:[
+    {prov:"eSIM.dog", best:true, size:5,  days:30, price:14.9, aff:"esimdog"},
+    {prov:"eSIMCard", size:5,  days:30, price:17.5, aff:"esimcard"},
+    {prov:"Airalo",   size:5,  days:30, price:22.0, aff:"airalo"},
+  ]},
+  {c:"ОАЭ", flag:"🇦🇪", note:"Дубай для отдыха и бизнеса. Цены выше среднего.", plans:[
+    {prov:"eSIM.dog", best:true, size:5,  days:30, price:12.9, aff:"esimdog"},
+    {prov:"Saily",    size:5,  days:30, price:17.9, aff:"saily"},
+    {prov:"Airalo",   size:5,  days:30, price:19.5, aff:"airalo"},
+  ]},
+  {c:"Вьетнам", flag:"🇻🇳", note:"Нячанг, Фукуок, Дананг — растущая зимовка.", plans:[
+    {prov:"eSIM.dog", best:true, size:10, days:30, price:9.5,  aff:"esimdog"},
+    {prov:"Saily",    size:10, days:30, price:17.99,aff:"saily"},
+    {prov:"Airalo",   size:10, days:30, price:20.0, aff:"airalo"},
+  ]},
+  {c:"Грузия", flag:"🇬🇪", note:"Батуми и Тбилиси, популярна для релокации. Мало сравнений — наша ниша.", plans:[
+    {prov:"eSIM.dog", best:true, size:10, days:30, price:11.9, aff:"esimdog"},
+    {prov:"Yesim",    size:10, days:30, price:19.0, aff:"yesim"},
+    {prov:"Airalo",   size:10, days:30, price:22.0, aff:"airalo"},
+  ]},
+  {c:"Шри-Ланка", flag:"🇱🇰", note:"Серф и чай: Велигама, Хиккадува, Элла.", plans:[
+    {prov:"eSIM.dog", best:true, size:5,  days:30, price:12.5, aff:"esimdog"},
+    {prov:"eSIMCard", size:5,  days:30, price:16.0, aff:"esimcard"},
+    {prov:"Airalo",   size:5,  days:30, price:19.5, aff:"airalo"},
+  ]},
+];
+
+const money = v => "$"+ v.toFixed(2).replace(/\.00$/,"");
+const perGb = p => "$"+ (p.price/p.size).toFixed(2) + "/ГБ";
+
+function planRow(p){
+  const url = AFF[p.aff] || "#";
+  return `<div class="plan ${p.best?'best':''}">
+    <div class="pleft">
+      <div class="prov">${p.prov} ${p.best?'<span class="badge">ДЕШЕВЛЕ ВСЕХ</span>':''}</div>
+      <div class="pdet">${p.size} ГБ · ${p.days} дней</div>
+    </div>
+    <div class="pgb"><b>${money(p.price)}</b><br>${perGb(p)}</div>
+    <a class="buy ${p.best?'':'alt'}" href="${url}" target="_blank" rel="nofollow sponsored noopener">Купить</a>
+  </div>`;
+}
+
+function card(d){
+  return `<section class="country" data-c="${d.c}">
+    <div class="chead"><div class="flag">${d.flag}</div><div class="cname">${d.c}</div></div>
+    <div class="cnote">${d.note}</div>
+    <div class="plans">${d.plans.map(planRow).join("")}</div>
+  </section>`;
+}
+
+const list = document.getElementById("list");
+const filters = document.getElementById("filters");
+function render(filter){
+  list.innerHTML = DATA.filter(d=>!filter||d.c===filter).map(card).join("");
+}
+filters.innerHTML = `<div class="chip active" data-f="">Все страны</div>` +
+  DATA.map(d=>`<div class="chip" data-f="${d.c}">${d.flag} ${d.c}</div>`).join("");
+filters.addEventListener("click", e=>{
+  const chip = e.target.closest(".chip"); if(!chip) return;
+  [...filters.children].forEach(c=>c.classList.remove("active"));
+  chip.classList.add("active");
+  render(chip.dataset.f);
+});
+render("");
+
+document.getElementById("disc").innerHTML =
+  "⚠️ Цены указаны как ориентир на дату обновления и могут меняться на стороне продавца. " +
+  "Мы получаем партнёрскую комиссию, если вы покупаете по ссылкам на странице — на вашу цену это не влияет. " +
+  "Проверяйте поддержку eSIM в вашем телефоне перед покупкой.";
+</script>
+</body>
+</html>
