@@ -331,7 +331,7 @@
     </section>
 
     <section class="compat shell">
-      <div class="compat-card"><div><span class="eyebrow">Перед покупкой</span><h2>Ваш телефон поддерживает eSIM?</h2><p>Большинство iPhone XS и новее, Google Pixel 3 и новее, а также современные Samsung Galaxy поддерживают eSIM. Проверьте устройство перед оплатой.</p></div><button class="secondary" id="openCompat">Проверить устройство</button></div>
+      <div class="compat-card"><div><span class="eyebrow">Перед покупкой</span><h2>Ваш телефон поддерживает eSIM?</h2><p>Поддержка зависит от модели, региона выпуска и прошивки. Проверьте наличие функции добавления eSIM в настройках телефона.</p></div><button class="secondary" id="openCompat">Как проверить</button></div>
     </section>
 
     <section class="faq" id="faq" aria-labelledby="faq-title"><div class="faq-grid shell">
@@ -358,7 +358,7 @@
     <form id="checkoutForm"><label class="email-label" for="checkoutEmail">Куда прислать eSIM?</label><input class="email" id="checkoutEmail" type="email" autocomplete="email" placeholder="you@example.com" required><button class="primary" type="submit">Перейти к оплате</button><div class="secure">🔒 Безопасная оплата · eSIM придёт сразу</div></form>
   </aside>
 
-  <div class="compat-modal" id="compatModal" role="dialog" aria-modal="true" aria-labelledby="compatTitle"><div class="modal-card"><div class="drawer-head"><h2 id="compatTitle">Проверим телефон</h2><button class="close" id="closeCompat" aria-label="Закрыть">×</button></div><p>Выберите производителя. Для точной проверки найдите в настройках пункт «Добавить eSIM» или наберите <b>*#06#</b>: если есть EID, eSIM поддерживается.</p><div class="device-grid"><button class="device" data-device="Apple">Apple</button><button class="device" data-device="Samsung">Samsung</button><button class="device" data-device="Google">Google Pixel</button></div><div class="compat-result" id="compatResult">Выберите производителя, чтобы увидеть ориентир.</div></div></div>
+  <div class="compat-modal" id="compatModal" role="dialog" aria-modal="true" aria-labelledby="compatTitle"><div class="modal-card"><div class="drawer-head"><h2 id="compatTitle">Как проверить eSIM</h2><button class="close" id="closeCompat" aria-label="Закрыть">×</button></div><p>Код <b>*#06#</b> для этой проверки ненадёжен: на некоторых телефонах он показывает только IMEI физических слотов. Выберите производителя и проверьте нужный пункт в настройках.</p><div class="device-grid"><button class="device" data-device="Apple">Apple</button><button class="device" data-device="Samsung">Samsung</button><button class="device" data-device="Google">Google Pixel</button></div><div class="compat-result" id="compatResult">Выберите производителя. Названия пунктов могут немного отличаться в зависимости от версии системы.</div></div></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
@@ -454,7 +454,11 @@
     function closeCompat(){compatModal.classList.remove('open');}
     document.getElementById('openCompat').addEventListener('click',openCompat);document.getElementById('footerCompat').addEventListener('click',openCompat);document.getElementById('closeCompat').addEventListener('click',closeCompat);
     compatModal.addEventListener('click',e=>{if(e.target===compatModal)closeCompat();});
-    const deviceText={Apple:'Обычно поддерживаются iPhone XS/XR и новее. Исключения возможны для устройств из некоторых регионов.',Samsung:'Обычно поддерживаются Galaxy S20 и новее, Fold и Flip. Бюджетные серии зависят от модели и региона.',Google:'Обычно поддерживаются Pixel 3 и новее. У отдельных операторских версий бывают ограничения.'};
+    const deviceText={
+      Apple:'Откройте «Настройки» → «Сотовая связь». Ищите пункт «Добавить eSIM» или «Настроить сотовые данные». EID также можно найти: «Настройки» → «Основные» → «Об этом устройстве».',
+      Samsung:'Откройте «Настройки» → «Подключения» → «Диспетчер SIM-карт». Если доступен пункт «Добавить eSIM», телефон поддерживает её установку. EID обычно находится в разделе «Сведения о телефоне» → «Состояние».',
+      Google:'Откройте «Настройки» → «Сеть и интернет» → «SIM-карты» → «Добавить SIM» → «Настроить eSIM». На старых Pixel поддержка может зависеть от модели, оператора и региона выпуска.'
+    };
     document.querySelectorAll('.device').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.device').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('compatResult').textContent=deviceText[btn.dataset.device];}));
     document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeDrawer();closeCompat();}});
     render();
