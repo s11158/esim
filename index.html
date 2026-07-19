@@ -91,6 +91,31 @@
   footer{text-align:center;color:var(--muted);font-size:13px;padding:26px 0 40px}
   footer a{color:var(--accent);text-decoration:none}
 
+  /* Гарантия лучшей цены */
+  .guarantee{display:flex;gap:16px;align-items:flex-start;
+    background:linear-gradient(135deg, rgba(255,46,147,.12), rgba(255,138,92,.10));
+    border:1.5px solid var(--accent);border-radius:18px;padding:18px 20px;margin:0 0 26px;
+    box-shadow:0 10px 30px rgba(255,46,147,.15);position:relative;overflow:hidden}
+  .guarantee::before{content:"";position:absolute;top:-40px;right:-40px;width:140px;height:140px;
+    background:radial-gradient(circle,rgba(255,46,147,.25),transparent 70%);pointer-events:none}
+  .g-badge{font-size:40px;line-height:1;flex-shrink:0;filter:drop-shadow(0 3px 6px rgba(255,46,147,.45))}
+  .g-title{font-weight:800;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;
+    background:linear-gradient(135deg,#ff2e93,#ff8a5c);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .g-lead{font-size:22px;font-weight:800;margin:3px 0 6px;letter-spacing:-.3px;line-height:1.15}
+  .g-text{color:var(--muted);font-size:14px;line-height:1.5;max-width:600px}
+  .g-actions{display:flex;flex-wrap:wrap;gap:14px 18px;align-items:center;margin-top:13px}
+  .g-cta{background:linear-gradient(135deg,#ff2e93,#ff6fb0);color:#fff;text-decoration:none;
+    font-weight:700;font-size:14px;padding:11px 20px;border-radius:10px;
+    box-shadow:0 4px 14px rgba(255,46,147,.35);transition:.15s;white-space:nowrap}
+  .g-cta:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(255,46,147,.5)}
+  .g-terms{font-size:13px}
+  .g-terms summary{color:var(--muted);cursor:pointer;text-decoration:underline;text-underline-offset:3px;
+    list-style:none;font-weight:500}
+  .g-terms summary::-webkit-details-marker{display:none}
+  .g-terms[open] summary{color:var(--text)}
+  .g-terms p{color:var(--muted);font-size:12.5px;line-height:1.6;margin-top:9px;max-width:660px}
+  @media(max-width:560px){.g-lead{font-size:19px}.guarantee{padding:16px;gap:12px}.g-badge{font-size:34px}}
+
   @media(max-width:560px){
     .plan{grid-template-columns:1fr auto;grid-template-areas:"l g" "l b";row-gap:8px}
     .pleft{grid-area:l}.pgb{grid-area:g}.buy{grid-area:b}
@@ -108,6 +133,22 @@
   <h1>Самые дешёвые <em>eSIM</em> для зимовок и путешествий</h1>
   <p class="sub">Сравниваем цены за гигабайт по популярным у русских направлениям и показываем, где реально дешевле всего. Никаких салонов связи — eSIM ставится за 2 минуты прямо в телефоне.</p>
   <div class="updated">Цены обновлены: <b id="upd">июль 2026</b> · ориентир, финальную цену проверяйте на сайте продавца</div>
+
+  <section class="guarantee">
+    <div class="g-badge">🏆</div>
+    <div class="g-body">
+      <div class="g-title">Гарантия лучшей цены</div>
+      <div class="g-lead">Найдёте дешевле — вернём разницу.</div>
+      <p class="g-text">Увидели такой же eSIM у другого продавца дешевле? Пришлите ссылку, оформите тариф у нас — и разницу мы вернём вам. Мы настолько уверены, что дешевле не найти, что готовы отвечать за свою цену рублём.</p>
+      <div class="g-actions">
+        <a class="g-cta" href="https://t.me/ТВОЙ_КОНТАКТ" target="_blank" rel="noopener">Нашли дешевле? Напишите нам →</a>
+        <details class="g-terms">
+          <summary>Условия гарантии</summary>
+          <p>Разницу возвращаем после проверки, если условия полностью совпадают: та же страна или регион покрытия, тот же объём данных и срок действия, тот же тип тарифа (только интернет / с номером) и та же валюта. Предложение другого продавца должно быть публично доступным, действующим на момент вашей покупки и от легального продавца. Гарантия действует только при подтверждённой покупке у нас; заявка принимается в течение 24 часов после оплаты, одна заявка на один заказ. Возврат производится на сумму разницы тем же способом оплаты. Гарантия не суммируется с промокодами, кэшбэком, бонусами, а также с оптовыми и партнёрскими спецценами. Окончательное решение о возврате принимается по итогам проверки заявки.</p>
+        </details>
+      </div>
+    </div>
+  </section>
 
   <div class="filters" id="filters"></div>
   <div id="list"></div>
