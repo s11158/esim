@@ -3,27 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>eSIM.pizza — интернет для путешествий по кусочкам</title>
-  <meta name="description" content="Подберите eSIM по стране, сроку поездки и объёму интернета. Сравните тарифы и подключитесь за пару минут — без пластика и роуминга.">
-  <meta name="theme-color" content="#1028d5">
+  <title>eSIM.pizza — выгодные eSIM для путешествий</title>
+  <meta name="description" content="Сравните eSIM для Турции, Таиланда, ОАЭ, Бали и других направлений. Выберите страну, срок и объём интернета — покажем цену и стоимость за ГБ.">
+  <meta name="theme-color" content="#f4e7cf">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://esim.pizza/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://esim.pizza/">
-  <meta property="og:title" content="eSIM.pizza — горячий интернет в любой стране">
-  <meta property="og:description" content="Выберите страну, дни и гигабайты. Мы подадим лучший eSIM-тариф.">
-  <meta property="og:image" content="https://esim.pizza/assets/pizza-hero.webp">
+  <meta property="og:title" content="eSIM.pizza — eSIM без роуминга и переплат">
+  <meta property="og:description" content="Сравните тарифы по цене, сроку и объёму интернета. Подключите eSIM за несколько минут.">
+  <meta property="og:image" content="https://esim.pizza/assets/pizza-hero-warm-v2.webp">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23ff3b1f'/%3E%3Ccircle cx='24' cy='23' r='5' fill='%23fff9e8'/%3E%3Ccircle cx='42' cy='28' r='5' fill='%23fff9e8'/%3E%3Ccircle cx='31' cy='43' r='5' fill='%23fff9e8'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500..800&family=IBM+Plex+Mono:wght@500;600&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --blue:#1028d5; --blue-dark:#0a197c; --tomato:#ff3b1f; --tomato-dark:#d9210a;
-      --cream:#fff9e8; --paper:#fffdf5; --ink:#151513; --muted:#68675f; --basil:#187b45;
-      --yellow:#ffc928; --line:rgba(21,21,19,.16); --white:#fff;
+      --terracotta:#a8442d; --charcoal:#44271e; --tomato:#d9472f; --tomato-dark:#a72d1d;
+      --cream:#f4e7cf; --paper:#fffaf0; --ink:#2b1d16; --muted:#76685d; --basil:#4d7046;
+      --yellow:#efc46d; --line:rgba(68,39,30,.17); --white:#fffdf8;
       --display:"Bricolage Grotesque",sans-serif; --body:"Onest",sans-serif; --mono:"IBM Plex Mono",monospace;
-      --radius:22px; --shadow:0 18px 50px rgba(15,24,83,.13);
+      --radius:22px; --shadow:0 18px 50px rgba(83,52,32,.14);
     }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; overflow-x:clip; }
@@ -46,25 +46,25 @@
     .brand em { color:var(--tomato); font-style:normal; }
     .nav-links { display:flex; gap:24px; margin-left:auto; }
     .nav-links a { text-decoration:none; color:#3e3d38; font-size:14px; font-weight:600; }
-    .nav-links a:hover { color:var(--blue); }
+    .nav-links a:hover { color:var(--terracotta); }
     .currency { border:1px solid var(--line); background:transparent; border-radius:999px; padding:9px 30px 9px 12px; font-size:13px; font-weight:700; color:var(--ink); }
-    .nav-cta { border:0; border-radius:999px; padding:12px 17px; color:white; background:var(--blue); font-weight:700; cursor:pointer; box-shadow:0 7px 0 var(--blue-dark); transform:translateY(-2px); }
-    .nav-cta:active { transform:translateY(4px); box-shadow:0 1px 0 var(--blue-dark); }
+    .nav-cta { border:0; border-radius:999px; padding:12px 17px; color:white; background:var(--terracotta); font-weight:700; cursor:pointer; box-shadow:0 7px 0 var(--charcoal); transform:translateY(-2px); }
+    .nav-cta:active { transform:translateY(4px); box-shadow:0 1px 0 var(--charcoal); }
 
-    .hero { background:var(--blue); color:white; position:relative; overflow:hidden; }
-    .hero::before { content:"eSIM.PIZZA · NO ROAMING · SERVED HOT · "; position:absolute; left:-20px; bottom:16px; color:rgba(255,255,255,.09); font:800 clamp(42px,7vw,100px)/1 var(--display); white-space:nowrap; letter-spacing:-4px; }
+    .hero { background:var(--cream); color:var(--ink); position:relative; overflow:hidden; }
+    .hero::before { content:"eSIM.PIZZA · NO ROAMING · SERVED HOT · "; position:absolute; left:-20px; bottom:16px; color:rgba(68,39,30,.07); font:800 clamp(42px,7vw,100px)/1 var(--display); white-space:nowrap; letter-spacing:-4px; }
     .hero-grid { min-height:680px; display:grid; grid-template-columns:minmax(0,.93fr) minmax(420px,1.07fr); align-items:center; gap:32px; position:relative; }
     .hero-copy { padding:74px 0 110px; position:relative; z-index:2; }
     .eyebrow { display:inline-flex; align-items:center; gap:9px; font:600 12px/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; }
     .eyebrow::before { content:""; width:28px; height:3px; border-radius:2px; background:var(--yellow); }
     .hero h1 { font:800 clamp(54px,6.4vw,92px)/.88 var(--display); letter-spacing:-.065em; margin:25px 0 24px; max-width:680px; }
-    .hero h1 .hot { display:inline-block; color:var(--yellow); transform:rotate(-2deg); }
-    .hero-lead { font-size:18px; max-width:525px; color:rgba(255,255,255,.82); margin:0 0 32px; }
+    .hero h1 .hot { display:inline-block; color:var(--tomato); transform:rotate(-2deg); }
+    .hero-lead { font-size:18px; max-width:525px; color:var(--muted); margin:0 0 32px; }
     .hero-proof { display:flex; flex-wrap:wrap; gap:18px; font-size:13px; font-weight:600; }
     .hero-proof span { display:flex; align-items:center; gap:7px; }
     .proof-dot { width:8px; height:8px; border-radius:50%; background:#62e29e; box-shadow:0 0 0 4px rgba(98,226,158,.15); }
     .hero-visual { position:absolute; inset:0 calc((100vw - min(1180px,calc(100vw - 40px))) / -2) 0 48%; overflow:hidden; }
-    .hero-visual::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,var(--blue) 0%,rgba(16,40,213,.6) 11%,transparent 42%),linear-gradient(0deg,rgba(3,9,52,.3),transparent 45%); }
+    .hero-visual::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,var(--cream) 0%,rgba(244,231,207,.76) 14%,transparent 46%),linear-gradient(0deg,rgba(68,39,30,.12),transparent 45%); }
     .hero-visual img { width:100%; height:100%; object-fit:cover; object-position:center; }
 
     .builder { width:min(580px,100%); background:var(--paper); color:var(--ink); border-radius:26px; padding:24px; position:relative; z-index:4; box-shadow:0 22px 65px rgba(2,7,42,.34); margin:42px 0 42px auto; align-self:end; transform:translateY(58px); }
@@ -75,7 +75,7 @@
     .field { display:block; }
     .field-label { display:block; color:var(--muted); font:600 10px/1 var(--mono); text-transform:uppercase; letter-spacing:.06em; margin:0 0 8px 2px; }
     .field-control { width:100%; min-height:52px; padding:0 14px; border:1px solid var(--line); border-radius:14px; color:var(--ink); background:white; outline:0; font-weight:650; }
-    .field-control:focus { border-color:var(--blue); box-shadow:0 0 0 3px rgba(16,40,213,.12); }
+    .field-control:focus { border-color:var(--tomato); box-shadow:0 0 0 3px rgba(217,71,47,.12); }
     .builder-action { display:flex; align-items:center; justify-content:space-between; gap:18px; margin-top:14px; padding-top:16px; border-top:1px dashed var(--line); }
     .builder-hint { color:var(--muted); font-size:12px; max-width:220px; }
     .primary { border:0; border-radius:14px; padding:15px 22px; color:white; background:var(--tomato); font-weight:800; cursor:pointer; box-shadow:0 6px 0 var(--tomato-dark); transition:.15s ease; }
@@ -101,11 +101,11 @@
     .tab[aria-selected="true"] { background:var(--ink); color:white; border-color:var(--ink); }
     .sort { border:1px solid var(--line); background:var(--paper); border-radius:12px; padding:11px 36px 11px 13px; color:var(--ink); font-weight:650; }
     .results-meta { display:flex; justify-content:space-between; align-items:center; margin-bottom:13px; color:var(--muted); font-size:13px; }
-    .clear-filter { border:0; background:transparent; color:var(--blue); font-weight:700; cursor:pointer; padding:4px; }
+    .clear-filter { border:0; background:transparent; color:var(--terracotta); font-weight:700; cursor:pointer; padding:4px; }
     .plans-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
     .plan-card { position:relative; overflow:hidden; background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:20px; min-height:310px; display:flex; flex-direction:column; transition:transform .2s,box-shadow .2s,border-color .2s; }
-    .plan-card:hover { transform:translateY(-5px); box-shadow:var(--shadow); border-color:rgba(16,40,213,.35); }
-    .plan-card.featured { background:var(--blue); color:white; border-color:var(--blue); }
+    .plan-card:hover { transform:translateY(-5px); box-shadow:var(--shadow); border-color:rgba(168,68,45,.38); }
+    .plan-card.featured { background:var(--terracotta); color:white; border-color:var(--terracotta); }
     .plan-card::after { content:""; position:absolute; width:110px; aspect-ratio:1; border:1px dashed currentColor; opacity:.08; border-radius:50%; right:-35px; top:-35px; }
     .card-top { display:flex; justify-content:space-between; align-items:center; gap:12px; }
     .country-name { display:flex; align-items:center; gap:9px; font-weight:750; }
@@ -156,11 +156,11 @@
     details:last-child { border-bottom:1px solid var(--line); }
     summary { list-style:none; cursor:pointer; display:flex; justify-content:space-between; gap:20px; padding:20px 0; font-weight:750; }
     summary::-webkit-details-marker { display:none; }
-    summary::after { content:"+"; color:var(--blue); font-size:24px; line-height:1; }
+    summary::after { content:"+"; color:var(--terracotta); font-size:24px; line-height:1; }
     details[open] summary::after { content:"−"; }
     details p { color:var(--muted); margin:-6px 40px 22px 0; font-size:14px; }
 
-    footer { background:var(--blue-dark); color:white; padding:58px 0 28px; }
+    footer { background:var(--charcoal); color:white; padding:58px 0 28px; }
     .footer-grid { display:grid; grid-template-columns:1.4fr repeat(2,.7fr); gap:70px; }
     .footer-brand { font:800 39px/1 var(--display); letter-spacing:-.05em; }
     .footer-brand em { color:var(--yellow); font-style:normal; }
@@ -169,7 +169,7 @@
     .footer-col a { display:block; color:rgba(255,255,255,.72); text-decoration:none; margin:9px 0; font-size:13px; }
     .legal { display:flex; justify-content:space-between; gap:20px; color:rgba(255,255,255,.38); border-top:1px solid rgba(255,255,255,.12); margin-top:48px; padding-top:22px; font-size:11px; }
 
-    .drawer-backdrop { position:fixed; inset:0; z-index:40; background:rgba(4,8,35,.62); opacity:0; pointer-events:none; transition:.25s; }
+    .drawer-backdrop { position:fixed; inset:0; z-index:40; background:rgba(43,29,22,.62); opacity:0; pointer-events:none; transition:.25s; }
     .drawer { position:fixed; z-index:41; right:0; top:0; width:min(470px,100%); height:100dvh; background:var(--paper); transform:translateX(100%); transition:.3s cubic-bezier(.2,.75,.2,1); padding:26px; display:flex; flex-direction:column; box-shadow:-25px 0 60px rgba(0,0,0,.18); }
     body.drawer-open { overflow:hidden; }
     body.drawer-open .drawer-backdrop { opacity:1; pointer-events:auto; }
@@ -177,7 +177,7 @@
     .drawer-head { display:flex; align-items:center; justify-content:space-between; }
     .drawer-head h2 { font:800 30px/1 var(--display); letter-spacing:-.04em; margin:0; }
     .close { width:42px; aspect-ratio:1; border:1px solid var(--line); background:white; border-radius:50%; cursor:pointer; font-size:22px; }
-    .order-ticket { margin:28px 0; padding:22px; background:var(--blue); color:white; border-radius:20px; position:relative; overflow:hidden; }
+    .order-ticket { margin:28px 0; padding:22px; background:var(--terracotta); color:white; border-radius:20px; position:relative; overflow:hidden; }
     .order-ticket::before,.order-ticket::after { content:""; position:absolute; width:24px; aspect-ratio:1; background:var(--paper); border-radius:50%; top:50%; transform:translateY(-50%); }
     .order-ticket::before { left:-12px; } .order-ticket::after { right:-12px; }
     .order-ticket-label { font:600 10px/1 var(--mono); color:var(--yellow); text-transform:uppercase; }
@@ -195,21 +195,21 @@
     .toast { position:fixed; z-index:60; left:50%; bottom:24px; transform:translate(-50%,120px); background:var(--ink); color:white; border-radius:999px; padding:13px 19px; font-size:13px; font-weight:700; transition:.3s; box-shadow:var(--shadow); }
     .toast.show { transform:translate(-50%,0); }
 
-    .compat-modal { position:fixed; inset:0; z-index:50; display:grid; place-items:center; padding:20px; background:rgba(4,8,35,.65); opacity:0; pointer-events:none; transition:.2s; }
+    .compat-modal { position:fixed; inset:0; z-index:50; display:grid; place-items:center; padding:20px; background:rgba(43,29,22,.66); opacity:0; pointer-events:none; transition:.2s; }
     .compat-modal.open { opacity:1; pointer-events:auto; }
     .modal-card { width:min(560px,100%); background:var(--paper); border-radius:26px; padding:28px; box-shadow:var(--shadow); }
     .modal-card h2 { font:800 31px/1 var(--display); margin:0 0 9px; }
     .modal-card p { color:var(--muted); font-size:14px; }
     .device-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:9px; margin:20px 0; }
     .device { border:1px solid var(--line); border-radius:13px; background:white; padding:13px; font-weight:700; cursor:pointer; }
-    .device.active { background:var(--blue); color:white; border-color:var(--blue); }
+    .device.active { background:var(--terracotta); color:white; border-color:var(--terracotta); }
     .compat-result { min-height:50px; border-radius:13px; background:#e5f7eb; color:#126233; padding:14px; font-size:13px; }
 
     @media (max-width:1000px) {
       .hero-grid { grid-template-columns:1fr; min-height:auto; padding-bottom:25px; }
       .hero-copy { padding:72px 0 245px; max-width:650px; }
       .hero-visual { inset:260px -20px 0 28%; height:490px; }
-      .hero-visual::after { background:linear-gradient(180deg,var(--blue),transparent 38%),linear-gradient(90deg,var(--blue),transparent 35%); }
+      .hero-visual::after { background:linear-gradient(180deg,var(--cream),transparent 40%),linear-gradient(90deg,var(--cream),transparent 34%); }
       .builder { margin-top:-150px; transform:translateY(48px); justify-self:end; }
       .plans-grid { grid-template-columns:repeat(2,1fr); }
       .trust-row { grid-template-columns:repeat(2,1fr); gap:16px 0; }
@@ -224,10 +224,10 @@
       .nav-links,.currency { display:none; }
       .nav-cta { margin-left:auto; padding:10px 14px; }
       .brand { font-size:21px; }
-      .hero-copy { padding:57px 0 260px; }
+      .hero-copy { padding:57px 0 400px; }
       .hero h1 { font-size:clamp(49px,15vw,68px); }
       .hero-lead { font-size:16px; }
-      .hero-visual { inset:270px -12px 0 3%; height:420px; }
+      .hero-visual { inset:440px -12px 0 3%; height:420px; }
       .hero-visual img { object-position:56% center; }
       .builder { margin-top:-118px; padding:19px; border-radius:22px; transform:translateY(35px); }
       .builder-grid { grid-template-columns:1fr 1fr; }
@@ -277,27 +277,27 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-grid shell">
         <div class="hero-copy">
-          <div class="eyebrow">Интернет подан</div>
-          <h1 id="hero-title">Связь за границей. <span class="hot">Горячая.</span></h1>
-          <p class="hero-lead">Выберите страну, дни и гигабайты — мы приготовим подходящий eSIM. QR-код придёт на почту быстрее, чем остынет пицца.</p>
+          <div class="eyebrow">eSIM для путешествий</div>
+          <h1 id="hero-title">Интернет в поездке. <span class="hot">Без переплат.</span></h1>
+          <p class="hero-lead">Сравниваем тарифы для популярных направлений и показываем реальную цену за ГБ. Установка занимает несколько минут — без салонов связи и физической SIM.</p>
           <div class="hero-proof"><span><i class="proof-dot"></i> 190+ стран</span><span><i class="proof-dot"></i> Активация за 2 минуты</span><span><i class="proof-dot"></i> Поддержка 24/7</span></div>
         </div>
-        <div class="hero-visual" aria-hidden="true"><img src="assets/pizza-hero.webp" alt="" width="1536" height="1024" fetchpriority="high"></div>
+        <div class="hero-visual" aria-hidden="true"><img src="assets/pizza-hero-warm-v2.webp" alt="" width="1536" height="1024" fetchpriority="high"></div>
         <form class="builder" id="builder">
-          <div class="builder-top"><h2>Соберите свой кусочек связи</h2><span class="ticket-no">заказ / 001</span></div>
+          <div class="builder-top"><h2>Подберите eSIM для поездки</h2><span class="ticket-no">подбор тарифа</span></div>
           <div class="builder-grid">
             <label class="field"><span class="field-label">Куда летите?</span><select class="field-control" id="countrySelect" required></select></label>
             <label class="field"><span class="field-label">Сколько дней?</span><select class="field-control" id="daysSelect"><option>7</option><option>15</option><option selected>30</option><option>60</option></select></label>
             <label class="field"><span class="field-label">Сколько ГБ?</span><select class="field-control" id="dataSelect"><option value="3">3 ГБ</option><option value="5">5 ГБ</option><option value="10" selected>10 ГБ</option><option value="20">20 ГБ</option><option value="999">Безлимит</option></select></label>
           </div>
-          <div class="builder-action"><span class="builder-hint">Покажем тарифы, которые подходят под ваши условия.</span><button class="primary" type="submit">Показать меню →</button></div>
+          <div class="builder-action"><span class="builder-hint">Покажем подходящие варианты и стоимость каждого гигабайта.</span><button class="primary" type="submit">Найти тарифы →</button></div>
         </form>
       </div>
     </section>
 
     <div class="trust-strip shell" aria-label="Преимущества">
       <div class="trust-row">
-        <div class="trust-item"><span class="trust-icon">⚡</span><span><b>Сразу на почте</b><small>QR-код после оплаты</small></span></div>
+        <div class="trust-item"><span class="trust-icon">🏆</span><span><b>Гарантия лучшей цены</b><small>Найдёте дешевле — вернём разницу</small></span></div>
         <div class="trust-item"><span class="trust-icon">📡</span><span><b>Лучшие сети</b><small>4G / 5G без роуминга</small></span></div>
         <div class="trust-item"><span class="trust-icon">🛟</span><span><b>Люди в поддержке</b><small>Поможем с установкой</small></span></div>
         <div class="trust-item"><span class="trust-icon">🛡️</span><span><b>Безопасная оплата</b><small>Карты и Apple Pay</small></span></div>
@@ -306,8 +306,8 @@
 
     <section class="catalog shell" id="catalog" aria-labelledby="catalog-title">
       <div class="section-head">
-        <div><span class="eyebrow" style="color:var(--tomato)">Меню eSIM</span><h2 id="catalog-title">Выберите свой тариф</h2></div>
-        <p>Как пицца, только полезнее в аэропорту. Цена финальная — без скрытых сборов на кассе.</p>
+        <div><span class="eyebrow" style="color:var(--tomato)">Сравнение тарифов</span><h2 id="catalog-title">Найдите выгодный eSIM</h2></div>
+        <p>Сортируйте предложения по цене, объёму интернета, сроку действия или стоимости одного гигабайта.</p>
       </div>
       <div class="menu-toolbar">
         <div class="tabs" role="tablist" aria-label="Тип покрытия"><button class="tab" role="tab" aria-selected="true" data-type="country">Страны</button><button class="tab" role="tab" aria-selected="false" data-type="region">Регионы</button><button class="tab" role="tab" aria-selected="false" data-type="global">Весь мир</button></div>
@@ -317,30 +317,31 @@
       <div class="plans-grid" id="plansGrid"></div>
     </section>
 
-    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Никакого пластика</span><span>190+ стран</span><span>Установка за 2 минуты</span><span>Интернет al dente</span><span>Никакого пластика</span><span>190+ стран</span><span>Установка за 2 минуты</span><span>Интернет al dente</span></div></div>
+    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Без роуминга</span><span>190+ стран</span><span>Установка за 2 минуты</span><span>Сравнение цены за ГБ</span><span>Без роуминга</span><span>190+ стран</span><span>Установка за 2 минуты</span><span>Сравнение цены за ГБ</span></div></div>
 
     <section class="how shell" id="how" aria-labelledby="how-title">
       <div class="how-grid">
-        <div class="how-photo"><img src="assets/pizza-esim-install.webp" alt="Установка eSIM по QR-коду перед поездкой" width="1536" height="1024" loading="lazy"></div>
-        <div class="how-copy"><span class="eyebrow" style="color:var(--yellow)">Три ингредиента</span><h2 id="how-title">Готово раньше, чем пицца</h2><div class="steps">
-          <div class="step"><div class="step-num">01</div><div><h3>Выберите тариф</h3><p>Страна, дни и нужный объём интернета — ничего лишнего.</p></div></div>
-          <div class="step"><div class="step-num">02</div><div><h3>Получите QR-код</h3><p>После оплаты инструкция и eSIM сразу придут на вашу почту.</p></div></div>
-          <div class="step"><div class="step-num">03</div><div><h3>Включите по прилёте</h3><p>Установите дома по Wi-Fi, а мобильные данные включите в поездке.</p></div></div>
+        <div class="how-photo"><img src="assets/pizza-esim-install-warm-v2.webp" alt="Установка eSIM по QR-коду перед поездкой" width="1536" height="1024" loading="lazy"></div>
+        <div class="how-copy"><span class="eyebrow" style="color:var(--yellow)">Как это работает</span><h2 id="how-title">Подключитесь до вылета</h2><div class="steps">
+          <div class="step"><div class="step-num">01</div><div><h3>Сравните тарифы</h3><p>Выберите страну, срок поездки и нужный объём интернета.</p></div></div>
+          <div class="step"><div class="step-num">02</div><div><h3>Получите eSIM</h3><p>После оплаты QR-код и инструкция сразу придут на почту.</p></div></div>
+          <div class="step"><div class="step-num">03</div><div><h3>Подключитесь по прилёте</h3><p>Установите eSIM дома по Wi-Fi, а мобильные данные включите в поездке.</p></div></div>
         </div></div>
       </div>
     </section>
 
     <section class="compat shell">
-      <div class="compat-card"><div><span class="eyebrow">Перед заказом</span><h2>Ваш телефон ест eSIM?</h2><p>Большинство iPhone XS и новее, Google Pixel 3 и новее, а также современные Samsung Galaxy поддерживают eSIM. Проверим за один клик.</p></div><button class="secondary" id="openCompat">Проверить устройство</button></div>
+      <div class="compat-card"><div><span class="eyebrow">Перед покупкой</span><h2>Ваш телефон поддерживает eSIM?</h2><p>Большинство iPhone XS и новее, Google Pixel 3 и новее, а также современные Samsung Galaxy поддерживают eSIM. Проверьте устройство перед оплатой.</p></div><button class="secondary" id="openCompat">Проверить устройство</button></div>
     </section>
 
     <section class="faq" id="faq" aria-labelledby="faq-title"><div class="faq-grid shell">
-      <div><span class="eyebrow" style="color:var(--tomato)">Нужна салфетка?</span><h2 id="faq-title">Вопросы без крошек</h2><p class="faq-intro">Если что-то останется непонятным, поддержка поможет установить eSIM до поездки.</p></div>
+      <div><span class="eyebrow" style="color:var(--tomato)">Перед покупкой</span><h2 id="faq-title">Что важно знать</h2><p class="faq-intro">Ответы про установку, обычный номер, раздачу интернета и возврат.</p></div>
       <div>
         <details><summary>Когда устанавливать и активировать eSIM?</summary><p>Установите eSIM заранее дома по стабильному Wi-Fi. Линию и роуминг данных на eSIM включайте после прилёта — именно тогда обычно начинается срок действия тарифа.</p></details>
         <details><summary>Мой обычный номер и мессенджеры останутся?</summary><p>Да. Физическая SIM продолжит принимать звонки и SMS, а eSIM будет отвечать только за интернет. WhatsApp и Telegram останутся на прежнем номере.</p></details>
         <details><summary>Можно раздавать интернет?</summary><p>На большинстве тарифов — да. Если раздача ограничена оператором, мы явно укажем это в параметрах тарифа до оплаты.</p></details>
         <details><summary>Что делать, если eSIM не подключается?</summary><p>Проверьте, что eSIM выбрана для мобильных данных, роуминг данных включён, а основная SIM не используется для интернета. Если связи нет — напишите поддержке, мы проверим настройки и сеть.</p></details>
+        <details><summary>Как работает гарантия лучшей цены?</summary><p>Если найдёте у другого продавца дешевле полностью совпадающий тариф — с той же страной, объёмом данных и сроком действия — пришлите нам ссылку в течение 24 часов после покупки. После проверки вернём разницу.</p></details>
         <details><summary>Можно вернуть деньги?</summary><p>До установки eSIM возврат возможен в соответствии с условиями тарифа. Если eSIM не работает по технической причине, поддержка сначала поможет с настройкой, а затем оформит возврат при подтверждённой неисправности.</p></details>
       </div>
     </div></section>
@@ -351,7 +352,7 @@
   <div class="drawer-backdrop" id="drawerBackdrop"></div>
   <aside class="drawer" id="drawer" aria-labelledby="drawerTitle" aria-hidden="true">
     <div class="drawer-head"><h2 id="drawerTitle">Ваш заказ</h2><button class="close" id="closeDrawer" aria-label="Закрыть">×</button></div>
-    <div class="order-ticket"><span class="order-ticket-label">eSIM.pizza / готово к подаче</span><h3 id="orderName"></h3><p id="orderMeta"></p><div class="order-price" id="orderPrice"></div></div>
+    <div class="order-ticket"><span class="order-ticket-label">eSIM.pizza / выбранный тариф</span><h3 id="orderName"></h3><p id="orderMeta"></p><div class="order-price" id="orderPrice"></div></div>
     <div class="order-list"><div class="order-line"><span>Покрытие</span><b id="orderCoverage"></b></div><div class="order-line"><span>Сеть</span><b>4G / 5G</b></div><div class="order-line"><span>Активация</span><b>по QR-коду</b></div><div class="order-line"><span>Раздача интернета</span><b>разрешена</b></div></div>
     <div class="drawer-spacer"></div>
     <form id="checkoutForm"><label class="email-label" for="checkoutEmail">Куда прислать eSIM?</label><input class="email" id="checkoutEmail" type="email" autocomplete="email" placeholder="you@example.com" required><button class="primary" type="submit">Перейти к оплате</button><div class="secure">🔒 Безопасная оплата · eSIM придёт сразу</div></form>
@@ -362,19 +363,19 @@
 
   <script>
     const plans = [
-      {id:1,type:'country',country:'Турция',flag:'🇹🇷',name:'Маргарита 10',data:10,days:30,price:8.9,popular:1,coverage:'Турция'},
-      {id:2,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Том Ям 20',data:20,days:30,price:14.9,popular:2,coverage:'Таиланд'},
-      {id:3,type:'country',country:'ОАЭ',flag:'🇦🇪',name:'Дубай Пепперони',data:5,days:15,price:11.5,popular:3,coverage:'ОАЭ'},
-      {id:4,type:'country',country:'Индонезия',flag:'🇮🇩',name:'Бали Базилик',data:10,days:30,price:10.9,popular:4,coverage:'Индонезия'},
-      {id:5,type:'country',country:'Италия',flag:'🇮🇹',name:'Наполи 5',data:5,days:15,price:7.5,popular:5,coverage:'Италия'},
-      {id:6,type:'country',country:'Япония',flag:'🇯🇵',name:'Токио Special',data:20,days:30,price:18.9,popular:6,coverage:'Япония'},
-      {id:7,type:'country',country:'Грузия',flag:'🇬🇪',name:'Тбилиси 10',data:10,days:30,price:12.2,popular:7,coverage:'Грузия'},
-      {id:8,type:'country',country:'Египет',flag:'🇪🇬',name:'Каир Crunch',data:5,days:15,price:12.9,popular:8,coverage:'Египет'},
-      {id:9,type:'region',country:'Европа',flag:'🇪🇺',name:'Quattro Europe',data:20,days:30,price:24.9,popular:1,coverage:'35 стран Европы'},
-      {id:10,type:'region',country:'Азия',flag:'🌏',name:'Asia Combo',data:10,days:30,price:21.5,popular:2,coverage:'14 стран Азии'},
-      {id:11,type:'region',country:'Ближний Восток',flag:'🧭',name:'Middle East Mix',data:10,days:30,price:26.9,popular:3,coverage:'8 стран Ближнего Востока'},
-      {id:12,type:'global',country:'Весь мир',flag:'🌍',name:'Pizza Senza Confini',data:20,days:60,price:44.9,popular:1,coverage:'120 стран'},
-      {id:13,type:'global',country:'Весь мир',flag:'🌐',name:'Unlimited World',data:999,days:30,price:69.9,popular:2,coverage:'105 стран'}
+      {id:1,type:'country',country:'Турция',flag:'🇹🇷',name:'eSIM.dog',data:10,days:30,price:8.9,popular:1,coverage:'Турция'},
+      {id:2,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Saily',data:20,days:30,price:14.9,popular:2,coverage:'Таиланд'},
+      {id:3,type:'country',country:'ОАЭ',flag:'🇦🇪',name:'Airalo',data:5,days:15,price:11.5,popular:3,coverage:'ОАЭ'},
+      {id:4,type:'country',country:'Индонезия',flag:'🇮🇩',name:'Yesim',data:10,days:30,price:10.9,popular:4,coverage:'Индонезия'},
+      {id:5,type:'country',country:'Италия',flag:'🇮🇹',name:'eSIMCard',data:5,days:15,price:7.5,popular:5,coverage:'Италия'},
+      {id:6,type:'country',country:'Япония',flag:'🇯🇵',name:'Saily',data:20,days:30,price:18.9,popular:6,coverage:'Япония'},
+      {id:7,type:'country',country:'Грузия',flag:'🇬🇪',name:'Yesim',data:10,days:30,price:12.2,popular:7,coverage:'Грузия'},
+      {id:8,type:'country',country:'Египет',flag:'🇪🇬',name:'eSIMCard',data:5,days:15,price:12.9,popular:8,coverage:'Египет'},
+      {id:9,type:'region',country:'Европа',flag:'🇪🇺',name:'Airalo Europe',data:20,days:30,price:24.9,popular:1,coverage:'35 стран Европы'},
+      {id:10,type:'region',country:'Азия',flag:'🌏',name:'Saily Asia',data:10,days:30,price:21.5,popular:2,coverage:'14 стран Азии'},
+      {id:11,type:'region',country:'Ближний Восток',flag:'🧭',name:'Yesim Middle East',data:10,days:30,price:26.9,popular:3,coverage:'8 стран Ближнего Востока'},
+      {id:12,type:'global',country:'Весь мир',flag:'🌍',name:'Airalo Global',data:20,days:60,price:44.9,popular:1,coverage:'120 стран'},
+      {id:13,type:'global',country:'Весь мир',flag:'🌐',name:'Yesim Unlimited',data:999,days:30,price:69.9,popular:2,coverage:'105 стран'}
     ];
     const rates={USD:1,AED:3.67,RUB:79};
     const symbols={USD:'$',AED:'د.إ ',RUB:'₽'};
@@ -408,11 +409,11 @@
       resultCount.textContent=`Найдено: ${list.length} ${list.length===1?'тариф':'тарифов'}`;
       clearFilter.hidden=!(state.country||state.days||state.data);
       grid.innerHTML=list.length?list.map((p,i)=>`<article class="plan-card ${i===0?'featured':''}">
-        <div class="card-top"><div class="country-name"><span class="flag">${p.flag}</span>${p.country}</div>${p.popular<=2?'<span class="popular">хит меню</span>':''}</div>
+        <div class="card-top"><div class="country-name"><span class="flag">${p.flag}</span>${p.country}</div>${p.popular<=2?'<span class="popular">рекомендуем</span>':''}</div>
         <div class="pizza-size" aria-hidden="true"><span>${dataLabel(p.data).replace(' ','<br>')}</span></div>
         <h3 class="plan-name">${p.name}</h3><p class="plan-meta">${p.days} дней · 4G/5G · hotspot</p>
         <div class="plan-bottom"><div class="price">${money(p.price)} <small>${p.data===999?'безлимит':money(p.price/p.data)+'/ГБ'}</small></div><button class="choose" data-plan="${p.id}">Выбрать →</button></div>
-      </article>`).join(''):'<div class="empty"><b>Такого кусочка пока нет.</b><br>Попробуйте уменьшить срок или объём интернета.</div>';
+      </article>`).join(''):'<div class="empty"><b>Подходящих тарифов не найдено.</b><br>Попробуйте уменьшить срок или объём интернета.</div>';
     }
     function setType(type){
       state.type=type; if(type!=='country') state.country='';
