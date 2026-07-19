@@ -14,27 +14,28 @@
 <meta property="og:locale" content="ru_RU">
 <style>
   :root{
-    --bg:#0d1117; --card:#161b22; --card2:#1c2330; --line:#252c3a;
-    --text:#e8edf4; --muted:#93a1b5; --accent:#3ddc97; --accent2:#2bb87c;
-    --gold:#ffcc66; --pill:#20293a; --shadow:0 8px 30px rgba(0,0,0,.35);
+    --bg:#fff0f7; --card:#ffffff; --card2:#fff4fa; --line:#ffd3e6;
+    --text:#2a1420; --muted:#a8617f; --accent:#ff2e93; --accent2:#e01a7d;
+    --gold:#ff7ab8; --pill:#ffe1ef; --shadow:0 10px 30px rgba(255,46,147,.15);
   }
-  @media (prefers-color-scheme: light){
+  @media (prefers-color-scheme: dark){
     :root{
-      --bg:#f6f8fb; --card:#ffffff; --card2:#f0f4f9; --line:#e3e9f1;
-      --text:#141a22; --muted:#5a6879; --accent:#14a06a; --accent2:#0e8a5b;
-      --gold:#b8842a; --pill:#eef3f9; --shadow:0 8px 24px rgba(20,40,70,.08);
+      --bg:#1b0e16; --card:#271322; --card2:#31182a; --line:#452338;
+      --text:#ffe6f2; --muted:#d99cbb; --accent:#ff4da6; --accent2:#ff2e93;
+      --gold:#ff8ac2; --pill:#3a1c2f; --shadow:0 10px 30px rgba(0,0,0,.4);
     }
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
+    background:radial-gradient(1200px 600px at 50% -100px, var(--pill), var(--bg) 70%);
+    color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
   .wrap{max-width:920px;margin:0 auto;padding:0 16px}
   header{padding:34px 0 10px;text-align:center}
   .logo{font-weight:800;font-size:26px;letter-spacing:-.5px}
-  .logo span{color:var(--accent)}
+  .logo span{background:linear-gradient(135deg,#ff2e93,#ff8a5c);-webkit-background-clip:text;background-clip:text;color:transparent}
   .tag{color:var(--muted);font-size:15px;margin-top:6px}
   h1{font-size:30px;line-height:1.2;margin:26px 0 10px;text-align:center;letter-spacing:-.6px}
-  h1 em{color:var(--accent);font-style:normal}
+  h1 em{background:linear-gradient(135deg,#ff2e93,#ff8a5c);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:normal}
   .sub{text-align:center;color:var(--muted);font-size:16px;max-width:620px;margin:0 auto 6px}
   .updated{text-align:center;color:var(--muted);font-size:13px;margin:14px 0 24px}
   .updated b{color:var(--gold)}
@@ -43,7 +44,7 @@
   .chip{border:1px solid var(--line);background:var(--pill);color:var(--text);
     padding:8px 14px;border-radius:999px;font-size:14px;cursor:pointer;transition:.15s;user-select:none}
   .chip:hover{border-color:var(--accent)}
-  .chip.active{background:var(--accent);color:#04150d;border-color:var(--accent);font-weight:600}
+  .chip.active{background:linear-gradient(135deg,#ff2e93,#ff6fb0);color:#fff;border-color:transparent;font-weight:600}
 
   .country{background:var(--card);border:1px solid var(--line);border-radius:18px;
     padding:18px;margin-bottom:16px;box-shadow:var(--shadow)}
@@ -56,14 +57,14 @@
     background:var(--card2);border:1px solid var(--line);border-radius:13px;padding:12px 14px}
   .plan.best{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
   .pleft .prov{font-weight:700;font-size:15px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-  .badge{font-size:11px;font-weight:700;background:var(--accent);color:#04150d;
+  .badge{font-size:11px;font-weight:700;background:linear-gradient(135deg,#ff2e93,#ff7a5c);color:#fff;
     padding:2px 8px;border-radius:999px;letter-spacing:.3px}
   .pdet{color:var(--muted);font-size:13px;margin-top:2px}
   .pgb{text-align:right;font-size:13px;color:var(--muted);white-space:nowrap}
   .pgb b{color:var(--text);font-size:15px}
-  .buy{background:var(--accent);color:#04150d;text-decoration:none;font-weight:700;font-size:14px;
-    padding:10px 16px;border-radius:10px;white-space:nowrap;transition:.15s;text-align:center}
-  .buy:hover{background:var(--accent2)}
+  .buy{background:linear-gradient(135deg,#ff2e93,#ff6fb0);color:#fff;text-decoration:none;font-weight:700;font-size:14px;
+    padding:10px 16px;border-radius:10px;white-space:nowrap;transition:.15s;text-align:center;box-shadow:0 4px 14px rgba(255,46,147,.35)}
+  .buy:hover{background:linear-gradient(135deg,#e01a7d,#ff5aa6);box-shadow:0 6px 18px rgba(255,46,147,.45);transform:translateY(-1px)}
   .buy.alt{background:transparent;color:var(--text);border:1px solid var(--line)}
   .buy.alt:hover{border-color:var(--accent);color:var(--accent)}
 
@@ -71,7 +72,7 @@
   .how h2{font-size:20px;margin-bottom:12px}
   .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:8px}
   .step{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:14px}
-  .step .n{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#04150d;
+  .step .n{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#ff2e93,#ff6fb0);color:#fff;
     font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px;margin-bottom:8px}
   .step p{font-size:14px;color:var(--muted)}
   .step b{color:var(--text)}
