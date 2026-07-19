@@ -200,6 +200,9 @@
     .email { width:100%; margin-top:8px; border:1px solid var(--line); border-radius:14px; min-height:52px; padding:0 14px; background:white; }
     .drawer .primary { width:100%; margin-top:14px; }
     .secure { text-align:center; color:var(--muted); font-size:11px; margin-top:14px; }
+    a.primary { display:block; text-align:center; text-decoration:none; }
+    .ad-label { display:inline-block; font-size:10px; color:var(--muted); border:1px solid var(--line); border-radius:6px; padding:1px 6px; margin-left:6px; text-transform:uppercase; letter-spacing:.04em; vertical-align:middle; }
+    .provider-note { text-align:center; color:var(--muted); font-size:12px; margin-top:12px; line-height:1.4; }
     .drawer-spacer { flex:1; }
     .toast { position:fixed; z-index:60; left:50%; bottom:24px; transform:translate(-50%,120px); background:var(--ink); color:white; border-radius:999px; padding:13px 19px; font-size:13px; font-weight:700; transition:.3s; box-shadow:var(--shadow); }
     .toast.show { transform:translate(-50%,0); }
@@ -356,7 +359,7 @@
     </div></section>
   </main>
 
-  <footer><div class="shell"><div class="footer-grid"><div class="footer-main"><div class="footer-brand">eSIM<em>.pizza</em></div><p class="footer-note">Цифровая связь для путешествий. Никакого пластика, долгих очередей и счетов за роуминг.</p></div><div class="footer-col"><b>Заказать</b><a href="#catalog">Тарифы</a><a href="#how">Как установить</a><a href="#" id="footerCompat">Совместимость</a></div><div class="footer-col"><b>Помощь</b><a href="mailto:ciao@esim.pizza">ciao@esim.pizza</a><a href="#faq">Частые вопросы</a><a href="#">Условия возврата</a></div></div><div class="legal">© 2026 eSIM.pizza. Все права защищены.<span>Цены и покрытие могут меняться в зависимости от оператора.</span></div></div></footer>
+  <footer><div class="shell"><div class="footer-grid"><div class="footer-main"><div class="footer-brand">eSIM<em>.pizza</em></div><p class="footer-note">Цифровая связь для путешествий. Никакого пластика, долгих очередей и счетов за роуминг.</p></div><div class="footer-col"><b>Заказать</b><a href="#catalog">Тарифы</a><a href="#how">Как установить</a><a href="#" id="footerCompat">Совместимость</a></div><div class="footer-col"><b>Помощь</b><a href="mailto:ciao@esim.pizza">ciao@esim.pizza</a><a href="#faq">Частые вопросы</a><a href="#">Условия возврата</a></div></div><div class="legal">© 2026 eSIM.pizza. Все права защищены.<span>Цены и покрытие могут меняться в зависимости от оператора.</span><span>Некоторые ссылки на сайте — партнёрские (реклама): при покупке по ним мы можем получить комиссию, цена для вас при этом не меняется. Рекламодатели: Airalo, Yesim.</span></div></div></footer>
 
   <div class="drawer-backdrop" id="drawerBackdrop"></div>
   <aside class="drawer" id="drawer" aria-labelledby="drawerTitle" aria-hidden="true">
@@ -364,27 +367,37 @@
     <div class="order-ticket"><span class="order-ticket-label">eSIM.pizza / выбранный тариф</span><h3 id="orderName"></h3><p id="orderMeta"></p><div class="order-price" id="orderPrice"></div></div>
     <div class="order-list"><div class="order-line"><span>Покрытие</span><b id="orderCoverage"></b></div><div class="order-line"><span>Сеть</span><b>4G / 5G</b></div><div class="order-line"><span>Активация</span><b>по QR-коду</b></div><div class="order-line"><span>Раздача интернета</span><b>разрешена</b></div></div>
     <div class="drawer-spacer"></div>
-    <form id="checkoutForm"><label class="email-label" for="checkoutEmail">Куда прислать eSIM?</label><input class="email" id="checkoutEmail" type="email" autocomplete="email" placeholder="you@example.com" required><button class="primary" type="submit">Перейти к оплате</button><div class="secure">🔒 Безопасная оплата · eSIM придёт сразу</div></form>
+    <a class="primary" id="goProvider" href="#" target="_blank" rel="nofollow noopener">Перейти к покупке →</a>
+    <div class="provider-note" id="providerNote">Оформление, оплата и активация — на сайте провайдера.</div>
   </aside>
 
   <div class="compat-modal" id="compatModal" role="dialog" aria-modal="true" aria-labelledby="compatTitle"><div class="modal-card"><div class="drawer-head"><h2 id="compatTitle">Как проверить eSIM</h2><button class="close" id="closeCompat" aria-label="Закрыть">×</button></div><p>Код <b>*#06#</b> для этой проверки ненадёжен: на некоторых телефонах он показывает только IMEI физических слотов. Выберите производителя и проверьте нужный пункт в настройках.</p><div class="device-grid"><button class="device" data-device="Apple">Apple</button><button class="device" data-device="Samsung">Samsung</button><button class="device" data-device="Google">Google Pixel</button></div><div class="compat-result" id="compatResult">Выберите производителя. Названия пунктов могут немного отличаться в зависимости от версии системы.</div></div></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
+    // Партнёрские ссылки. Airalo/Yesim — через Travelpayouts (маркер 753028, реклама, платят комиссию).
+    // eSIM.dog/eSIMCard/Saily — пока прямые ссылки на бренды без метки (партнёрки заведём отдельно) → paid:false.
+    const AFF = {
+      airalo:'https://airalo.tpx.gr/zKWubZS0',
+      yesim:'https://yesim.tpx.gr/H3g2VJiB',
+      esimdog:'https://esim.dog/',
+      esimcard:'https://esimcard.com/',
+      saily:'https://saily.com/'
+    };
     const plans = [
-      {id:1,type:'country',country:'Турция',flag:'🇹🇷',name:'eSIM.dog',data:10,days:30,price:8.9,popular:1,coverage:'Турция'},
-      {id:2,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Saily',data:20,days:30,price:14.9,popular:2,coverage:'Таиланд'},
-      {id:3,type:'country',country:'ОАЭ',flag:'🇦🇪',name:'Airalo',data:5,days:15,price:11.5,popular:3,coverage:'ОАЭ'},
-      {id:4,type:'country',country:'Индонезия',flag:'🇮🇩',name:'Yesim',data:10,days:30,price:10.9,popular:4,coverage:'Индонезия'},
-      {id:5,type:'country',country:'Италия',flag:'🇮🇹',name:'eSIMCard',data:5,days:15,price:7.5,popular:5,coverage:'Италия'},
-      {id:6,type:'country',country:'Япония',flag:'🇯🇵',name:'Saily',data:20,days:30,price:18.9,popular:6,coverage:'Япония'},
-      {id:7,type:'country',country:'Грузия',flag:'🇬🇪',name:'Yesim',data:10,days:30,price:12.2,popular:7,coverage:'Грузия'},
-      {id:8,type:'country',country:'Египет',flag:'🇪🇬',name:'eSIMCard',data:5,days:15,price:12.9,popular:8,coverage:'Египет'},
-      {id:9,type:'region',country:'Европа',flag:'🇪🇺',name:'Airalo Europe',data:20,days:30,price:24.9,popular:1,coverage:'35 стран Европы'},
-      {id:10,type:'region',country:'Азия',flag:'🌏',name:'Saily Asia',data:10,days:30,price:21.5,popular:2,coverage:'14 стран Азии'},
-      {id:11,type:'region',country:'Ближний Восток',flag:'🧭',name:'Yesim Middle East',data:10,days:30,price:26.9,popular:3,coverage:'8 стран Ближнего Востока'},
-      {id:12,type:'global',country:'Весь мир',flag:'🌍',name:'Airalo Global',data:20,days:60,price:44.9,popular:1,coverage:'120 стран'},
-      {id:13,type:'global',country:'Весь мир',flag:'🌐',name:'Yesim Unlimited',data:999,days:30,price:69.9,popular:2,coverage:'105 стран'}
+      {id:1,type:'country',country:'Турция',flag:'🇹🇷',name:'eSIM.dog',data:10,days:30,price:8.9,popular:1,coverage:'Турция',provider:'eSIM.dog',aff:AFF.esimdog,paid:false},
+      {id:2,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Saily',data:20,days:30,price:14.9,popular:2,coverage:'Таиланд',provider:'Saily',aff:AFF.saily,paid:false},
+      {id:3,type:'country',country:'ОАЭ',flag:'🇦🇪',name:'Airalo',data:5,days:15,price:11.5,popular:3,coverage:'ОАЭ',provider:'Airalo',aff:AFF.airalo,paid:true},
+      {id:4,type:'country',country:'Индонезия',flag:'🇮🇩',name:'Yesim',data:10,days:30,price:10.9,popular:4,coverage:'Индонезия',provider:'Yesim',aff:AFF.yesim,paid:true},
+      {id:5,type:'country',country:'Италия',flag:'🇮🇹',name:'eSIMCard',data:5,days:15,price:7.5,popular:5,coverage:'Италия',provider:'eSIMCard',aff:AFF.esimcard,paid:false},
+      {id:6,type:'country',country:'Япония',flag:'🇯🇵',name:'Saily',data:20,days:30,price:18.9,popular:6,coverage:'Япония',provider:'Saily',aff:AFF.saily,paid:false},
+      {id:7,type:'country',country:'Грузия',flag:'🇬🇪',name:'Yesim',data:10,days:30,price:12.2,popular:7,coverage:'Грузия',provider:'Yesim',aff:AFF.yesim,paid:true},
+      {id:8,type:'country',country:'Египет',flag:'🇪🇬',name:'eSIMCard',data:5,days:15,price:12.9,popular:8,coverage:'Египет',provider:'eSIMCard',aff:AFF.esimcard,paid:false},
+      {id:9,type:'region',country:'Европа',flag:'🇪🇺',name:'Airalo Europe',data:20,days:30,price:24.9,popular:1,coverage:'35 стран Европы',provider:'Airalo',aff:AFF.airalo,paid:true},
+      {id:10,type:'region',country:'Азия',flag:'🌏',name:'Saily Asia',data:10,days:30,price:21.5,popular:2,coverage:'14 стран Азии',provider:'Saily',aff:AFF.saily,paid:false},
+      {id:11,type:'region',country:'Ближний Восток',flag:'🧭',name:'Yesim Middle East',data:10,days:30,price:26.9,popular:3,coverage:'8 стран Ближнего Востока',provider:'Yesim',aff:AFF.yesim,paid:true},
+      {id:12,type:'global',country:'Весь мир',flag:'🌍',name:'Airalo Global',data:20,days:60,price:44.9,popular:1,coverage:'120 стран',provider:'Airalo',aff:AFF.airalo,paid:true},
+      {id:13,type:'global',country:'Весь мир',flag:'🌐',name:'Yesim Unlimited',data:999,days:30,price:69.9,popular:2,coverage:'105 стран',provider:'Yesim',aff:AFF.yesim,paid:true}
     ];
     const rates={USD:1,AED:3.67,RUB:79};
     const symbols={USD:'$',AED:'د.إ ',RUB:'₽'};
@@ -447,6 +460,11 @@
       document.getElementById('orderMeta').textContent=`${dataLabel(selectedPlan.data)} · ${selectedPlan.days} дней`;
       document.getElementById('orderPrice').textContent=money(selectedPlan.price);
       document.getElementById('orderCoverage').textContent=selectedPlan.coverage;
+      const go=document.getElementById('goProvider');
+      go.href=selectedPlan.aff;
+      go.textContent=`Перейти на ${selectedPlan.provider} →`;
+      go.rel=selectedPlan.paid?'nofollow sponsored noopener':'nofollow noopener';
+      document.getElementById('providerNote').innerHTML=`Оформление, оплата и активация — на сайте ${selectedPlan.provider}.`+(selectedPlan.paid?' <span class="ad-label">Реклама</span>':'');
       drawer.setAttribute('aria-hidden','false');document.body.classList.add('drawer-open');document.getElementById('closeDrawer').focus();
     }
     function closeDrawer(){
@@ -455,7 +473,7 @@
       drawer.setAttribute('aria-hidden','true');document.body.classList.remove('drawer-open');
     }
     document.getElementById('closeDrawer').addEventListener('click',closeDrawer);document.getElementById('drawerBackdrop').addEventListener('click',closeDrawer);
-    document.getElementById('checkoutForm').addEventListener('submit',e=>{e.preventDefault();showToast('Заказ собран. Подключите платёжный шлюз для приёма оплаты.');});
+    // Переход к провайдеру задаётся в openDrawer (кнопка-ссылка #goProvider с rel="nofollow sponsored").
     function showToast(message){const toast=document.getElementById('toast');toast.textContent=message;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3500);}
 
     const compatModal=document.getElementById('compatModal');
