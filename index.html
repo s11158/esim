@@ -205,6 +205,16 @@
     .provider-note { text-align:center; color:var(--muted); font-size:12px; margin-top:12px; line-height:1.4; }
     .drawer-spacer { flex:1; }
     .toast { position:fixed; z-index:60; left:50%; bottom:24px; transform:translate(-50%,120px); background:var(--ink); color:white; border-radius:999px; padding:13px 19px; font-size:13px; font-weight:700; transition:.3s; box-shadow:var(--shadow); }
+    .sp { position:fixed; z-index:30; left:18px; bottom:18px; max-width:335px; background:var(--paper); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); padding:13px 38px 13px 14px; display:flex; gap:11px; align-items:flex-start; opacity:0; transform:translateY(14px); pointer-events:none; transition:opacity .35s ease, transform .35s ease; }
+    .sp.show { opacity:1; transform:translateY(0); pointer-events:auto; }
+    body.drawer-open .sp { opacity:0; pointer-events:none; }
+    .sp-ico { flex:0 0 34px; height:34px; border-radius:11px; background:var(--tomato); color:white; display:grid; place-items:center; font-size:16px; }
+    .sp-body b { display:block; font-size:13px; font-weight:800; line-height:1.25; }
+    .sp-body span { display:block; margin-top:3px; font-size:12px; color:var(--muted); line-height:1.4; }
+    .sp-close { position:absolute; top:6px; right:7px; border:0; background:transparent; color:var(--muted); font-size:17px; line-height:1; cursor:pointer; padding:5px; border-radius:8px; }
+    .sp-close:hover { background:rgba(43,29,22,.08); }
+    @media (max-width:560px) { .sp { left:12px; right:12px; bottom:12px; max-width:none; } }
+    @media (prefers-reduced-motion:reduce) { .sp { transition:none; } }
     .toast.show { transform:translate(-50%,0); }
 
     .compat-modal { position:fixed; inset:0; z-index:50; display:grid; place-items:center; padding:20px; background:rgba(43,29,22,.66); opacity:0; pointer-events:none; transition:.2s; }
@@ -373,6 +383,11 @@
 
   <div class="compat-modal" id="compatModal" role="dialog" aria-modal="true" aria-labelledby="compatTitle"><div class="modal-card"><div class="drawer-head"><h2 id="compatTitle">Как проверить eSIM</h2><button class="close" id="closeCompat" aria-label="Закрыть">×</button></div><p>Код <b>*#06#</b> для этой проверки ненадёжен: на некоторых телефонах он показывает только IMEI физических слотов. Выберите производителя и проверьте нужный пункт в настройках.</p><div class="device-grid"><button class="device" data-device="Apple">Apple</button><button class="device" data-device="Samsung">Samsung</button><button class="device" data-device="Google">Google Pixel</button></div><div class="compat-result" id="compatResult">Выберите производителя. Названия пунктов могут немного отличаться в зависимости от версии системы.</div></div></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <aside class="sp" id="salesPop" role="status" aria-live="polite">
+    <div class="sp-ico" id="spIco" aria-hidden="true">🍕</div>
+    <div class="sp-body"><b id="spTitle"></b><span id="spText"></span></div>
+    <button class="sp-close" id="spClose" aria-label="Скрыть подсказки">×</button>
+  </aside>
 
   <script>
     // Партнёрские ссылки. Airalo/Yesim — через Travelpayouts (маркер 753028, реклама, платят комиссию).
@@ -489,6 +504,34 @@
     document.querySelectorAll('.device').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.device').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('compatResult').textContent=deviceText[btn.dataset.device];}));
     document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeDrawer();closeCompat();}});
     render();
+
+    // Всплывающие карточки. ВАЖНО: только правдивые факты и подсказки — никаких выдуманных
+    // «покупок». Когда пойдут реальные продажи через Travelpayouts, сюда можно подставить
+    // настоящие данные, и это станет честным social proof.
+    const SP_TIPS=[
+      {i:'📱',t:'Проверьте телефон за 5 секунд',s:'Наберите *#06#. Если показан EID — ваш телефон поддерживает eSIM.'},
+      {i:'💬',t:'Ваш номер останется с вами',s:'eSIM отвечает только за интернет. WhatsApp и Telegram — на прежнем номере.'},
+      {i:'✈️',t:'Ставьте заранее, включайте на месте',s:'Установите eSIM дома по Wi-Fi, а активируйте после прилёта — срок обычно идёт с активации.'},
+      {i:'⚖️',t:'Сравниваем 5 провайдеров',s:'eSIM.dog, Saily, Airalo, Yesim и eSIMCard — показываем, где для вашей страны выгоднее.'},
+      {i:'📶',t:'Раздача интернета разрешена',s:'На большинстве тарифов можно раздавать интернет с телефона на ноутбук.'},
+      {i:'🤝',t:'Честно про ссылки',s:'Часть ссылок — партнёрские: мы можем получить комиссию, но цена для вас не меняется.'}
+    ];
+    (function(){
+      const el=document.getElementById('salesPop');
+      if(!el||sessionStorage.getItem('spClosed')==='1') return;
+      const ico=document.getElementById('spIco'),title=document.getElementById('spTitle'),text=document.getElementById('spText');
+      let idx=0,timer;
+      function show(){
+        const tip=SP_TIPS[idx%SP_TIPS.length]; idx++;
+        ico.textContent=tip.i; title.textContent=tip.t; text.textContent=tip.s;
+        el.classList.add('show');
+        timer=setTimeout(()=>{ el.classList.remove('show'); timer=setTimeout(show,5000); },7000);
+      }
+      document.getElementById('spClose').addEventListener('click',()=>{
+        clearTimeout(timer); el.classList.remove('show'); sessionStorage.setItem('spClosed','1');
+      });
+      timer=setTimeout(show,6000);
+    })();
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"eSIM.pizza","url":"https://esim.pizza/","email":"ciao@esim.pizza","description":"Магазин туристических eSIM для 190+ стран"}</script>
 </body>
