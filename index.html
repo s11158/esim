@@ -130,6 +130,10 @@
     .plan-bottom { display:flex; align-items:end; justify-content:space-between; gap:10px; margin-top:auto; padding-top:17px; border-top:1px dashed currentColor; }
     .price { font:800 28px/1 var(--display); letter-spacing:-.04em; }
     .price small { font:500 11px/1 var(--mono); opacity:.62; letter-spacing:0; }
+    .promo-code { display:block; margin-top:6px; font:700 11px/1.2 var(--mono); color:var(--basil); letter-spacing:0; }
+    .promo-code s { color:var(--muted); font-weight:500; }
+    .featured .promo-code { color:var(--yellow); }
+    .featured .promo-code s { color:rgba(255,255,255,.6); }
     .choose { border:1px solid var(--line); border-radius:12px; padding:11px 13px; background:white; color:var(--ink); font-weight:800; cursor:pointer; }
     .featured .choose { background:var(--tomato); color:white; border-color:var(--tomato); }
     .empty { grid-column:1/-1; padding:60px 20px; text-align:center; border:1px dashed var(--line); border-radius:var(--radius); color:var(--muted); }
@@ -401,7 +405,7 @@
       saily:'https://saily.com/'
     };
     const plans = [
-      {id:1,type:'country',country:'Турция',flag:'🇹🇷',name:'Superalink',data:10,days:30,price:8.9,popular:1,coverage:'Турция',provider:'Superalink',aff:AFF.superalink,paid:true},
+      {id:1,type:'country',country:'Турция',flag:'🇹🇷',name:'Superalink',data:10,days:30,price:8.9,popular:1,coverage:'Турция',provider:'Superalink',aff:AFF.superalink,paid:true,promo:{code:'ADD20',pct:0.2}},
       {id:2,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Saily',data:20,days:30,price:14.9,popular:2,coverage:'Таиланд',provider:'Saily',aff:AFF.saily,paid:false},
       {id:3,type:'country',country:'ОАЭ',flag:'🇦🇪',name:'Airalo',data:5,days:15,price:11.5,popular:3,coverage:'ОАЭ',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:4,type:'country',country:'Индонезия',flag:'🇮🇩',name:'Yesim',data:10,days:30,price:10.9,popular:4,coverage:'Индонезия',provider:'Yesim',aff:AFF.yesim,paid:true},
@@ -434,12 +438,15 @@
       return state.currency==='AED'?`${symbols.AED}${converted.toFixed(digits)}`:`${converted.toFixed(digits).replace(/\.00$/,'')}${symbols[state.currency]}`;
     }
     function dataLabel(data){return data===999?'∞ ГБ':`${data} ГБ`;}
+    // Цена с учётом нашего промокода. base price → эффективная цена (что реально платит пользователь по коду).
+    function eff(p){return p.promo?Math.round(p.price*(1-p.promo.pct)*100)/100:p.price;}
+    function promoPct(p){return p.promo?Math.round(p.promo.pct*100):0;}
     function filteredPlans(){
       let list=plans.filter(p=>p.type===state.type);
       if(state.country) list=list.filter(p=>p.country===state.country);
       if(state.days) list=list.filter(p=>p.days>=state.days);
       if(state.data) list=list.filter(p=>p.data>=state.data);
-      const sorters={priceAsc:(a,b)=>a.price-b.price,dataDesc:(a,b)=>b.data-a.data,daysDesc:(a,b)=>b.days-a.days,unitAsc:(a,b)=>(a.price/(a.data===999?100:a.data))-(b.price/(b.data===999?100:b.data)),recommended:(a,b)=>a.popular-b.popular};
+      const sorters={priceAsc:(a,b)=>eff(a)-eff(b),dataDesc:(a,b)=>b.data-a.data,daysDesc:(a,b)=>b.days-a.days,unitAsc:(a,b)=>(eff(a)/(a.data===999?100:a.data))-(eff(b)/(b.data===999?100:b.data)),recommended:(a,b)=>a.popular-b.popular};
       return list.sort(sorters[state.sort]);
     }
     function render(){
@@ -450,7 +457,7 @@
         <div class="card-top"><div class="country-name"><span class="flag">${p.flag}</span>${p.country}</div>${p.popular<=2?'<span class="popular">рекомендуем</span>':''}</div>
         <div class="pizza-size" aria-hidden="true"><span>${dataLabel(p.data).replace(' ','<br>')}</span></div>
         <h3 class="plan-name">${p.name}</h3><p class="plan-meta">${p.days} дней · 4G/5G · hotspot</p>
-        <div class="plan-bottom"><div class="price">${money(p.price)} <small>${p.data===999?'безлимит':money(p.price/p.data)+'/ГБ'}</small></div><button class="choose" data-plan="${p.id}">Выбрать →</button></div>
+        <div class="plan-bottom"><div class="price">${money(eff(p))} <small>${p.data===999?'безлимит':money(eff(p)/p.data)+'/ГБ'}</small>${p.promo?`<span class="promo-code"><s>${money(p.price)}</s> код ${p.promo.code} −${promoPct(p)}%</span>`:''}</div><button class="choose" data-plan="${p.id}">Выбрать →</button></div>
       </article>`).join(''):'<div class="empty"><b>Подходящих тарифов не найдено.</b><br>Попробуйте уменьшить срок или объём интернета.</div>';
     }
     function setType(type){
@@ -473,8 +480,8 @@
       selectedPlan=plans.find(p=>p.id===id); if(!selectedPlan)return;
       if(!document.body.classList.contains('drawer-open')) drawerReturnFocus=document.activeElement;
       document.getElementById('orderName').textContent=`${selectedPlan.flag} ${selectedPlan.name}`;
-      document.getElementById('orderMeta').textContent=`${dataLabel(selectedPlan.data)} · ${selectedPlan.days} дней`;
-      document.getElementById('orderPrice').textContent=money(selectedPlan.price);
+      document.getElementById('orderMeta').textContent=`${dataLabel(selectedPlan.data)} · ${selectedPlan.days} дней`+(selectedPlan.promo?` · код ${selectedPlan.promo.code} (−${promoPct(selectedPlan)}%)`:'');
+      document.getElementById('orderPrice').textContent=money(eff(selectedPlan));
       document.getElementById('orderCoverage').textContent=selectedPlan.coverage;
       const go=document.getElementById('goProvider');
       go.href=selectedPlan.aff;
