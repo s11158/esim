@@ -417,7 +417,13 @@
       {id:10,type:'region',country:'Азия',flag:'🌏',name:'Saily Asia',data:10,days:30,price:21.5,popular:2,coverage:'14 стран Азии',provider:'Saily',aff:AFF.saily,paid:false},
       {id:11,type:'region',country:'Ближний Восток',flag:'🧭',name:'Yesim Middle East',data:10,days:30,price:26.9,popular:3,coverage:'8 стран Ближнего Востока',provider:'Yesim',aff:AFF.yesim,paid:true},
       {id:12,type:'global',country:'Весь мир',flag:'🌍',name:'Airalo Global',data:20,days:60,price:44.9,popular:1,coverage:'120 стран',provider:'Airalo',aff:AFF.airalo,paid:true},
-      {id:13,type:'global',country:'Весь мир',flag:'🌐',name:'Yesim Unlimited',data:999,days:30,price:69.9,popular:2,coverage:'105 стран',provider:'Yesim',aff:AFF.yesim,paid:true}
+      {id:13,type:'global',country:'Весь мир',flag:'🌐',name:'Yesim Unlimited',data:999,days:30,price:69.9,popular:2,coverage:'105 стран',provider:'Yesim',aff:AFF.yesim,paid:true},
+      // Maya Mobile — снапшот их affiliate-фида assets.maya.net/affiliates/plans.json (global unlimited, реальные цены USD).
+      // TODO после одобрения Bart'а (Impact prog 49401): aff → трекинг-ссылка Impact, paid:true, promo:{code:'ESIMPIZZA',pct:0.10}.
+      {id:14,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 3д',data:999,days:3,price:9.99,popular:3,coverage:'180 стран · безлимит',provider:'Maya',aff:'https://maya.net/esim/global/3-days-unlimited-global-data',paid:false},
+      {id:15,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 7д',data:999,days:7,price:19.99,popular:4,coverage:'180 стран · безлимит',provider:'Maya',aff:'https://maya.net/esim/global/7-days-unlimited-global-data',paid:false},
+      {id:16,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 14д',data:999,days:14,price:27.99,popular:5,coverage:'180 стран · безлимит',provider:'Maya',aff:'https://maya.net/esim/global/14-days-unlimited-global-data',paid:false},
+      {id:17,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 30д',data:999,days:30,price:49.99,popular:6,coverage:'180 стран · безлимит',provider:'Maya',aff:'https://maya.net/esim/global/30-days-unlimited-global-data',paid:false}
     ];
     const rates={USD:1,AED:3.67,RUB:79};
     const symbols={USD:'$',AED:'د.إ ',RUB:'₽'};
@@ -520,7 +526,7 @@
       {i:'📱',t:'Проверьте телефон за 5 секунд',s:'Наберите *#06#. Если показан EID — ваш телефон поддерживает eSIM.'},
       {i:'💬',t:'Ваш номер останется с вами',s:'eSIM отвечает только за интернет. WhatsApp и Telegram — на прежнем номере.'},
       {i:'✈️',t:'Ставьте заранее, включайте на месте',s:'Установите eSIM дома по Wi-Fi, а активируйте после прилёта — срок обычно идёт с активации.'},
-      {i:'⚖️',t:'Сравниваем 5 провайдеров',s:'eSIM.dog, Saily, Airalo, Yesim и eSIMCard — показываем, где для вашей страны выгоднее.'},
+      {i:'⚖️',t:'Сравниваем 6 провайдеров',s:'Superalink, Airalo, Yesim, Maya, Saily и eSIMCard — показываем, где для вашей страны выгоднее.'},
       {i:'📶',t:'Раздача интернета разрешена',s:'На большинстве тарифов можно раздавать интернет с телефона на ноутбук.'},
       {i:'🤝',t:'Честно про ссылки',s:'Часть ссылок — партнёрские: мы можем получить комиссию, но цена для вас не меняется.'}
     ];
