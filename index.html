@@ -402,7 +402,13 @@
       yesim:'https://yesim.tpx.gr/H3g2VJiB',
       superalink:'https://www.superalink.com/destination/aff/STAS00000',
       esimcard:'https://esimcard.com/',
-      saily:'https://saily.com/'
+      saily:'https://saily.com/',
+      // Maya — трекинг-ссылки Impact (программа 49401), прислал Jean-Marie Kesch 2026-07-29. Купон ESIMPIZZA подтверждён.
+      maya:'https://mayamobile.pxf.io/k4bdrM',
+      maya3:'https://mayamobile.pxf.io/ZV4WMR',
+      maya7:'https://mayamobile.pxf.io/zzqdom',
+      maya14:'https://mayamobile.pxf.io/0GOav3',
+      maya30:'https://mayamobile.pxf.io/n4bd5x'
     };
     const plans = [
       {id:1,type:'country',country:'Турция',flag:'🇹🇷',name:'Superalink',data:10,days:30,price:8.9,popular:1,coverage:'Турция',provider:'Superalink',aff:AFF.superalink,paid:true,promo:{code:'ADD20',pct:0.2}},
@@ -419,11 +425,11 @@
       {id:12,type:'global',country:'Весь мир',flag:'🌍',name:'Airalo Global',data:20,days:60,price:44.9,popular:1,coverage:'120 стран',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:13,type:'global',country:'Весь мир',flag:'🌐',name:'Yesim Unlimited',data:999,days:30,price:69.9,popular:2,coverage:'105 стран',provider:'Yesim',aff:AFF.yesim,paid:true},
       // Maya Mobile — снапшот их affiliate-фида assets.maya.net/affiliates/plans.json (global unlimited, реальные цены USD).
-      // TODO после одобрения Bart'а (Impact prog 49401): aff → трекинг-ссылка Impact, paid:true, promo:{code:'ESIMPIZZA',pct:0.10}.
-      {id:14,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 3д',data:999,days:3,price:9.99,popular:3,coverage:'180 стран · безлимит',provider:'Maya',aff:'https://maya.net/esim/global/3-days-unlimited-global-data',paid:false},
-      {id:15,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 7д',data:999,days:7,price:19.99,popular:4,coverage:'180 стран · безлимит',provider:'Maya',aff:'https://maya.net/esim/global/7-days-unlimited-global-data',paid:false},
-      {id:16,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 14д',data:999,days:14,price:27.99,popular:5,coverage:'180 стран · безлимит',provider:'Maya',aff:'https://maya.net/esim/global/14-days-unlimited-global-data',paid:false},
-      {id:17,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 30д',data:999,days:30,price:49.99,popular:6,coverage:'180 стран · безлимит',provider:'Maya',aff:'https://maya.net/esim/global/30-days-unlimited-global-data',paid:false},
+      // Монетизировано 2026-07-30: трекинг-ссылки Impact на страницы тарифов + персональный купон ESIMPIZZA −10%.
+      {id:14,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 3д',data:999,days:3,price:9.99,popular:3,coverage:'180 стран · безлимит',provider:'Maya',aff:AFF.maya3,paid:true,promo:{code:'ESIMPIZZA',pct:0.10}},
+      {id:15,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 7д',data:999,days:7,price:19.99,popular:4,coverage:'180 стран · безлимит',provider:'Maya',aff:AFF.maya7,paid:true,promo:{code:'ESIMPIZZA',pct:0.10}},
+      {id:16,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 14д',data:999,days:14,price:27.99,popular:5,coverage:'180 стран · безлимит',provider:'Maya',aff:AFF.maya14,paid:true,promo:{code:'ESIMPIZZA',pct:0.10}},
+      {id:17,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 30д',data:999,days:30,price:49.99,popular:6,coverage:'180 стран · безлимит',provider:'Maya',aff:AFF.maya30,paid:true,promo:{code:'ESIMPIZZA',pct:0.10}},
       // Airalo — РЕАЛЬНЫЕ цены с их страниц направлений (проверено 2026-07-29, USD). ОАЭ пропущен: страница отдала EUR.
       {id:18,type:'country',country:'Турция',flag:'🇹🇷',name:'Airalo Unlimited',data:999,days:7,price:24.5,popular:9,coverage:'Турция · Turk Telekom',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:19,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Airalo Unlimited',data:999,days:7,price:21.5,popular:10,coverage:'Таиланд · dtac',provider:'Airalo',aff:AFF.airalo,paid:true},
