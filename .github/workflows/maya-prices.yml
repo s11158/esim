@@ -1,0 +1,36 @@
+name: Sync Maya prices
+
+# Цены Maya живут в их affiliate-фиде и меняются без предупреждения.
+# Раз в сутки подтягиваем их в index.html, чтобы на сайте не висели устаревшие цифры.
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Pull prices from Maya feed
+        run: node scripts/update-maya-prices.mjs
+
+      - name: Commit if prices changed
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "Цены не изменились — коммита нет."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Sync Maya prices from affiliate feed"
+          git push
