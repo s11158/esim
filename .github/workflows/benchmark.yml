@@ -1,0 +1,37 @@
+name: Track competitor benchmark
+
+# Цены eSIM.dog — наш ориентир по всей ценовой стратегии, и они меняются
+# без предупреждения. Раз в сутки складываем их таблицу в data/, чтобы видеть
+# реальный разрыв на сегодня, а не на день последней ручной проверки.
+on:
+  schedule:
+    - cron: '41 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch benchmark
+        run: node scripts/fetch-benchmark.mjs
+
+      - name: Commit if prices moved
+        run: |
+          if git diff --quiet -- data/; then
+            echo "Цены конкурента не изменились — коммита нет."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "Track eSIM.dog benchmark prices"
+          git push
