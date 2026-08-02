@@ -411,19 +411,28 @@
       maya30:'https://mayamobile.pxf.io/n4bd5x'
     };
     const plans = [
-      {id:1,type:'country',country:'Турция',flag:'🇹🇷',name:'Superalink',data:10,days:30,price:8.9,popular:1,coverage:'Турция',provider:'Superalink',aff:AFF.superalink,paid:true,promo:{code:'ADD20',pct:0.2}},
-      {id:2,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Saily',data:20,days:30,price:19.99,popular:2,coverage:'Таиланд',provider:'Saily',aff:AFF.saily,paid:false},
-      {id:3,type:'country',country:'ОАЭ',flag:'🇦🇪',name:'Airalo',data:5,days:15,price:11.5,popular:3,coverage:'ОАЭ',provider:'Airalo',aff:AFF.airalo,paid:true},
-      {id:4,type:'country',country:'Индонезия',flag:'🇮🇩',name:'Yesim',data:10,days:30,price:10.9,popular:4,coverage:'Индонезия',provider:'Yesim',aff:AFF.yesim,paid:true},
-      {id:5,type:'country',country:'Италия',flag:'🇮🇹',name:'eSIMCard',data:5,days:15,price:7.5,popular:5,coverage:'Италия',provider:'eSIMCard',aff:AFF.esimcard,paid:false},
-      {id:6,type:'country',country:'Япония',flag:'🇯🇵',name:'Saily',data:20,days:30,price:18.9,popular:6,coverage:'Япония',provider:'Saily',aff:AFF.saily,paid:false},
-      {id:7,type:'country',country:'Грузия',flag:'🇬🇪',name:'Yesim',data:10,days:30,price:12.2,popular:7,coverage:'Грузия',provider:'Yesim',aff:AFF.yesim,paid:true},
-      {id:8,type:'country',country:'Египет',flag:'🇪🇬',name:'eSIMCard',data:5,days:15,price:12.9,popular:8,coverage:'Египет',provider:'eSIMCard',aff:AFF.esimcard,paid:false},
-      {id:9,type:'region',country:'Европа',flag:'🇪🇺',name:'Airalo Europe',data:20,days:30,price:24.9,popular:1,coverage:'35 стран Европы',provider:'Airalo',aff:AFF.airalo,paid:true},
-      {id:10,type:'region',country:'Азия',flag:'🌏',name:'Saily Asia',data:10,days:30,price:35.99,popular:2,coverage:'Азия и Океания',provider:'Saily',aff:AFF.saily,paid:false},
-      {id:11,type:'region',country:'Ближний Восток',flag:'🧭',name:'Yesim Middle East',data:10,days:30,price:26.9,popular:3,coverage:'8 стран Ближнего Востока',provider:'Yesim',aff:AFF.yesim,paid:true},
-      {id:12,type:'global',country:'Весь мир',flag:'🌍',name:'Airalo Global',data:20,days:60,price:44.9,popular:1,coverage:'120 стран',provider:'Airalo',aff:AFF.airalo,paid:true},
-      {id:13,type:'global',country:'Весь мир',flag:'🌐',name:'Yesim Unlimited',data:999,days:30,price:69.9,popular:2,coverage:'105 стран',provider:'Yesim',aff:AFF.yesim,paid:true},
+      // ⚠️ ПРАВИЛО: в этом массиве только цены, подтверждённые реальным источником.
+      // Строки Superalink, Yesim, eSIMCard (Италия/Египет) и Airalo Global удалены 2026-08-02:
+      // это были placeholder-цены из первой версии, подтвердить их не удалось. Вернём, когда партнёры дадут фид.
+      //
+      // Saily — цены с их страниц направлений (проверено 2026-08-02, USD, срок действия указан на странице).
+      // Сверено с независимым источником (сравнительная таблица eSIM.dog): Турция 15.99, Таиланд 10.99,
+      // Япония 17.99, Индонезия 21.99, Грузия 30.99 — совпали в обоих источниках.
+      {id:2,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Saily 20 ГБ',data:20,days:30,price:19.99,popular:2,coverage:'Таиланд',provider:'Saily',aff:AFF.saily,paid:false},
+      {id:5,type:'country',country:'ОАЭ',flag:'🇦🇪',name:'Saily 10 ГБ',data:10,days:30,price:19.99,popular:5,coverage:'ОАЭ',provider:'Saily',aff:AFF.saily,paid:false},
+      {id:6,type:'country',country:'Япония',flag:'🇯🇵',name:'Saily 20 ГБ',data:20,days:30,price:24.99,popular:6,coverage:'Япония',provider:'Saily',aff:AFF.saily,paid:false},
+      {id:7,type:'country',country:'Грузия',flag:'🇬🇪',name:'Saily 10 ГБ',data:10,days:30,price:30.99,popular:7,coverage:'Грузия',provider:'Saily',aff:AFF.saily,paid:false},
+      {id:8,type:'country',country:'Египет',flag:'🇪🇬',name:'Saily 10 ГБ',data:10,days:30,price:33.99,popular:8,coverage:'Египет',provider:'Saily',aff:AFF.saily,paid:false},
+      {id:4,type:'country',country:'Индонезия',flag:'🇮🇩',name:'Saily 10 ГБ',data:10,days:30,price:21.99,popular:4,coverage:'Индонезия',provider:'Saily',aff:AFF.saily,paid:false},
+      {id:10,type:'region',country:'Азия',flag:'🌏',name:'Saily Asia 10 ГБ',data:10,days:30,price:35.99,popular:2,coverage:'Азия и Океания',provider:'Saily',aff:AFF.saily,paid:false},
+      {id:11,type:'region',country:'Европа',flag:'🇪🇺',name:'Saily Europe 10 ГБ',data:10,days:30,price:35.99,popular:3,coverage:'Европа',provider:'Saily',aff:AFF.saily,paid:false},
+      // Airalo — безлимитные тарифы с их страниц направлений (проверено 2026-08-02, USD).
+      {id:3,type:'country',country:'ОАЭ',flag:'🇦🇪',name:'Airalo Unlimited 3д',data:999,days:3,price:12.5,popular:3,coverage:'ОАЭ · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
+      {id:12,type:'country',country:'ОАЭ',flag:'🇦🇪',name:'Airalo Unlimited 7д',data:999,days:7,price:27.5,popular:18,coverage:'ОАЭ · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
+      {id:9,type:'region',country:'Европа',flag:'🇪🇺',name:'Airalo Europe Unlimited 7д',data:999,days:7,price:27,popular:1,coverage:'Европа · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
+      {id:13,type:'region',country:'Европа',flag:'🇪🇺',name:'Airalo Europe Unlimited 30д',data:999,days:30,price:71,popular:5,coverage:'Европа · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
+      // eSIMCard — единственный тариф, который удалось подтвердить (проверено 2026-08-02).
+      {id:1,type:'country',country:'Турция',flag:'🇹🇷',name:'eSIMCard 25 ГБ',data:25,days:30,price:46.65,popular:19,coverage:'Турция',provider:'eSIMCard',aff:AFF.esimcard,paid:false},
       // Maya Mobile — снапшот их affiliate-фида assets.maya.net/affiliates/plans.json (global unlimited, реальные цены USD).
       // Монетизировано 2026-07-30: трекинг-ссылки Impact на страницы тарифов + персональный купон ESIMPIZZA −10%.
       {id:14,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 3д',data:999,days:3,price:9.99,popular:3,coverage:'180 стран · безлимит',provider:'Maya',aff:AFF.maya3,paid:true,promo:{code:'ESIMPIZZA',pct:0.10}},
@@ -545,7 +554,7 @@
       {i:'📱',t:'Проверьте телефон за 5 секунд',s:'Наберите *#06#. Если показан EID — ваш телефон поддерживает eSIM.'},
       {i:'💬',t:'Ваш номер останется с вами',s:'eSIM отвечает только за интернет. WhatsApp и Telegram — на прежнем номере.'},
       {i:'✈️',t:'Ставьте заранее, включайте на месте',s:'Установите eSIM дома по Wi-Fi, а активируйте после прилёта — срок обычно идёт с активации.'},
-      {i:'⚖️',t:'Сравниваем 6 провайдеров',s:'Superalink, Airalo, Yesim, Maya, Saily и eSIMCard — показываем, где для вашей страны выгоднее.'},
+      {i:'⚖️',t:'Сравниваем 4 провайдера',s:'Airalo, Maya, Saily и eSIMCard — показываем, где для вашей страны выгоднее.'},
       {i:'📶',t:'Раздача интернета разрешена',s:'На большинстве тарифов можно раздавать интернет с телефона на ноутбук.'},
       {i:'🤝',t:'Честно про ссылки',s:'Часть ссылок — партнёрские: мы можем получить комиссию, но цена для вас не меняется.'}
     ];
