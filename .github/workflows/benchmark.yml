@@ -24,6 +24,9 @@ jobs:
       - name: Fetch benchmark
         run: node scripts/fetch-benchmark.mjs
 
+      - name: Dump competitor market
+        run: node scripts/fetch-competitors.mjs
+
       - name: Commit if prices moved
         run: |
           if git diff --quiet -- data/; then
