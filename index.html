@@ -412,7 +412,7 @@
     };
     const plans = [
       {id:1,type:'country',country:'Турция',flag:'🇹🇷',name:'Superalink',data:10,days:30,price:8.9,popular:1,coverage:'Турция',provider:'Superalink',aff:AFF.superalink,paid:true,promo:{code:'ADD20',pct:0.2}},
-      {id:2,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Saily',data:20,days:30,price:14.9,popular:2,coverage:'Таиланд',provider:'Saily',aff:AFF.saily,paid:false},
+      {id:2,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Saily',data:20,days:30,price:19.99,popular:2,coverage:'Таиланд',provider:'Saily',aff:AFF.saily,paid:false},
       {id:3,type:'country',country:'ОАЭ',flag:'🇦🇪',name:'Airalo',data:5,days:15,price:11.5,popular:3,coverage:'ОАЭ',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:4,type:'country',country:'Индонезия',flag:'🇮🇩',name:'Yesim',data:10,days:30,price:10.9,popular:4,coverage:'Индонезия',provider:'Yesim',aff:AFF.yesim,paid:true},
       {id:5,type:'country',country:'Италия',flag:'🇮🇹',name:'eSIMCard',data:5,days:15,price:7.5,popular:5,coverage:'Италия',provider:'eSIMCard',aff:AFF.esimcard,paid:false},
@@ -420,7 +420,7 @@
       {id:7,type:'country',country:'Грузия',flag:'🇬🇪',name:'Yesim',data:10,days:30,price:12.2,popular:7,coverage:'Грузия',provider:'Yesim',aff:AFF.yesim,paid:true},
       {id:8,type:'country',country:'Египет',flag:'🇪🇬',name:'eSIMCard',data:5,days:15,price:12.9,popular:8,coverage:'Египет',provider:'eSIMCard',aff:AFF.esimcard,paid:false},
       {id:9,type:'region',country:'Европа',flag:'🇪🇺',name:'Airalo Europe',data:20,days:30,price:24.9,popular:1,coverage:'35 стран Европы',provider:'Airalo',aff:AFF.airalo,paid:true},
-      {id:10,type:'region',country:'Азия',flag:'🌏',name:'Saily Asia',data:10,days:30,price:21.5,popular:2,coverage:'14 стран Азии',provider:'Saily',aff:AFF.saily,paid:false},
+      {id:10,type:'region',country:'Азия',flag:'🌏',name:'Saily Asia',data:10,days:30,price:35.99,popular:2,coverage:'Азия и Океания',provider:'Saily',aff:AFF.saily,paid:false},
       {id:11,type:'region',country:'Ближний Восток',flag:'🧭',name:'Yesim Middle East',data:10,days:30,price:26.9,popular:3,coverage:'8 стран Ближнего Востока',provider:'Yesim',aff:AFF.yesim,paid:true},
       {id:12,type:'global',country:'Весь мир',flag:'🌍',name:'Airalo Global',data:20,days:60,price:44.9,popular:1,coverage:'120 стран',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:13,type:'global',country:'Весь мир',flag:'🌐',name:'Yesim Unlimited',data:999,days:30,price:69.9,popular:2,coverage:'105 стран',provider:'Yesim',aff:AFF.yesim,paid:true},
@@ -436,7 +436,13 @@
       {id:20,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Airalo Unlimited 30д',data:999,days:30,price:49,popular:11,coverage:'Таиланд · dtac',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:21,type:'country',country:'Индонезия',flag:'🇮🇩',name:'Airalo Unlimited',data:999,days:7,price:27,popular:12,coverage:'Индонезия',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:22,type:'country',country:'Япония',flag:'🇯🇵',name:'Airalo Unlimited',data:999,days:7,price:27,popular:13,coverage:'Япония · SoftBank',provider:'Airalo',aff:AFF.airalo,paid:true},
-      {id:23,type:'country',country:'Грузия',flag:'🇬🇪',name:'Airalo 10 ГБ',data:10,days:30,price:28.5,popular:14,coverage:'Грузия · Cellfie',provider:'Airalo',aff:AFF.airalo,paid:true}
+      {id:23,type:'country',country:'Грузия',flag:'🇬🇪',name:'Airalo 10 ГБ',data:10,days:30,price:28.5,popular:14,coverage:'Грузия · Cellfie',provider:'Airalo',aff:AFF.airalo,paid:true},
+      // Saily — РЕАЛЬНЫЕ цены с их страниц направлений (проверено 2026-08-02, USD).
+      // Сверено с независимым источником (сравнительная таблица eSIM.dog): Турция 10 ГБ 15.99 и Таиланд 10 ГБ 10.99 совпали.
+      {id:24,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Saily 10 ГБ',data:10,days:30,price:10.99,popular:15,coverage:'Таиланд',provider:'Saily',aff:AFF.saily,paid:false},
+      {id:25,type:'country',country:'Турция',flag:'🇹🇷',name:'Saily 20 ГБ',data:20,days:30,price:22.99,popular:16,coverage:'Турция',provider:'Saily',aff:AFF.saily,paid:false},
+      {id:26,type:'country',country:'Турция',flag:'🇹🇷',name:'Saily 10 ГБ',data:10,days:30,price:15.99,popular:17,coverage:'Турция',provider:'Saily',aff:AFF.saily,paid:false},
+      {id:27,type:'region',country:'Азия',flag:'🌏',name:'Saily Asia 25 ГБ',data:25,days:60,price:48.99,popular:4,coverage:'Азия и Океания',provider:'Saily',aff:AFF.saily,paid:false}
     ];
     const rates={USD:1,AED:3.67,RUB:79};
     const symbols={USD:'$',AED:'د.إ ',RUB:'₽'};
