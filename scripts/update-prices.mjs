@@ -32,6 +32,27 @@ const SOURCES = [
   { provider: 'Airalo', country: 'ОАЭ',       url: 'https://www.airalo.com/united-arab-emirates-esim' },
   { provider: 'Airalo', country: 'Европа',    url: 'https://www.airalo.com/europe-esim' },
   { provider: 'Airalo', country: 'Азия',      url: 'https://www.airalo.com/asia-esim' },
+  // Расширение каталога 2026-08-02
+  { provider: 'Saily', country: 'Италия',         url: 'https://saily.com/esim-italy/' },
+  { provider: 'Saily', country: 'Испания',        url: 'https://saily.com/esim-spain/' },
+  { provider: 'Saily', country: 'Франция',        url: 'https://saily.com/esim-france/' },
+  { provider: 'Saily', country: 'Германия',       url: 'https://saily.com/esim-germany/' },
+  { provider: 'Saily', country: 'Великобритания', url: 'https://saily.com/esim-united-kingdom/' },
+  { provider: 'Saily', country: 'США',            url: 'https://saily.com/esim-united-states/' },
+  { provider: 'Saily', country: 'Вьетнам',        url: 'https://saily.com/esim-vietnam/' },
+  { provider: 'Saily', country: 'Малайзия',       url: 'https://saily.com/esim-malaysia/' },
+  { provider: 'Saily', country: 'Сингапур',       url: 'https://saily.com/esim-singapore/' },
+  { provider: 'Saily', country: 'Мексика',        url: 'https://saily.com/esim-mexico/' },
+  { provider: 'Airalo', country: 'Италия',         url: 'https://www.airalo.com/italy-esim' },
+  { provider: 'Airalo', country: 'Испания',        url: 'https://www.airalo.com/spain-esim' },
+  { provider: 'Airalo', country: 'Франция',        url: 'https://www.airalo.com/france-esim' },
+  { provider: 'Airalo', country: 'Германия',       url: 'https://www.airalo.com/germany-esim' },
+  { provider: 'Airalo', country: 'Великобритания', url: 'https://www.airalo.com/united-kingdom-esim' },
+  { provider: 'Airalo', country: 'США',            url: 'https://www.airalo.com/united-states-esim' },
+  { provider: 'Airalo', country: 'Вьетнам',        url: 'https://www.airalo.com/vietnam-esim' },
+  { provider: 'Airalo', country: 'Малайзия',       url: 'https://www.airalo.com/malaysia-esim' },
+  { provider: 'Airalo', country: 'Сингапур',       url: 'https://www.airalo.com/singapore-esim' },
+  { provider: 'Airalo', country: 'Мексика',        url: 'https://www.airalo.com/mexico-esim' },
 ];
 
 // Saily: "* 10 GB" / "30 days" / "US$15.99" идут подряд отдельными строками.
