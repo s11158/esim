@@ -408,7 +408,12 @@
       maya3:'https://mayamobile.pxf.io/ZV4WMR',
       maya7:'https://mayamobile.pxf.io/zzqdom',
       maya14:'https://mayamobile.pxf.io/0GOav3',
-      maya30:'https://mayamobile.pxf.io/n4bd5x'
+      maya30:'https://mayamobile.pxf.io/n4bd5x',
+      // Stellar — трекинг-ссылка партнёрки stellarafi (аффилиат ESIM, кампания esim_pizza_comparison, кука 180 дней).
+      // ⚠️ Параметр redirect обязателен: без него ссылка уводит на stellarvpn.org, а не на eSIM,
+      // и продажа не засчитывается. Проверено запросом: с redirect отдаёт 302 на страницу тарифа с aff_session.
+      // К этой строке справа приклеивается слуг направления, например turkey-esim.
+      stellar:'https://stellarafi.com/r/ESIM?src=esim.pizza&campaign=esim_pizza_comparison&product=DIGITAL+Product&redirect=https%3A%2F%2Fstellarsecurity.com%2Fstellar-esim%2F'
     };
     const plans = [
       // ⚠️ ПРАВИЛО: в этом массиве только цены, подтверждённые реальным источником.
@@ -480,7 +485,27 @@
       {id:49,type:'country',country:'Сингапур',flag:'🇸🇬',name:'Saily 20 ГБ',data:20,days:30,price:22.99,popular:39,coverage:'Сингапур',provider:'Saily',aff:AFF.saily,paid:false},
       {id:50,type:'country',country:'Сингапур',flag:'🇸🇬',name:'Airalo Unlimited 7д',data:999,days:7,price:27,popular:40,coverage:'Сингапур · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:51,type:'country',country:'Мексика',flag:'🇲🇽',name:'Saily 20 ГБ',data:20,days:30,price:45.99,popular:41,coverage:'Мексика',provider:'Saily',aff:AFF.saily,paid:false},
-      {id:52,type:'country',country:'Мексика',flag:'🇲🇽',name:'Airalo Unlimited 7д',data:999,days:7,price:23.5,popular:42,coverage:'Мексика · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true}
+      {id:52,type:'country',country:'Мексика',flag:'🇲🇽',name:'Airalo Unlimited 7д',data:999,days:7,price:23.5,popular:42,coverage:'Мексика · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
+      // Stellar eSim (Stellar Technology AG, Женева) — цены из их публичного фида
+      // stellarsecurity.com/assets/esim/products.snapshot.json, конвертация EUR->USD по курсу ЕЦБ 1.1485 (31.07.2026).
+      // Взят тариф с лучшей ценой за ГБ среди пакетов от 5 ГБ и от 30 дней. Обновляется scripts/update-stellar.mjs.
+      {id:60,type:'country',country:'Турция',flag:'🇹🇷',name:'Stellar 10 ГБ',data:10,days:30,price:2.14,popular:43,coverage:'Турция · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'turkey-esim',paid:true},
+      {id:61,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Stellar 20 ГБ',data:20,days:30,price:6.18,popular:44,coverage:'Таиланд · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'thailand-esim',paid:true},
+      {id:62,type:'country',country:'ОАЭ',flag:'🇦🇪',name:'Stellar 20 ГБ',data:20,days:30,price:19.73,popular:45,coverage:'ОАЭ · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'united-arab-emirates-esim',paid:true},
+      {id:63,type:'country',country:'Индонезия',flag:'🇮🇩',name:'Stellar 50 ГБ',data:50,days:30,price:12.89,popular:46,coverage:'Индонезия · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'indonesia-esim',paid:true},
+      {id:64,type:'country',country:'Япония',flag:'🇯🇵',name:'Stellar 50 ГБ',data:50,days:30,price:12.89,popular:47,coverage:'Япония · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'japan-esim',paid:true},
+      {id:65,type:'country',country:'Грузия',flag:'🇬🇪',name:'Stellar 20 ГБ',data:20,days:30,price:12.75,popular:48,coverage:'Грузия · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'georgia-esim',paid:true},
+      {id:66,type:'country',country:'Египет',flag:'🇪🇬',name:'Stellar 20 ГБ',data:20,days:30,price:15.92,popular:49,coverage:'Египет · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'egypt-esim',paid:true},
+      {id:67,type:'country',country:'Италия',flag:'🇮🇹',name:'Stellar 50 ГБ',data:50,days:30,price:12.89,popular:50,coverage:'Италия · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'italy-esim',paid:true},
+      {id:68,type:'country',country:'Испания',flag:'🇪🇸',name:'Stellar 50 ГБ',data:50,days:30,price:12.89,popular:51,coverage:'Испания · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'spain-esim',paid:true},
+      {id:69,type:'country',country:'Франция',flag:'🇫🇷',name:'Stellar 50 ГБ',data:50,days:30,price:12.89,popular:52,coverage:'Франция · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'france-esim',paid:true},
+      {id:70,type:'country',country:'Германия',flag:'🇩🇪',name:'Stellar 50 ГБ',data:50,days:30,price:12.89,popular:53,coverage:'Германия · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'germany-esim',paid:true},
+      {id:71,type:'country',country:'Великобритания',flag:'🇬🇧',name:'Stellar 50 ГБ',data:50,days:30,price:12.89,popular:54,coverage:'Великобритания · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'united-kingdom-esim',paid:true},
+      {id:72,type:'country',country:'США',flag:'🇺🇸',name:'Stellar 15 ГБ',data:15,days:30,price:5.98,popular:55,coverage:'США · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'united-states-esim',paid:true},
+      {id:73,type:'country',country:'Вьетнам',flag:'🇻🇳',name:'Stellar 20 ГБ',data:20,days:30,price:9.43,popular:56,coverage:'Вьетнам · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'vietnam-esim',paid:true},
+      {id:74,type:'country',country:'Малайзия',flag:'🇲🇾',name:'Stellar 50 ГБ',data:50,days:30,price:12.89,popular:57,coverage:'Малайзия · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'malaysia-esim',paid:true},
+      {id:75,type:'country',country:'Сингапур',flag:'🇸🇬',name:'Stellar 50 ГБ',data:50,days:30,price:12.89,popular:58,coverage:'Сингапур · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'singapore-esim',paid:true},
+      {id:76,type:'country',country:'Мексика',flag:'🇲🇽',name:'Stellar 50 ГБ',data:50,days:30,price:42.91,popular:59,coverage:'Мексика · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'mexico-esim',paid:true}
     ];
     const rates={USD:1,AED:3.67,RUB:79};
     const symbols={USD:'$',AED:'د.إ ',RUB:'₽'};

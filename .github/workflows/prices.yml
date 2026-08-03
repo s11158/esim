@@ -24,6 +24,9 @@ jobs:
       - name: Pull prices from Saily and Airalo
         run: node scripts/update-prices.mjs
 
+      - name: Pull prices from Stellar (EUR feed, ECB rate)
+        run: node scripts/update-stellar.mjs
+
       - name: Commit if prices changed
         run: |
           if git diff --quiet -- index.html; then
