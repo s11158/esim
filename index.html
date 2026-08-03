@@ -86,6 +86,13 @@
     .field-label { display:block; color:var(--muted); font:600 10px/1 var(--mono); text-transform:uppercase; letter-spacing:.06em; margin:0 0 8px 2px; }
     .field-control { width:100%; min-height:52px; padding:0 14px; border:1px solid var(--line); border-radius:14px; color:var(--ink); background:white; outline:0; font-weight:650; }
     .field-control:focus { border-color:var(--tomato); box-shadow:0 0 0 3px rgba(217,71,47,.12); }
+    .chips { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 0; }
+    .chips:empty { margin:0; }
+    .chip { display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border:1px solid var(--line); border-radius:999px; background:white; font:650 12px/1 inherit; color:var(--ink); }
+    .chip button { border:0; background:none; padding:0; cursor:pointer; color:var(--muted); font:700 14px/1 inherit; }
+    .chip button:hover { color:var(--tomato); }
+    .suggest { margin-top:14px; }
+    .suggest b { display:block; margin-bottom:8px; }
     .builder-action { display:flex; align-items:center; justify-content:space-between; gap:18px; margin-top:14px; padding-top:16px; border-top:1px dashed var(--line); }
     .builder-hint { color:var(--muted); font-size:12px; max-width:220px; }
     .primary { border:0; border-radius:14px; padding:15px 22px; color:white; background:var(--tomato); font-weight:800; cursor:pointer; box-shadow:0 6px 0 var(--tomato-dark); transition:.15s ease; }
@@ -314,10 +321,11 @@
           <div class="builder-top"><h2>Подберите eSIM для поездки</h2><span class="ticket-no">подбор тарифа</span></div>
           <div class="builder-grid">
             <label class="field"><span class="field-label">Куда летите?</span><select class="field-control" id="countrySelect" required></select></label>
-            <label class="field"><span class="field-label">Сколько дней?</span><select class="field-control" id="daysSelect"><option>7</option><option>15</option><option selected>30</option><option>60</option></select></label>
-            <label class="field"><span class="field-label">Сколько ГБ?</span><select class="field-control" id="dataSelect"><option value="3">3 ГБ</option><option value="5">5 ГБ</option><option value="10" selected>10 ГБ</option><option value="20">20 ГБ</option><option value="999">Безлимит</option></select></label>
+            <label class="field"><span class="field-label">Сколько дней?</span><input class="field-control" id="daysInput" type="number" min="1" max="365" step="1" inputmode="numeric" placeholder="любой срок"></label>
+            <label class="field"><span class="field-label">Сколько ГБ?</span><input class="field-control" id="dataInput" type="number" min="1" max="500" step="1" inputmode="numeric" placeholder="любой объём"></label>
           </div>
-          <div class="builder-action"><span class="builder-hint">Покажем подходящие варианты и стоимость каждого гигабайта.</span><button class="primary" type="submit">Найти тарифы →</button></div>
+          <div class="chips" id="chosenCountries"></div>
+          <div class="builder-action"><span class="builder-hint">Можно выбрать несколько стран. Срок и объём — любые числа; пустое поле значит «не важно».</span><button class="primary" type="submit">Найти тарифы →</button></div>
         </form>
       </div>
     </section>
@@ -327,7 +335,7 @@
         <div class="trust-item"><span class="trust-icon">🏆</span><span><b>Гарантия лучшей цены</b><small>Найдёте дешевле — вернём разницу</small></span></div>
         <div class="trust-item"><span class="trust-icon">📡</span><span><b>Лучшие сети</b><small>4G / 5G без роуминга</small></span></div>
         <div class="trust-item"><span class="trust-icon">🛟</span><span><b>Люди в поддержке</b><small>Поможем с установкой</small></span></div>
-        <div class="trust-item"><span class="trust-icon">🛡️</span><span><b>Безопасная оплата</b><small>Карты и Apple Pay</small></span></div>
+        <div class="trust-item"><span class="trust-icon">🛡️</span><span><b>Оплата у провайдера</b><small>Мы не берём платежи и не храним данные карт</small></span></div>
       </div>
     </div>
 
@@ -351,7 +359,7 @@
         <div class="how-photo"><img src="assets/pizza-esim-install-warm-v2.webp" alt="Установка eSIM по QR-коду перед поездкой" width="1536" height="1024" loading="lazy"></div>
         <div class="how-copy"><span class="eyebrow" style="color:var(--yellow)">Как это работает</span><h2 id="how-title">Подключитесь до вылета</h2><div class="steps">
           <div class="step"><div class="step-num">01</div><div><h3>Сравните тарифы</h3><p>Выберите страну, срок поездки и нужный объём интернета.</p></div></div>
-          <div class="step"><div class="step-num">02</div><div><h3>Получите eSIM</h3><p>После оплаты QR-код и инструкция сразу придут на почту.</p></div></div>
+          <div class="step"><div class="step-num">02</div><div><h3>Получите eSIM</h3><p>Покупка и оплата — на сайте провайдера. QR-код и инструкцию он пришлёт сразу после оплаты.</p></div></div>
           <div class="step"><div class="step-num">03</div><div><h3>Подключитесь по прилёте</h3><p>Установите eSIM дома по Wi-Fi, а мобильные данные включите в поездке.</p></div></div>
         </div></div>
       </div>
@@ -484,7 +492,7 @@
     ];
     const rates={USD:1,AED:3.67,RUB:79};
     const symbols={USD:'$',AED:'د.إ ',RUB:'₽'};
-    let state={type:'country',country:'',days:0,data:0,sort:'recommended',currency:'USD'};
+    let state={type:'country',countries:[],days:0,data:0,sort:'recommended',currency:'USD'};
     let selectedPlan=null;
     let drawerReturnFocus=null;
 
@@ -493,7 +501,27 @@
     const resultCount=document.getElementById('resultCount');
     const clearFilter=document.getElementById('clearFilter');
     const uniqueCountries=[...new Set(plans.filter(p=>p.type==='country').map(p=>p.country))];
-    countrySelect.innerHTML='<option value="">Любая страна</option>'+uniqueCountries.map(c=>`<option>${c}</option>`).join('');
+    const chosenCountries=document.getElementById('chosenCountries');
+    const daysInput=document.getElementById('daysInput');
+    const dataInput=document.getElementById('dataInput');
+    function fillCountrySelect(){
+      countrySelect.innerHTML='<option value="">Любая страна</option>'+uniqueCountries.filter(c=>!state.countries.includes(c)).map(c=>`<option>${c}</option>`).join('');
+      countrySelect.value='';
+    }
+    function renderChips(){
+      chosenCountries.innerHTML=state.countries.map(c=>`<span class="chip">${c}<button type="button" data-remove="${c}" aria-label="Убрать ${c}">×</button></span>`).join('');
+    }
+    chosenCountries.addEventListener('click',e=>{
+      const btn=e.target.closest('[data-remove]'); if(!btn)return;
+      state.countries=state.countries.filter(c=>c!==btn.dataset.remove);
+      fillCountrySelect(); renderChips(); render();
+    });
+    countrySelect.addEventListener('change',()=>{
+      const value=countrySelect.value; if(!value)return;
+      if(!state.countries.includes(value)) state.countries.push(value);
+      fillCountrySelect(); renderChips(); if(state.type==='country') render();
+    });
+    fillCountrySelect();
 
     function money(value){
       const converted=value*rates[state.currency];
@@ -504,27 +532,45 @@
     // Цена с учётом нашего промокода. base price → эффективная цена (что реально платит пользователь по коду).
     function eff(p){return p.promo?Math.round(p.price*(1-p.promo.pct)*100)/100:p.price;}
     function promoPct(p){return p.promo?Math.round(p.promo.pct*100):0;}
+    const sorters={priceAsc:(a,b)=>eff(a)-eff(b),dataDesc:(a,b)=>b.data-a.data,daysDesc:(a,b)=>b.days-a.days,unitAsc:(a,b)=>(eff(a)/(a.data===999?100:a.data))-(eff(b)/(b.data===999?100:b.data)),recommended:(a,b)=>a.popular-b.popular};
     function filteredPlans(){
       let list=plans.filter(p=>p.type===state.type);
-      if(state.country) list=list.filter(p=>p.country===state.country);
+      if(state.type==='country'&&state.countries.length) list=list.filter(p=>state.countries.includes(p.country));
       if(state.days) list=list.filter(p=>p.days>=state.days);
       if(state.data) list=list.filter(p=>p.data>=state.data);
-      const sorters={priceAsc:(a,b)=>eff(a)-eff(b),dataDesc:(a,b)=>b.data-a.data,daysDesc:(a,b)=>b.days-a.days,unitAsc:(a,b)=>(eff(a)/(a.data===999?100:a.data))-(eff(b)/(b.data===999?100:b.data)),recommended:(a,b)=>a.popular-b.popular};
-      return list.sort(sorters[state.sort]);
+      return list.slice().sort(sorters[state.sort]);
     }
-    function render(){
-      const list=filteredPlans();
-      resultCount.textContent=`Найдено: ${list.length} ${list.length===1?'тариф':'тарифов'}`;
-      clearFilter.hidden=!(state.country||state.days||state.data);
-      grid.innerHTML=list.length?list.map((p,i)=>`<article class="plan-card ${i===0?'featured':''}">
+    // Когда точных совпадений нет — показываем ближайшие: сохраняем выбранные страны,
+    // отпускаем срок и объём и ранжируем по тому, насколько тариф недотягивает до запроса.
+    function nearestPlans(){
+      let list=plans.filter(p=>p.type===state.type);
+      if(state.type==='country'&&state.countries.length) list=list.filter(p=>state.countries.includes(p.country));
+      if(!list.length) list=plans.filter(p=>p.type===state.type);
+      const miss=p=>(state.days?Math.max(0,state.days-p.days)/state.days:0)+(state.data?Math.max(0,state.data-p.data)/state.data:0);
+      return list.slice().sort((a,b)=>miss(a)-miss(b)||eff(a)/(a.data===999?100:a.data)-eff(b)/(b.data===999?100:b.data)).slice(0,3);
+    }
+    function planCard(p,featured){
+      return `<article class="plan-card ${featured?'featured':''}">
         <div class="card-top"><div class="country-name"><span class="flag">${p.flag}</span>${p.country}</div>${p.popular<=2?'<span class="popular">рекомендуем</span>':''}</div>
         <div class="pizza-size" aria-hidden="true"><span>${dataLabel(p.data).replace(' ','<br>')}</span></div>
         <h3 class="plan-name">${p.name}</h3><p class="plan-meta">${p.days} дней · 4G/5G · hotspot</p>
         <div class="plan-bottom"><div class="price">${money(eff(p))} <small>${p.data===999?'безлимит':money(eff(p)/p.data)+'/ГБ'}</small>${p.promo?`<span class="promo-code"><s>${money(p.price)}</s> код ${p.promo.code} −${promoPct(p)}%</span>`:''}</div><button class="choose" data-plan="${p.id}">Выбрать →</button></div>
-      </article>`).join(''):'<div class="empty"><b>Подходящих тарифов не найдено.</b><br>Попробуйте уменьшить срок или объём интернета.</div>';
+      </article>`;
+    }
+    function plural(n){const t=n%10,h=n%100;return t===1&&h!==11?'тариф':(t>=2&&t<=4&&(h<12||h>14)?'тарифа':'тарифов');}
+    function render(){
+      const list=filteredPlans();
+      resultCount.textContent=`Найдено: ${list.length} ${plural(list.length)}`;
+      clearFilter.hidden=!(state.countries.length||state.days||state.data);
+      if(list.length){
+        grid.innerHTML=list.map((p,i)=>planCard(p,i===0)).join('');
+      }else{
+        const near=nearestPlans();
+        grid.innerHTML='<div class="empty"><b>Точных совпадений нет.</b><br>Показываем ближайшие варианты — в них может быть меньше гигабайт или короче срок.</div>'+near.map(p=>planCard(p,false)).join('');
+      }
     }
     function setType(type){
-      state.type=type; if(type!=='country') state.country='';
+      state.type=type; if(type!=='country'){state.countries=[];fillCountrySelect();renderChips();}
       document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected',String(t.dataset.type===type)));
       render();
     }
@@ -533,9 +579,21 @@
     document.getElementById('currency').addEventListener('change',e=>{state.currency=e.target.value;render();if(selectedPlan)openDrawer(selectedPlan.id);});
     document.querySelectorAll('[data-scroll-catalog]').forEach(b=>b.addEventListener('click',()=>document.getElementById('catalog').scrollIntoView({behavior:'smooth'})));
     document.getElementById('builder').addEventListener('submit',e=>{
-      e.preventDefault(); state.type='country'; state.country=countrySelect.value; state.days=Number(document.getElementById('daysSelect').value); state.data=Number(document.getElementById('dataSelect').value); setType('country'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});
+      e.preventDefault();
+      // Селект «Куда летите?» уже добавляет страну чипом по change — здесь только подхватываем
+      // страну, которую пользователь выбрал и сразу отправил форму, не отпуская select.
+      const pending=countrySelect.value;
+      if(pending&&!state.countries.includes(pending)){state.countries.push(pending);fillCountrySelect();renderChips();}
+      const days=Number(daysInput.value), data=Number(dataInput.value);
+      state.days=Number.isFinite(days)&&days>0?days:0;
+      state.data=Number.isFinite(data)&&data>0?data:0;
+      setType('country'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});
     });
-    clearFilter.addEventListener('click',()=>{state.country='';state.days=0;state.data=0;countrySelect.value='';render();});
+    clearFilter.addEventListener('click',()=>{
+      state.countries=[];state.days=0;state.data=0;
+      daysInput.value='';dataInput.value='';
+      fillCountrySelect();renderChips();render();
+    });
     grid.addEventListener('click',e=>{const btn=e.target.closest('[data-plan]');if(btn)openDrawer(Number(btn.dataset.plan));});
 
     const drawer=document.getElementById('drawer');
