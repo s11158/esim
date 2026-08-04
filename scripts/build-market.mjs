@@ -14,7 +14,7 @@
 //   data/market-gaps.csv    — по направлению: дно рынка против нашего лучшего
 //
 // Запуск: node scripts/build-market.mjs [страна ...]
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { writeFileSync, mkdirSync, readFileSync } from 'node:fs';
 
 const UA = 'esim.pizza market map';
 const READER = (url) => `https://r.jina.ai/${url}`;
@@ -139,6 +139,70 @@ async function fromDog(dest) {
   }
 }
 
+// --- eSimerge: оптовый каталог, цены в риалах. Это наша себестоимость, а не рынок,
+// поэтому строки идут в отдельный локальный файл и в публичный репозиторий не попадают.
+const SAR_USD = 0.2666;
+const wholesale = [];
+async function fromEsimerge() {
+  let key = process.env.ESIMERGE_LIVE_KEY;
+  if (!key) {
+    try {
+      const file = readFileSync(process.env.ESIMERGE_KEY_FILE || 'C:/Users/LENOVO/Downloads/esimerge_key.txt', 'utf8');
+      key = (file.match(/^ESIMERGE_LIVE_KEY=(.+)$/m) || [])[1]?.trim();
+    } catch { /* ниже */ }
+  }
+  if (!key) { notes.push('eSimerge: ключ не найден — опт в отчёт не попал'); return; }
+
+  const names = new Map(DESTINATIONS.map((d) => [d.title.toLowerCase(), d]));
+  for (let offset = 0; offset < 20000; offset += 1000) {
+    // Портал регулярно отдаёт 502 на большой странице — это их шлюз, а не наш ключ,
+    // поэтому пробуем несколько раз, прежде чем считать источник недоступным.
+    let res = null;
+    for (let attempt = 1; attempt <= 4; attempt += 1) {
+      res = await fetch(`https://portal.esimerge.com/api/public/v1/catalog?limit=1000&offset=${offset}`, {
+        headers: { Authorization: `Bearer ${key}`, Accept: 'application/json', 'User-Agent': UA },
+      }).catch(() => null);
+      if (res?.ok) break;
+      if (res && res.status !== 502 && res.status !== 429) break;
+      await new Promise((r) => setTimeout(r, attempt * 2000));
+    }
+    if (!res?.ok) {
+      notes.push(`eSimerge: HTTP ${res ? res.status : 'нет ответа'} на offset ${offset}${res?.status === 401 || res?.status === 403 ? ' — ключ отозван, перевыпустить в портале' : ' — временный сбой их шлюза'}`);
+      return;
+    }
+    const page = await res.json();
+    const items = page.data || [];
+    if (!items.length) break;
+    // Неполная страница — она последняя. Дальше идти нельзя: за концом каталога
+    // их шлюз отвечает 502, и это выглядело бы как отзыв ключа.
+    const isLastPage = items.length < 1000;
+    for (const p of items) {
+      const blob = JSON.stringify(p).toLowerCase();
+      const dest = DESTINATIONS.find((d) => blob.includes(`"${d.key}"`) || blob.includes(d.key)) || names.get('');
+      if (!dest) continue;
+      const gb = Number(p.data_mb ?? p.data ?? 0) / 1024;
+      // Безлимиты приходят синтетическим объёмом в терабайтах — в сравнении по цене
+      // за гигабайт они дают ноль и вытесняют реальные тарифы наверх.
+      if (!(gb > 0) || gb > 1000) continue;
+      const usd = +(Number(p.price_sar ?? p.price ?? 0) * SAR_USD).toFixed(2);
+      if (!(usd > 0)) continue;
+      wholesale.push({
+        country: dest.key,
+        provider: 'eSimerge (опт)',
+        name: p.name || '',
+        gb: +gb.toFixed(1),
+        days: Number(p.validity_days ?? p.validity ?? 0),
+        usd,
+        // считаем сразу: страница может оборваться на сбое их шлюза, и добор
+        // цены за гигабайт «потом» тогда не выполнится вовсе
+        perGb: +(usd / gb).toFixed(3),
+        source: 'esimerge api',
+      });
+    }
+    if (isLastPage) break;
+  }
+}
+
 const rate = await eurUsd();
 const only = process.argv.slice(2);
 const targets = only.length ? DESTINATIONS.filter((d) => only.includes(d.key)) : DESTINATIONS;
@@ -152,16 +216,30 @@ if (rows.length === beforeMaya) {
   notes.push('Maya: страновых тарифов нет — только глобальные безлимиты, в карту не попадают');
 }
 for (const dest of targets) await fromDog(dest);
+await fromEsimerge();
 
 // --- отчёт: где наш лучший вариант проигрывает рынку ---
 const partners = new Set(Object.entries(COMMISSION).filter(([, pct]) => pct > 0).map(([name]) => name));
 const gaps = [];
+const costLines = [];
 for (const dest of DESTINATIONS) {
   const here = rows.filter((r) => r.country === dest.key);
   if (!here.length) continue;
   const best = here.reduce((a, b) => (a.perGb <= b.perGb ? a : b));
   const ours = here.filter((r) => partners.has(r.provider));
   const bestOurs = ours.length ? ours.reduce((a, b) => (a.perGb <= b.perGb ? a : b)) : null;
+  const cost = wholesale.filter((r) => r.country === dest.key);
+  const bestCost = cost.length ? cost.reduce((a, b) => (a.perGb <= b.perGb ? a : b)) : null;
+  costLines.push({
+    country: dest.key,
+    title: dest.title,
+    marketBest: best.perGb,
+    marketBestProvider: best.provider,
+    ourCost: bestCost ? bestCost.perGb : '',
+    ourCostPlan: bestCost ? `${bestCost.gb}GB/${bestCost.days}d $${bestCost.usd}` : '',
+    // во сколько раз мы могли бы продавать дешевле рынка, если бы торговали сами
+    couldUndercut: bestCost ? +(best.perGb / bestCost.perGb).toFixed(2) : '',
+  });
   gaps.push({
     country: dest.key,
     title: dest.title,
@@ -183,8 +261,22 @@ writeFileSync(new URL('../data/market-map.csv', import.meta.url),
 writeFileSync(new URL('../data/market-gaps.csv', import.meta.url),
   csv(['country', 'title', 'marketBest', 'marketBestProvider', 'oursBest', 'oursBestProvider', 'ratio', 'action'], gaps), 'utf8');
 
+// Себестоимость — только локально: имя по маске *.local.csv закрыто .gitignore.
+if (wholesale.length) {
+  writeFileSync(new URL('../data/market-wholesale.local.csv', import.meta.url),
+    csv(['country', 'provider', 'name', 'gb', 'days', 'usd', 'perGb', 'source'], wholesale.sort((a, b) => a.country.localeCompare(b.country) || a.perGb - b.perGb)), 'utf8');
+  writeFileSync(new URL('../data/market-cost-vs-retail.local.csv', import.meta.url),
+    csv(['country', 'title', 'marketBest', 'marketBestProvider', 'ourCost', 'ourCostPlan', 'couldUndercut'], costLines), 'utf8');
+}
+
 console.log(`тарифов собрано: ${rows.length}, направлений: ${new Set(rows.map((r) => r.country)).size}`);
 for (const g of gaps) {
   console.log(`${g.title.padEnd(10)} дно $${g.marketBest}/ГБ (${g.marketBestProvider})   наш лучший ${g.oursBest ? '$' + g.oursBest + '/ГБ (' + g.oursBestProvider + ')' : '—'}   ${g.action}`);
+}
+if (costLines.some((c) => c.ourCost)) {
+  console.log('\nсебестоимость против рынка (локально, в репозиторий не идёт):');
+  for (const c of costLines.filter((x) => x.ourCost)) {
+    console.log(`${c.title.padEnd(10)} рынок $${c.marketBest}/ГБ   наш опт $${c.ourCost}/ГБ (${c.ourCostPlan})   дешевле рынка в ${c.couldUndercut}x`);
+  }
 }
 if (notes.length) console.log('\nзамечания:\n' + notes.map((n) => ' - ' + n).join('\n'));
