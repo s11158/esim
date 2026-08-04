@@ -27,6 +27,12 @@ jobs:
       - name: Dump competitor market
         run: node scripts/fetch-competitors.mjs
 
+      # Карта рынка по прямым фидам провайдеров. Отдельно от дампа агрегатора:
+      # тот показывает, кто вообще есть на направлении, а эта таблица — по каким
+      # ценам мы реально можем продавать и где у нас нет партнёра.
+      - name: Build market map
+        run: node scripts/build-market.mjs
+
       - name: Commit if prices moved
         run: |
           if git diff --quiet -- data/; then

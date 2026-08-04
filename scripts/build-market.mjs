@@ -144,7 +144,13 @@ const only = process.argv.slice(2);
 const targets = only.length ? DESTINATIONS.filter((d) => only.includes(d.key)) : DESTINATIONS;
 
 await fromStellar(rate);
+const beforeMaya = rows.length;
 await fromMaya();
+if (rows.length === beforeMaya) {
+  // Ожидаемо: Maya продаёт только глобальные безлимиты, страновых тарифов у неё нет.
+  // Держим строку в отчёте, чтобы «ноль от Maya» читался как факт, а не как сбой фида.
+  notes.push('Maya: страновых тарифов нет — только глобальные безлимиты, в карту не попадают');
+}
 for (const dest of targets) await fromDog(dest);
 
 // --- отчёт: где наш лучший вариант проигрывает рынку ---
