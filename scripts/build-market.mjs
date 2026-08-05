@@ -31,6 +31,9 @@ const COMMISSION = {
 };
 
 // Направления: слаг esim.dog, название в фиде Stellar, человеческое имя.
+// Слаги Stellar — только одностраничные продукты: у них есть и региональные пакеты
+// вроде singapore-malaysia-thailand-esim, но их цена за гигабайт несравнима с местным
+// тарифом и перекашивает «дно рынка» по конкретной стране.
 const DESTINATIONS = [
   { key: 'canada', dog: 'ca', stellar: 'canada-esim', title: 'Канада' },
   { key: 'turkey', dog: 'tr', stellar: 'turkey-esim', title: 'Турция' },
@@ -41,8 +44,17 @@ const DESTINATIONS = [
   { key: 'uae', dog: 'ae', stellar: 'united-arab-emirates-esim', title: 'ОАЭ' },
   { key: 'italy', dog: 'it', stellar: 'italy-esim', title: 'Италия' },
   { key: 'spain', dog: 'es', stellar: 'spain-esim', title: 'Испания' },
-  // У Stellar нет продукта по США — там eSIM продают не все, проверено 04.08.2026.
-  { key: 'usa', dog: 'us', stellar: null, title: 'США' },
+  { key: 'usa', dog: 'us', stellar: 'united-states-esim', title: 'США' },
+  { key: 'france', dog: 'fr', stellar: 'france-esim', title: 'Франция' },
+  { key: 'germany', dog: 'de', stellar: 'germany-esim', title: 'Германия' },
+  { key: 'uk', dog: 'gb', stellar: 'united-kingdom-esim', title: 'Британия' },
+  { key: 'indonesia', dog: 'id', stellar: 'indonesia-esim', title: 'Индонезия' },
+  { key: 'malaysia', dog: 'my', stellar: 'malaysia-esim', title: 'Малайзия' },
+  { key: 'singapore', dog: 'sg', stellar: 'singapore-esim', title: 'Сингапур' },
+  { key: 'mexico', dog: 'mx', stellar: 'mexico-esim', title: 'Мексика' },
+  { key: 'egypt', dog: 'eg', stellar: 'egypt-esim', title: 'Египет' },
+  { key: 'greece', dog: 'gr', stellar: 'greece-esim', title: 'Греция' },
+  { key: 'china', dog: 'cn', stellar: 'china-esim', title: 'Китай' },
 ];
 
 const rows = [];
@@ -222,13 +234,23 @@ await fromEsimerge();
 const partners = new Set(Object.entries(COMMISSION).filter(([, pct]) => pct > 0).map(([name]) => name));
 const gaps = [];
 const costLines = [];
+// Сравниваем только сопоставимое. Цена за гигабайт у мелких пакетов почти всегда ниже:
+// у Stellar 3 ГБ / 30 дней стоит $0.62 и бьёт по этой метрике любые 50 ГБ конкурента.
+// Поездочный минимум — от 10 ГБ и от 14 дней; всё, что меньше, в сравнение дна не идёт.
+const TRIP_MIN_GB = 10;
+const TRIP_MIN_DAYS = 14;
+const forTrip = (r) => r.gb >= TRIP_MIN_GB && r.days >= TRIP_MIN_DAYS;
+
 for (const dest of DESTINATIONS) {
-  const here = rows.filter((r) => r.country === dest.key);
+  const here = rows.filter((r) => r.country === dest.key && forTrip(r));
   if (!here.length) continue;
   const best = here.reduce((a, b) => (a.perGb <= b.perGb ? a : b));
   const ours = here.filter((r) => partners.has(r.provider));
   const bestOurs = ours.length ? ours.reduce((a, b) => (a.perGb <= b.perGb ? a : b)) : null;
-  const cost = wholesale.filter((r) => r.country === dest.key);
+  // Пакеты от 500 ГБ у eSimerge неотличимы от безлимитов с синтетическим объёмом:
+  // США «1000 ГБ за $12.13» дало бы $0.012/ГБ и обрушило бы всю таблицу. В локальный
+  // файл они попадают, в сравнение — нет, пока поставщик не подтвердит, что это реальный объём.
+  const cost = wholesale.filter((r) => r.country === dest.key && forTrip(r) && r.gb < 500);
   const bestCost = cost.length ? cost.reduce((a, b) => (a.perGb <= b.perGb ? a : b)) : null;
   costLines.push({
     country: dest.key,
