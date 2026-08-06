@@ -2,16 +2,16 @@
 // умеем читать машинно, плюс отчёт «где мы проигрываем».
 //
 // Зачем отдельно от fetch-competitors.mjs: тот берёт esimdb и видит только то, что
-// попало в серверный HTML. Проверено 04.08.2026 на Канаде — там нет ни Movisim 75 ГБ
+// попало в серверный HTML. Проверено 04.08.2026 на Канаде - там нет ни Movisim 75 ГБ
 // за $19.99, ни нашего же Stellar 75 ГБ за $22.12, хотя в интерфейсе сайта они есть.
 // Агрегатор годится как список имён провайдеров, но не как источник цен.
 //
-// Здесь каждая цена приходит из фида самого провайдера. Что не читается машинно —
+// Здесь каждая цена приходит из фида самого провайдера. Что не читается машинно -
 // в таблицу не попадает совсем, чтобы не смешивать проверенное с приблизительным.
 //
 // Выход:
-//   data/market-map.csv     — все тарифы всех источников, нормализованные
-//   data/market-gaps.csv    — по направлению: дно рынка против нашего лучшего
+//   data/market-map.csv     - все тарифы всех источников, нормализованные
+//   data/market-gaps.csv    - по направлению: дно рынка против нашего лучшего
 //
 // Запуск: node scripts/build-market.mjs [страна ...]
 import { writeFileSync, mkdirSync, readFileSync } from 'node:fs';
@@ -19,7 +19,7 @@ import { writeFileSync, mkdirSync, readFileSync } from 'node:fs';
 const UA = 'esim.pizza market map';
 const READER = (url) => `https://r.jina.ai/${url}`;
 
-// Комиссия — только там, где партнёрство подтверждено письмом. Ноль означает
+// Комиссия - только там, где партнёрство подтверждено письмом. Ноль означает
 // «продаём себе в убыток по времени, но по лучшей цене», и это осознанно.
 const COMMISSION = {
   Stellar: 0.10,
@@ -31,7 +31,7 @@ const COMMISSION = {
 };
 
 // Направления: слаг esim.dog, название в фиде Stellar, человеческое имя.
-// Слаги Stellar — только одностраничные продукты: у них есть и региональные пакеты
+// Слаги Stellar - только одностраничные продукты: у них есть и региональные пакеты
 // вроде singapore-malaysia-thailand-esim, но их цена за гигабайт несравнима с местным
 // тарифом и перекашивает «дно рынка» по конкретной стране.
 const DESTINATIONS = [
@@ -132,7 +132,7 @@ async function fromDog(dest) {
     try {
       const text = await (await fetch(READER(url), { headers: { 'User-Agent': UA } })).text();
       // Страница печатает подобранный тариф как «30GB • 14d$21.76». Если точного
-      // размера нет, eSIM.dog молча отдаёт ближайший — поэтому сверяем, что вернули
+      // размера нет, eSIM.dog молча отдаёт ближайший - поэтому сверяем, что вернули
       // именно запрошенное, иначе цена уедет не к тому объёму.
       const m = text.match(new RegExp(`${gb}GB\\s*.\\s*${days}d\\$([0-9]+\\.[0-9]{2})`));
       if (!m) continue;
@@ -163,11 +163,11 @@ async function fromEsimerge() {
       key = (file.match(/^ESIMERGE_LIVE_KEY=(.+)$/m) || [])[1]?.trim();
     } catch { /* ниже */ }
   }
-  if (!key) { notes.push('eSimerge: ключ не найден — опт в отчёт не попал'); return; }
+  if (!key) { notes.push('eSimerge: ключ не найден - опт в отчёт не попал'); return; }
 
   const names = new Map(DESTINATIONS.map((d) => [d.title.toLowerCase(), d]));
   for (let offset = 0; offset < 20000; offset += 1000) {
-    // Портал регулярно отдаёт 502 на большой странице — это их шлюз, а не наш ключ,
+    // Портал регулярно отдаёт 502 на большой странице - это их шлюз, а не наш ключ,
     // поэтому пробуем несколько раз, прежде чем считать источник недоступным.
     let res = null;
     for (let attempt = 1; attempt <= 4; attempt += 1) {
@@ -179,13 +179,13 @@ async function fromEsimerge() {
       await new Promise((r) => setTimeout(r, attempt * 2000));
     }
     if (!res?.ok) {
-      notes.push(`eSimerge: HTTP ${res ? res.status : 'нет ответа'} на offset ${offset}${res?.status === 401 || res?.status === 403 ? ' — ключ отозван, перевыпустить в портале' : ' — временный сбой их шлюза'}`);
+      notes.push(`eSimerge: HTTP ${res ? res.status : 'нет ответа'} на offset ${offset}${res?.status === 401 || res?.status === 403 ? ' - ключ отозван, перевыпустить в портале' : ' - временный сбой их шлюза'}`);
       return;
     }
     const page = await res.json();
     const items = page.data || [];
     if (!items.length) break;
-    // Неполная страница — она последняя. Дальше идти нельзя: за концом каталога
+    // Неполная страница - она последняя. Дальше идти нельзя: за концом каталога
     // их шлюз отвечает 502, и это выглядело бы как отзыв ключа.
     const isLastPage = items.length < 1000;
     for (const p of items) {
@@ -193,7 +193,7 @@ async function fromEsimerge() {
       const dest = DESTINATIONS.find((d) => blob.includes(`"${d.key}"`) || blob.includes(d.key)) || names.get('');
       if (!dest) continue;
       const gb = Number(p.data_mb ?? p.data ?? 0) / 1024;
-      // Безлимиты приходят синтетическим объёмом в терабайтах — в сравнении по цене
+      // Безлимиты приходят синтетическим объёмом в терабайтах - в сравнении по цене
       // за гигабайт они дают ноль и вытесняют реальные тарифы наверх.
       if (!(gb > 0) || gb > 1000) continue;
       const usd = +(Number(p.price_sar ?? p.price ?? 0) * SAR_USD).toFixed(2);
@@ -225,7 +225,7 @@ await fromMaya();
 if (rows.length === beforeMaya) {
   // Ожидаемо: Maya продаёт только глобальные безлимиты, страновых тарифов у неё нет.
   // Держим строку в отчёте, чтобы «ноль от Maya» читался как факт, а не как сбой фида.
-  notes.push('Maya: страновых тарифов нет — только глобальные безлимиты, в карту не попадают');
+  notes.push('Maya: страновых тарифов нет - только глобальные безлимиты, в карту не попадают');
 }
 for (const dest of targets) await fromDog(dest);
 await fromEsimerge();
@@ -236,7 +236,7 @@ const gaps = [];
 const costLines = [];
 // Сравниваем только сопоставимое. Цена за гигабайт у мелких пакетов почти всегда ниже:
 // у Stellar 3 ГБ / 30 дней стоит $0.62 и бьёт по этой метрике любые 50 ГБ конкурента.
-// Поездочный минимум — от 10 ГБ и от 14 дней; всё, что меньше, в сравнение дна не идёт.
+// Поездочный минимум - от 10 ГБ и от 14 дней; всё, что меньше, в сравнение дна не идёт.
 const TRIP_MIN_GB = 10;
 const TRIP_MIN_DAYS = 14;
 const forTrip = (r) => r.gb >= TRIP_MIN_GB && r.days >= TRIP_MIN_DAYS;
@@ -249,7 +249,7 @@ for (const dest of DESTINATIONS) {
   const bestOurs = ours.length ? ours.reduce((a, b) => (a.perGb <= b.perGb ? a : b)) : null;
   // Пакеты от 500 ГБ у eSimerge неотличимы от безлимитов с синтетическим объёмом:
   // США «1000 ГБ за $12.13» дало бы $0.012/ГБ и обрушило бы всю таблицу. В локальный
-  // файл они попадают, в сравнение — нет, пока поставщик не подтвердит, что это реальный объём.
+  // файл они попадают, в сравнение - нет, пока поставщик не подтвердит, что это реальный объём.
   const cost = wholesale.filter((r) => r.country === dest.key && forTrip(r) && r.gb < 500);
   const bestCost = cost.length ? cost.reduce((a, b) => (a.perGb <= b.perGb ? a : b)) : null;
   costLines.push({
@@ -272,7 +272,7 @@ for (const dest of DESTINATIONS) {
     // во сколько раз наш лучший дороже рыночного дна: >1 значит, что по этому
     // направлению нам нужен новый поставщик, а не новая скидка у старого
     ratio: bestOurs ? +(bestOurs.perGb / best.perGb).toFixed(2) : '',
-    action: bestOurs ? (bestOurs.perGb <= best.perGb * 1.05 ? 'ок' : `написать ${best.provider}`) : `нет партнёра — написать ${best.provider}`,
+    action: bestOurs ? (bestOurs.perGb <= best.perGb * 1.05 ? 'ок' : `написать ${best.provider}`) : `нет партнёра - написать ${best.provider}`,
   });
 }
 
@@ -283,7 +283,7 @@ writeFileSync(new URL('../data/market-map.csv', import.meta.url),
 writeFileSync(new URL('../data/market-gaps.csv', import.meta.url),
   csv(['country', 'title', 'marketBest', 'marketBestProvider', 'oursBest', 'oursBestProvider', 'ratio', 'action'], gaps), 'utf8');
 
-// Себестоимость — только локально: имя по маске *.local.csv закрыто .gitignore.
+// Себестоимость - только локально: имя по маске *.local.csv закрыто .gitignore.
 if (wholesale.length) {
   writeFileSync(new URL('../data/market-wholesale.local.csv', import.meta.url),
     csv(['country', 'provider', 'name', 'gb', 'days', 'usd', 'perGb', 'source'], wholesale.sort((a, b) => a.country.localeCompare(b.country) || a.perGb - b.perGb)), 'utf8');
@@ -293,7 +293,7 @@ if (wholesale.length) {
 
 console.log(`тарифов собрано: ${rows.length}, направлений: ${new Set(rows.map((r) => r.country)).size}`);
 for (const g of gaps) {
-  console.log(`${g.title.padEnd(10)} дно $${g.marketBest}/ГБ (${g.marketBestProvider})   наш лучший ${g.oursBest ? '$' + g.oursBest + '/ГБ (' + g.oursBestProvider + ')' : '—'}   ${g.action}`);
+  console.log(`${g.title.padEnd(10)} дно $${g.marketBest}/ГБ (${g.marketBestProvider})   наш лучший ${g.oursBest ? '$' + g.oursBest + '/ГБ (' + g.oursBestProvider + ')' : '-'}   ${g.action}`);
 }
 if (costLines.some((c) => c.ourCost)) {
   console.log('\nсебестоимость против рынка (локально, в репозиторий не идёт):');
