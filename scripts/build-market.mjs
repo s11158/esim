@@ -121,12 +121,91 @@ async function fromMaya() {
   }
 }
 
+// --- Airalo: цены лежат в payload их Nuxt-страницы, в теге __NUXT_DATA__.
+// Это плоский массив, где число означает ссылку на другой элемент массива.
+// Регулярка по HTML тут не годится: на странице Канады рядом с канадскими тарифами
+// висят карибские и североамериканские региональные пакеты. Поэтому берём массив
+// packages именно у объекта страны, чей слаг совпадает с открытой страницей.
+//
+// Слаги страниц Airalo совпали со слагами Stellar по всем двадцати направлениям
+// (проверено 09.08.2026 запросом каждой страницы). Поле airalo нужно на случай,
+// когда они разойдутся.
+const airaloSlug = (d) => d.airalo || d.stellar;
+async function fromAiralo(dest) {
+  const slug = airaloSlug(dest);
+  const url = `https://www.airalo.com/${slug}`;
+  try {
+    const res = await fetch(url, { headers: { 'User-Agent': UA } });
+    if (!res.ok) { notes.push(`Airalo ${dest.key}: HTTP ${res.status}`); return; }
+    const html = await res.text();
+    const tag = html.match(/<script[^>]*id="__NUXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
+    if (!tag) { notes.push(`Airalo ${dest.key}: на странице нет __NUXT_DATA__, разметка изменилась`); return; }
+    const flat = JSON.parse(tag[1]);
+    const deref = (i, depth = 0) => (depth > 8 ? null : (typeof flat[i] === 'number' ? deref(flat[i], depth + 1) : flat[i]));
+    const country = slug.replace(/-esim$/, '');
+    const holder = flat.find((v) => v && typeof v === 'object' && !Array.isArray(v)
+      && 'packages' in v && 'slug' in v && deref(v.slug) === country);
+    if (!holder) { notes.push(`Airalo ${dest.key}: страна ${country} не найдена в payload`); return; }
+    let taken = 0;
+    for (const ref of deref(holder.packages) || []) {
+      const p = deref(ref);
+      if (!p || typeof p !== 'object') continue;
+      const gb = /^([\d.]+)\s*GB$/i.exec(String(deref(p.data)));
+      const days = /^(\d+)\s*days?$/i.exec(String(deref(p.validity)));
+      const price = deref(p.price);
+      const usd = price && typeof price === 'object' ? Number(deref(price.amount)) : NaN;
+      if (!gb || !days || !(usd > 0)) continue;
+      add({
+        country: dest.key,
+        provider: 'Airalo',
+        name: String(deref(p.slug) || ''),
+        gb: Number(gb[1]),
+        days: Number(days[1]),
+        usd,
+        source: url,
+      });
+      taken += 1;
+    }
+    if (!taken) notes.push(`Airalo ${dest.key}: страна найдена, но ни один тариф не разобрался`);
+  } catch (e) {
+    notes.push(`Airalo ${dest.key}: ${e.message}`);
+  }
+}
+
+// --- Saily: сайт закрыт Cloudflare и с этой машины не открывается напрямую
+// (Connect Timeout по IPv6), поэтому читаем через тот же reader-прокси, что и eSIM.dog.
+// В его markdown тариф печатается тремя строками: объём, срок, цена в долларах.
+// Слаг страницы - это слаг направления без хвоста -esim: united-arab-emirates, а не uae.
+const SAILY_PLAN = /(\d+(?:\.\d+)?)\s*GB\s+(\d+)\s*days\s+US\$([\d.]+)/gi;
+async function fromSaily(dest) {
+  const slug = airaloSlug(dest).replace(/-esim$/, '');
+  const url = `https://saily.com/esim-${slug}/`;
+  try {
+    const text = await (await fetch(READER(url), { headers: { 'User-Agent': UA } })).text();
+    const seen = new Set();
+    for (const m of text.matchAll(SAILY_PLAN)) {
+      const gb = Number(m[1]);
+      const days = Number(m[2]);
+      const usd = Number(m[3]);
+      // Один и тот же тариф печатается на странице дважды - в списке и в подборке.
+      const id = `${gb}/${days}/${usd}`;
+      if (seen.has(id)) continue;
+      seen.add(id);
+      add({ country: dest.key, provider: 'Saily', name: `${gb}GB / ${days}d`, gb, days, usd, source: url });
+    }
+    if (!seen.size) notes.push(`Saily ${dest.key}: тарифы не разобрались, разметка страницы изменилась`);
+  } catch (e) {
+    notes.push(`Saily ${dest.key}: ${e.message}`);
+  }
+}
+
 // --- eSIM.dog: сетка тарифов адресуется прямо в URL, читаем через reader-прокси ---
 const DOG_GRID = [
   [10, 30], [20, 30], [50, 30],
   [10, 14], [20, 14], [30, 14], [50, 14],
 ];
 async function fromDog(dest) {
+  let read = 0;
   for (const [gb, days] of DOG_GRID) {
     const url = `https://esim.dog/${dest.dog}?tab=fixedgb&data=${gb}&validity=${days}`;
     try {
@@ -145,9 +224,16 @@ async function fromDog(dest) {
         usd: Number(m[1]),
         source: url,
       });
+      read += 1;
     } catch (e) {
       notes.push(`eSIM.dog ${dest.key} ${gb}/${days}: ${e.message}`);
     }
+  }
+  // Раньше непрочитанная точка сетки просто пропускалась молча, и отчёт по направлению
+  // выглядел как «eSIM.dog дороже нас», хотя на деле мы их цену не увидели.
+  // Через reader-прокси стабильно приходит лишь часть страниц, и это надо знать.
+  if (read < DOG_GRID.length) {
+    notes.push(`eSIM.dog ${dest.key}: прочитано ${read} из ${DOG_GRID.length} точек сетки${read ? '' : ' - сравнение по этому направлению без них'}`);
   }
 }
 
@@ -165,7 +251,12 @@ async function fromEsimerge() {
   }
   if (!key) { notes.push('eSimerge: ключ не найден - опт в отчёт не попал'); return; }
 
-  const names = new Map(DESTINATIONS.map((d) => [d.title.toLowerCase(), d]));
+  // Страну берём из country_code, а не поиском по тексту записи. Слаг esim.dog у нас
+  // совпадает с ISO-2, поэтому карта строится прямо из него. Поиск подстрокой, который
+  // здесь стоял раньше, находил опт только по десяти направлениям из двадцати и при этом
+  // записывал украинские тарифы в Британию, потому что 'uk' лежит внутри 'ukraine'.
+  const byIso = new Map(DESTINATIONS.map((d) => [d.dog.toUpperCase(), d]));
+  const seen = new Set();
   for (let offset = 0; offset < 20000; offset += 1000) {
     // Портал регулярно отдаёт 502 на большой странице - это их шлюз, а не наш ключ,
     // поэтому пробуем несколько раз, прежде чем считать источник недоступным.
@@ -189,9 +280,13 @@ async function fromEsimerge() {
     // их шлюз отвечает 502, и это выглядело бы как отзыв ключа.
     const isLastPage = items.length < 1000;
     for (const p of items) {
-      const blob = JSON.stringify(p).toLowerCase();
-      const dest = DESTINATIONS.find((d) => blob.includes(`"${d.key}"`) || blob.includes(d.key)) || names.get('');
+      // Только страновые пакеты: региональные и глобальные покрывают десятки стран,
+      // и их цена за гигабайт несравнима с местным тарифом.
+      if (p.scope && p.scope !== 'country') continue;
+      const iso = String(p.country_code || p.destination_code || '').toUpperCase();
+      const dest = byIso.get(iso);
       if (!dest) continue;
+      seen.add(dest.key);
       const gb = Number(p.data_mb ?? p.data ?? 0) / 1024;
       // Безлимиты приходят синтетическим объёмом в терабайтах - в сравнении по цене
       // за гигабайт они дают ноль и вытесняют реальные тарифы наверх.
@@ -213,6 +308,9 @@ async function fromEsimerge() {
     }
     if (isLastPage) break;
   }
+  // Пустое направление - это факт о каталоге поставщика, а не молчаливый ноль в отчёте.
+  const missing = DESTINATIONS.filter((d) => !seen.has(d.key)).map((d) => d.title);
+  if (missing.length) notes.push(`eSimerge: страновых пакетов нет по направлениям: ${missing.join(', ')}`);
 }
 
 const rate = await eurUsd();
@@ -227,6 +325,8 @@ if (rows.length === beforeMaya) {
   // Держим строку в отчёте, чтобы «ноль от Maya» читался как факт, а не как сбой фида.
   notes.push('Maya: страновых тарифов нет - только глобальные безлимиты, в карту не попадают');
 }
+for (const dest of targets) await fromAiralo(dest);
+for (const dest of targets) await fromSaily(dest);
 for (const dest of targets) await fromDog(dest);
 await fromEsimerge();
 
