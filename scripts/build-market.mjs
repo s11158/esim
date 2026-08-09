@@ -199,42 +199,91 @@ async function fromSaily(dest) {
   }
 }
 
-// --- eSIM.dog: сетка тарифов адресуется прямо в URL, читаем через reader-прокси ---
-const DOG_GRID = [
-  [10, 30], [20, 30], [50, 30],
-  [10, 14], [20, 14], [30, 14], [50, 14],
-];
-async function fromDog(dest) {
-  let read = 0;
-  for (const [gb, days] of DOG_GRID) {
-    const url = `https://esim.dog/${dest.dog}?tab=fixedgb&data=${gb}&validity=${days}`;
-    try {
-      const text = await (await fetch(READER(url), { headers: { 'User-Agent': UA } })).text();
-      // Страница печатает подобранный тариф как «30GB • 14d$21.76». Если точного
-      // размера нет, eSIM.dog молча отдаёт ближайший - поэтому сверяем, что вернули
-      // именно запрошенное, иначе цена уедет не к тому объёму.
-      const m = text.match(new RegExp(`${gb}GB\\s*.\\s*${days}d\\$([0-9]+\\.[0-9]{2})`));
-      if (!m) continue;
-      add({
-        country: dest.key,
-        provider: 'eSIM.dog',
-        name: `${gb}GB / ${days}d`,
-        gb,
-        days,
-        usd: Number(m[1]),
-        source: url,
-      });
-      read += 1;
-    } catch (e) {
-      notes.push(`eSIM.dog ${dest.key} ${gb}/${days}: ${e.message}`);
+// --- eSIM.dog: весь каталог страны лежит в RSC-потоке их страницы, полем allPlans.
+//
+// Раньше здесь была сетка из семи точек, и каждая точка запрашивалась отдельным URL
+// вида ?tab=fixedgb&data=10&validity=30. Из 140 запросов доходило 29, по Египту и
+// Таиланду ноль, и отчёт молча писал «ок» там, где мы просто не увидели чужую цену.
+//
+// Причина оказалась не в прокси: esim.dog отдаёт на наш IP страницу Access Restricted
+// (проверено 09.08.2026 прямым запросом - HTTP 200, но это /blocked). Читать их можно
+// только через reader-прокси, а тот при 140 запросах подряд отваливался.
+//
+// Теперь один запрос на страну вместо семи, и в ответе не одна подобранная цена,
+// а весь их прайс: 117-183 тарифа на направление. Reader просим отдать HTML, а не
+// markdown: цены живут в скриптах RSC, в markdown они не попадают.
+const DOG_TRIES = 3;
+
+// Поток RSC собирается из вызовов self.__next_f.push([1,"кусок"]) и склеивается в
+// одну строку, в которой уже лежит JSON. Границу массива ищем счётчиком скобок:
+// внутри значений встречаются и скобки, и кавычки.
+function dogPlans(html) {
+  let payload = '';
+  for (const m of html.matchAll(/self\.__next_f\.push\(\[1,"((?:[^"\\]|\\.)*)"\]\)/g)) {
+    payload += JSON.parse(`"${m[1]}"`);
+  }
+  const at = payload.indexOf('"allPlans":[');
+  if (at === -1) return null;
+  const start = payload.indexOf('[', at);
+  let depth = 0, inStr = false, esc = false;
+  for (let i = start; i < payload.length; i += 1) {
+    const c = payload[i];
+    if (inStr) {
+      if (esc) esc = false;
+      else if (c === '\\') esc = true;
+      else if (c === '"') inStr = false;
+      continue;
     }
+    if (c === '"') inStr = true;
+    else if (c === '[') depth += 1;
+    else if (c === ']') { depth -= 1; if (!depth) { try { return JSON.parse(payload.slice(start, i + 1)); } catch { return null; } } }
   }
-  // Раньше непрочитанная точка сетки просто пропускалась молча, и отчёт по направлению
-  // выглядел как «eSIM.dog дороже нас», хотя на деле мы их цену не увидели.
-  // Через reader-прокси стабильно приходит лишь часть страниц, и это надо знать.
-  if (read < DOG_GRID.length) {
-    notes.push(`eSIM.dog ${dest.key}: прочитано ${read} из ${DOG_GRID.length} точек сетки${read ? '' : ' - сравнение по этому направлению без них'}`);
+  return null;
+}
+
+async function fromDog(dest) {
+  const url = `https://esim.dog/${dest.dog}`;
+  let plans = null;
+  let last = '';
+  for (let attempt = 1; attempt <= DOG_TRIES && !plans; attempt += 1) {
+    try {
+      const res = await fetch(READER(url), { headers: { 'User-Agent': UA, 'X-Return-Format': 'html' } });
+      if (!res.ok) { last = `HTTP ${res.status}`; }
+      else {
+        const html = await res.text();
+        plans = dogPlans(html);
+        if (!plans) last = /Access Restricted/i.test(html) ? 'прокси получил Access Restricted' : 'в ответе нет allPlans';
+      }
+    } catch (e) {
+      last = e.message;
+    }
+    if (!plans && attempt < DOG_TRIES) await new Promise((r) => setTimeout(r, attempt * 2000));
   }
+  // Направление без цен - это дыра в сравнении, а не «мы не проигрываем».
+  if (!plans) { notes.push(`eSIM.dog ${dest.key}: каталог не прочитан за ${DOG_TRIES} попытки (${last}) - сравнение по этому направлению без них`); return; }
+
+  // Часть их тарифов работает только с платным VPN сверху: голая цена такого пакета
+  // несравнима с обычной и занижала бы дно рынка. Считаем их отдельной строкой отчёта.
+  let vpn = 0;
+  let taken = 0;
+  for (const p of plans) {
+    if (p.vpnRequired === true) { vpn += 1; continue; }
+    const gb = Number(p.gb);
+    const usd = Number(p.price);
+    if (!(gb > 0) || !(usd > 0)) continue;
+    add({
+      country: dest.key,
+      provider: 'eSIM.dog',
+      name: String(p.planid || ''),
+      gb: +gb.toFixed(2),
+      days: Number(p.days) || 0,
+      usd,
+      source: url,
+    });
+    taken += 1;
+  }
+  if (!taken) notes.push(`eSIM.dog ${dest.key}: каталог прочитан, но ни один тариф не разобрался`);
+  else if (vpn) notes.push(`eSIM.dog ${dest.key}: ${taken} тарифов, ещё ${vpn} пропущено - они требуют платный VPN сверху`);
 }
 
 // --- eSimerge: оптовый каталог, цены в риалах. Это наша себестоимость, а не рынок,
