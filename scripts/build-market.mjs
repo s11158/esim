@@ -383,6 +383,8 @@ await fromEsimerge();
 const partners = new Set(Object.entries(COMMISSION).filter(([, pct]) => pct > 0).map(([name]) => name));
 const gaps = [];
 const costLines = [];
+// Сравнение, в котором опт eSimerge засчитан как наша цена. Только локально.
+const realLines = [];
 // Сравниваем только сопоставимое. Цена за гигабайт у мелких пакетов почти всегда ниже:
 // у Stellar 3 ГБ / 30 дней стоит $0.62 и бьёт по этой метрике любые 50 ГБ конкурента.
 // Поездочный минимум - от 10 ГБ и от 14 дней; всё, что меньше, в сравнение дна не идёт.
@@ -411,6 +413,25 @@ for (const dest of DESTINATIONS) {
     // во сколько раз мы могли бы продавать дешевле рынка, если бы торговали сами
     couldUndercut: bestCost ? +(best.perGb / bestCost.perGb).toFixed(2) : '',
   });
+
+  // Решение владельца от 09.08.2026: опт eSimerge считать своей ценой, а не «возможностью».
+  // Кошелёк не пополнен и заказов не было, но положить туда сотню - вопрос одного платежа,
+  // поэтому в планировании эти цены наши. В публичный market-gaps.csv они не идут:
+  // репозиторий открытый, а это себестоимость. Полная картина - в локальном файле.
+  const withCost = bestCost && (!bestOurs || bestCost.perGb < bestOurs.perGb) ? bestCost : bestOurs;
+  realLines.push({
+    country: dest.key,
+    title: dest.title,
+    marketBest: best.perGb,
+    marketBestProvider: best.provider,
+    oursBest: withCost ? withCost.perGb : '',
+    oursBestProvider: withCost ? withCost.provider : '',
+    oursBestPlan: withCost ? `${withCost.gb}GB/${withCost.days}d $${withCost.usd}` : '',
+    ratio: withCost ? +(withCost.perGb / best.perGb).toFixed(2) : '',
+    action: withCost
+      ? (withCost.perGb <= best.perGb ? 'дно рынка у нас' : `дороже рынка в ${(withCost.perGb / best.perGb).toFixed(2)}x - искать поставщика`)
+      : 'цены нет ни у партнёров, ни в опте',
+  });
   gaps.push({
     country: dest.key,
     title: dest.title,
@@ -438,6 +459,8 @@ if (wholesale.length) {
     csv(['country', 'provider', 'name', 'gb', 'days', 'usd', 'perGb', 'source'], wholesale.sort((a, b) => a.country.localeCompare(b.country) || a.perGb - b.perGb)), 'utf8');
   writeFileSync(new URL('../data/market-cost-vs-retail.local.csv', import.meta.url),
     csv(['country', 'title', 'marketBest', 'marketBestProvider', 'ourCost', 'ourCostPlan', 'couldUndercut'], costLines), 'utf8');
+  writeFileSync(new URL('../data/market-gaps-with-wholesale.local.csv', import.meta.url),
+    csv(['country', 'title', 'marketBest', 'marketBestProvider', 'oursBest', 'oursBestProvider', 'oursBestPlan', 'ratio', 'action'], realLines), 'utf8');
 }
 
 console.log(`тарифов собрано: ${rows.length}, направлений: ${new Set(rows.map((r) => r.country)).size}`);
@@ -449,5 +472,13 @@ if (costLines.some((c) => c.ourCost)) {
   for (const c of costLines.filter((x) => x.ourCost)) {
     console.log(`${c.title.padEnd(10)} рынок $${c.marketBest}/ГБ   наш опт $${c.ourCost}/ГБ (${c.ourCostPlan})   дешевле рынка в ${c.couldUndercut}x`);
   }
+  const losing = realLines.filter((r) => r.ratio && r.ratio > 1);
+  console.log('\nс учётом опта eSimerge как нашей цены (локально):');
+  for (const r of realLines) {
+    console.log(`${r.title.padEnd(10)} дно $${r.marketBest}/ГБ (${r.marketBestProvider})   наш ${r.oursBest ? '$' + r.oursBest + '/ГБ (' + r.oursBestProvider + ', ' + r.oursBestPlan + ')' : '-'}   ${r.action}`);
+  }
+  console.log(losing.length
+    ? `проигрываем рынку по ${losing.length} направлениям: ${losing.map((r) => r.title).join(', ')}`
+    : 'дно рынка держим по всем направлениям');
 }
 if (notes.length) console.log('\nзамечания:\n' + notes.map((n) => ' - ' + n).join('\n'));
