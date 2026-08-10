@@ -362,6 +362,130 @@ async function fromEsimerge() {
   if (missing.length) notes.push(`eSimerge: страновых пакетов нет по направлениям: ${missing.join(', ')}`);
 }
 
+// --- Zesimo: оптовый агрегатор (Test Mode подключён 10.08.2026), цены reseller_price
+// уже в долларах. Это себестоимость, как и eSimerge: строки идут в wholesale и только
+// в локальные файлы. Ключ лежит в .env worktree (ZESIMO_API_KEY); если API недоступен,
+// читаем последний снятый снапшот data/zesimo-packages.local.json.
+async function fromZesimo() {
+  let key = process.env.ZESIMO_API_KEY;
+  if (!key) {
+    try {
+      const envText = readFileSync(new URL('../.env', import.meta.url), 'utf8');
+      key = (envText.match(/^ZESIMO_API_KEY=(.+)$/m) || [])[1]?.trim();
+    } catch { /* ниже фолбэк на снапшот */ }
+  }
+  const byIso = new Map(DESTINATIONS.map((d) => [d.dog.toUpperCase(), d]));
+  let all = null;
+  if (key) {
+    all = [];
+    for (let page = 1; page <= 80; page += 1) {
+      let res = null;
+      for (let attempt = 1; attempt <= 4; attempt += 1) {
+        res = await fetch(`https://zesimo.com/api/v1/packages?page=${page}&per_page=100`, {
+          headers: { Authorization: `Bearer ${key}`, Accept: 'application/json', 'User-Agent': UA },
+        }).catch(() => null);
+        if (res?.ok) break;
+        // 429 - их rate limit, ждём дольше с каждой попыткой
+        if (res && res.status !== 429 && res.status !== 502) break;
+        await new Promise((r) => setTimeout(r, attempt * 5000));
+      }
+      if (!res?.ok) { notes.push(`Zesimo: HTTP ${res ? res.status : 'нет ответа'} на странице ${page} - дальше каталог из снапшота`); all = null; break; }
+      const j = await res.json();
+      const list = Array.isArray(j) ? j : (j.data || j.packages || []);
+      if (!list.length) break;
+      const before = new Set(all.map((p) => p.id)).size;
+      all.push(...list);
+      // Сервер без пагинации возвращал бы одни и те же 50 - тогда выходим.
+      if (new Set(all.map((p) => p.id)).size === before) { all = [...new Map(all.map((p) => [p.id, p])).values()]; break; }
+    }
+  }
+  if (!all) {
+    try {
+      all = JSON.parse(readFileSync(new URL('../data/zesimo-packages.local.json', import.meta.url), 'utf8'));
+      notes.push(`Zesimo: использован локальный снапшот (${all.length} пакетов)`);
+    } catch { notes.push('Zesimo: ни API, ни снапшота - опт в отчёт не попал'); return; }
+  }
+  let unlimited = 0;
+  for (const p of all) {
+    const cs = p.countries || [];
+    if (cs.length !== 1) continue; // только страновые, как у eSimerge
+    const dest = byIso.get(String(cs[0]).toUpperCase());
+    if (!dest) continue;
+    const gb = Number(p.data_gb) || 0;
+    if (!(gb > 0) || gb > 500) continue;
+    // У «безлимитов» Zesimo data_gb - это высокоскоростной объём по FUP (дневная норма,
+    // умноженная на срок), то есть реальный сравнимый объём, а не синтетика. Считаем их,
+    // но помечаем счётчиком в замечаниях.
+    if (p.is_unlimited) unlimited += 1;
+    const usd = Number(p.reseller_price);
+    if (!(usd > 0)) continue;
+    wholesale.push({
+      country: dest.key,
+      provider: 'Zesimo (опт)',
+      name: p.name || '',
+      gb: +gb.toFixed(1),
+      days: Number(p.duration_days) || 0,
+      usd: +usd.toFixed(2),
+      perGb: +(usd / gb).toFixed(3),
+      source: 'zesimo api',
+    });
+  }
+  const got = new Set(wholesale.filter((w) => w.provider === 'Zesimo (опт)').map((w) => w.country));
+  notes.push(`Zesimo: ${[...got].length} направлений из ${DESTINATIONS.length}, безлимитов в сравнении ${unlimited}`);
+}
+
+// --- Дилерские прайсы из файлов: у части поставщиков фида нет вовсе, прайс присылают
+// таблицей. Скрипты scripts/import-dealer-price.py и scripts/import-eur-price-list.py
+// раскладывают такие таблицы в CSV одной схемы, а здесь они читаются с диска.
+// Файла нет - источник просто молчит, это не сбой сборки.
+const DEALER_FILES = ['../data/gloesim-dealer.local.csv', '../data/eur-dealer.local.csv'];
+
+function fromDealerCsv(file) {
+  let text = null;
+  try {
+    text = readFileSync(new URL(file, import.meta.url), 'utf8');
+  } catch {
+    notes.push(`Дилерский прайс: файла ${file.replace('../data/', '')} нет, источник пропущен`);
+    return;
+  }
+  const lines = text.trim().split(/\r?\n/);
+  const head = lines.shift().split(',');
+  const idx = (name) => head.indexOf(name);
+  const iCountry = idx('country');
+  const iScope = idx('scope');
+  const iProvider = idx('provider');
+  const iName = idx('name');
+  const iGb = idx('gb');
+  const iDays = idx('days');
+  const iUsd = idx('usd');
+  const iSource = idx('source');
+  const keys = new Set(DESTINATIONS.map((d) => d.key));
+  let taken = 0;
+  for (const line of lines) {
+    // В названиях тарифов есть запятые, поэтому разбор с учётом кавычек.
+    const cells = line.match(/("([^"]|"")*"|[^,]*)/g).filter((_, i) => i % 2 === 0)
+      .map((c) => c.replace(/^"|"$/g, '').replace(/""/g, '"'));
+    if (cells[iScope] !== 'country') continue;
+    const country = cells[iCountry];
+    if (!keys.has(country)) continue;
+    const gb = Number(cells[iGb]);
+    const usd = Number(cells[iUsd]);
+    if (!(gb > 0) || !(usd > 0)) continue;
+    wholesale.push({
+      country,
+      provider: cells[iProvider] || 'дилерский прайс (опт)',
+      name: cells[iName] || '',
+      gb: +gb.toFixed(1),
+      days: Number(cells[iDays]) || 0,
+      usd: +usd.toFixed(2),
+      perGb: +(usd / gb).toFixed(3),
+      source: cells[iSource] || 'dealer price file',
+    });
+    taken += 1;
+  }
+  notes.push(`Дилерский прайс ${file.replace('../data/', '')}: ${taken} тарифов по нашим направлениям`);
+}
+
 const rate = await eurUsd();
 const only = process.argv.slice(2);
 const targets = only.length ? DESTINATIONS.filter((d) => only.includes(d.key)) : DESTINATIONS;
@@ -378,6 +502,8 @@ for (const dest of targets) await fromAiralo(dest);
 for (const dest of targets) await fromSaily(dest);
 for (const dest of targets) await fromDog(dest);
 await fromEsimerge();
+await fromZesimo();
+for (const file of DEALER_FILES) fromDealerCsv(file);
 
 // --- отчёт: где наш лучший вариант проигрывает рынку ---
 const partners = new Set(Object.entries(COMMISSION).filter(([, pct]) => pct > 0).map(([name]) => name));
