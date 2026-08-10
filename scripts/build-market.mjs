@@ -443,6 +443,8 @@ const DEALER_FILES = [
   '../data/mobisim-dealer.local.csv',
   // MicroEsim приходит по API, но кладётся в тот же CSV: scripts/fetch-microesim.mjs.
   '../data/microesim-dealer.local.csv',
+  // RoamWiFi присылает прайс в PDF: scripts/import-roamwifi-price.py.
+  '../data/roamwifi-dealer.local.csv',
 ];
 
 function fromDealerCsv(file) {
