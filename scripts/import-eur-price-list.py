@@ -116,7 +116,7 @@ def main():
             "source": "%s, курс %s %.4f" % (source, rate_src, rate),
         })
 
-    path = os.path.join(REPO, "data", "eur-dealer.local.csv")
+    path = os.path.join(REPO, "data", "mobisim-dealer.local.csv")
     with io.open(path, "w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=COLS)
         writer.writeheader()

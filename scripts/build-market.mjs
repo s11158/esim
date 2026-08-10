@@ -438,7 +438,7 @@ async function fromZesimo() {
 // таблицей. Скрипты scripts/import-dealer-price.py и scripts/import-eur-price-list.py
 // раскладывают такие таблицы в CSV одной схемы, а здесь они читаются с диска.
 // Файла нет - источник просто молчит, это не сбой сборки.
-const DEALER_FILES = ['../data/gloesim-dealer.local.csv', '../data/eur-dealer.local.csv'];
+const DEALER_FILES = ['../data/gloesim-dealer.local.csv', '../data/mobisim-dealer.local.csv'];
 
 function fromDealerCsv(file) {
   let text = null;
