@@ -445,6 +445,8 @@ const DEALER_FILES = [
   '../data/microesim-dealer.local.csv',
   // RoamWiFi присылает прайс в PDF: scripts/import-roamwifi-price.py.
   '../data/roamwifi-dealer.local.csv',
+  // Airhub: выгрузка каталога из партнёрского портала, scripts/import-airhub-plans.py.
+  '../data/airhub-dealer.local.csv',
 ];
 
 function fromDealerCsv(file) {
