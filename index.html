@@ -12,15 +12,15 @@
       document.head.appendChild(script);
     })();
   </script>
-  <title>eSIM.pizza — выгодные eSIM для путешествий</title>
-  <meta name="description" content="Сравните eSIM для Турции, Таиланда, ОАЭ, Бали и других направлений. Выберите страну, срок и объём интернета — покажем цену и стоимость за ГБ.">
+  <title>eSIM.pizza - выгодные eSIM для путешествий</title>
+  <meta name="description" content="Сравните eSIM для Турции, Таиланда, ОАЭ, Бали и других направлений. Выберите страну, срок и объём интернета - покажем цену и стоимость за ГБ.">
   <meta name="theme-color" content="#f4e7cf">
   <meta name="robots" content="index,follow">
   <meta name="impact-site-verification" value="e091c792-0fac-4f7c-b77e-64d4e71492d7">
   <link rel="canonical" href="https://esim.pizza/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://esim.pizza/">
-  <meta property="og:title" content="eSIM.pizza — eSIM без роуминга и переплат">
+  <meta property="og:title" content="eSIM.pizza - eSIM без роуминга и переплат">
   <meta property="og:description" content="Сравните тарифы по цене, сроку и объёму интернета. Подключите eSIM за несколько минут.">
   <meta property="og:image" content="https://esim.pizza/assets/pizza-hero-warm-v2.webp">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23ff3b1f'/%3E%3Ccircle cx='24' cy='23' r='5' fill='%23fff9e8'/%3E%3Ccircle cx='42' cy='28' r='5' fill='%23fff9e8'/%3E%3Ccircle cx='31' cy='43' r='5' fill='%23fff9e8'/%3E%3C/svg%3E">
@@ -86,6 +86,13 @@
     .field-label { display:block; color:var(--muted); font:600 10px/1 var(--mono); text-transform:uppercase; letter-spacing:.06em; margin:0 0 8px 2px; }
     .field-control { width:100%; min-height:52px; padding:0 14px; border:1px solid var(--line); border-radius:14px; color:var(--ink); background:white; outline:0; font-weight:650; }
     .field-control:focus { border-color:var(--tomato); box-shadow:0 0 0 3px rgba(217,71,47,.12); }
+    .chips { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 0; }
+    .chips:empty { margin:0; }
+    .chip { display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border:1px solid var(--line); border-radius:999px; background:white; font:650 12px/1 inherit; color:var(--ink); }
+    .chip button { border:0; background:none; padding:0; cursor:pointer; color:var(--muted); font:700 14px/1 inherit; }
+    .chip button:hover { color:var(--tomato); }
+    .suggest { margin-top:14px; }
+    .suggest b { display:block; margin-bottom:8px; }
     .builder-action { display:flex; align-items:center; justify-content:space-between; gap:18px; margin-top:14px; padding-top:16px; border-top:1px dashed var(--line); }
     .builder-hint { color:var(--muted); font-size:12px; max-width:220px; }
     .primary { border:0; border-radius:14px; padding:15px 22px; color:white; background:var(--tomato); font-weight:800; cursor:pointer; box-shadow:0 6px 0 var(--tomato-dark); transition:.15s ease; }
@@ -306,7 +313,7 @@
         <div class="hero-copy">
           <div class="eyebrow">eSIM для путешествий</div>
           <h1 id="hero-title">Интернет в поездке. <span class="hot">Без переплат.</span></h1>
-          <p class="hero-lead">Сравниваем тарифы для популярных направлений и показываем реальную цену за ГБ. Установка занимает несколько минут — без салонов связи и физической SIM.</p>
+          <p class="hero-lead">Сравниваем тарифы для популярных направлений и показываем реальную цену за ГБ. Установка занимает несколько минут - без салонов связи и физической SIM.</p>
           <div class="hero-proof"><span><i class="proof-dot"></i> 190+ стран</span><span><i class="proof-dot"></i> Активация за 2 минуты</span><span><i class="proof-dot"></i> Поддержка 24/7</span></div>
         </div>
         <div class="hero-visual" aria-hidden="true"><img src="assets/pizza-hero-warm-v2.webp" alt="" width="1536" height="1024" fetchpriority="high"></div>
@@ -314,20 +321,21 @@
           <div class="builder-top"><h2>Подберите eSIM для поездки</h2><span class="ticket-no">подбор тарифа</span></div>
           <div class="builder-grid">
             <label class="field"><span class="field-label">Куда летите?</span><select class="field-control" id="countrySelect" required></select></label>
-            <label class="field"><span class="field-label">Сколько дней?</span><select class="field-control" id="daysSelect"><option>7</option><option>15</option><option selected>30</option><option>60</option></select></label>
-            <label class="field"><span class="field-label">Сколько ГБ?</span><select class="field-control" id="dataSelect"><option value="3">3 ГБ</option><option value="5">5 ГБ</option><option value="10" selected>10 ГБ</option><option value="20">20 ГБ</option><option value="999">Безлимит</option></select></label>
+            <label class="field"><span class="field-label">Сколько дней?</span><input class="field-control" id="daysInput" type="number" min="1" max="365" step="1" inputmode="numeric" placeholder="любой срок"></label>
+            <label class="field"><span class="field-label">Сколько ГБ?</span><input class="field-control" id="dataInput" type="number" min="1" max="500" step="1" inputmode="numeric" placeholder="любой объём"></label>
           </div>
-          <div class="builder-action"><span class="builder-hint">Покажем подходящие варианты и стоимость каждого гигабайта.</span><button class="primary" type="submit">Найти тарифы →</button></div>
+          <div class="chips" id="chosenCountries"></div>
+          <div class="builder-action"><span class="builder-hint">Можно выбрать несколько стран. Срок и объём - любые числа; пустое поле значит «не важно-.</span><button class="primary" type="submit">Найти тарифы -</button></div>
         </form>
       </div>
     </section>
 
     <div class="trust-strip shell" aria-label="Преимущества">
       <div class="trust-row">
-        <div class="trust-item"><span class="trust-icon">🏆</span><span><b>Гарантия лучшей цены</b><small>Найдёте дешевле — вернём разницу</small></span></div>
+        <div class="trust-item"><span class="trust-icon">🏆</span><span><b>Гарантия лучшей цены</b><small>Найдёте дешевле - вернём разницу</small></span></div>
         <div class="trust-item"><span class="trust-icon">📡</span><span><b>Лучшие сети</b><small>4G / 5G без роуминга</small></span></div>
         <div class="trust-item"><span class="trust-icon">🛟</span><span><b>Люди в поддержке</b><small>Поможем с установкой</small></span></div>
-        <div class="trust-item"><span class="trust-icon">🛡️</span><span><b>Безопасная оплата</b><small>Карты и Apple Pay</small></span></div>
+        <div class="trust-item"><span class="trust-icon">🛡️</span><span><b>Оплата у провайдера</b><small>Мы не берём платежи и не храним данные карт</small></span></div>
       </div>
     </div>
 
@@ -351,7 +359,7 @@
         <div class="how-photo"><img src="assets/pizza-esim-install-warm-v2.webp" alt="Установка eSIM по QR-коду перед поездкой" width="1536" height="1024" loading="lazy"></div>
         <div class="how-copy"><span class="eyebrow" style="color:var(--yellow)">Как это работает</span><h2 id="how-title">Подключитесь до вылета</h2><div class="steps">
           <div class="step"><div class="step-num">01</div><div><h3>Сравните тарифы</h3><p>Выберите страну, срок поездки и нужный объём интернета.</p></div></div>
-          <div class="step"><div class="step-num">02</div><div><h3>Получите eSIM</h3><p>После оплаты QR-код и инструкция сразу придут на почту.</p></div></div>
+          <div class="step"><div class="step-num">02</div><div><h3>Получите eSIM</h3><p>Покупка и оплата - на сайте провайдера. QR-код и инструкцию он пришлёт сразу после оплаты.</p></div></div>
           <div class="step"><div class="step-num">03</div><div><h3>Подключитесь по прилёте</h3><p>Установите eSIM дома по Wi-Fi, а мобильные данные включите в поездке.</p></div></div>
         </div></div>
       </div>
@@ -364,17 +372,17 @@
     <section class="faq" id="faq" aria-labelledby="faq-title"><div class="faq-grid shell">
       <div><span class="eyebrow" style="color:var(--tomato)">Перед покупкой</span><h2 id="faq-title">Что важно знать</h2><p class="faq-intro">Ответы про установку, обычный номер, раздачу интернета и возврат.</p></div>
       <div>
-        <details><summary>Когда устанавливать и активировать eSIM?</summary><p>Установите eSIM заранее дома по стабильному Wi-Fi. Линию и роуминг данных на eSIM включайте после прилёта — именно тогда обычно начинается срок действия тарифа.</p></details>
+        <details><summary>Когда устанавливать и активировать eSIM?</summary><p>Установите eSIM заранее дома по стабильному Wi-Fi. Линию и роуминг данных на eSIM включайте после прилёта - именно тогда обычно начинается срок действия тарифа.</p></details>
         <details><summary>Мой обычный номер и мессенджеры останутся?</summary><p>Да. Физическая SIM продолжит принимать звонки и SMS, а eSIM будет отвечать только за интернет. WhatsApp и Telegram останутся на прежнем номере.</p></details>
-        <details><summary>Можно раздавать интернет?</summary><p>На большинстве тарифов — да. Если раздача ограничена оператором, мы явно укажем это в параметрах тарифа до оплаты.</p></details>
-        <details><summary>Что делать, если eSIM не подключается?</summary><p>Проверьте, что eSIM выбрана для мобильных данных, роуминг данных включён, а основная SIM не используется для интернета. Если связи нет — напишите поддержке, мы проверим настройки и сеть.</p></details>
-        <details><summary>Как работает гарантия лучшей цены?</summary><p>Если найдёте у другого продавца дешевле полностью совпадающий тариф — с той же страной, объёмом данных и сроком действия — пришлите нам ссылку в течение 24 часов после покупки. После проверки вернём разницу.</p></details>
+        <details><summary>Можно раздавать интернет?</summary><p>На большинстве тарифов - да. Если раздача ограничена оператором, мы явно укажем это в параметрах тарифа до оплаты.</p></details>
+        <details><summary>Что делать, если eSIM не подключается?</summary><p>Проверьте, что eSIM выбрана для мобильных данных, роуминг данных включён, а основная SIM не используется для интернета. Если связи нет - напишите поддержке, мы проверим настройки и сеть.</p></details>
+        <details><summary>Как работает гарантия лучшей цены?</summary><p>Если найдёте у другого продавца дешевле полностью совпадающий тариф - с той же страной, объёмом данных и сроком действия - пришлите нам ссылку в течение 24 часов после покупки. После проверки вернём разницу.</p></details>
         <details><summary>Можно вернуть деньги?</summary><p>До установки eSIM возврат возможен в соответствии с условиями тарифа. Если eSIM не работает по технической причине, поддержка сначала поможет с настройкой, а затем оформит возврат при подтверждённой неисправности.</p></details>
       </div>
     </div></section>
   </main>
 
-  <footer><div class="shell"><div class="footer-grid"><div class="footer-main"><div class="footer-brand">eSIM<em>.pizza</em></div><p class="footer-note">Цифровая связь для путешествий. Никакого пластика, долгих очередей и счетов за роуминг.</p></div><div class="footer-col"><b>Заказать</b><a href="#catalog">Тарифы</a><a href="#how">Как установить</a><a href="#" id="footerCompat">Совместимость</a></div><div class="footer-col"><b>Помощь</b><a href="mailto:ciao@esim.pizza">ciao@esim.pizza</a><a href="#faq">Частые вопросы</a><a href="#">Условия возврата</a></div></div><div class="legal">© 2026 eSIM.pizza. Все права защищены.<span>Цены и покрытие могут меняться в зависимости от оператора.</span><span>Некоторые ссылки на сайте — партнёрские (реклама): при покупке по ним мы можем получить комиссию, цена для вас при этом не меняется. Рекламодатели: Airalo, Yesim.</span></div></div></footer>
+  <footer><div class="shell"><div class="footer-grid"><div class="footer-main"><div class="footer-brand">eSIM<em>.pizza</em></div><p class="footer-note">Цифровая связь для путешествий. Никакого пластика, долгих очередей и счетов за роуминг.</p></div><div class="footer-col"><b>Заказать</b><a href="#catalog">Тарифы</a><a href="#how">Как установить</a><a href="#" id="footerCompat">Совместимость</a></div><div class="footer-col"><b>Помощь</b><a href="mailto:ciao@esim.pizza">ciao@esim.pizza</a><a href="#faq">Частые вопросы</a><a href="#">Условия возврата</a></div></div><div class="legal">© 2026 eSIM.pizza. Все права защищены.<span>Цены и покрытие могут меняться в зависимости от оператора.</span><span>Некоторые ссылки на сайте - партнёрские (реклама): при покупке по ним мы можем получить комиссию, цена для вас при этом не меняется. Рекламодатели: Airalo, Yesim.</span></div></div></footer>
 
   <div class="drawer-backdrop" id="drawerBackdrop"></div>
   <aside class="drawer" id="drawer" aria-labelledby="drawerTitle" aria-hidden="true">
@@ -382,8 +390,8 @@
     <div class="order-ticket"><span class="order-ticket-label">eSIM.pizza / выбранный тариф</span><h3 id="orderName"></h3><p id="orderMeta"></p><div class="order-price" id="orderPrice"></div></div>
     <div class="order-list"><div class="order-line"><span>Покрытие</span><b id="orderCoverage"></b></div><div class="order-line"><span>Сеть</span><b>4G / 5G</b></div><div class="order-line"><span>Активация</span><b>по QR-коду</b></div><div class="order-line"><span>Раздача интернета</span><b>разрешена</b></div></div>
     <div class="drawer-spacer"></div>
-    <a class="primary" id="goProvider" href="#" target="_blank" rel="nofollow noopener">Перейти к покупке →</a>
-    <div class="provider-note" id="providerNote">Оформление, оплата и активация — на сайте провайдера.</div>
+    <a class="primary" id="goProvider" href="#" target="_blank" rel="nofollow noopener">Перейти к покупке -</a>
+    <div class="provider-note" id="providerNote">Оформление, оплата и активация - на сайте провайдера.</div>
   </aside>
 
   <div class="compat-modal" id="compatModal" role="dialog" aria-modal="true" aria-labelledby="compatTitle"><div class="modal-card"><div class="drawer-head"><h2 id="compatTitle">Как проверить eSIM</h2><button class="close" id="closeCompat" aria-label="Закрыть">×</button></div><p>Код <b>*#06#</b> для этой проверки ненадёжен: на некоторых телефонах он показывает только IMEI физических слотов. Выберите производителя и проверьте нужный пункт в настройках.</p><div class="device-grid"><button class="device" data-device="Apple">Apple</button><button class="device" data-device="Samsung">Samsung</button><button class="device" data-device="Google">Google Pixel</button></div><div class="compat-result" id="compatResult">Выберите производителя. Названия пунктов могут немного отличаться в зависимости от версии системы.</div></div></div>
@@ -395,29 +403,33 @@
   </aside>
 
   <script>
-    // Партнёрские ссылки. Airalo/Yesim — через Travelpayouts (маркер 753028, реклама, платят комиссию).
-    // eSIM.dog/eSIMCard/Saily — пока прямые ссылки на бренды без метки (партнёрки заведём отдельно) → paid:false.
+    // Партнёрские ссылки. Airalo/Yesim - через Travelpayouts (маркер 753028, реклама, платят комиссию).
+    // eSIM.dog/eSIMCard/Saily - пока прямые ссылки на бренды без метки (партнёрки заведём отдельно) - paid:false.
     const AFF = {
       airalo:'https://airalo.tpx.gr/zKWubZS0',
       yesim:'https://yesim.tpx.gr/H3g2VJiB',
       superalink:'https://www.superalink.com/destination/aff/STAS00000',
       esimcard:'https://esimcard.com/',
       saily:'https://saily.com/',
-      // Maya — трекинг-ссылки Impact (программа 49401), прислал Jean-Marie Kesch 2026-07-29. Купон ESIMPIZZA подтверждён.
+      // Maya - трекинг-ссылки Impact (программа 49401), прислал Jean-Marie Kesch 2026-07-29. Купон ESIMPIZZA подтверждён.
       maya:'https://mayamobile.pxf.io/k4bdrM',
       maya3:'https://mayamobile.pxf.io/ZV4WMR',
       maya7:'https://mayamobile.pxf.io/zzqdom',
       maya14:'https://mayamobile.pxf.io/0GOav3',
-      maya30:'https://mayamobile.pxf.io/n4bd5x'
+      maya30:'https://mayamobile.pxf.io/n4bd5x',
+      // Stellar - партнёрка stellarafi, аффилиат ESIM, кампания esim_pizza_comparison, кука 180 дней.
+      // ⚠️ Параметр redirect обязателен: без него ссылка уводит на stellarvpn.org и продажа не засчитывается.
+      // К этой строке подставляется слаг страницы тарифа, например canada-esim.
+      stellar:'https://stellarafi.com/r/ESIM?src=esim.pizza&campaign=esim_pizza_comparison&product=DIGITAL+Product&redirect=https%3A%2F%2Fstellarsecurity.com%2Fstellar-esim%2F'
     };
     const plans = [
       // ⚠️ ПРАВИЛО: в этом массиве только цены, подтверждённые реальным источником.
       // Строки Superalink, Yesim, eSIMCard (Италия/Египет) и Airalo Global удалены 2026-08-02:
       // это были placeholder-цены из первой версии, подтвердить их не удалось. Вернём, когда партнёры дадут фид.
       //
-      // Saily — цены с их страниц направлений (проверено 2026-08-02, USD, срок действия указан на странице).
+      // Saily - цены с их страниц направлений (проверено 2026-08-02, USD, срок действия указан на странице).
       // Сверено с независимым источником (сравнительная таблица eSIM.dog): Турция 15.99, Таиланд 10.99,
-      // Япония 17.99, Индонезия 21.99, Грузия 30.99 — совпали в обоих источниках.
+      // Япония 17.99, Индонезия 21.99, Грузия 30.99 - совпали в обоих источниках.
       {id:2,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Saily 20 ГБ',data:20,days:30,price:19.99,popular:2,coverage:'Таиланд',provider:'Saily',aff:AFF.saily,paid:false},
       {id:5,type:'country',country:'ОАЭ',flag:'🇦🇪',name:'Saily 10 ГБ',data:10,days:30,price:19.99,popular:5,coverage:'ОАЭ',provider:'Saily',aff:AFF.saily,paid:false},
       {id:6,type:'country',country:'Япония',flag:'🇯🇵',name:'Saily 20 ГБ',data:20,days:30,price:24.99,popular:6,coverage:'Япония',provider:'Saily',aff:AFF.saily,paid:false},
@@ -426,20 +438,20 @@
       {id:4,type:'country',country:'Индонезия',flag:'🇮🇩',name:'Saily 10 ГБ',data:10,days:30,price:21.99,popular:4,coverage:'Индонезия',provider:'Saily',aff:AFF.saily,paid:false},
       {id:10,type:'region',country:'Азия',flag:'🌏',name:'Saily Asia 10 ГБ',data:10,days:30,price:35.99,popular:2,coverage:'Азия и Океания',provider:'Saily',aff:AFF.saily,paid:false},
       {id:11,type:'region',country:'Европа',flag:'🇪🇺',name:'Saily Europe 10 ГБ',data:10,days:30,price:35.99,popular:3,coverage:'Европа',provider:'Saily',aff:AFF.saily,paid:false},
-      // Airalo — безлимитные тарифы с их страниц направлений (проверено 2026-08-02, USD).
+      // Airalo - безлимитные тарифы с их страниц направлений (проверено 2026-08-02, USD).
       {id:3,type:'country',country:'ОАЭ',flag:'🇦🇪',name:'Airalo Unlimited 3д',data:999,days:3,price:12.5,popular:3,coverage:'ОАЭ · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:12,type:'country',country:'ОАЭ',flag:'🇦🇪',name:'Airalo Unlimited 7д',data:999,days:7,price:27.5,popular:18,coverage:'ОАЭ · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:9,type:'region',country:'Европа',flag:'🇪🇺',name:'Airalo Europe Unlimited 7д',data:999,days:7,price:27,popular:1,coverage:'Европа · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:13,type:'region',country:'Европа',flag:'🇪🇺',name:'Airalo Europe Unlimited 30д',data:999,days:30,price:71,popular:5,coverage:'Европа · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
-      // eSIMCard — единственный тариф, который удалось подтвердить (проверено 2026-08-02).
+      // eSIMCard - единственный тариф, который удалось подтвердить (проверено 2026-08-02).
       {id:1,type:'country',country:'Турция',flag:'🇹🇷',name:'eSIMCard 25 ГБ',data:25,days:30,price:46.65,popular:19,coverage:'Турция',provider:'eSIMCard',aff:AFF.esimcard,paid:false},
-      // Maya Mobile — снапшот их affiliate-фида assets.maya.net/affiliates/plans.json (global unlimited, реальные цены USD).
+      // Maya Mobile - снапшот их affiliate-фида assets.maya.net/affiliates/plans.json (global unlimited, реальные цены USD).
       // Монетизировано 2026-07-30: трекинг-ссылки Impact на страницы тарифов + персональный купон ESIMPIZZA −10%.
       {id:14,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 3д',data:999,days:3,price:9.99,popular:3,coverage:'180 стран · безлимит',provider:'Maya',aff:AFF.maya3,paid:true,promo:{code:'ESIMPIZZA',pct:0.10}},
       {id:15,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 7д',data:999,days:7,price:19.99,popular:4,coverage:'180 стран · безлимит',provider:'Maya',aff:AFF.maya7,paid:true,promo:{code:'ESIMPIZZA',pct:0.10}},
       {id:16,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 14д',data:999,days:14,price:27.99,popular:5,coverage:'180 стран · безлимит',provider:'Maya',aff:AFF.maya14,paid:true,promo:{code:'ESIMPIZZA',pct:0.10}},
       {id:17,type:'global',country:'Весь мир',flag:'🌍',name:'Maya Unlimited 30д',data:999,days:30,price:49.99,popular:6,coverage:'180 стран · безлимит',provider:'Maya',aff:AFF.maya30,paid:true,promo:{code:'ESIMPIZZA',pct:0.10}},
-      // Airalo — РЕАЛЬНЫЕ цены с их страниц направлений (проверено 2026-07-29, USD). ОАЭ пропущен: страница отдала EUR.
+      // Airalo - РЕАЛЬНЫЕ цены с их страниц направлений (проверено 2026-07-29, USD). ОАЭ пропущен: страница отдала EUR.
       {id:18,type:'country',country:'Турция',flag:'🇹🇷',name:'Airalo Unlimited',data:999,days:7,price:24.5,popular:9,coverage:'Турция · Turk Telekom',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:19,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Airalo Unlimited',data:999,days:7,price:21.5,popular:10,coverage:'Таиланд · dtac',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:20,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Airalo Unlimited 30д',data:999,days:30,price:49,popular:11,coverage:'Таиланд · dtac',provider:'Airalo',aff:AFF.airalo,paid:true},
@@ -447,20 +459,20 @@
       {id:22,type:'country',country:'Япония',flag:'🇯🇵',name:'Airalo Unlimited',data:999,days:7,price:27,popular:13,coverage:'Япония · SoftBank',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:23,type:'country',country:'Грузия',flag:'🇬🇪',name:'Airalo 5 ГБ',data:5,days:30,price:17,popular:14,coverage:'Грузия · Cellfie',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:32,type:'country',country:'Грузия',flag:'🇬🇪',name:'Airalo 3 ГБ',data:3,days:7,price:11,popular:22,coverage:'Грузия · Cellfie',provider:'Airalo',aff:AFF.airalo,paid:true},
-      // Saily — РЕАЛЬНЫЕ цены с их страниц направлений (проверено 2026-08-02, USD).
+      // Saily - РЕАЛЬНЫЕ цены с их страниц направлений (проверено 2026-08-02, USD).
       // Сверено с независимым источником (сравнительная таблица eSIM.dog): Турция 10 ГБ 15.99 и Таиланд 10 ГБ 10.99 совпали.
       {id:24,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Saily 10 ГБ',data:10,days:30,price:10.99,popular:15,coverage:'Таиланд',provider:'Saily',aff:AFF.saily,paid:false},
       {id:25,type:'country',country:'Турция',flag:'🇹🇷',name:'Saily 20 ГБ',data:20,days:30,price:22.99,popular:16,coverage:'Турция',provider:'Saily',aff:AFF.saily,paid:false},
       {id:26,type:'country',country:'Турция',flag:'🇹🇷',name:'Saily 10 ГБ',data:10,days:30,price:15.99,popular:17,coverage:'Турция',provider:'Saily',aff:AFF.saily,paid:false},
       {id:27,type:'region',country:'Азия',flag:'🌏',name:'Saily Asia 25 ГБ',data:25,days:60,price:48.99,popular:4,coverage:'Азия и Океания',provider:'Saily',aff:AFF.saily,paid:false},
-      // Airalo — безлимиты по Египту и региону Азия (проверено 2026-08-02, USD).
+      // Airalo - безлимиты по Египту и региону Азия (проверено 2026-08-02, USD).
       // Глобальный тариф Airalo не добавлен: страница не отдаёт список пакетов, гадать не стали.
       {id:28,type:'country',country:'Египет',flag:'🇪🇬',name:'Airalo Unlimited 3д',data:999,days:3,price:19.5,popular:20,coverage:'Египет · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:29,type:'country',country:'Египет',flag:'🇪🇬',name:'Airalo Unlimited 7д',data:999,days:7,price:32,popular:21,coverage:'Египет · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:30,type:'region',country:'Азия',flag:'🌏',name:'Airalo Asia Unlimited 7д',data:999,days:7,price:26,popular:6,coverage:'Азия · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:31,type:'region',country:'Азия',flag:'🌏',name:'Airalo Asia Unlimited 30д',data:999,days:30,price:73.5,popular:7,coverage:'Азия · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
       // Расширение каталога 2026-08-02: цены сняты со страниц Saily и Airalo, обновляются скриптом scripts/update-prices.mjs.
-      // У Saily берём тариф с лучшей ценой за ГБ (20 ГБ / 30 дней), у Airalo — безлимиты на 7 и 30 дней.
+      // У Saily берём тариф с лучшей ценой за ГБ (20 ГБ / 30 дней), у Airalo - безлимиты на 7 и 30 дней.
       {id:33,type:'country',country:'Италия',flag:'🇮🇹',name:'Saily 20 ГБ',data:20,days:30,price:28.99,popular:23,coverage:'Италия',provider:'Saily',aff:AFF.saily,paid:false},
       {id:34,type:'country',country:'Италия',flag:'🇮🇹',name:'Airalo Unlimited 7д',data:999,days:7,price:23,popular:24,coverage:'Италия · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:35,type:'country',country:'Испания',flag:'🇪🇸',name:'Saily 20 ГБ',data:20,days:30,price:22.99,popular:25,coverage:'Испания',provider:'Saily',aff:AFF.saily,paid:false},
@@ -480,11 +492,36 @@
       {id:49,type:'country',country:'Сингапур',flag:'🇸🇬',name:'Saily 20 ГБ',data:20,days:30,price:22.99,popular:39,coverage:'Сингапур',provider:'Saily',aff:AFF.saily,paid:false},
       {id:50,type:'country',country:'Сингапур',flag:'🇸🇬',name:'Airalo Unlimited 7д',data:999,days:7,price:27,popular:40,coverage:'Сингапур · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
       {id:51,type:'country',country:'Мексика',flag:'🇲🇽',name:'Saily 20 ГБ',data:20,days:30,price:37.99,popular:41,coverage:'Мексика',provider:'Saily',aff:AFF.saily,paid:false},
-      {id:52,type:'country',country:'Мексика',flag:'🇲🇽',name:'Airalo Unlimited 7д',data:999,days:7,price:23.5,popular:42,coverage:'Мексика · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true}
+      {id:52,type:'country',country:'Мексика',flag:'🇲🇽',name:'Airalo Unlimited 7д',data:999,days:7,price:23.5,popular:42,coverage:'Мексика · безлимит',provider:'Airalo',aff:AFF.airalo,paid:true},
+      // >>> STELLAR AUTO - не править руками, генерируется scripts/update-stellar.mjs
+      // Курс ЕЦБ на день сборки: 1 EUR = 1.1554 USD. Пакеты от 10 ГБ и 14 дней.
+      {id:100,type:'country',country:'Канада',flag:'🇨🇦',name:'Stellar 75 ГБ',data:75,days:30,price:22.13,popular:100,coverage:'Канада · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'canada-esim',paid:true},
+      {id:101,type:'country',country:'Турция',flag:'🇹🇷',name:'Stellar 10 ГБ',data:10,days:30,price:2.15,popular:101,coverage:'Турция · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'turkey-esim',paid:true},
+      {id:102,type:'country',country:'Турция',flag:'🇹🇷',name:'Stellar 50 ГБ',data:50,days:180,price:15.85,popular:102,coverage:'Турция · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'turkey-esim',paid:true},
+      {id:103,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Stellar 20 ГБ',data:20,days:30,price:6.09,popular:103,coverage:'Таиланд · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'thailand-esim',paid:true},
+      {id:104,type:'country',country:'Таиланд',flag:'🇹🇭',name:'Stellar 50 ГБ',data:50,days:30,price:21.49,popular:104,coverage:'Таиланд · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'thailand-esim',paid:true},
+      {id:105,type:'country',country:'Грузия',flag:'🇬🇪',name:'Stellar 20 ГБ',data:20,days:30,price:12.82,popular:105,coverage:'Грузия · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'georgia-esim',paid:true},
+      {id:106,type:'country',country:'Вьетнам',flag:'🇻🇳',name:'Stellar 20 ГБ',data:20,days:30,price:9.49,popular:106,coverage:'Вьетнам · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'vietnam-esim',paid:true},
+      {id:107,type:'country',country:'Вьетнам',flag:'🇻🇳',name:'Stellar 50 ГБ',data:50,days:180,price:30.68,popular:107,coverage:'Вьетнам · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'vietnam-esim',paid:true},
+      {id:108,type:'country',country:'Япония',flag:'🇯🇵',name:'Stellar 50 ГБ',data:50,days:30,price:11.92,popular:108,coverage:'Япония · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'japan-esim',paid:true},
+      {id:109,type:'country',country:'ОАЭ',flag:'🇦🇪',name:'Stellar 20 ГБ',data:20,days:30,price:19.85,popular:109,coverage:'ОАЭ · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'united-arab-emirates-esim',paid:true},
+      {id:110,type:'country',country:'ОАЭ',flag:'🇦🇪',name:'Stellar 50 ГБ',data:50,days:180,price:73.69,popular:110,coverage:'ОАЭ · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'united-arab-emirates-esim',paid:true},
+      {id:111,type:'country',country:'Италия',flag:'🇮🇹',name:'Stellar 50 ГБ',data:50,days:30,price:11.92,popular:111,coverage:'Италия · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'italy-esim',paid:true},
+      {id:112,type:'country',country:'Испания',flag:'🇪🇸',name:'Stellar 50 ГБ',data:50,days:30,price:11.92,popular:112,coverage:'Испания · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'spain-esim',paid:true},
+      {id:113,type:'country',country:'США',flag:'🇺🇸',name:'Stellar 50 ГБ',data:50,days:30,price:19.66,popular:113,coverage:'США · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'united-states-esim',paid:true},
+      {id:114,type:'country',country:'Франция',flag:'🇫🇷',name:'Stellar 50 ГБ',data:50,days:30,price:11.92,popular:114,coverage:'Франция · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'france-esim',paid:true},
+      {id:115,type:'country',country:'Германия',flag:'🇩🇪',name:'Stellar 50 ГБ',data:50,days:30,price:11.92,popular:115,coverage:'Германия · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'germany-esim',paid:true},
+      {id:116,type:'country',country:'Великобритания',flag:'🇬🇧',name:'Stellar 50 ГБ',data:50,days:30,price:11.92,popular:116,coverage:'Великобритания · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'united-kingdom-esim',paid:true},
+      {id:117,type:'country',country:'Индонезия',flag:'🇮🇩',name:'Stellar 50 ГБ',data:50,days:30,price:11.92,popular:117,coverage:'Индонезия · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'indonesia-esim',paid:true},
+      {id:118,type:'country',country:'Малайзия',flag:'🇲🇾',name:'Stellar 50 ГБ',data:50,days:30,price:11.92,popular:118,coverage:'Малайзия · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'malaysia-esim',paid:true},
+      {id:119,type:'country',country:'Сингапур',flag:'🇸🇬',name:'Stellar 50 ГБ',data:50,days:30,price:11.92,popular:119,coverage:'Сингапур · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'singapore-esim',paid:true},
+      {id:120,type:'country',country:'Мексика',flag:'🇲🇽',name:'Stellar 50 ГБ',data:50,days:30,price:39.71,popular:120,coverage:'Мексика · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'mexico-esim',paid:true},
+      {id:121,type:'country',country:'Египет',flag:'🇪🇬',name:'Stellar 20 ГБ',data:20,days:30,price:16.01,popular:121,coverage:'Египет · + бесплатный VPN',provider:'Stellar',aff:AFF.stellar+'egypt-esim',paid:true},
+      // <<< STELLAR AUTO
     ];
     const rates={USD:1,AED:3.67,RUB:79};
     const symbols={USD:'$',AED:'د.إ ',RUB:'₽'};
-    let state={type:'country',country:'',days:0,data:0,sort:'recommended',currency:'USD'};
+    let state={type:'country',countries:[],days:0,data:0,sort:'recommended',currency:'USD'};
     let selectedPlan=null;
     let drawerReturnFocus=null;
 
@@ -493,7 +530,27 @@
     const resultCount=document.getElementById('resultCount');
     const clearFilter=document.getElementById('clearFilter');
     const uniqueCountries=[...new Set(plans.filter(p=>p.type==='country').map(p=>p.country))];
-    countrySelect.innerHTML='<option value="">Любая страна</option>'+uniqueCountries.map(c=>`<option>${c}</option>`).join('');
+    const chosenCountries=document.getElementById('chosenCountries');
+    const daysInput=document.getElementById('daysInput');
+    const dataInput=document.getElementById('dataInput');
+    function fillCountrySelect(){
+      countrySelect.innerHTML='<option value="">Любая страна</option>'+uniqueCountries.filter(c=>!state.countries.includes(c)).map(c=>`<option>${c}</option>`).join('');
+      countrySelect.value='';
+    }
+    function renderChips(){
+      chosenCountries.innerHTML=state.countries.map(c=>`<span class="chip">${c}<button type="button" data-remove="${c}" aria-label="Убрать ${c}">×</button></span>`).join('');
+    }
+    chosenCountries.addEventListener('click',e=>{
+      const btn=e.target.closest('[data-remove]'); if(!btn)return;
+      state.countries=state.countries.filter(c=>c!==btn.dataset.remove);
+      fillCountrySelect(); renderChips(); render();
+    });
+    countrySelect.addEventListener('change',()=>{
+      const value=countrySelect.value; if(!value)return;
+      if(!state.countries.includes(value)) state.countries.push(value);
+      fillCountrySelect(); renderChips(); if(state.type==='country') render();
+    });
+    fillCountrySelect();
 
     function money(value){
       const converted=value*rates[state.currency];
@@ -501,30 +558,48 @@
       return state.currency==='AED'?`${symbols.AED}${converted.toFixed(digits)}`:`${converted.toFixed(digits).replace(/\.00$/,'')}${symbols[state.currency]}`;
     }
     function dataLabel(data){return data===999?'∞ ГБ':`${data} ГБ`;}
-    // Цена с учётом нашего промокода. base price → эффективная цена (что реально платит пользователь по коду).
+    // Цена с учётом нашего промокода. base price - эффективная цена (что реально платит пользователь по коду).
     function eff(p){return p.promo?Math.round(p.price*(1-p.promo.pct)*100)/100:p.price;}
     function promoPct(p){return p.promo?Math.round(p.promo.pct*100):0;}
+    const sorters={priceAsc:(a,b)=>eff(a)-eff(b),dataDesc:(a,b)=>b.data-a.data,daysDesc:(a,b)=>b.days-a.days,unitAsc:(a,b)=>(eff(a)/(a.data===999?100:a.data))-(eff(b)/(b.data===999?100:b.data)),recommended:(a,b)=>a.popular-b.popular};
     function filteredPlans(){
       let list=plans.filter(p=>p.type===state.type);
-      if(state.country) list=list.filter(p=>p.country===state.country);
+      if(state.type==='country'&&state.countries.length) list=list.filter(p=>state.countries.includes(p.country));
       if(state.days) list=list.filter(p=>p.days>=state.days);
       if(state.data) list=list.filter(p=>p.data>=state.data);
-      const sorters={priceAsc:(a,b)=>eff(a)-eff(b),dataDesc:(a,b)=>b.data-a.data,daysDesc:(a,b)=>b.days-a.days,unitAsc:(a,b)=>(eff(a)/(a.data===999?100:a.data))-(eff(b)/(b.data===999?100:b.data)),recommended:(a,b)=>a.popular-b.popular};
-      return list.sort(sorters[state.sort]);
+      return list.slice().sort(sorters[state.sort]);
     }
-    function render(){
-      const list=filteredPlans();
-      resultCount.textContent=`Найдено: ${list.length} ${list.length===1?'тариф':'тарифов'}`;
-      clearFilter.hidden=!(state.country||state.days||state.data);
-      grid.innerHTML=list.length?list.map((p,i)=>`<article class="plan-card ${i===0?'featured':''}">
+    // Когда точных совпадений нет - показываем ближайшие: сохраняем выбранные страны,
+    // отпускаем срок и объём и ранжируем по тому, насколько тариф недотягивает до запроса.
+    function nearestPlans(){
+      let list=plans.filter(p=>p.type===state.type);
+      if(state.type==='country'&&state.countries.length) list=list.filter(p=>state.countries.includes(p.country));
+      if(!list.length) list=plans.filter(p=>p.type===state.type);
+      const miss=p=>(state.days?Math.max(0,state.days-p.days)/state.days:0)+(state.data?Math.max(0,state.data-p.data)/state.data:0);
+      return list.slice().sort((a,b)=>miss(a)-miss(b)||eff(a)/(a.data===999?100:a.data)-eff(b)/(b.data===999?100:b.data)).slice(0,3);
+    }
+    function planCard(p,featured){
+      return `<article class="plan-card ${featured?'featured':''}">
         <div class="card-top"><div class="country-name"><span class="flag">${p.flag}</span>${p.country}</div>${p.popular<=2?'<span class="popular">рекомендуем</span>':''}</div>
         <div class="pizza-size" aria-hidden="true"><span>${dataLabel(p.data).replace(' ','<br>')}</span></div>
         <h3 class="plan-name">${p.name}</h3><p class="plan-meta">${p.days} дней · 4G/5G · hotspot</p>
-        <div class="plan-bottom"><div class="price">${money(eff(p))} <small>${p.data===999?'безлимит':money(eff(p)/p.data)+'/ГБ'}</small>${p.promo?`<span class="promo-code"><s>${money(p.price)}</s> код ${p.promo.code} −${promoPct(p)}%</span>`:''}</div><button class="choose" data-plan="${p.id}">Выбрать →</button></div>
-      </article>`).join(''):'<div class="empty"><b>Подходящих тарифов не найдено.</b><br>Попробуйте уменьшить срок или объём интернета.</div>';
+        <div class="plan-bottom"><div class="price">${money(eff(p))} <small>${p.data===999?'безлимит':money(eff(p)/p.data)+'/ГБ'}</small>${p.promo?`<span class="promo-code"><s>${money(p.price)}</s> код ${p.promo.code} −${promoPct(p)}%</span>`:''}</div><button class="choose" data-plan="${p.id}">Выбрать -</button></div>
+      </article>`;
+    }
+    function plural(n){const t=n%10,h=n%100;return t===1&&h!==11?'тариф':(t>=2&&t<=4&&(h<12||h>14)?'тарифа':'тарифов');}
+    function render(){
+      const list=filteredPlans();
+      resultCount.textContent=`Найдено: ${list.length} ${plural(list.length)}`;
+      clearFilter.hidden=!(state.countries.length||state.days||state.data);
+      if(list.length){
+        grid.innerHTML=list.map((p,i)=>planCard(p,i===0)).join('');
+      }else{
+        const near=nearestPlans();
+        grid.innerHTML='<div class="empty"><b>Точных совпадений нет.</b><br>Показываем ближайшие варианты - в них может быть меньше гигабайт или короче срок.</div>'+near.map(p=>planCard(p,false)).join('');
+      }
     }
     function setType(type){
-      state.type=type; if(type!=='country') state.country='';
+      state.type=type; if(type!=='country'){state.countries=[];fillCountrySelect();renderChips();}
       document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected',String(t.dataset.type===type)));
       render();
     }
@@ -533,9 +608,21 @@
     document.getElementById('currency').addEventListener('change',e=>{state.currency=e.target.value;render();if(selectedPlan)openDrawer(selectedPlan.id);});
     document.querySelectorAll('[data-scroll-catalog]').forEach(b=>b.addEventListener('click',()=>document.getElementById('catalog').scrollIntoView({behavior:'smooth'})));
     document.getElementById('builder').addEventListener('submit',e=>{
-      e.preventDefault(); state.type='country'; state.country=countrySelect.value; state.days=Number(document.getElementById('daysSelect').value); state.data=Number(document.getElementById('dataSelect').value); setType('country'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});
+      e.preventDefault();
+      // Селект «Куда летите?- уже добавляет страну чипом по change - здесь только подхватываем
+      // страну, которую пользователь выбрал и сразу отправил форму, не отпуская select.
+      const pending=countrySelect.value;
+      if(pending&&!state.countries.includes(pending)){state.countries.push(pending);fillCountrySelect();renderChips();}
+      const days=Number(daysInput.value), data=Number(dataInput.value);
+      state.days=Number.isFinite(days)&&days>0?days:0;
+      state.data=Number.isFinite(data)&&data>0?data:0;
+      setType('country'); document.getElementById('catalog').scrollIntoView({behavior:'smooth'});
     });
-    clearFilter.addEventListener('click',()=>{state.country='';state.days=0;state.data=0;countrySelect.value='';render();});
+    clearFilter.addEventListener('click',()=>{
+      state.countries=[];state.days=0;state.data=0;
+      daysInput.value='';dataInput.value='';
+      fillCountrySelect();renderChips();render();
+    });
     grid.addEventListener('click',e=>{const btn=e.target.closest('[data-plan]');if(btn)openDrawer(Number(btn.dataset.plan));});
 
     const drawer=document.getElementById('drawer');
@@ -548,9 +635,9 @@
       document.getElementById('orderCoverage').textContent=selectedPlan.coverage;
       const go=document.getElementById('goProvider');
       go.href=selectedPlan.aff;
-      go.textContent=`Перейти на ${selectedPlan.provider} →`;
+      go.textContent=`Перейти на ${selectedPlan.provider} -`;
       go.rel=selectedPlan.paid?'nofollow sponsored noopener':'nofollow noopener';
-      document.getElementById('providerNote').innerHTML=`Оформление, оплата и активация — на сайте ${selectedPlan.provider}.`+(selectedPlan.paid?' <span class="ad-label">Реклама</span>':'');
+      document.getElementById('providerNote').innerHTML=`Оформление, оплата и активация - на сайте ${selectedPlan.provider}.`+(selectedPlan.paid?' <span class="ad-label">Реклама</span>':'');
       drawer.setAttribute('aria-hidden','false');document.body.classList.add('drawer-open');document.getElementById('closeDrawer').focus();
     }
     function closeDrawer(){
@@ -568,24 +655,24 @@
     document.getElementById('openCompat').addEventListener('click',openCompat);document.getElementById('footerCompat').addEventListener('click',openCompat);document.getElementById('closeCompat').addEventListener('click',closeCompat);
     compatModal.addEventListener('click',e=>{if(e.target===compatModal)closeCompat();});
     const deviceText={
-      Apple:'Откройте «Настройки» → «Сотовая связь». Ищите пункт «Добавить eSIM» или «Настроить сотовые данные». EID также можно найти: «Настройки» → «Основные» → «Об этом устройстве».',
-      Samsung:'Откройте «Настройки» → «Подключения» → «Диспетчер SIM-карт». Если доступен пункт «Добавить eSIM», телефон поддерживает её установку. EID обычно находится в разделе «Сведения о телефоне» → «Состояние».',
-      Google:'Откройте «Настройки» → «Сеть и интернет» → «SIM-карты» → «Добавить SIM» → «Настроить eSIM». На старых Pixel поддержка может зависеть от модели, оператора и региона выпуска.'
+      Apple:'Откройте «Настройки- - «Сотовая связь-. Ищите пункт «Добавить eSIM- или «Настроить сотовые данные-. EID также можно найти: «Настройки- - «Основные- - «Об этом устройстве-.',
+      Samsung:'Откройте «Настройки- - «Подключения- - «Диспетчер SIM-карт-. Если доступен пункт «Добавить eSIM-, телефон поддерживает её установку. EID обычно находится в разделе «Сведения о телефоне- - «Состояние-.',
+      Google:'Откройте «Настройки- - «Сеть и интернет- - «SIM-карты- - «Добавить SIM- - «Настроить eSIM-. На старых Pixel поддержка может зависеть от модели, оператора и региона выпуска.'
     };
     document.querySelectorAll('.device').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.device').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('compatResult').textContent=deviceText[btn.dataset.device];}));
     document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeDrawer();closeCompat();}});
     render();
 
-    // Всплывающие карточки. ВАЖНО: только правдивые факты и подсказки — никаких выдуманных
-    // «покупок». Когда пойдут реальные продажи через Travelpayouts, сюда можно подставить
+    // Всплывающие карточки. ВАЖНО: только правдивые факты и подсказки - никаких выдуманных
+    // «покупок-. Когда пойдут реальные продажи через Travelpayouts, сюда можно подставить
     // настоящие данные, и это станет честным social proof.
     const SP_TIPS=[
-      {i:'📱',t:'Проверьте телефон за 5 секунд',s:'Наберите *#06#. Если показан EID — ваш телефон поддерживает eSIM.'},
-      {i:'💬',t:'Ваш номер останется с вами',s:'eSIM отвечает только за интернет. WhatsApp и Telegram — на прежнем номере.'},
-      {i:'✈️',t:'Ставьте заранее, включайте на месте',s:'Установите eSIM дома по Wi-Fi, а активируйте после прилёта — срок обычно идёт с активации.'},
-      {i:'⚖️',t:'Сравниваем 4 провайдера',s:'Airalo, Maya, Saily и eSIMCard — показываем, где для вашей страны выгоднее.'},
+      {i:'📱',t:'Проверьте телефон за 5 секунд',s:'Наберите *#06#. Если показан EID - ваш телефон поддерживает eSIM.'},
+      {i:'💬',t:'Ваш номер останется с вами',s:'eSIM отвечает только за интернет. WhatsApp и Telegram - на прежнем номере.'},
+      {i:'✈️',t:'Ставьте заранее, включайте на месте',s:'Установите eSIM дома по Wi-Fi, а активируйте после прилёта - срок обычно идёт с активации.'},
+      {i:'⚖️',t:'Сравниваем 4 провайдера',s:'Airalo, Maya, Saily и eSIMCard - показываем, где для вашей страны выгоднее.'},
       {i:'📶',t:'Раздача интернета разрешена',s:'На большинстве тарифов можно раздавать интернет с телефона на ноутбук.'},
-      {i:'🤝',t:'Честно про ссылки',s:'Часть ссылок — партнёрские: мы можем получить комиссию, но цена для вас не меняется.'}
+      {i:'🤝',t:'Честно про ссылки',s:'Часть ссылок - партнёрские: мы можем получить комиссию, но цена для вас не меняется.'}
     ];
     (function(){
       const el=document.getElementById('salesPop');
