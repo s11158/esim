@@ -663,6 +663,22 @@
     document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeDrawer();closeCompat();}});
     render();
 
+    // Живые цены Maya лежат в data/plans.json (его обновляет workflow maya-prices.yml по их
+    // affiliate-фиду). Встроенный массив выше - рабочий fallback: если fetch не удался,
+    // страница показывает последний закоммиченный снапшот. Перекрываем ТОЛЬКО price у Maya,
+    // ссылки и промокоды остаются из массива.
+    fetch('data/plans.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(j=>{
+      if(!j||!Array.isArray(j.plans))return;
+      let changed=false;
+      for(const fresh of j.plans){
+        if(fresh.provider!=='Maya')continue;
+        const p=plans.find(x=>x.id===fresh.id&&x.provider==='Maya');
+        const price=Number(fresh.price);
+        if(p&&Number.isFinite(price)&&price>0&&p.price!==price){p.price=price;changed=true;}
+      }
+      if(changed){render();if(selectedPlan&&document.body.classList.contains('drawer-open'))openDrawer(selectedPlan.id);}
+    }).catch(()=>{});
+
     // Всплывающие карточки. ВАЖНО: только правдивые факты и подсказки - никаких выдуманных
     // «покупок-. Когда пойдут реальные продажи через Travelpayouts, сюда можно подставить
     // настоящие данные, и это станет честным social proof.

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06T05:48:31.717Z",
+  "generatedAt": "2026-08-30T11:52:15.243Z",
   "plans": [
     {
       "id": 2,
@@ -565,7 +565,7 @@
       "name": "Saily 20 ГБ",
       "data": 20,
       "days": 30,
-      "price": 26.99,
+      "price": 22.99,
       "popular": 27,
       "coverage": "Франция",
       "provider": "Saily",
@@ -775,7 +775,7 @@
       "name": "Saily 20 ГБ",
       "data": 20,
       "days": 30,
-      "price": 45.99,
+      "price": 37.99,
       "popular": 41,
       "coverage": "Мексика",
       "provider": "Saily",

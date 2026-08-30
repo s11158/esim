@@ -1,7 +1,8 @@
 name: Sync Maya prices
 
 # Цены Maya живут в их affiliate-фиде и меняются без предупреждения.
-# Раз в сутки подтягиваем их в index.html, чтобы на сайте не висели устаревшие цифры.
+# Раз в сутки подтягиваем их в data/plans.json - index.html читает этот файл fetch-ом
+# и перекрывает цены Maya поверх встроенного каталога, HTML больше не правится.
 on:
   schedule:
     - cron: '17 4 * * *'
@@ -25,12 +26,12 @@ jobs:
 
       - name: Commit if prices changed
         run: |
-          if git diff --quiet -- index.html; then
-            echo "Цены не изменились — коммита нет."
+          if git diff --quiet -- data/plans.json; then
+            echo "Цены не изменились - коммита нет."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html
+          git add data/plans.json
           git commit -m "Sync Maya prices from affiliate feed"
           git push
