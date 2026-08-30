@@ -39,9 +39,9 @@ egypt,"ESIM.DOG 🐶","⚡️ [5G] Vodafone Egypt - Best 5G Coverage (2GB/15Days
 egypt,"ESIM.DOG 🐶","⚡️ [5G] Vodafone Egypt - Best 5G Coverage (2GB/14Days) - Black route",2,14,2.3,1.15,,yes
 egypt,"Tripuck eSIM","Egypt 2 GB / 15 Days",2,15,2.31,1.155,,yes
 egypt,"thirr.com","EG 1GB 3D",1,3,1.17019509,1.17,,no
+egypt,"Stellar eSim","Egypt 1GB 7Days + Free Stellar VPN",1,7,1.17019509,1.17,,no
 egypt,"ASIMGO","eSIM Egypt - 1 Day / Daily 500MB",0.5,1,0.59,1.18,,yes
 egypt,"ESIM888","Egypt (1GB/7DAYS)",1,7,1.2,1.2,,no
-egypt,"Stellar eSim","Egypt 1GB 7Days + Free Stellar VPN",1,7,1.2281255400000002,1.228,,no
 egypt,"abesteSIM","eSIM Egypt - 1 Day / Daily 2GB",2,1,2.465638440846551,1.233,,yes
 egypt,"Horizon eSIM","Egypt 1GB 7Days",1,7,1.2628838100000002,1.263,,no
 egypt,"abesteSIM","eSIM Global (66 Destinations) - 1 Day / Daily 2GB",2,1,2.536309606348522,1.268,,yes
@@ -111,6 +111,7 @@ egypt,"Ozly eSIM","Egypt 1GB 7Days",1,7,2.05,2.05,,yes
 egypt,"ASIMGO","eSIM Africa - 21 Counties - 1 Day / Daily 500MB",0.5,1,1.03,2.06,,yes
 egypt,"4S eSIM","Middle East 1GB - 7 Days",1,7,2.12,2.12,,no
 egypt,"MicroEsim","Egypt eSIM 5G - 3 Days / Total 1GB",1,3,2.13,2.13,,yes
+egypt,"Stellar eSim","Egypt 500MB 7Days + Free Stellar VPN",0.5,7,1.06592028,2.132,,no
 egypt,"Yoho Mobile","EG eSIM 1GB/Day 1Day",1,1,2.16,2.16,,no
 egypt,"Bloomy eSIM","Egypt Unlimited (1GB/day) 1 Day",1,1,2.18,2.18,,yes
 egypt,"ASIMGO","eSIM Egypt - 7 Days / Total 1GB",1,7,2.18,2.18,,yes
@@ -119,7 +120,6 @@ egypt,"abesteSIM","eSIM Egypt - 5 Days / Total 1GB",1,5,2.1908061305611075,2.191
 egypt,"abesteSIM","eSIM Egypt - 7 Days / Total 1GB",1,7,2.1986584822835487,2.199,,yes
 egypt,"mobineX","Unlimited Standard",1,1,2.2,2.2,,yes
 egypt,"Textr eSIM","Egypt 1GB",1,7,2.21,2.21,,no
-egypt,"Stellar eSim","Egypt 500MB 7Days + Free Stellar VPN",0.5,7,1.12385073,2.248,,no
 egypt,"4S eSIM","Global 1GB - 5 Days",1,5,2.27,2.27,,no
 egypt,"Horizon eSIM","Egypt 500MB 7Days",0.5,7,1.14702291,2.294,,no
 egypt,"eSimy","Egypt - 1 GB - 7 Days",1,7,2.3056319100000002,2.306,,no
@@ -281,7 +281,7 @@ egypt,"eSIM4Travel","Egypt (Vodafone, Orange, Etisalat/e&amp;) - 100MB/1Days",0.
 egypt,"PRIeSIM","Discover Global 300 MB · 3 days",0.3,3,2.3056319100000002,7.685,,no
 egypt,"Connect Me Guru","Egypt 100MB 7Days",0.1,7,0.85,8.5,,yes
 egypt,"Roamix","Egypt 100MB 7Days",0.1,7,0.85,8.5,,yes
-egypt,"Stellar eSim","Egypt 100MB 7Days + Free Stellar VPN",0.1,7,0.90371502,9.037,,no
+egypt,"Stellar eSim","Egypt 100MB 7Days + Free Stellar VPN",0.1,7,0.8573706600000001,8.574,,no
 egypt,"eSIMNow","Egypt 100MB 7Days",0.1,7,0.91,9.1,,yes
 egypt,"IbridMarket","Egypt 100MB 7Days",0.1,7,0.92,9.2,,no
 egypt,"BlueSky eSIM","✈️ [5G] Worldwide (201 countries) Best Coverage (200MB/30d)",0.2,30,1.97,9.85,,yes
@@ -317,34 +317,34 @@ egypt,"Bordersim","Egypt 100MB 7Days",0.1,7,2.99,29.9,,yes
 egypt,"Movisim","Egypt 100MB - 7-Day eSIM",0.1,7,2.99,29.9,,yes
 egypt,"Turnaa eSIM","Egypt · 0.1 GB · 7 days",0.1,7,2.99,29.9,,yes
 egypt,"Keepgo","Eridanus World",0.1,0,3,30,,yes
-france,"Stellar eSim","France 3GB 30Days + Free Stellar VPN",3,30,0.46344360000000007,0.154,,no
+france,"Stellar eSim","France 3GB 30Days + Free Stellar VPN",3,30,0.44027142,0.147,,no
 france,"Sim Local","France eSIM – 70 GB for 15 Days + EU Roaming",70,15,17.5,0.25,,no
-france,"Stellar eSim","Europe (33 areas) 3GB 15Days + Free Stellar VPN",3,15,1.12385073,0.375,,no
-france,"Stellar eSim","France 3GB 15Days + Free Stellar VPN",3,15,1.12385073,0.375,,no
-france,"Stellar eSim","Europe (33 areas) 4GB 30Days + Free Stellar VPN",4,30,1.5525360600000002,0.388,,no
+france,"Stellar eSim","Europe (33 areas) 3GB 15Days + Free Stellar VPN",3,15,1.06592028,0.355,,no
+france,"Stellar eSim","France 3GB 15Days + Free Stellar VPN",3,15,1.06592028,0.355,,no
+france,"Stellar eSim","Europe (33 areas) 4GB 30Days + Free Stellar VPN",4,30,1.48301952,0.371,,no
+france,"Stellar eSim","Europe (33 areas) 3GB 30Days + Free Stellar VPN",3,30,1.17019509,0.39,,no
 france,"ESIM.DOG 🐶","🛜 Orange France - Essential Coverage (4GB/1Days) - Amber route",4,1,1.58,0.395,,yes
-france,"Stellar eSim","Europe (33 areas) 3GB 30Days + Free Stellar VPN",3,30,1.2281255400000002,0.409,,no
-france,"Stellar eSim","Europe (33 areas) eSIM Unlimited - 1 day",3,1,1.2860559900000001,0.429,,no
-france,"Stellar eSim","Europe (33 areas) 2GB 30Days + Free Stellar VPN",2,30,1.01957592,0.51,,no
+france,"Stellar eSim","Europe (33 areas) eSIM Unlimited - 1 day",3,1,1.2281255400000002,0.409,,no
+france,"Stellar eSim","Europe (33 areas) 2GB 30Days + Free Stellar VPN",2,30,0.97323156,0.487,,no
 france,"thirr.com","FR 3GB 7D",3,7,1.5293638800000002,0.51,,yes
 france,"ESIM888","France (3GB/30DAYS)",3,30,1.65,0.55,,no
 france,"Billion Connect","Global eSIM [45 Countries] 1 Day 3GB/Day",3,1,1.67,0.557,,yes
+france,"Stellar eSim","France eSIM Unlimited - 1 day",3,1,1.67998305,0.56,,no
+france,"Stellar eSim","Europe (33 areas) 2GB 15Days + Free Stellar VPN",2,15,1.12385073,0.562,,no
+france,"Stellar eSim","France 2GB 15Days + Free Stellar VPN",2,15,1.12385073,0.562,,no
 france,"Bloomy eSIM","France Unlimited (3GB/day) 1 Day",3,1,1.74,0.58,,yes
 france,"abesteSIM","eSIM Europe (36 Countries) - 1 Day / Daily 3GB",3,1,1.7589267858268391,0.586,,yes
-france,"Stellar eSim","France eSIM Unlimited - 1 day",3,1,1.76108568,0.587,,no
-france,"Stellar eSim","Europe (33 areas) 2GB 15Days + Free Stellar VPN",2,15,1.18178118,0.591,,no
-france,"Stellar eSim","France 2GB 15Days + Free Stellar VPN",2,15,1.18178118,0.591,,no
 france,"Billion Connect","Global eSIM [45 Countries] 1 Day 2GB/Day",2,1,1.25,0.625,,yes
-france,"Stellar eSim","Europe (33 areas) 1GB 7Days + Free Stellar VPN",1,7,0.66040713,0.66,,no
+france,"Stellar eSim","Europe (33 areas) 1GB 7Days + Free Stellar VPN",1,7,0.6256488600000001,0.626,,no
 france,"eSIMX","France 10GB 7Days",10,7,6.8,0.68,,yes
 france,"ASIMGO","eSIM France - 1 Day / Daily 1GB",1,1,0.68,0.68,,yes
 france,"eSIM4Travel","Best Europe 41 - 1GB/1Days",1,1,0.69,0.69,,yes
 france,"eSIM4Travel","Best Europe 41 - 1GB/7Days",1,7,0.69,0.69,,yes
 france,"Astaroam","Europe (33 areas) 1GB 7Days",1,7,0.6909223240803536,0.691,,yes
+france,"Stellar eSim","France 1GB 7Days + Free Stellar VPN",1,7,0.70675149,0.707,,no
+france,"Stellar eSim","Europe (33 areas) 750MB 7Days + Free Stellar VPN",0.75,7,0.53296014,0.711,,no
 france,"Billion Connect","Europe eSIM [33 Countries] 1 Day 2GB/Day",2,1,1.43,0.715,,yes
 france,"abesteSIM","eSIM Europe (36 Countries) - 1 Day / Daily 2GB",2,1,1.4605374203740717,0.73,,yes
-france,"Stellar eSim","Europe (33 areas) 750MB 7Days + Free Stellar VPN",0.75,7,0.55613232,0.742,,no
-france,"Stellar eSim","France 1GB 7Days + Free Stellar VPN",1,7,0.74150976,0.742,,no
 france,"Superalink","France - Regular",1,1,0.75,0.75,,yes
 france,"abesteSIM","eSIM World 45 Regions - 1 Day / Daily 2GB",2,1,1.507651530708719,0.754,,yes
 france,"Superalink","France - Regular",2,1,1.51,0.755,,yes
@@ -415,6 +415,7 @@ france,"Horizon eSIM","France 1GB 7Days",1,7,1.14702291,1.147,,no
 france,"Yoho Mobile","32-Country eSIM 1GB/Day 1Day",1,1,1.15,1.15,,yes
 france,"Yoho Mobile","FR eSIM 1GB/Day 1Day",1,1,1.15,1.15,,yes
 france,"thirr.com","FR 1GB 3D",1,3,1.158609,1.159,,yes
+france,"Stellar eSim","Europe(30+ areas) 1GB 7Days + Free Stellar VPN",1,7,1.158609,1.159,,no
 france,"Yoho Mobile","36-Country eSIM 1GB 7Day",1,7,1.16,1.16,,yes
 france,"Yoho Mobile","39-Country eSIM 1GB 7Day",1,7,1.16,1.16,,yes
 france,"Yoho Mobile","FR eSIM 1GB 7Day",1,7,1.16,1.16,,yes
@@ -432,7 +433,6 @@ france,"Billion Connect","Europe eSIM [33 Countries] 1 Day 1GB/Day",1,1,1.21,1.2
 france,"4S eSIM","France 1GB - 5 Days",1,5,1.21,1.21,,no
 france,"4S eSIM","Europe+ 1GB - 5 Days",1,5,1.21,1.21,,no
 france,"AdventureSIMs","France 1GB 7 Days",1,7,1.2132512519471637,1.213,,yes
-france,"Stellar eSim","Europe(30+ areas) 1GB 7Days + Free Stellar VPN",1,7,1.2165394500000002,1.217,,no
 france,"4S eSIM","France 1GB - 7 Days",1,7,1.24,1.24,,no
 france,"4S eSIM","Europe+ 1GB - 7 Days",1,7,1.24,1.24,,no
 france,"eSIM4Travel","France (Orange, Bouygues) - 1GB/7Days",1,7,1.25,1.25,,yes
@@ -520,6 +520,7 @@ france,"MicroEsim","Europe eSIM 5G 49 Destinations - 1 Day / Daily 1GB",1,1,1.55
 france,"TravelGator eSIM","France eSIM Roaming Data",1,10,1.5547656410433666,1.555,,no
 france,"MicroEsim","Europe eSIM 33 Countries - 10 Days / Total 1GB",1,10,1.56,1.56,,yes
 france,"ASIMGO","eSIM Europe (49 Destinations) - 1 Day / Daily 1GB",1,1,1.56,1.56,,yes
+france,"Stellar eSim","Europe(30+ areas) 1GB 30Days + Free Stellar VPN",1,30,1.5641221500000002,1.564,,no
 france,"RedEx eSIM","1 GB - 7 Days",1,7,1.57,1.57,,no
 france,"TravelGator eSIM","France eSIM Roaming Data",1,15,1.570470344488249,1.57,,no
 france,"eSIM Agora","Europe (33 areas) 1GB/Day FUP1Mbps",1,1,1.5757082400000002,1.576,,no
@@ -533,7 +534,6 @@ france,"Voyasim","France 1GB/Day",1,1,1.6,1.6,,yes
 france,"Billion Connect","Europe eSIM [33 Countries] 3 Days 1GB",1,3,1.6,1.6,,yes
 france,"IbridMarket","France 1GB/Day FUP1Mbps",1,1,1.62,1.62,,no
 france,"Tripuck eSIM","France 1 GB / 7 Days",1,7,1.64,1.64,,no
-france,"Stellar eSim","Europe(30+ areas) 1GB 30Days + Free Stellar VPN",1,30,1.64522478,1.645,,no
 france,"MicroEsim","Europe eSIM 33 Countries - 15 Days / Total 1GB",1,15,1.65,1.65,,yes
 france,"MicroEsim","Europe eSIM 42 Countries - 5 Days / Total 1GB",1,5,1.65,1.65,,yes
 france,"Yoho Mobile","45-Country eSIM 1GB/Day 1Day",1,1,1.65,1.65,,yes
@@ -620,7 +620,7 @@ france,"Superalink","France - Regular",0.1,3,0.65,6.5,,yes
 france,"Superalink","France - Regular",0.1,5,0.67,6.7,,yes
 france,"Superalink","France - Regular",0.1,7,0.69,6.9,,yes
 france,"Roamix","France 100MB 7Days",0.1,7,0.85,8.5,,yes
-france,"Stellar eSim","France 100MB 7Days + Free Stellar VPN",0.1,7,0.90371502,9.037,,no
+france,"Stellar eSim","France 100MB 7Days + Free Stellar VPN",0.1,7,0.8573706600000001,8.574,,no
 france,"eSIMNow","France 100MB 7Days",0.1,7,0.91,9.1,,yes
 france,"IbridMarket","France 100MB 7Days",0.1,7,0.92,9.2,,no
 france,"Zwitchy","France · 100 MB · 1 day",0.1,1,1,10,,yes
@@ -635,7 +635,7 @@ france,"Simsima","France 100MB 7Days",0.1,7,1.5,15,,yes
 france,"eSIM Hero","France 100MB 7 Days",0.1,7,1.5,15,,yes
 france,"RedEx eSIM","France 100MB 7Days",0.1,7,1.71,17.1,,yes
 georgia,"Horizon eSIM","Georgia 1GB 7Days",1,7,0.31282443000000004,0.313,,no
-georgia,"Stellar eSim","Georgia eSIM Unlimited - 1 day",3,1,1.76108568,0.587,,no
+georgia,"Stellar eSim","Georgia eSIM Unlimited - 1 day",3,1,1.67998305,0.56,,no
 georgia,"ESIM.DOG 🐶","⚡️ Magti Georgia - Best Coverage (3GB/1Days) - Black route",3,1,1.98,0.66,,no
 georgia,"ESIM.DOG 🐶","🛜 Magti Georgia - Essential Coverage (3GB/15Days) - Amber route",3,15,1.98,0.66,,no
 georgia,"ESIM.DOG 🐶","🛜 Magti Georgia - Essential Coverage (3GB/7Days) - Amber route",3,7,1.98,0.66,,no
@@ -650,12 +650,13 @@ georgia,"RedEx eSIM","Unlimited Data - 1 Days (3 GB / 384 KBPS)",3,1,2.17,0.723,
 georgia,"ESIM.DOG 🐶","🛜 Magti Georgia - Essential Coverage (2GB/1Days) - Amber route",2,1,1.49,0.745,,no
 georgia,"Superalink","Georgia - 2GB/day",2,1,1.5,0.75,,yes
 georgia,"ESIM888","Georgia (3GB/30DAYS)",3,30,2.25,0.75,,no
+georgia,"Stellar eSim","Georgia 3GB 15Days + Free Stellar VPN",3,15,2.5257676200000003,0.842,,no
 georgia,"RedEx eSIM","Unlimited Data - 1 Days (2 GB / 384 KBPS)",2,1,1.71,0.855,,no
 georgia,"RedEx eSIM","Unlimited Data - 1 Days (2 GB / 384 KBPS)",2,1,1.71,0.855,,no
 georgia,"Bloomy eSIM","Georgia Unlimited (3GB/day) 1 Day",3,1,2.57,0.857,,no
+georgia,"Stellar eSim","Georgia 3GB 30Days + Free Stellar VPN",3,30,2.61845634,0.873,,no
 georgia,"4S eSIM","Georgia 3GB - 1 Day",3,1,2.62,0.873,,no
 georgia,"Tripuck eSIM","Europe 3 GB / 3 Days",3,3,2.62,0.873,,yes
-georgia,"Stellar eSim","Georgia 3GB 15Days + Free Stellar VPN",3,15,2.65321461,0.884,,no
 georgia,"Tripuck eSIM","Europe 3 GB / 5 Days",3,5,2.69,0.897,,yes
 georgia,"ESIM888","Georgia (1GB/7DAYS)",1,7,0.9,0.9,,no
 georgia,"4S eSIM","Georgia 3GB - 5 Days",3,5,2.73,0.91,,no
@@ -663,7 +664,6 @@ georgia,"ESIM.DOG 🐶","⚡️ Magti Georgia - Best Coverage (2GB/4Days) - Blac
 georgia,"ESIM.DOG 🐶","🛜 Magti Georgia - Essential Coverage (2GB/15Days) - Amber route",2,15,1.83,0.915,,no
 georgia,"ESIM.DOG 🐶","🛜 Magti Georgia - Essential Coverage (2GB/14Days) - Amber route",2,14,1.83,0.915,,no
 georgia,"ESIM.DOG 🐶","🛜 Magti Georgia - Essential Coverage (2GB/30Days) - Amber route",2,30,1.83,0.915,,no
-georgia,"Stellar eSim","Georgia 3GB 30Days + Free Stellar VPN",3,30,2.7459033300000004,0.915,,no
 georgia,"Tripuck eSIM","Europe 3 GB / 25 Days",3,25,2.75,0.917,,yes
 georgia,"ESIM.DOG 🐶","⚡️ Magti Georgia - Best Coverage (3GB/30Days) - Black route",3,30,2.76,0.92,,no
 georgia,"Horizon eSIM","Georgia 3GB 30Days",3,30,2.7690755100000004,0.923,,no
@@ -688,15 +688,15 @@ georgia,"ESIM.DOG 🐶","⚡️ Magti Georgia - Best Coverage (3GB/3Days) - Blac
 georgia,"ESIM.DOG 🐶","⚡️ Magti Georgia - Best Coverage (3GB/10Days) - Black route",3,10,2.99,0.997,,no
 georgia,"MoodSIM","Georgia Unlimited (3 GB/day, then 1 Mbps) 1 Day",3,1,2.99,0.997,,no
 georgia,"ESIM.DOG 🐶","⚡️ Magti Georgia - Best Coverage (2GB/30Days) - Black route",2,30,2.04,1.02,,no
+georgia,"Stellar eSim","Georgia 1GB 7Days + Free Stellar VPN",1,7,1.05433419,1.054,,no
 georgia,"abesteSIM","eSIM Global (23 Destinations) - 1 Day / Daily 500MB",0.5,1,0.5418122688484459,1.084,,yes
 georgia,"abesteSIM","eSIM Middle East (17 Countries) - 1 Day / Daily 500MB",0.5,1,0.5418122688484459,1.084,,yes
-georgia,"Stellar eSim","Georgia 1GB 7Days + Free Stellar VPN",1,7,1.11226464,1.112,,no
+georgia,"Stellar eSim","Georgia 2GB 30Days + Free Stellar VPN",2,30,2.3519762699999998,1.176,,no
 georgia,"Tripuck eSIM","Europe 2 GB / 15 Days",2,15,2.37,1.185,,yes
 georgia,"Tripuck eSIM","Europe 2 GB / 15 Days",2,15,2.37,1.185,,yes
 georgia,"EZsim","Georgia - 1GB/7Days",1,7,1.2,1.2,,no
 georgia,"Tripuck eSIM","Georgia 2 GB/day / 1 Days",2,1,2.46,1.23,,no
 georgia,"Tripuck eSIM","Balkans 2 GB/day / 1 Days",2,1,2.46,1.23,,yes
-georgia,"Stellar eSim","Georgia 2GB 30Days + Free Stellar VPN",2,30,2.46783717,1.234,,no
 georgia,"ESIM.DOG 🐶","⚡️ Magti Georgia - Best Coverage (2GB/14Days) - Black route",2,14,2.49,1.245,,no
 georgia,"Billion Connect","Georgia eSIM 1 Day 2GB/Day",2,1,2.5,1.25,,yes
 georgia,"RedEx eSIM","Unlimited Data - 1 Days (2 GB / 384 KBPS)",2,1,2.52,1.26,,no
@@ -729,11 +729,11 @@ georgia,"MoodSIM","Georgia Unlimited (2 GB/day, then 512 Kbps) 1 Day",2,1,2.99,1
 georgia,"mobineX","Unlimited Standard",1,1,1.5,1.5,,yes
 georgia,"MegaEsim","Georgia 1 GB, 1 day",1,1,1.5,1.5,,no
 georgia,"4S eSIM","Caucasus+ 1GB - 5 Days",1,5,1.51,1.51,,no
+georgia,"Stellar eSim","Georgia 750MB 7Days + Free Stellar VPN",0.75,7,1.158609,1.545,,no
 georgia,"Bloomy eSIM","Georgia Unlimited (1GB/day) 1 Day",1,1,1.55,1.55,,no
 georgia,"4S eSIM","Caucasus+ 1GB - 7 Days",1,7,1.56,1.56,,no
 georgia,"Hiroaming","Georgia 1GB 7Days",1,7,1.58,1.58,,no
 georgia,"Ozly eSIM","Georgia 1GB 7Days",1,7,1.6,1.6,,no
-georgia,"Stellar eSim","Georgia 750MB 7Days + Free Stellar VPN",0.75,7,1.2165394500000002,1.622,,no
 georgia,"MegaEsim","Georgia Unlimited, 1 day (1 GB/day full speed)",1,1,1.64,1.64,,no
 georgia,"RedEx eSIM","1 GB - 7 Days",1,7,1.65,1.65,,no
 georgia,"RedEx eSIM","1 GB - 7 Days",1,7,1.65,1.65,,no
@@ -1272,24 +1272,25 @@ germany,"ESIM.DOG 🐶","⚡️ [5G] Vodafone Germany - Best 5G Coverage (100MB/
 germany,"ESIM.DOG 🐶","⚡️ [5G] Vodafone Germany - Best 5G Coverage (100MB/30Days) - Black route",0.1,30,1.49,14.9,,yes
 germany,"ESIM.DOG 🐶","🛜 Vodafone Germany - Essential Coverage (100MB/1Days) - Amber route",0.1,1,1.49,14.9,,yes
 germany,"ESIM.DOG 🐶","🛜 Vodafone Germany - Essential Coverage (100MB/30Days) - Amber route",0.1,30,1.49,14.9,,yes
-indonesia,"Stellar eSim","Indonesia 3GB 30Days + Free Stellar VPN",3,30,0.46344360000000007,0.154,,no
-indonesia,"Stellar eSim","Indonesia 5GB 30Days + Free Stellar VPN",5,30,1.8653604900000003,0.373,,no
-indonesia,"Stellar eSim","Indonesia 3GB 15Days + Free Stellar VPN",3,15,1.12385073,0.375,,no
-indonesia,"Stellar eSim","Indonesia eSIM Unlimited - 1 day",3,1,1.49460561,0.498,,no
+indonesia,"Stellar eSim","Indonesia 3GB 30Days + Free Stellar VPN",3,30,0.44027142,0.147,,no
+indonesia,"Stellar eSim","Indonesia 3GB 15Days + Free Stellar VPN",3,15,1.06592028,0.355,,no
+indonesia,"Stellar eSim","Indonesia 5GB 30Days + Free Stellar VPN",5,30,1.77267177,0.355,,no
+indonesia,"Stellar eSim","Indonesia eSIM Unlimited - 1 day",3,1,1.42508907,0.475,,no
 indonesia,"abesteSIM","eSIM Indonesia (Support Tiktok) - 1 Day / Daily 3GB",3,1,1.5155038824311604,0.505,,yes
 indonesia,"MicroEsim","Indonesia eSIM - 1 Day / Daily 3GB",3,1,1.63,0.543,,yes
 indonesia,"ASIMGO","eSIM Indonesia - 1 Day / Daily 3GB",3,1,1.63,0.543,,yes
 indonesia,"Billion Connect","Indonesia eSIM 5 Days 3GB",3,5,1.7,0.567,,yes
+indonesia,"Stellar eSim","Indonesia 3GB 15Days (nonhkip) + Free Stellar VPN",3,15,1.7379135,0.579,,no
 indonesia,"eSIMX","Indonesia 10GB 7Days",10,7,5.8,0.58,,yes
 indonesia,"ASIMGO","eSIM Southeast Asia - 5 Countries - 1 Day / Daily 1GB",1,1,0.59,0.59,,yes
 indonesia,"Billion Connect","Singapore &amp; Malaysia &amp; Indonesia eSIM 5 Days 3GB",3,5,1.81,0.603,,yes
-indonesia,"Stellar eSim","Indonesia 3GB 15Days (nonhkip) + Free Stellar VPN",3,15,1.83060222,0.61,,no
 indonesia,"ESIM.DOG 🐶","⚡️ [5G] Asia (5 countries) - Best 5G Coverage (3GB/1Days) - Pink route",3,1,1.89,0.63,,no
 indonesia,"Yoho Mobile","4-Country eSIM 3GB/Day 1Day",3,1,1.9,0.633,,yes
 indonesia,"Billion Connect","Southeast Asia eSIM [5 Countries] 5 Days 3GB",3,5,1.9,0.633,,yes
 indonesia,"Yoho Mobile","ID eSIM 3GB/Day 1Day",3,1,1.9,0.633,,yes
 indonesia,"Yoho Mobile","4-Country eSIM 3GB 3Day",3,3,1.91,0.637,,yes
 indonesia,"Yoho Mobile","ID eSIM 3GB 3Day",3,3,1.91,0.637,,yes
+indonesia,"Stellar eSim","Indonesia 3GB 30Days (nonhkip) + Free Stellar VPN",3,30,1.91170485,0.637,,no
 indonesia,"Billion Connect","Indonesia eSIM 1 Day 3GB/Day",3,1,1.93,0.643,,yes
 indonesia,"Billion Connect","Southeast Asia eSIM [5 Countries] 1 Day 3GB/Day",3,1,1.94,0.647,,yes
 indonesia,"ESIM.DOG 🐶","🛜 Smartfren/XL Axiata Indonesia - Essential Coverage (3GB/30Days) - Amber route",3,30,1.95,0.65,,yes
@@ -1301,10 +1302,10 @@ indonesia,"ESIM.DOG 🐶","🛜 Smartfren/XL Axiata Indonesia - Essential Covera
 indonesia,"ESIM.DOG 🐶","🛜 Smartfren/XL Axiata Indonesia - Essential Coverage (3GB/3Days) - Amber route",3,3,1.99,0.663,,yes
 indonesia,"MobiMatter","Indonesia 15 GB",15,30,9.99,0.666,,no
 indonesia,"MicroEsim","Indonesia eSIM - 1 Day / Daily 2GB",2,1,1.35,0.675,,yes
+indonesia,"Stellar eSim","Indonesia 1GB 7Days + Free Stellar VPN",1,7,0.70675149,0.707,,no
 indonesia,"ASIMGO","eSIM Indonesia - 1 Day / Daily 2GB",2,1,1.43,0.715,,yes
 indonesia,"MicroEsim","Southeast Asia eSIM 5 Countries - 1 Day / Daily 2GB",2,1,1.46,0.73,,yes
 indonesia,"RedEx eSIM","Unlimited Data - 1 Days (2 GB / 384 KBPS)",2,1,1.46,0.73,,no
-indonesia,"Stellar eSim","Indonesia 1GB 7Days + Free Stellar VPN",1,7,0.74150976,0.742,,no
 indonesia,"Billion Connect","Singapore &amp; Malaysia &amp; Indonesia eSIM 1 Day 2GB/Day",2,1,1.56,0.78,,yes
 indonesia,"Billion Connect","Indonesia eSIM 1 Day 2GB/Day",2,1,1.57,0.785,,yes
 indonesia,"Billion Connect","Indonesia eSIM 7 Days 1GB",1,7,0.8,0.8,,yes
@@ -1366,6 +1367,7 @@ indonesia,"Horizon eSIM","Indonesia 1GB 7Days",1,7,1.14702291,1.147,,no
 indonesia,"Yoho Mobile","4-Country eSIM 1GB/Day 1Day",1,1,1.15,1.15,,yes
 indonesia,"abesteSIM","eSIM Indonesia (Support Tiktok) - 30 Days / Total 1GB",1,30,1.154295703198863,1.154,,yes
 indonesia,"abesteSIM","eSIM Indonesia - 15 Days / Total 1GB",1,15,1.154295703198863,1.154,,yes
+indonesia,"Stellar eSim","Asia (7 areas) 1GB 7Days + Free Stellar VPN",1,7,1.17019509,1.17,,no
 indonesia,"ASIMGO","eSIM Indonesia - 3 Days / Total 1GB",1,3,1.18,1.18,,yes
 indonesia,"Yoho Mobile","12-Country eSIM 1GB 7Day",1,7,1.18,1.18,,yes
 indonesia,"Yoho Mobile","9-Country eSIM 1GB 7Day",1,7,1.18,1.18,,yes
@@ -1380,7 +1382,6 @@ indonesia,"Billion Connect","Southeast Asia eSIM [5 Countries] 3 Days 1GB",1,3,1
 indonesia,"Billion Connect","Southeast Asia eSIM [5 Countries] 1 Day 1GB/Day",1,1,1.21,1.21,,yes
 indonesia,"AdventureSIMs","Indonesia 1GB 7 Days",1,7,1.2132512519471637,1.213,,yes
 indonesia,"ASIMGO","eSIM Indonesia - 5 Days / Total 1GB",1,5,1.22,1.22,,yes
-indonesia,"Stellar eSim","Asia (7 areas) 1GB 7Days + Free Stellar VPN",1,7,1.2281255400000002,1.228,,no
 indonesia,"abesteSIM","eSIM Southeast Asia (5 Countries) - 1 Day / Daily 1GB",1,1,1.2328192204232755,1.233,,yes
 indonesia,"ASIMGO","eSIM Indonesia - 7 Days / Total 1GB",1,7,1.24,1.24,,yes
 indonesia,"TravelGator eSIM","Indonesia eSIM Roaming Data",1,3,1.2406715721457169,1.241,,no
@@ -1451,6 +1452,7 @@ indonesia,"4S eSIM","Asia+ 1GB - 5 Days",1,5,1.68,1.68,,no
 indonesia,"Yoho Mobile","14-Country eSIM 1GB/Day 1Day",1,1,1.68,1.68,,yes
 indonesia,"iRoamly","Indonesia-eSIM-1GB-15 Days-Total",1,15,1.7,1.7,,yes
 indonesia,"Superalink","Indonesia - Regular",1,7,1.71,1.71,,yes
+indonesia,"Stellar eSim","Indonesia 500MB 7Days + Free Stellar VPN",0.5,7,0.8573706600000001,1.715,,no
 indonesia,"eSIM Agora","Indonesia 1GB 7Days",1,7,1.7263274100000001,1.726,,no
 indonesia,"4S eSIM","Asia+ 1GB - 7 Days",1,7,1.73,1.73,,no
 indonesia,"Flysimio","Indonesia 1GB 7Days",1,7,1.75,1.75,,yes
@@ -1460,7 +1462,6 @@ indonesia,"IbridMarket","Indonesia 1GB/Day",1,1,1.76,1.76,,no
 indonesia,"iRoamly","Indonesia-eSIM-1GB-30 Days-Total",1,30,1.8,1.8,,yes
 indonesia,"eSIM4Travel","Global 72 - 1GB/7Days",1,7,1.8,1.8,,yes
 indonesia,"Voyasim","Indonesia 1GB 7Days",1,7,1.8,1.8,,yes
-indonesia,"Stellar eSim","Indonesia 500MB 7Days + Free Stellar VPN",0.5,7,0.90371502,1.807,,no
 indonesia,"SimSmash","Indonesia Daily Unlimited 0.49GB/day for 1 Days",0.49,1,0.89,1.816,,yes
 indonesia,"abesteSIM","eSIM Indonesia (Support Tiktok) - 3 Days / Daily 1GB",1,3,1.8295979513288103,1.83,,yes
 indonesia,"ASIMGO","eSIM Indonesia - Support Tikok - 3 Days / Daily 1GB",1,3,1.87,1.87,,yes
@@ -1491,7 +1492,6 @@ indonesia,"Billion Connect","Singapore &amp; Malaysia &amp; Indonesia eSIM 3 Day
 indonesia,"YonoSIM","Indonesia 1GB 7Days",1,7,1.99,1.99,,no
 indonesia,"Earth Esim","1GB/1 Day Indonesia 5G eSIM",1,1,1.99,1.99,,yes
 indonesia,"Wanderly eSIM","Indonesia 1GB 7Days",1,7,1.99,1.99,,no
-indonesia,"WonderConnect","Indonesia",1,7,1.99,1.99,,yes
 indonesia,"Connect Me Guru","Indonesia 500MB 7Days",0.5,7,1,2,,yes
 indonesia,"AlpineSIM","AlpineSIM Indonesia eSIM - 500MB | 7Days",0.5,7,1,2,,yes
 indonesia,"AlpineSIM","AlpineSIM Unlimited Indonesia eSIM - 500MB/Day / 1",0.5,1,1,2,,yes
@@ -1564,7 +1564,7 @@ indonesia,"Truely","Asia - 300MB, 2 days",0.3,2,1.89,6.3,,yes
 indonesia,"BlueSky eSIM","🔷 [5G] Worldwide (201 countries) Best Coverage (300MB/3d)",0.3,3,1.97,6.567,,yes
 indonesia,"Connect Me Guru","Indonesia 100MB 7Days",0.1,7,0.85,8.5,,yes
 indonesia,"Roamix","Indonesia 100MB 7Days",0.1,7,0.85,8.5,,yes
-indonesia,"Stellar eSim","Indonesia 100MB 7Days + Free Stellar VPN",0.1,7,0.90371502,9.037,,no
+indonesia,"Stellar eSim","Indonesia 100MB 7Days + Free Stellar VPN",0.1,7,0.8573706600000001,8.574,,no
 indonesia,"eSIMNow","Indonesia 100MB 7Days",0.1,7,0.91,9.1,,yes
 indonesia,"IbridMarket","Indonesia 100MB 7Days",0.1,7,0.92,9.2,,no
 indonesia,"BlueSky eSIM","✈️ [5G] Worldwide (201 countries) Best Coverage (200MB/30d)",0.2,30,1.97,9.85,,yes
@@ -1590,42 +1590,42 @@ indonesia,"ESIM.DOG 🐶","⚡️ [5G] Asia (2 countries) - Best 5G Coverage (10
 indonesia,"ESIM.DOG 🐶","⚡️ [5G] Asia (2 countries) - Best 5G Coverage (100MB/15Days) - Black route",0.1,15,1.96,19.6,,yes
 indonesia,"ESIM.DOG 🐶","⚡️ [5G] Asia (2 countries) - Best 5G Coverage (100MB/20Days) - Black route",0.1,20,1.96,19.6,,yes
 indonesia,"ESIM.DOG 🐶","⚡️ [5G] Asia (2 countries) - Best 5G Coverage (100MB/30Days) - Black route",0.1,30,1.96,19.6,,yes
-italy,"Stellar eSim","Italy 3GB 30Days + Free Stellar VPN",3,30,0.46344360000000007,0.154,,no
-italy,"Stellar eSim","Italy 3GB 15Days + Free Stellar VPN",3,15,0.59089059,0.197,,no
-italy,"Stellar eSim","Europe (35 areas) 4GB 30Days + Free Stellar VPN",4,30,1.49460561,0.374,,no
-italy,"Stellar eSim","Europe (33 areas) 3GB 15Days + Free Stellar VPN",3,15,1.12385073,0.375,,no
-italy,"Stellar eSim","Italy eSIM Unlimited - 1 day",3,1,1.12385073,0.375,,no
+italy,"Stellar eSim","Italy 3GB 30Days + Free Stellar VPN",3,30,0.44027142,0.147,,no
+italy,"Stellar eSim","Italy 3GB 15Days + Free Stellar VPN",3,15,0.56771841,0.189,,no
+italy,"Stellar eSim","Europe (33 areas) 3GB 15Days + Free Stellar VPN",3,15,1.06592028,0.355,,no
+italy,"Stellar eSim","Italy eSIM Unlimited - 1 day",3,1,1.06592028,0.355,,no
+italy,"Stellar eSim","Europe (35 areas) 4GB 30Days + Free Stellar VPN",4,30,1.42508907,0.356,,no
+italy,"Stellar eSim","Europe (35 areas) 3GB 30Days + Free Stellar VPN",3,30,1.11226464,0.371,,no
+italy,"Stellar eSim","Europe (33 areas) 4GB 30Days + Free Stellar VPN",4,30,1.48301952,0.371,,no
 italy,"Horizon eSIM","Italy 1GB 7Days",1,7,0.38234097000000006,0.382,,no
-italy,"Stellar eSim","Europe (33 areas) 4GB 30Days + Free Stellar VPN",4,30,1.5525360600000002,0.388,,no
-italy,"Stellar eSim","Europe (35 areas) 3GB 30Days + Free Stellar VPN",3,30,1.17019509,0.39,,no
-italy,"Stellar eSim","Europe (33 areas) 3GB 30Days + Free Stellar VPN",3,30,1.2281255400000002,0.409,,no
-italy,"Stellar eSim","Europe (35 areas) 3GB 15Days + Free Stellar VPN",3,15,1.2512977200000002,0.417,,no
-italy,"Stellar eSim","Europe (35 areas) eSIM Unlimited - 1 day",3,1,1.2628838100000002,0.421,,no
-italy,"Stellar eSim","Europe (33 areas) eSIM Unlimited - 1 day",3,1,1.2860559900000001,0.429,,no
+italy,"Stellar eSim","Europe (33 areas) 3GB 30Days + Free Stellar VPN",3,30,1.17019509,0.39,,no
+italy,"Stellar eSim","Europe (35 areas) 3GB 15Days + Free Stellar VPN",3,15,1.19336727,0.398,,no
+italy,"Stellar eSim","Europe (35 areas) eSIM Unlimited - 1 day",3,1,1.2049533600000002,0.402,,no
+italy,"Stellar eSim","Italy 4GB 30Days + Free Stellar VPN",4,30,1.6220526,0.406,,no
+italy,"Stellar eSim","Europe (33 areas) eSIM Unlimited - 1 day",3,1,1.2281255400000002,0.409,,no
+italy,"Stellar eSim","Europe (33 areas) 2GB 30Days + Free Stellar VPN",2,30,0.97323156,0.487,,no
+italy,"Stellar eSim","Europe (35 areas) 2GB 15Days + Free Stellar VPN",2,15,0.98481765,0.492,,no
 italy,"abesteSIM","eSIM Italy - 1 Day / Daily 3GB",3,1,1.4840944755413954,0.495,,no
-italy,"Stellar eSim","Europe (33 areas) 2GB 30Days + Free Stellar VPN",2,30,1.01957592,0.51,,no
-italy,"Stellar eSim","Europe (35 areas) 2GB 15Days + Free Stellar VPN",2,15,1.03116201,0.516,,no
 italy,"ASIMGO","eSIM Italy - 1 Day / Daily 3GB",3,1,1.6,0.533,,no
-italy,"abesteSIM","eSIM Italy - 7 Days / Total 3GB",3,7,1.633289158267779,0.544,,no
-italy,"Stellar eSim","Europe (33 areas) 2GB 15Days + Free Stellar VPN",2,15,1.18178118,0.591,,no
+italy,"Stellar eSim","Europe (33 areas) 2GB 15Days + Free Stellar VPN",2,15,1.12385073,0.562,,no
+italy,"Stellar eSim","Europe (35 areas) 2GB 30Days + Free Stellar VPN",2,30,1.158609,0.579,,no
 italy,"abesteSIM","eSIM Italy - 1 Day / Daily 1GB",1,1,0.6046310826279759,0.605,,yes
-italy,"Stellar eSim","Europe (35 areas) 2GB 30Days + Free Stellar VPN",2,30,1.2165394500000002,0.608,,no
+italy,"Stellar eSim","Europe (35 areas) 1GB 7Days + Free Stellar VPN",1,7,0.6140627700000001,0.614,,no
 italy,"Billion Connect","Global eSIM [45 Countries] 1 Day 2GB/Day",2,1,1.25,0.625,,yes
+italy,"Stellar eSim","Europe (33 areas) 1GB 7Days + Free Stellar VPN",1,7,0.6256488600000001,0.626,,no
 italy,"abesteSIM","eSIM Italy - 1 Day / Daily 2GB",2,1,1.2956380342028053,0.648,,no
-italy,"Stellar eSim","Europe (35 areas) 1GB 7Days + Free Stellar VPN",1,7,0.6488210400000001,0.649,,no
-italy,"Stellar eSim","Europe (33 areas) 1GB 7Days + Free Stellar VPN",1,7,0.66040713,0.66,,no
 italy,"eSIMX","Italy 10GB 7Days",10,7,6.8,0.68,,yes
 italy,"eSIM4Travel","Best Europe 41 - 1GB/1Days",1,1,0.69,0.69,,yes
 italy,"eSIM4Travel","Best Europe 41 - 1GB/7Days",1,7,0.69,0.69,,yes
 italy,"Astaroam","Europe (33 areas) 1GB 7Days",1,7,0.6909223240803536,0.691,,yes
+italy,"Stellar eSim","Europe (35 areas) 750MB 7Days + Free Stellar VPN",0.75,7,0.52137405,0.695,,no
 italy,"ASIMGO","eSIM Italy - 1 Day / Daily 2GB",2,1,1.41,0.705,,no
+italy,"Stellar eSim","Italy 1GB 7Days + Free Stellar VPN",1,7,0.70675149,0.707,,no
+italy,"Stellar eSim","Europe (33 areas) 750MB 7Days + Free Stellar VPN",0.75,7,0.53296014,0.711,,no
 italy,"Billion Connect","Europe eSIM [33 Countries] 1 Day 2GB/Day",2,1,1.43,0.715,,yes
 italy,"Billion Connect","Italy eSIM 1 Day 2GB/Day",2,1,1.43,0.715,,yes
-italy,"Stellar eSim","Europe (35 areas) 750MB 7Days + Free Stellar VPN",0.75,7,0.54454623,0.726,,no
 italy,"abesteSIM","eSIM Europe (36 Countries) - 1 Day / Daily 2GB",2,1,1.4605374203740717,0.73,,yes
 italy,"abesteSIM","eSIM Europe (32 Countries) - 1 Day / Daily 2GB",2,1,1.4605374203740717,0.73,,yes
-italy,"Stellar eSim","Europe (33 areas) 750MB 7Days + Free Stellar VPN",0.75,7,0.55613232,0.742,,no
-italy,"Stellar eSim","Italy 1GB 7Days + Free Stellar VPN",1,7,0.74150976,0.742,,no
 italy,"ESIM.DOG 🐶","🛜 TIM/Wind Italy - Essential Coverage (2GB/1Days) - Amber route",2,1,1.49,0.745,,yes
 italy,"Superalink","Italy - Regular",1,1,0.75,0.75,,yes
 italy,"thirr.com","IT 1GB 3D",1,3,0.75309585,0.753,,yes
@@ -1704,6 +1704,7 @@ italy,"Hiroaming","Europe (35 areas) 1GB 7Days",1,7,1.14,1.14,,no
 italy,"abesteSIM","eSIM Europe (32 Countries) - 1 Day / Daily 1GB",1,1,1.1464433514764218,1.146,,yes
 italy,"Yoho Mobile","32-Country eSIM 1GB/Day 1Day",1,1,1.15,1.15,,yes
 italy,"Yoho Mobile","IT eSIM 1GB/Day 1Day",1,1,1.15,1.15,,yes
+italy,"Stellar eSim","Europe(30+ areas) 1GB 7Days + Free Stellar VPN",1,7,1.158609,1.159,,no
 italy,"Yoho Mobile","36-Country eSIM 1GB 7Day",1,7,1.16,1.16,,yes
 italy,"Yoho Mobile","39-Country eSIM 1GB 7Day",1,7,1.16,1.16,,yes
 italy,"Yoho Mobile","IT eSIM 1GB 7Day",1,7,1.16,1.16,,yes
@@ -1725,7 +1726,6 @@ italy,"Connect Me Guru","Italy 1GB/Day",1,1,1.21,1.21,,yes
 italy,"4S eSIM","Europe+ 1GB - 5 Days",1,5,1.21,1.21,,no
 italy,"AdventureSIMs","Italy 1GB 7 Days",1,7,1.2132512519471637,1.213,,yes
 italy,"AdventureSIMs","Europe Saver 1GB 7 Days",1,7,1.2132512519471637,1.213,,yes
-italy,"Stellar eSim","Europe(30+ areas) 1GB 7Days + Free Stellar VPN",1,7,1.2165394500000002,1.217,,no
 italy,"4S eSIM","Italy 1GB - 5 Days",1,5,1.22,1.22,,no
 italy,"4S eSIM","Europe+ 1GB - 7 Days",1,7,1.24,1.24,,no
 italy,"4S eSIM","Italy 1GB - 7 Days",1,7,1.25,1.25,,no
@@ -1835,6 +1835,7 @@ italy,"MicroEsim","Europe eSIM 5G 49 Destinations - 1 Day / Daily 1GB",1,1,1.55,
 italy,"TravelGator eSIM","Italy eSIM Roaming Data",1,10,1.5547656410433666,1.555,,no
 italy,"MicroEsim","Europe eSIM 33 Countries - 10 Days / Total 1GB",1,10,1.56,1.56,,yes
 italy,"ASIMGO","eSIM Europe (49 Destinations) - 1 Day / Daily 1GB",1,1,1.56,1.56,,yes
+italy,"Stellar eSim","Europe(30+ areas) 1GB 30Days + Free Stellar VPN",1,30,1.5641221500000002,1.564,,no
 italy,"Tripuck eSIM","Italy 1 GB / 7 Days",1,7,1.57,1.57,,yes
 italy,"RedEx eSIM","1 GB - 7 Days",1,7,1.57,1.57,,no
 italy,"TravelGator eSIM","Italy eSIM Roaming Data",1,15,1.570470344488249,1.57,,no
@@ -1892,7 +1893,6 @@ italy,"ASIMGO","eSIM Europe (36 Countries) - 3 Days / Daily 500MB",0.5,3,1.55,3.
 italy,"abesteSIM","eSIM Asia+Europe 52 Regions - 3 Days / Daily 500MB",0.5,3,1.5861750479331316,3.172,,yes
 italy,"Connect Me Guru","Europe(30+ areas) 500MB/Day",0.5,1,1.6,3.2,,no
 italy,"IbridMarket","Europe(30+ areas) 500MB/Day",0.5,1,1.62,3.24,,no
-italy,"abesteSIM","eSIM Italy - 5 Days / Daily 500MB",0.5,5,1.633289158267779,3.267,,no
 italy,"Earth Esim","300MB/1 Day Europe Region eSIM",0.3,1,0.99,3.3,,yes
 italy,"AlpineSIM","AlpineSIM Unlimited Europe(30+ areas) eSIM - 300MB/Day / 1",0.3,1,1,3.333,,yes
 italy,"Connect Me Guru","Europe(30+ areas) 300MB/Day",0.3,1,1.08,3.6,,no
@@ -2224,44 +2224,45 @@ japan,"ESIM.DOG 🐶","🛜 SoftBank Japan Japan - Essential Coverage (100MB/25D
 japan,"merdata","eSIM Japan 100 MB 7 days",0.1,7,1.4932055367591441,14.932,,no
 japan,"Simsima","Japan 100MB 7Days",0.1,7,1.5,15,,yes
 japan,"RedEx eSIM","Japan 100MB 7Days",0.1,7,1.71,17.1,,yes
-malaysia,"Stellar eSim","Malaysia 3GB 30Days + Free Stellar VPN",3,30,0.46344360000000007,0.154,,no
+malaysia,"Stellar eSim","Malaysia 3GB 30Days + Free Stellar VPN",3,30,0.44027142,0.147,,no
 malaysia,"Superalink","Malaysia - 5GB/day",5,1,1.08,0.216,,yes
-malaysia,"Stellar eSim","Malaysia 2GB 30Days + Free Stellar VPN",2,30,0.46344360000000007,0.232,,no
+malaysia,"Stellar eSim","Malaysia 2GB 30Days + Free Stellar VPN",2,30,0.44027142,0.22,,no
 malaysia,"Superalink","Malaysia - 3GB/day",3,1,0.84,0.28,,yes
-malaysia,"Stellar eSim","Malaysia 4GB 30Days + Free Stellar VPN",4,30,1.2165394500000002,0.304,,no
+malaysia,"Stellar eSim","Malaysia 4GB 30Days + Free Stellar VPN",4,30,1.158609,0.29,,no
 malaysia,"Superalink","Malaysia - 2GB/day",2,1,0.7,0.35,,yes
-malaysia,"Stellar eSim","Malaysia 3GB 15Days + Free Stellar VPN",3,15,1.12385073,0.375,,no
+malaysia,"Stellar eSim","Malaysia 3GB 15Days + Free Stellar VPN",3,15,1.06592028,0.355,,no
 malaysia,"abesteSIM","eSIM Malaysia (5G) - 1 Day / Daily 3GB",3,1,1.3113427376476878,0.437,,yes
 malaysia,"abesteSIM","eSIM Malaysia &amp; Thailand - 1 Day / Daily 3GB",3,1,1.3270474410925703,0.442,,yes
 malaysia,"Yoho Mobile","MY eSIM 3GB 15Day",3,15,1.35,0.45,,yes
 malaysia,"Yoho Mobile","MY eSIM 3GB 10Day",3,10,1.35,0.45,,yes
 malaysia,"ASIMGO","eSIM Malaysia (5G) - 1 Day / Daily 3GB",3,1,1.42,0.473,,yes
+malaysia,"Stellar eSim","Malaysia 3GB 15Days (nonhkip) + Free Stellar VPN",3,15,1.44826125,0.483,,no
+malaysia,"Stellar eSim","Malaysia eSIM Unlimited - 1 day",3,1,1.44826125,0.483,,no
 malaysia,"abesteSIM","eSIM Malaysia (5G) - 3 Days / Total 3GB",3,3,1.499799178986278,0.5,,yes
+malaysia,"Stellar eSim","Malaysia 3GB 30Days (nonhkip) + Free Stellar VPN",3,30,1.5061917,0.502,,no
 malaysia,"thirr.com","MY 3GB 30D",3,30,1.51777779,0.506,,yes
-malaysia,"Stellar eSim","Malaysia 3GB 15Days (nonhkip) + Free Stellar VPN",3,15,1.51777779,0.506,,no
-malaysia,"Stellar eSim","Malaysia eSIM Unlimited - 1 day",3,1,1.51777779,0.506,,no
 malaysia,"MicroEsim","Malaysia eSIM - Umobile 5G - 1 Day / Daily 3GB",3,1,1.52,0.507,,yes
 malaysia,"abesteSIM","eSIM Malaysia (5G) - 5 Days / Total 3GB",3,5,1.5469132893209254,0.516,,yes
 malaysia,"abesteSIM","eSIM Malaysia &amp; Thailand - 3 Days / Total 3GB",3,3,1.5547656410433666,0.518,,yes
 malaysia,"BNESIM","Surf 20 GB in Malaysia for 30 days",20,30,10.42,0.521,,yes
 malaysia,"eSIMX","Malaysia 20GB 7Days",20,7,10.8,0.54,,yes
+malaysia,"Stellar eSim","Malaysia 2GB 15Days + Free Stellar VPN",2,15,1.12385073,0.562,,no
 malaysia,"ASIMGO","eSIM Southeast Asia - 5 Countries - 1 Day / Daily 1GB",1,1,0.59,0.59,,yes
-malaysia,"Stellar eSim","Malaysia 2GB 15Days + Free Stellar VPN",2,15,1.18178118,0.591,,no
 malaysia,"MicroEsim","Malaysia eSIM - Umobile 5G - 1 Day / Daily 2GB",2,1,1.22,0.61,,yes
+malaysia,"Stellar eSim","Singapore &amp; Malaysia &amp; Thailand eSIM Unlimited - 1 day",2,1,1.2281255400000002,0.614,,no
 malaysia,"abesteSIM","eSIM Malaysia (5G) - 1 Day / Daily 2GB",2,1,1.2328192204232755,0.616,,yes
 malaysia,"MicroEsim","Malaysia eSIM 5G - Maxis, Celcom, Digi - 1 Day / Daily 2GB",2,1,1.26,0.63,,yes
 malaysia,"abesteSIM","eSIM Malaysia &amp; Thailand - 1 Day / Daily 2GB",2,1,1.2799333307579228,0.64,,yes
-malaysia,"Stellar eSim","Singapore &amp; Malaysia &amp; Thailand eSIM Unlimited - 1 day",2,1,1.2860559900000001,0.643,,no
 malaysia,"MicroEsim","Singapore &amp; Malaysia &amp; Thailand eSIM 5G - 1 Day / Daily 2GB",2,1,1.3,0.65,,yes
 malaysia,"Superalink","Malaysia - 1GB/day",1,1,0.67,0.67,,yes
 malaysia,"ASIMGO","eSIM Malaysia (5G) - 1 Day / Daily 2GB",2,1,1.34,0.67,,yes
 malaysia,"Yoho Mobile","MY eSIM 1GB/Day 1Day",1,1,0.68,0.68,,yes
+malaysia,"Stellar eSim","Malaysia 1GB 7Days + Free Stellar VPN",1,7,0.70675149,0.707,,no
 malaysia,"Billion Connect","Malaysia eSIM 1 Day 2GB/Day",2,1,1.43,0.715,,yes
 malaysia,"MicroEsim","Southeast Asia eSIM 5 Countries - 1 Day / Daily 2GB",2,1,1.46,0.73,,yes
 malaysia,"RedEx eSIM","Unlimited Data - 1 Days (2 GB / 384 KBPS)",2,1,1.46,0.73,,no
 malaysia,"MicroEsim","Malaysia eSIM - Umobile 5G - 1 Day / Daily 1GB",1,1,0.74,0.74,,yes
 malaysia,"MicroEsim","Malaysia eSIM 5G - Maxis, Celcom, Digi - 1 Day / Daily 1GB",1,1,0.74,0.74,,yes
-malaysia,"Stellar eSim","Malaysia 1GB 7Days + Free Stellar VPN",1,7,0.74150976,0.742,,no
 malaysia,"RedEx eSIM","Unlimited Data - 1 Days (2 GB / 384 KBPS)",2,1,1.49,0.745,,no
 malaysia,"MicroEsim","Singapore &amp; Malaysia &amp; Thailand eSIM 5G - 1 Day / Daily 1GB",1,1,0.75,0.75,,yes
 malaysia,"Superalink","Malaysia - Regular",1,1,0.75,0.75,,yes
@@ -2271,6 +2272,7 @@ malaysia,"Superalink","Malaysia - Regular",2,3,1.53,0.765,,yes
 malaysia,"Superalink","Malaysia - Regular",1,3,0.77,0.77,,yes
 malaysia,"TravelGator eSIM","Malaysia eSIM Roaming Data",1,1,0.7773828205216833,0.777,,no
 malaysia,"Billion Connect","Singapore &amp; Malaysia &amp; Indonesia eSIM 1 Day 2GB/Day",2,1,1.56,0.78,,yes
+malaysia,"Stellar eSim","Singapore &amp; Malaysia &amp; Thailand 2GB 15Days + Free Stellar VPN",2,15,1.5641221500000002,0.782,,no
 malaysia,"Superalink","Malaysia - Regular",2,5,1.57,0.785,,yes
 malaysia,"TravelGator eSIM","Malaysia eSIM Roaming Data",2,1,1.570470344488249,0.785,,no
 malaysia,"Superalink","Malaysia - Regular",1,5,0.79,0.79,,yes
@@ -2294,6 +2296,7 @@ malaysia,"Billion Connect","Malaysia eSIM 3 Days 1GB",1,3,0.9,0.9,,yes
 malaysia,"MicroEsim","Malaysia eSIM 5G - Maxis, Celcom, Digi - 5 Days / Total 1GB",1,5,0.94,0.94,,yes
 malaysia,"ASIMGO","eSIM Malaysia (5G) - 1 Day / Daily 1GB",1,1,0.95,0.95,,yes
 malaysia,"abesteSIM","eSIM Asia (27 Regions, Support Tiktok) - 1 Day / Daily 500MB",0.5,1,0.47899345506891594,0.958,,yes
+malaysia,"Stellar eSim","Malaysia 1GB 7Days (nonhkip) + Free Stellar VPN",1,7,0.96164547,0.962,,no
 malaysia,"MicroEsim","Singapore &amp; Malaysia &amp; Thailand eSIM 5G - 5 Days / Total 1GB",1,5,0.97,0.97,,yes
 malaysia,"Yoho Mobile","3-Country eSIM 1GB 7Day",1,7,0.97,0.97,,yes
 malaysia,"Yoho Mobile","MY eSIM 1GB 7Day",1,7,0.97,0.97,,yes
@@ -2305,7 +2308,6 @@ malaysia,"Instabridge","1 GB Malaysia eSIM Mobile Data Plan",1,7,1,1,,no
 malaysia,"Orbit Mobile","Global Pass",1,1,1,1,,no
 malaysia,"AlpineSIM","AlpineSIM Unlimited Malaysia eSIM - 1GB/Day / 1",1,1,1,1,,yes
 malaysia,"iRoamly","Malaysia-eSIM-1GB-1 Day-Daily",1,1,1,1,,yes
-malaysia,"Stellar eSim","Malaysia 1GB 7Days (nonhkip) + Free Stellar VPN",1,7,1.00798983,1.008,,no
 malaysia,"MicroEsim","Malaysia eSIM 5G - Maxis, Celcom, Digi - 7 Days / Total 1GB",1,7,1.02,1.02,,yes
 malaysia,"eSIM4Travel","South Asia 5 (Singapore, Malaysia, Thailand, Indonesia, Vietnam) - 1GB/7Days",1,7,1.03,1.03,,yes
 malaysia,"abesteSIM","eSIM Malaysia (5G, Local IP) - 5 Days / Total 1GB",1,5,1.0365104273622445,1.037,,yes
@@ -2316,6 +2318,7 @@ malaysia,"Bloomy eSIM","Malaysia Unlimited (1GB/day) 1 Day",1,1,1.05,1.05,,yes
 malaysia,"Bloomy eSIM","Malaysia 1GB 7 Days",1,7,1.05,1.05,,yes
 malaysia,"Yoho Mobile","4-Country eSIM 1GB 7Day",1,7,1.05,1.05,,yes
 malaysia,"abesteSIM","eSIM Malaysia &amp; Thailand - 5 Days / Total 1GB",1,5,1.052215130807127,1.052,,yes
+malaysia,"Stellar eSim","Singapore &amp; Malaysia &amp; Thailand 1GB 7Days + Free Stellar VPN",1,7,1.05433419,1.054,,no
 malaysia,"MicroEsim","Singapore &amp; Malaysia &amp; Thailand eSIM 5G - 7 Days / Total 1GB",1,7,1.06,1.06,,yes
 malaysia,"Yoho Mobile","2-Country eSIM 1GB/Day 1Day",1,1,1.07,1.07,,yes
 malaysia,"Yoho Mobile","4-Country eSIM 1GB/Day 1Day",1,1,1.07,1.07,,yes
@@ -2332,7 +2335,6 @@ malaysia,"Ubigi","",10,7,11,1.1,,yes
 malaysia,"ASIMGO","eSIM Malaysia - Local IP - 2 Days / Daily 500MB",0.5,2,0.55,1.1,,yes
 malaysia,"ASIMGO","eSIM Southeast Asia - 5 Countries - 1 Day / Daily 500MB",0.5,1,0.55,1.1,,yes
 malaysia,"mobineX","Unlimited Standard",1,1,1.1,1.1,,yes
-malaysia,"Stellar eSim","Singapore &amp; Malaysia &amp; Thailand 1GB 7Days + Free Stellar VPN",1,7,1.11226464,1.112,,no
 malaysia,"abesteSIM","eSIM Malaysia &amp; Thailand - 7 Days / Total 1GB",1,7,1.1150339445866568,1.115,,yes
 malaysia,"ASIMGO","eSIM Singapore - Malaysia - Thailand (Support TikTok) - 1 Day / Daily 500MB",0.5,1,0.56,1.12,,yes
 malaysia,"ASIMGO","eSIM Asia&amp;Europe - 54 Countries - 1 Day / Daily 500MB",0.5,1,0.56,1.12,,yes
@@ -2346,6 +2348,7 @@ malaysia,"eSIM4Travel","Malaysia (Celcom, Digi) - 1GB/1Days",1,1,1.16,1.16,,yes
 malaysia,"abesteSIM","eSIM Malaysia &amp; Thailand - 10 Days / Total 1GB",1,10,1.1621480549213044,1.162,,yes
 malaysia,"MicroEsim","Malaysia eSIM - Umobile 5G - 2 Days / Daily 1GB",1,2,1.17,1.17,,yes
 malaysia,"Superalink","Malaysia - 1GB/day",1,3,1.17,1.17,,yes
+malaysia,"Stellar eSim","Asia (7 areas) 1GB 7Days + Free Stellar VPN",1,7,1.17019509,1.17,,no
 malaysia,"Yoho Mobile","12-Country eSIM 1GB 7Day",1,7,1.18,1.18,,yes
 malaysia,"Yoho Mobile","9-Country eSIM 1GB 7Day",1,7,1.18,1.18,,yes
 malaysia,"Yoho Mobile","10-Country eSIM 1GB 7Day",1,7,1.18,1.18,,yes
@@ -2365,7 +2368,6 @@ malaysia,"ASIMGO","eSIM Malaysia (5G) - 7 Days / Total 1GB",1,7,1.21,1.21,,yes
 malaysia,"AdventureSIMs","Malaysia 1GB 7 Days",1,7,1.2132512519471637,1.213,,yes
 malaysia,"abesteSIM","eSIM Malaysia (5G) - 15 Days / Total 1GB",1,15,1.217114516978393,1.217,,yes
 malaysia,"SimSmash","Malaysia Daily Unlimited 1GB/day for 1 Days",1,1,1.22,1.22,,yes
-malaysia,"Stellar eSim","Asia (7 areas) 1GB 7Days + Free Stellar VPN",1,7,1.2281255400000002,1.228,,no
 malaysia,"abesteSIM","eSIM Malaysia &amp; Thailand - 15 Days / Total 1GB",1,15,1.2328192204232755,1.233,,yes
 malaysia,"abesteSIM","eSIM Southeast Asia (5 Countries) - 1 Day / Daily 1GB",1,1,1.2328192204232755,1.233,,yes
 malaysia,"MicroEsim","Singapore &amp; Malaysia &amp; Thailand eSIM 5G - 15 Days / Total 1GB",1,15,1.24,1.24,,yes
@@ -2446,10 +2448,10 @@ malaysia,"RedEx eSIM","1 GB - 7 Days",1,7,1.53,1.53,,no
 malaysia,"Yatelo","MYS 1GB 7 Days",1,7,1.54,1.54,,yes
 malaysia,"ASIMGO","eSIM Malaysia (5G) - 3 Days / Daily 1GB",1,3,1.55,1.55,,yes
 malaysia,"SimSmash","Malaysia Daily Unlimited 0.49GB/day for 1 Days",0.49,1,0.79,1.612,,yes
+malaysia,"Stellar eSim","Malaysia 500MB 7Days + Free Stellar VPN",0.5,7,0.8573706600000001,1.715,,no
 malaysia,"MicroEsim","Southeast Asia eSIM 5 Countries - 1 Day / Daily 500MB",0.5,1,0.88,1.76,,yes
 malaysia,"MicroEsim","Malaysia eSIM - Umobile 5G - 2 Days / Daily 300MB",0.3,2,0.53,1.767,,yes
 malaysia,"MicroEsim","Malaysia eSIM - Umobile 5G - 2 Days / Daily 500MB",0.5,2,0.89,1.78,,yes
-malaysia,"Stellar eSim","Malaysia 500MB 7Days + Free Stellar VPN",0.5,7,0.90371502,1.807,,no
 malaysia,"Hiroaming","Malaysia 500MB/Day",0.5,1,0.92,1.84,,no
 malaysia,"ASIMGO","eSIM Asia (26 Regions, Support Tiktok) - 1 Day / Daily 500MB",0.5,1,0.96,1.92,,yes
 malaysia,"abesteSIM","eSIM Malaysia (5G, Local IP) - 2 Days / Daily 500MB",0.5,2,0.9658392618602731,1.932,,yes
@@ -2514,9 +2516,7 @@ malaysia,"Superalink","Malaysia - 500MB/day",0.5,7,1.55,3.1,,yes
 malaysia,"MicroEsim","Malaysia eSIM - Umobile 5G - 5 Days / Daily 500MB",0.5,5,1.56,3.12,,yes
 malaysia,"Horizon eSIM","Malaysia 100MB 7Days",0.1,7,0.31282443000000004,3.128,,no
 malaysia,"ESIM.DOG 🐶","⚡️ [5G] CelcomDigi/Maxis Malaysia - Best Unlimited 5G Coverage - Blue route",0.5,1,1.57,3.14,,yes
-malaysia,"Tripuck eSIM","Multi-Region 502 MB / 1 Days",0.5,1,1.58,3.147,,no
 malaysia,"MicroEsim","Malaysia eSIM - Umobile 5G - 10 Days / Daily 3GB",3,10,9.47,3.157,,yes
-malaysia,"ASIMGO","eSIM Malaysia (5G) - 5 Days / Daily 500MB",0.5,5,1.58,3.16,,yes
 malaysia,"Voyasim","Malaysia 100MB 7Days",0.1,7,0.5,5,,yes
 malaysia,"Bloomy eSIM","Malaysia 100MB 7 Days",0.1,7,0.5,5,,yes
 malaysia,"MicroEsim","Asia eSIM 10 Regions - Support TikTok - 1 Day / Total 200MB",0.2,1,1.01,5.05,,yes
@@ -2528,7 +2528,7 @@ malaysia,"Superalink","Malaysia - Regular",0.1,5,0.67,6.7,,yes
 malaysia,"Superalink","Malaysia - Regular",0.1,7,0.69,6.9,,yes
 malaysia,"Connect Me Guru","Malaysia 100MB 7Days",0.1,7,0.85,8.5,,yes
 malaysia,"Roamix","Malaysia 100MB 7Days",0.1,7,0.85,8.5,,yes
-malaysia,"Stellar eSim","Malaysia 100MB 7Days + Free Stellar VPN",0.1,7,0.90371502,9.037,,no
+malaysia,"Stellar eSim","Malaysia 100MB 7Days + Free Stellar VPN",0.1,7,0.8573706600000001,8.574,,no
 malaysia,"IbridMarket","Malaysia 100MB 7Days",0.1,7,0.92,9.2,,no
 malaysia,"Keepgo","Norm",0.1,0,1,10,,yes
 malaysia,"Zwitchy","Malaysia · 100 MB · 1 day",0.1,1,1,10,,yes
@@ -2557,21 +2557,22 @@ mexico,"ESIM.DOG 🐶","🛜 Altan Mexico - Essential Coverage (2GB/1Days) - Amb
 mexico,"ESIM.DOG 🐶","🛜 Altan Mexico - Essential Coverage (2GB/10Days) - Amber route",2,10,2.13,1.065,,no
 mexico,"ESIM.DOG 🐶","🛜 Altan Mexico - Essential Coverage (2GB/14Days) - Amber route",2,14,2.13,1.065,,no
 mexico,"abesteSIM","eSIM North America (US &amp; Canada &amp; Mexico) 5G - 1 Day / Daily 500MB",0.5,1,0.5418122688484459,1.084,,yes
+mexico,"Stellar eSim","Mexico 1GB 7Days + Free Stellar VPN",1,7,1.11226464,1.112,,no
 mexico,"Superalink","Mexico - 1GB/day",1,1,1.12,1.12,,yes
 mexico,"ESIM.DOG 🐶","🛜 Altan Mexico - Essential Coverage (2GB/20Days) - Amber route",2,20,2.27,1.135,,no
 mexico,"ESIM.DOG 🐶","🛜 Altan Mexico - Essential Coverage (2GB/30Days) - Amber route",2,30,2.27,1.135,,no
 mexico,"abesteSIM","eSIM America (20 Destinations) - 1 Day / Daily 500MB",0.5,1,0.5810740274606522,1.162,,yes
-mexico,"Stellar eSim","Mexico 1GB 7Days + Free Stellar VPN",1,7,1.17019509,1.17,,no
 mexico,"nadanada","eSIM, 1GB, 7 Days, North America",1,7,1.19,1.19,,no
 mexico,"Sim Local","Mexico 20 GB for 30 Days",20,30,24.5,1.225,,yes
 mexico,"Superalink","Mexico - 500MB/day",0.5,1,0.63,1.26,,yes
-mexico,"Stellar eSim","Mexico 2GB 15Days + Free Stellar VPN",2,15,2.8617642300000004,1.431,,no
-mexico,"Stellar eSim","North America 1GB 30Days + Free Stellar VPN",1,30,1.48301952,1.483,,no
+mexico,"Stellar eSim","Mexico 2GB 15Days + Free Stellar VPN",2,15,2.7227311500000004,1.361,,no
+mexico,"Stellar eSim","North America 1GB 30Days + Free Stellar VPN",1,30,1.41350298,1.414,,no
+mexico,"Stellar eSim","Mexico 2GB 30Days + Free Stellar VPN",2,30,2.90810859,1.454,,no
+mexico,"Stellar eSim","North America 1GB 7Days + Free Stellar VPN",1,7,1.48301952,1.483,,no
 mexico,"ESIM.DOG 🐶","⚡️ Altan Mexico - Best Coverage (2GB/1Days) - Black route",2,1,2.99,1.495,,no
 mexico,"Breeze","Mexico",10,30,14.99,1.499,,yes
 mexico,"Superalink","Mexico - Regular",1,1,1.54,1.54,,yes
 mexico,"Nomad","Local Mexico - 30 Days - 10 GB",10,30,15.5,1.55,ESIMDB3,yes
-mexico,"Stellar eSim","North America 1GB 7Days + Free Stellar VPN",1,7,1.5525360600000002,1.553,,no
 mexico,"ESIM.DOG 🐶","🛜 Altan Mexico - Essential Coverage (1GB/3Days) - Amber route",1,3,1.57,1.57,,no
 mexico,"Superalink","Mexico - Regular",0.5,1,0.79,1.58,,yes
 mexico,"Superalink","Mexico - Regular",1,3,1.58,1.58,,yes
@@ -2588,16 +2589,16 @@ mexico,"ESIM.DOG 🐶","🛜 Altan Mexico - Essential Coverage (1GB/20Days) - Am
 mexico,"Superalink","Mexico - Regular",1,20,1.7,1.7,,yes
 mexico,"ESIM.DOG 🐶","🛜 Altan Mexico - Essential Coverage (1GB/30Days) - Amber route",1,30,1.71,1.71,,no
 mexico,"Superalink","Mexico - Regular",1,30,1.72,1.72,,yes
+mexico,"Stellar eSim","North America (3 areas) 750MB 7Days + Free Stellar VPN",0.75,7,1.2976420800000001,1.73,,no
 mexico,"Superalink","Mexico - Regular",0.5,7,0.87,1.74,,yes
 mexico,"eSIM4Travel","Global 72 - 1GB/7Days",1,7,1.8,1.8,,yes
 mexico,"ASIMGO","eSIM Mexico - 1 Day / Daily 1GB",1,1,1.82,1.82,,yes
-mexico,"Stellar eSim","North America (3 areas) 750MB 7Days + Free Stellar VPN",0.75,7,1.3671586199999999,1.823,,no
 mexico,"Billion Connect","USA &amp; Canada &amp; Mexico eSIM 1 Day 1GB/Day",1,1,1.9,1.9,,yes
 mexico,"MicroEsim","Mexico eSIM 5G - 1 Day / Daily 1GB",1,1,1.91,1.91,,yes
+mexico,"Stellar eSim","Mexico 500MB 7Days + Free Stellar VPN",0.5,7,0.96164547,1.923,,no
 mexico,"MicroEsim","North America (US &amp; Canada &amp; Mexico) eSIM 5G - 1 Day / Daily 1GB",1,1,1.98,1.98,,yes
 mexico,"ESIM.DOG 🐶","🛜 Altan Mexico - Essential Coverage (1GB/1Days) - Amber route",1,1,1.99,1.99,,no
 mexico,"SparkRoam","1 GB / 7 Days",1,7,2,2,,no
-mexico,"Stellar eSim","Mexico 500MB 7Days + Free Stellar VPN",0.5,7,1.00798983,2.016,,no
 mexico,"MegaEsim","Mexico 1 GB, 1 day",1,1,2.1,2.1,,yes
 mexico,"SimSmash","Mexico Daily Unlimited 1GB/day for 1 Days",1,1,2.11,2.11,,yes
 mexico,"4S eSIM","North America 1GB - 1 Day",1,1,2.15,2.15,,no
@@ -2805,7 +2806,6 @@ mexico,"ESIM.DOG 🐶","⚡️ Latin America (11 countries) - Best Coverage (500
 mexico,"ESIM.DOG 🐶","⚡️ [5G] Latin America (11 countries) - Best 5G Coverage (500MB/1Days) - Pink route",0.5,1,2.99,5.98,,no
 mexico,"YeeSiM","Mexico eSIM - 500MB Total for 7 days",0.5,7,3,6,,no
 mexico,"Ubigi","",0.5,2,3,6,,yes
-mexico,"Superalink","Mexico - 500MB/day",0.5,5,3,6,,yes
 mexico,"Superalink","Mexico - Regular",0.1,1,0.61,6.1,,yes
 mexico,"Superalink","Mexico - Regular",0.1,3,0.63,6.3,,yes
 mexico,"Truely","Mexico - 300MB, 2 days",0.3,2,1.89,6.3,,no
@@ -2820,8 +2820,8 @@ mexico,"PRIeSIM","Discover Global 300 MB · 3 days",0.3,3,2.3056319100000002,7.6
 mexico,"Truely","North America - 300MB, 2 days",0.3,2,2.49,8.3,,yes
 mexico,"Connect Me Guru","Mexico 100MB 7Days",0.1,7,0.85,8.5,,yes
 mexico,"Roamix","Mexico 100MB 7Days",0.1,7,0.85,8.5,,yes
+mexico,"Stellar eSim","Mexico 100MB 7Days + Free Stellar VPN",0.1,7,0.8573706600000001,8.574,,no
 mexico,"LATAM Travellers","Mexico eSIM - 100MB / 7 Days",0.1,7,0.88,8.8,,no
-mexico,"Stellar eSim","Mexico 100MB 7Days + Free Stellar VPN",0.1,7,0.90371502,9.037,,no
 mexico,"eSIMNow","Mexico 100MB 7Days",0.1,7,0.91,9.1,,yes
 mexico,"IbridMarket","Mexico 100MB 7Days",0.1,7,0.92,9.2,,no
 mexico,"BlueSky eSIM","✈️ [5G] Worldwide (201 countries) Best Coverage (200MB/30d)",0.2,30,1.97,9.85,,yes
@@ -2859,35 +2859,37 @@ mexico,"yaySIM","MX_0.1_7",0.1,7,2.2013571,21.582,,yes
 mexico,"Bordersim","Mexico 100MB 7Days",0.1,7,2.99,29.9,,yes
 mexico,"Turnaa eSIM","Mexico · 0.1 GB · 7 days",0.1,7,2.99,29.9,,yes
 mexico,"Movisim","Mexico 100MB - 7-Day eSIM",0.1,7,2.99,29.9,,yes
-singapore,"Stellar eSim","Singapore 3GB 30Days + Free Stellar VPN",3,30,0.46344360000000007,0.154,,no
+singapore,"Stellar eSim","Singapore 3GB 30Days + Free Stellar VPN",3,30,0.44027142,0.147,,no
 singapore,"Superalink","Singapore - 5GB/day",5,1,1.23,0.246,,yes
 singapore,"Superalink","Singapore - 3GB/day",3,1,0.98,0.327,,yes
-singapore,"Stellar eSim","Singapore 3GB 15Days + Free Stellar VPN",3,15,1.12385073,0.375,,no
+singapore,"Stellar eSim","Singapore 3GB 15Days + Free Stellar VPN",3,15,1.06592028,0.355,,no
 singapore,"Superalink","Singapore - 2GB/day",2,1,0.77,0.385,,yes
-singapore,"Stellar eSim","Singapore eSIM Unlimited - 1 day",3,1,1.2512977200000002,0.417,,no
+singapore,"Stellar eSim","Singapore eSIM Unlimited - 1 day",3,1,1.19336727,0.398,,no
 singapore,"abesteSIM","eSIM Malaysia &amp; Thailand - 1 Day / Daily 3GB",3,1,1.3270474410925703,0.442,,yes
 singapore,"ASIMGO","eSIM Singapore - 1 Day / Daily 3GB",3,1,1.42,0.473,,no
 singapore,"EtravelSIM","Singapore eSIM 20 GB - 10 Days",20,10,9.99,0.499,,no
 singapore,"Yoho Mobile","SG eSIM 3GB 15Day",3,15,1.54,0.513,,yes
 singapore,"abesteSIM","eSIM Malaysia &amp; Thailand - 3 Days / Total 3GB",3,3,1.5547656410433666,0.518,,yes
+singapore,"Stellar eSim","Singapore 3GB 15Days (nonhkip) + Free Stellar VPN",3,15,1.59888042,0.533,,no
 singapore,"eSIMX","Singapore 20GB 7Days",20,7,10.8,0.54,,yes
 singapore,"ASIMGO","eSIM Singapore - 3 Days / Total 3GB",3,3,1.63,0.543,,no
-singapore,"Stellar eSim","Singapore 3GB 15Days (nonhkip) + Free Stellar VPN",3,15,1.67998305,0.56,,no
+singapore,"Stellar eSim","Singapore &amp; Malaysia eSIM Unlimited - 1 day",3,1,1.64522478,0.548,,no
+singapore,"Stellar eSim","Singapore 3GB 30Days (nonhkip) + Free Stellar VPN",3,30,1.65681087,0.552,,no
 singapore,"MicroEsim","Singapore eSIM - 1 Day / Daily 3GB",3,1,1.69,0.563,,no
 singapore,"ASIMGO","eSIM Southeast Asia - 5 Countries - 1 Day / Daily 1GB",1,1,0.59,0.59,,yes
+singapore,"Stellar eSim","Singapore &amp; Malaysia &amp; Thailand eSIM Unlimited - 1 day",2,1,1.2281255400000002,0.614,,no
 singapore,"MicroEsim","Singapore eSIM - 1 Day / Daily 2GB",2,1,1.26,0.63,,no
 singapore,"abesteSIM","eSIM Malaysia &amp; Thailand - 1 Day / Daily 2GB",2,1,1.2799333307579228,0.64,,yes
-singapore,"Stellar eSim","Singapore &amp; Malaysia &amp; Thailand eSIM Unlimited - 1 day",2,1,1.2860559900000001,0.643,,no
 singapore,"MicroEsim","Singapore &amp; Malaysia &amp; Thailand eSIM 5G - 1 Day / Daily 2GB",2,1,1.3,0.65,,yes
+singapore,"Stellar eSim","Singapore 2GB 15Days + Free Stellar VPN",2,15,1.32081426,0.66,,no
 singapore,"ASIMGO","eSIM Singapore - 1 Day / Daily 2GB",2,1,1.37,0.685,,no
-singapore,"Stellar eSim","Singapore 2GB 15Days + Free Stellar VPN",2,15,1.3903308,0.695,,no
 singapore,"Superalink","Singapore - 1GB/day",1,1,0.7,0.7,,yes
+singapore,"Stellar eSim","Singapore 1GB 7Days + Free Stellar VPN",1,7,0.70675149,0.707,,no
+singapore,"Stellar eSim","Singapore 2GB 30Days + Free Stellar VPN",2,30,1.41350298,0.707,,no
 singapore,"MicroEsim","Southeast Asia eSIM 5 Countries - 1 Day / Daily 2GB",2,1,1.46,0.73,,yes
 singapore,"RedEx eSIM","Unlimited Data - 1 Days (2 GB / 384 KBPS)",2,1,1.46,0.73,,no
 singapore,"MicroEsim","Singapore eSIM - 1 Day / Daily 1GB",1,1,0.74,0.74,,no
 singapore,"Yoho Mobile","SG eSIM 1GB 7Day",1,7,0.74,0.74,,yes
-singapore,"Stellar eSim","Singapore 1GB 7Days + Free Stellar VPN",1,7,0.74150976,0.742,,no
-singapore,"Stellar eSim","Singapore 2GB 30Days + Free Stellar VPN",2,30,1.48301952,0.742,,no
 singapore,"MicroEsim","Singapore &amp; Malaysia &amp; Thailand eSIM 5G - 1 Day / Daily 1GB",1,1,0.75,0.75,,yes
 singapore,"Bloomy eSIM","Singapore Unlimited (1GB/day) 1 Day",1,1,0.75,0.75,,no
 singapore,"Superalink","Singapore - Regular",1,1,0.75,0.75,,yes
@@ -2899,13 +2901,13 @@ singapore,"Superalink","Singapore - Regular",2,3,1.53,0.765,,yes
 singapore,"Superalink","Singapore - Regular",1,3,0.77,0.77,,yes
 singapore,"TravelGator eSIM","Singapore eSIM Roaming Data",1,1,0.7773828205216833,0.777,,no
 singapore,"Billion Connect","Singapore &amp; Malaysia &amp; Indonesia eSIM 1 Day 2GB/Day",2,1,1.56,0.78,,yes
+singapore,"Stellar eSim","Singapore &amp; Malaysia &amp; Thailand 2GB 15Days + Free Stellar VPN",2,15,1.5641221500000002,0.782,,no
 singapore,"Superalink","Singapore - Regular",2,5,1.57,0.785,,yes
 singapore,"Superalink","Singapore - Regular",1,5,0.79,0.79,,yes
 singapore,"Superalink","Singapore - Regular",2,7,1.6,0.8,,yes
 singapore,"Superalink","Singapore - Regular",2,10,1.62,0.81,,yes
 singapore,"Superalink","Singapore - Regular",1,7,0.82,0.82,,yes
 singapore,"Superalink","Singapore - Regular",2,15,1.64,0.82,,yes
-singapore,"Stellar eSim","Singapore &amp; Malaysia &amp; Thailand 2GB 15Days + Free Stellar VPN",2,15,1.64522478,0.823,,no
 singapore,"abesteSIM","eSIM Southeast Asia (5 Countries) - 1 Day / Daily 2GB",2,1,1.6489938617126616,0.824,,yes
 singapore,"Yoho Mobile","4-Country eSIM 2GB/Day 1Day",2,1,1.65,0.825,,yes
 singapore,"Yoho Mobile","2-Country eSIM 2GB/Day 1Day",2,1,1.65,0.825,,yes
@@ -2928,6 +2930,7 @@ singapore,"MicroEsim","Singapore &amp; Malaysia &amp; Thailand eSIM 5G - 3 Days 
 singapore,"MicroEsim","Singapore eSIM - 5 Days / Total 1GB",1,5,0.94,0.94,,no
 singapore,"TravelGator eSIM","Singapore eSIM Roaming Data",1,3,0.9422822066929494,0.942,,no
 singapore,"ASIMGO","eSIM Singapore - 1 Day / Daily 1GB",1,1,0.95,0.95,,no
+singapore,"Stellar eSim","Singapore 1GB 7Days (nonhkip) + Free Stellar VPN",1,7,0.96164547,0.962,,no
 singapore,"TravelGator eSIM","Singapore eSIM Roaming Data",1,5,0.9658392618602731,0.966,,no
 singapore,"MicroEsim","Singapore &amp; Malaysia &amp; Thailand eSIM 5G - 5 Days / Total 1GB",1,5,0.97,0.97,,yes
 singapore,"Yoho Mobile","3-Country eSIM 1GB 7Day",1,7,0.97,0.97,,yes
@@ -2939,7 +2942,6 @@ singapore,"Orbit Mobile","Global Pass",1,1,1,1,,no
 singapore,"ESIM888","Singapore (1GB/7DAYS)",1,7,1,1,,no
 singapore,"iRoamly","Singapore-eSIM-1GB-1 Day-Daily",1,1,1,1,,yes
 singapore,"AlpineSIM","AlpineSIM Singapore eSIM - 1GB | 7Days",1,7,1,1,,no
-singapore,"Stellar eSim","Singapore 1GB 7Days (nonhkip) + Free Stellar VPN",1,7,1.00798983,1.008,,no
 singapore,"TravelGator eSIM","Singapore eSIM Roaming Data",1,7,1.0129533721949207,1.013,,no
 singapore,"MicroEsim","Singapore eSIM - 7 Days / Total 1GB",1,7,1.02,1.02,,no
 singapore,"eSIM4Travel","South Asia 5 (Singapore, Malaysia, Thailand, Indonesia, Vietnam) - 1GB/7Days",1,7,1.03,1.03,,yes
@@ -2947,6 +2949,7 @@ singapore,"Yesim","Singapore",0.5,1,0.52137405,1.043,,yes
 singapore,"Yesim","South East Asia",0.5,1,0.52137405,1.043,,yes
 singapore,"Yoho Mobile","4-Country eSIM 1GB 7Day",1,7,1.05,1.05,,yes
 singapore,"abesteSIM","eSIM Malaysia &amp; Thailand - 5 Days / Total 1GB",1,5,1.052215130807127,1.052,,yes
+singapore,"Stellar eSim","Singapore &amp; Malaysia &amp; Thailand 1GB 7Days + Free Stellar VPN",1,7,1.05433419,1.054,,no
 singapore,"MicroEsim","Singapore &amp; Malaysia &amp; Thailand eSIM 5G - 7 Days / Total 1GB",1,7,1.06,1.06,,yes
 singapore,"TravelGator eSIM","Singapore eSIM Roaming Data",1,10,1.0679198342520095,1.068,,no
 singapore,"Yoho Mobile","2-Country eSIM 1GB/Day 1Day",1,1,1.07,1.07,,yes
@@ -2960,7 +2963,7 @@ singapore,"Ubigi","",10,7,11,1.1,,yes
 singapore,"ASIMGO","eSIM Southeast Asia - 5 Countries - 1 Day / Daily 500MB",0.5,1,0.55,1.1,,yes
 singapore,"mobineX","Unlimited Standard",1,1,1.1,1.1,,yes
 singapore,"mobineX","Unlimited Standard",1,1,1.1,1.1,,yes
-singapore,"Stellar eSim","Singapore &amp; Malaysia &amp; Thailand 1GB 7Days + Free Stellar VPN",1,7,1.11226464,1.112,,no
+singapore,"Stellar eSim","Singapore 750MB 7Days + Free Stellar VPN",0.75,7,0.83419848,1.112,,no
 singapore,"abesteSIM","eSIM Malaysia &amp; Thailand - 7 Days / Total 1GB",1,7,1.1150339445866568,1.115,,yes
 singapore,"ASIMGO","eSIM Singapore - Malaysia - Thailand (Support TikTok) - 1 Day / Daily 500MB",0.5,1,0.56,1.12,,yes
 singapore,"ASIMGO","eSIM Asia&amp;Europe - 54 Countries - 1 Day / Daily 500MB",0.5,1,0.56,1.12,,yes
@@ -2974,7 +2977,7 @@ singapore,"eSIM Agora","Singapore 1GB/Day FUP1Mbps",1,1,1.158609,1.159,,no
 singapore,"eSIM4Travel","Singapore (Singtel) - 1GB/1Days",1,1,1.16,1.16,,yes
 singapore,"abesteSIM","eSIM Malaysia &amp; Thailand - 10 Days / Total 1GB",1,10,1.1621480549213044,1.162,,yes
 singapore,"eSIM4Travel","South Asia 3 (Singapore, Malaysia, Thailand) - 1GB/7Days",1,7,1.17,1.17,,yes
-singapore,"Stellar eSim","Singapore 750MB 7Days + Free Stellar VPN",0.75,7,0.88054284,1.174,,no
+singapore,"Stellar eSim","Asia (7 areas) 1GB 7Days + Free Stellar VPN",1,7,1.17019509,1.17,,no
 singapore,"TravelGator eSIM","Singapore eSIM Roaming Data",1,15,1.1778527583661869,1.178,,no
 singapore,"Yoho Mobile","12-Country eSIM 1GB 7Day",1,7,1.18,1.18,,yes
 singapore,"Yoho Mobile","9-Country eSIM 1GB 7Day",1,7,1.18,1.18,,yes
@@ -2991,7 +2994,6 @@ singapore,"Billion Connect","Southeast Asia eSIM [5 Countries] 3 Days 1GB",1,3,1
 singapore,"Billion Connect","Southeast Asia eSIM [5 Countries] 1 Day 1GB/Day",1,1,1.21,1.21,,yes
 singapore,"ASIMGO","eSIM Singapore - 7 Days / Total 1GB",1,7,1.21,1.21,,no
 singapore,"AdventureSIMs","Singapore 1GB 7 Days",1,7,1.2132512519471637,1.213,,no
-singapore,"Stellar eSim","Asia (7 areas) 1GB 7Days + Free Stellar VPN",1,7,1.2281255400000002,1.228,,no
 singapore,"Connect Me Guru","Singapore 1GB 7Days",1,7,1.23,1.23,,yes
 singapore,"abesteSIM","eSIM Malaysia &amp; Thailand - 15 Days / Total 1GB",1,15,1.2328192204232755,1.233,,yes
 singapore,"abesteSIM","eSIM Southeast Asia (5 Countries) - 1 Day / Daily 1GB",1,1,1.2328192204232755,1.233,,yes
@@ -3079,9 +3081,8 @@ singapore,"abesteSIM","eSIM Global (66 Destinations) - 1 Day / Daily 1GB",1,1,1.
 singapore,"4S eSIM","Asia+ 1GB - 5 Days",1,5,1.68,1.68,,no
 singapore,"Yoho Mobile","14-Country eSIM 1GB/Day 1Day",1,1,1.68,1.68,,yes
 singapore,"SimSmash","Singapore Daily Unlimited 1GB/day for 1 Days",1,1,1.69,1.69,,yes
-singapore,"iRoamly","Singapore-eSIM-1GB-10 Days-Total",1,10,1.7,1.7,,yes
+singapore,"Stellar eSim","Singapore 500MB 7Days + Free Stellar VPN",0.5,7,0.8573706600000001,1.715,,no
 singapore,"MicroEsim","Southeast Asia eSIM 5 Countries - 1 Day / Daily 500MB",0.5,1,0.88,1.76,,yes
-singapore,"Stellar eSim","Singapore 500MB 7Days + Free Stellar VPN",0.5,7,0.90371502,1.807,,no
 singapore,"SimSmash","Singapore Daily Unlimited 0.49GB/day for 1 Days",0.49,1,0.89,1.816,,yes
 singapore,"Hiroaming","Singapore 500MB/Day",0.5,1,0.92,1.84,,no
 singapore,"Earth Esim","500MB/1 Day Singapore eSIM",0.5,1,0.99,1.98,,no
@@ -3146,7 +3147,6 @@ singapore,"abesteSIM","eSIM Malaysia &amp; Thailand (Support TikTok) - 3 Days / 
 singapore,"Hiroaming","Asia (7 areas) 500MB/Day",0.5,1,1.65,3.3,,no
 singapore,"SimBalkan","Singapore · 0.49 GB · 1 days · 5G",0.49,1,1.6220526,3.31,,yes
 singapore,"Superalink","Singapore - 500MB/day",0.5,7,1.69,3.38,,yes
-singapore,"ASIMGO","eSIM Asia&amp;Europe - 54 Countries - 3 Days / Daily 500MB",0.5,3,1.7,3.4,,yes
 singapore,"Voyasim","Singapore 100MB 7Days",0.1,7,0.5,5,,no
 singapore,"Bloomy eSIM","Singapore 100MB 7 Days",0.1,7,0.5,5,,no
 singapore,"MicroEsim","Asia eSIM 10 Regions - Support TikTok - 1 Day / Total 200MB",0.2,1,1.01,5.05,,yes
@@ -3159,7 +3159,7 @@ singapore,"Superalink","Singapore - Regular",0.1,5,0.67,6.7,,yes
 singapore,"Superalink","Singapore - Regular",0.1,7,0.69,6.9,,yes
 singapore,"Connect Me Guru","Singapore 100MB 7Days",0.1,7,0.85,8.5,,yes
 singapore,"Roamix","Singapore 100MB 7Days",0.1,7,0.85,8.5,,no
-singapore,"Stellar eSim","Singapore 100MB 7Days + Free Stellar VPN",0.1,7,0.90371502,9.037,,no
+singapore,"Stellar eSim","Singapore 100MB 7Days + Free Stellar VPN",0.1,7,0.8573706600000001,8.574,,no
 singapore,"eSIMNow","Singapore 100MB 7Days",0.1,7,0.91,9.1,,no
 singapore,"IbridMarket","Singapore 100MB 7Days",0.1,7,0.92,9.2,,no
 singapore,"Keepgo","Norm",0.1,0,1,10,,yes
@@ -4143,10 +4143,11 @@ uae,"abesteSIM","eSIM United Arab Emirates - 1 Day / Daily 500MB",0.5,1,0.471141
 uae,"Superalink","United Arab Emirates - 2GB/day",2,1,2.03,1.015,,yes
 uae,"MobiMatter","Half Global 12 GB",12,30,12.99,1.083,,no
 uae,"abesteSIM","eSIM Middle East (17 Countries) - 1 Day / Daily 500MB",0.5,1,0.5418122688484459,1.084,,yes
+uae,"Stellar eSim","United Arab Emirates 3GB 15Days + Free Stellar VPN",3,15,3.3599661,1.12,,no
 uae,"Superalink","United Arab Emirates - 1GB/day",1,1,1.19,1.19,,yes
+uae,"Stellar eSim","United Arab Emirates 1GB 7Days + Free Stellar VPN",1,7,1.2049533600000002,1.205,,no
 uae,"ESIM.DOG 🐶","⚡️ [5G] DU UAE - Best 5G Coverage (2GB/1Days) - Black route",2,1,2.51,1.255,,yes
 uae,"ASIMGO","eSIM United Arab Emirates - 1 Day / Daily 500MB",0.5,1,0.63,1.26,,yes
-uae,"Stellar eSim","United Arab Emirates 1GB 7Days + Free Stellar VPN",1,7,1.2628838100000002,1.263,,no
 uae,"Superalink","United Arab Emirates - 500MB/day",0.5,1,0.64,1.28,,yes
 uae,"Superalink","United Arab Emirates - Regular",15,30,19.63,1.309,,yes
 uae,"ESIM.DOG 🐶","⚡️ [5G] DU United Arab Emirates - Best 5G Coverage (2GB/15Days) - Black route",2,15,2.63,1.315,,yes
@@ -4176,24 +4177,24 @@ uae,"Superalink","United Arab Emirates - Regular",0.5,3,0.73,1.46,,yes
 uae,"Superalink","United Arab Emirates - Regular",1,20,1.47,1.47,,yes
 uae,"ESIM.DOG 🐶","🛜 DU UAE - Essential Coverage (1GB/9Days) - Amber route",1,9,1.47,1.47,,yes
 uae,"Superalink","United Arab Emirates - Regular",1,30,1.48,1.48,,yes
+uae,"Stellar eSim","United Arab Emirates 750MB 7Days + Free Stellar VPN",0.75,7,1.11226464,1.483,,no
+uae,"Stellar eSim","Gulf Region 1GB 7Days + Free Stellar VPN",1,7,1.48301952,1.483,,no
 uae,"Billion Connect","UAE eSIM [5G] 1 Day 2GB/Day",2,1,3,1.5,,yes
 uae,"Superalink","United Arab Emirates - Regular",0.5,5,0.76,1.52,,yes
 uae,"Tripuck eSIM","Asia 2 GB/day / 1 Days",2,1,3.08,1.54,,yes
 uae,"Tripuck eSIM","Global 2 GB/day / 1 Days",2,1,3.08,1.54,,yes
 uae,"Tripuck eSIM","United Arab Emirates 2 GB/day / 1 Days",2,1,3.08,1.54,,yes
-uae,"Stellar eSim","Gulf Region 1GB 7Days + Free Stellar VPN",1,7,1.5525360600000002,1.553,,no
 uae,"Superalink","United Arab Emirates - Regular",0.5,7,0.78,1.56,,yes
-uae,"Stellar eSim","United Arab Emirates 750MB 7Days + Free Stellar VPN",0.75,7,1.17019509,1.56,,no
 uae,"eSIM4Travel","Middle East 6 &amp; North Africa 2 - 1GB/7Days",1,7,1.69,1.69,,yes
 uae,"GlobaleSIM","Dubai, Abu Dhabi &amp; UAE",10,30,17,1.7,,no
 uae,"Yoho Mobile","AE eSIM 2GB/Day 1Day",2,1,3.42,1.71,,yes
 uae,"Yoho Mobile","4-Country eSIM 2GB/Day 1Day",2,1,3.42,1.71,,yes
 uae,"RedEx eSIM","Unlimited Data - 1 Days (2 GB / 384 KBPS)",2,1,3.45,1.725,,no
-uae,"RedEx eSIM","Unlimited Data - 1 Days (2 GB / 384 KBPS)",2,1,3.45,1.725,,no
 uae,"Orange Travel","World - Zone 1",20,30,35.99,1.8,ESIMDBWRLD,no
 uae,"eSIM4Travel","Global 72 - 1GB/7Days",1,7,1.8,1.8,,yes
 uae,"Nomad","Local United Arab Emirates - 30 Days - 10 GB",10,30,18.5,1.85,ESIMDB3,no
 uae,"Airhub","UAE 1GB 7Days",1,7,1.89,1.89,,yes
+uae,"Stellar eSim","Gulf Region eSIM Unlimited - 1 day",1,1,1.91170485,1.912,,no
 uae,"thirr.com","AE 1GB 3D",1,3,1.95804921,1.958,,yes
 uae,"ASIMGO","eSIM Middle East - 17 Countries - 1 Day / Daily 500MB",0.5,1,0.99,1.98,,yes
 uae,"nadanada","eSIM, 1GB, 7 Days, Middle East and North Africa",1,7,1.99,1.99,,no
@@ -4201,13 +4202,12 @@ uae,"ESIM.DOG 🐶","🛜 DU United Arab Emirates - Essential Coverage (1GB/7Day
 uae,"ESIM.DOG 🐶","🛜 DU UAE - Essential Coverage (1GB/1Days) - Amber route",1,1,1.99,1.99,,yes
 uae,"Journey Esims","United Arab Emirates 1 GB · 1 day",1,1,2,2,,no
 uae,"Journey Esims","United Arab Emirates 1 GB · 7 days",1,7,2,2,,no
-uae,"Stellar eSim","Gulf Region eSIM Unlimited - 1 day",1,1,2.00439357,2.004,,no
 uae,"abesteSIM","eSIM United Arab Emirates - 1 Day / Daily 1GB",1,1,2.0965779098918125,2.097,,yes
+uae,"Stellar eSim","United Arab Emirates 500MB 7Days + Free Stellar VPN",0.5,7,1.05433419,2.109,,no
 uae,"Yoho Mobile","AE eSIM 1GB/Day 1Day",1,1,2.15,2.15,,yes
 uae,"Yoho Mobile","4-Country eSIM 1GB/Day 1Day",1,1,2.15,2.15,,yes
 uae,"SimSmash","United Arab Emirates Daily Unlimited 1GB/day for 1 Days",1,1,2.19,2.19,,yes
 uae,"4S eSIM","Global 1GB - 1 Day",1,1,2.19,2.19,,no
-uae,"Stellar eSim","United Arab Emirates 500MB 7Days + Free Stellar VPN",0.5,7,1.11226464,2.225,,no
 uae,"ASIMGO","eSIM United Arab Emirates - 1 Day / Daily 1GB",1,1,2.24,2.24,,yes
 uae,"4S eSIM","Global 1GB - 5 Days",1,5,2.27,2.27,,no
 uae,"MicroEsim","United Arab Emirates eSIM 5G - 1 Day / Daily 1GB",1,1,2.29,2.29,,yes
@@ -4409,7 +4409,7 @@ uae,"Truely","United Arab Emirates - 300MB, 2 days",0.3,2,2.29,7.633,,yes
 uae,"PRIeSIM","Discover Global 300 MB · 3 days",0.3,3,2.3056319100000002,7.685,,no
 uae,"Connect Me Guru","United Arab Emirates 100MB 7Days",0.1,7,0.85,8.5,,yes
 uae,"Roamix","United Arab Emirates 100MB 7Days",0.1,7,0.85,8.5,,yes
-uae,"Stellar eSim","United Arab Emirates 100MB 7Days + Free Stellar VPN",0.1,7,0.90371502,9.037,,no
+uae,"Stellar eSim","United Arab Emirates 100MB 7Days + Free Stellar VPN",0.1,7,0.8573706600000001,8.574,,no
 uae,"IbridMarket","United Arab Emirates 100MB 7Days",0.1,7,0.92,9.2,,no
 uae,"BlueSky eSIM","✈️ [5G] Worldwide (201 countries) Best Coverage (200MB/30d)",0.2,30,1.97,9.85,,yes
 uae,"Zwitchy","United Arab Emirates · 100 MB · 1 day",0.1,1,1,10,,yes
@@ -4444,38 +4444,39 @@ uae,"Bordersim","United Arab Emirates 100MB 7Days",0.1,7,2.99,29.9,,yes
 uae,"Movisim","United Arab Emirates 100MB - 7-Day eSIM",0.1,7,2.99,29.9,,yes
 uae,"Keepgo","Auriga 35 Most Visited",0.1,0,3,30,,yes
 uae,"Keepgo","Eridanus World",0.1,0,3,30,,yes
-uk,"Stellar eSim","United Kingdom 3GB 30Days + Free Stellar VPN",3,30,0.46344360000000007,0.154,,no
+uk,"Stellar eSim","United Kingdom 3GB 30Days + Free Stellar VPN",3,30,0.44027142,0.147,,no
 uk,"Sim Local","United Kingdom eSIM – 100GB for 30 Days",100,30,20,0.2,,yes
 uk,"Amigo eSIM","Three 40GB 30Days",40,30,13,0.325,,yes
-uk,"Stellar eSim","Europe (35 areas) 4GB 30Days + Free Stellar VPN",4,30,1.49460561,0.374,,no
-uk,"Stellar eSim","Europe (33 areas) 3GB 15Days + Free Stellar VPN",3,15,1.12385073,0.375,,no
-uk,"Stellar eSim","United Kingdom 3GB 15Days + Free Stellar VPN",3,15,1.12385073,0.375,,no
-uk,"Stellar eSim","United Kingdom eSIM Unlimited - 1 day",3,1,1.12385073,0.375,,no
-uk,"Stellar eSim","Europe (35 areas) 3GB 30Days + Free Stellar VPN",3,30,1.17019509,0.39,,no
-uk,"Stellar eSim","Europe (33 areas) 3GB 30Days + Free Stellar VPN",3,30,1.2281255400000002,0.409,,no
-uk,"Stellar eSim","Europe (35 areas) 3GB 15Days + Free Stellar VPN",3,15,1.2512977200000002,0.417,,no
-uk,"Stellar eSim","Europe (35 areas) eSIM Unlimited - 1 day",3,1,1.2628838100000002,0.421,,no
-uk,"Stellar eSim","Europe (33 areas) eSIM Unlimited - 1 day",3,1,1.2860559900000001,0.429,,no
+uk,"Stellar eSim","Europe (33 areas) 3GB 15Days + Free Stellar VPN",3,15,1.06592028,0.355,,no
+uk,"Stellar eSim","United Kingdom 3GB 15Days + Free Stellar VPN",3,15,1.06592028,0.355,,no
+uk,"Stellar eSim","United Kingdom eSIM Unlimited - 1 day",3,1,1.06592028,0.355,,no
+uk,"Stellar eSim","Europe (35 areas) 4GB 30Days + Free Stellar VPN",4,30,1.42508907,0.356,,no
+uk,"Stellar eSim","Europe (35 areas) 3GB 30Days + Free Stellar VPN",3,30,1.11226464,0.371,,no
+uk,"Stellar eSim","Europe (33 areas) 4GB 30Days + Free Stellar VPN",4,30,1.48301952,0.371,,no
+uk,"Stellar eSim","Europe (33 areas) 3GB 30Days + Free Stellar VPN",3,30,1.17019509,0.39,,no
+uk,"Stellar eSim","Europe (35 areas) 3GB 15Days + Free Stellar VPN",3,15,1.19336727,0.398,,no
+uk,"Stellar eSim","Europe (35 areas) eSIM Unlimited - 1 day",3,1,1.2049533600000002,0.402,,no
+uk,"Stellar eSim","Europe (33 areas) eSIM Unlimited - 1 day",3,1,1.2281255400000002,0.409,,no
+uk,"Stellar eSim","Europe (33 areas) 2GB 30Days + Free Stellar VPN",2,30,0.97323156,0.487,,no
+uk,"Stellar eSim","Europe (35 areas) 2GB 15Days + Free Stellar VPN",2,15,0.98481765,0.492,,no
 uk,"abesteSIM","eSIM United Kingdom - 1 Day / Daily 3GB",3,1,1.4840944755413954,0.495,,yes
-uk,"Stellar eSim","Europe (33 areas) 2GB 30Days + Free Stellar VPN",2,30,1.01957592,0.51,,no
-uk,"Stellar eSim","Europe (35 areas) 2GB 15Days + Free Stellar VPN",2,15,1.03116201,0.516,,no
 uk,"abesteSIM","eSIM United Kingdom - 1 Day / Daily 1GB",1,1,0.5182552136811223,0.518,,yes
-uk,"Stellar eSim","Europe (33 areas) 2GB 15Days + Free Stellar VPN",2,15,1.18178118,0.591,,no
-uk,"Stellar eSim","United Kingdom 2GB 15Days + Free Stellar VPN",2,15,1.18178118,0.591,,no
-uk,"Stellar eSim","Europe (35 areas) 2GB 30Days + Free Stellar VPN",2,30,1.2165394500000002,0.608,,no
+uk,"Stellar eSim","Europe (33 areas) 2GB 15Days + Free Stellar VPN",2,15,1.12385073,0.562,,no
+uk,"Stellar eSim","United Kingdom 2GB 15Days + Free Stellar VPN",2,15,1.12385073,0.562,,no
+uk,"Stellar eSim","Europe (35 areas) 2GB 30Days + Free Stellar VPN",2,30,1.158609,0.579,,no
+uk,"Stellar eSim","Europe (35 areas) 1GB 7Days + Free Stellar VPN",1,7,0.6140627700000001,0.614,,no
 uk,"Billion Connect","Global eSIM [45 Countries] 1 Day 2GB/Day",2,1,1.25,0.625,,yes
+uk,"Stellar eSim","Europe (33 areas) 1GB 7Days + Free Stellar VPN",1,7,0.6256488600000001,0.626,,no
 uk,"abesteSIM","eSIM United Kingdom - 1 Day / Daily 2GB",2,1,1.2956380342028053,0.648,,yes
-uk,"Stellar eSim","Europe (35 areas) 1GB 7Days + Free Stellar VPN",1,7,0.6488210400000001,0.649,,no
-uk,"Stellar eSim","Europe (33 areas) 1GB 7Days + Free Stellar VPN",1,7,0.66040713,0.66,,no
 uk,"eSIM4Travel","Best Europe 41 - 1GB/1Days",1,1,0.69,0.69,,yes
 uk,"eSIM4Travel","Best Europe 41 - 1GB/7Days",1,7,0.69,0.69,,yes
 uk,"Astaroam","Europe (33 areas) 1GB 7Days",1,7,0.6909223240803536,0.691,,yes
+uk,"Stellar eSim","Europe (35 areas) 750MB 7Days + Free Stellar VPN",0.75,7,0.52137405,0.695,,no
+uk,"Stellar eSim","United Kingdom 1GB 7Days + Free Stellar VPN",1,7,0.70675149,0.707,,no
+uk,"Stellar eSim","Europe (33 areas) 750MB 7Days + Free Stellar VPN",0.75,7,0.53296014,0.711,,no
 uk,"Billion Connect","Europe eSIM [33 Countries] 1 Day 2GB/Day",2,1,1.43,0.715,,yes
-uk,"Stellar eSim","Europe (35 areas) 750MB 7Days + Free Stellar VPN",0.75,7,0.54454623,0.726,,no
 uk,"abesteSIM","eSIM Europe (36 Countries) - 1 Day / Daily 2GB",2,1,1.4605374203740717,0.73,,yes
 uk,"abesteSIM","eSIM Europe (32 Countries) - 1 Day / Daily 2GB",2,1,1.4605374203740717,0.73,,yes
-uk,"Stellar eSim","Europe (33 areas) 750MB 7Days + Free Stellar VPN",0.75,7,0.55613232,0.742,,no
-uk,"Stellar eSim","United Kingdom 1GB 7Days + Free Stellar VPN",1,7,0.74150976,0.742,,no
 uk,"Superalink","United Kingdom - Regular",1,1,0.75,0.75,,yes
 uk,"abesteSIM","eSIM World 45 Regions - 1 Day / Daily 2GB",2,1,1.507651530708719,0.754,,yes
 uk,"Superalink","United Kingdom - Regular",2,1,1.51,0.755,,yes
@@ -4528,6 +4529,7 @@ uk,"abesteSIM","eSIM Europe (36 Countries) - 1 Day / Daily 1GB",1,1,1.0208057239
 uk,"Yesim","United Kingdom (UK)",0.5,1,0.52137405,1.043,,yes
 uk,"Yesim","Europe &amp; UK",0.5,1,0.52137405,1.043,,yes
 uk,"Hiroaming","United Kingdom 1GB 7Days",1,7,1.05,1.05,,no
+uk,"Stellar eSim","Ireland &amp; UK 1GB 3Days + Free Stellar VPN",1,3,1.06592028,1.066,,no
 uk,"Bloomy eSIM","Europe (33 areas) Unlimited (1GB/day) 1 Day",1,1,1.07,1.07,,yes
 uk,"ASIMGO","eSIM Europe (36 Countries) - 1 Day / Daily 500MB",0.5,1,0.54,1.08,,yes
 uk,"ASIMGO","eSIM Europe - 32 Countries - 1 Day / Daily 500MB",0.5,1,0.54,1.08,,yes
@@ -4536,7 +4538,6 @@ uk,"Billion Connect","Global eSIM [45 Countries] 1 Day 1GB/Day",1,1,1.11,1.11,,y
 uk,"ASIMGO","eSIM Asia&amp;Europe - 54 Countries - 1 Day / Daily 500MB",0.5,1,0.56,1.12,,yes
 uk,"MicroEsim","Europe eSIM 36 Countries - 1 Day / Daily 1GB",1,1,1.12,1.12,,yes
 uk,"ASIMGO","eSIM United Kingdom - 1 Day / Daily 1GB",1,1,1.12,1.12,,yes
-uk,"Stellar eSim","Ireland &amp; UK 1GB 3Days + Free Stellar VPN",1,3,1.12385073,1.124,,no
 uk,"ASIMGO","eSIM Europe (36 Countries) - 1 Day / Daily 1GB",1,1,1.13,1.13,,yes
 uk,"GlobaleSIM","United Kingdom",15,30,17,1.133,,no
 uk,"ASIMGO","eSIM Europe (49 Destinations) - 1 Day / Daily 500MB",0.5,1,0.57,1.14,,yes
@@ -4546,6 +4547,7 @@ uk,"abesteSIM","eSIM Europe (32 Countries) - 1 Day / Daily 1GB",1,1,1.1464433514
 uk,"Horizon eSIM","United Kingdom 1GB 7Days",1,7,1.14702291,1.147,,no
 uk,"Yoho Mobile","32-Country eSIM 1GB/Day 1Day",1,1,1.15,1.15,,yes
 uk,"Yoho Mobile","GB eSIM 1GB/Day 1Day",1,1,1.15,1.15,,yes
+uk,"Stellar eSim","Europe(30+ areas) 1GB 7Days + Free Stellar VPN",1,7,1.158609,1.159,,no
 uk,"Yoho Mobile","36-Country eSIM 1GB 7Day",1,7,1.16,1.16,,yes
 uk,"Yoho Mobile","39-Country eSIM 1GB 7Day",1,7,1.16,1.16,,yes
 uk,"Yoho Mobile","GB eSIM 1GB 7Day",1,7,1.16,1.16,,yes
@@ -4565,7 +4567,6 @@ uk,"4S eSIM","Europe+ 1GB - 5 Days",1,5,1.21,1.21,,no
 uk,"Connect Me Guru","United Kingdom 1GB/Day",1,1,1.21,1.21,,yes
 uk,"AdventureSIMs","United Kingdom 1GB 7 Days",1,7,1.2132512519471637,1.213,,yes
 uk,"AdventureSIMs","Europe Saver 1GB 7 Days",1,7,1.2132512519471637,1.213,,yes
-uk,"Stellar eSim","Europe(30+ areas) 1GB 7Days + Free Stellar VPN",1,7,1.2165394500000002,1.217,,no
 uk,"4S eSIM","United Kingdom 1GB - 7 Days",1,7,1.24,1.24,,no
 uk,"4S eSIM","Europe+ 1GB - 7 Days",1,7,1.24,1.24,,no
 uk,"Hiroaming","Europe (35 areas) 1GB/Day FUP1Mbps",1,1,1.25,1.25,,no
@@ -4674,9 +4675,9 @@ uk,"MicroEsim","Europe eSIM 5G 49 Destinations - 1 Day / Daily 1GB",1,1,1.55,1.5
 uk,"RedEx eSIM","United Kingdom 500MB/Day",0.5,1,0.83,1.66,,yes
 uk,"MicroEsim","United Kingdom eSIM 5G - 1 Day / Daily 500MB",0.5,1,0.84,1.68,,yes
 uk,"MicroEsim","Europe eSIM 36 Countries - 1 Day / Daily 500MB",0.5,1,0.85,1.7,,yes
+uk,"Stellar eSim","United Kingdom 500MB 7Days + Free Stellar VPN",0.5,7,0.8573706600000001,1.715,,no
 uk,"MicroEsim","Europe eSIM 33 Countries - 1 Day / Daily 500MB",0.5,1,0.86,1.72,,yes
 uk,"Connect Me Guru","United Kingdom 500MB/Day",0.5,1,0.88,1.76,,yes
-uk,"Stellar eSim","United Kingdom 500MB 7Days + Free Stellar VPN",0.5,7,0.90371502,1.807,,no
 uk,"RedEx eSIM","United Kingdom 500MB 7Days",0.5,7,0.91,1.82,,yes
 uk,"IbridMarket","United Kingdom 500MB 7Days",0.5,7,0.93,1.86,,no
 uk,"IbridMarket","United Kingdom 500MB/Day",0.5,1,0.95,1.9,,no
@@ -4728,7 +4729,6 @@ uk,"ESIM.DOG 🐶","🛜 EE/H3G United Kingdom - Essential Coverage (500MB/30Day
 uk,"eSIM Hero","United Kingdom 500MB 7 Days",0.5,7,1.5,3,,yes
 uk,"MicroEsim","Europe eSIM 36 Countries - 3 Days / Daily 500MB",0.5,3,1.53,3.06,,yes
 uk,"PikaSim","United Kingdom 500MB 7Days",0.5,7,1.55,3.1,,no
-uk,"ASIMGO","eSIM Europe (36 Countries) - 3 Days / Daily 500MB",0.5,3,1.55,3.1,,yes
 uk,"Horizon eSIM","United Kingdom 100MB 7Days",0.1,7,0.31282443000000004,3.128,,no
 uk,"Earth Esim","300MB/1 Day Europe Region eSIM",0.3,1,0.99,3.3,,yes
 uk,"AlpineSIM","AlpineSIM Unlimited Europe(30+ areas) eSIM - 300MB/Day / 1",0.3,1,1,3.333,,yes
@@ -4747,7 +4747,7 @@ uk,"Superalink","United Kingdom - Regular",0.1,7,0.69,6.9,,yes
 uk,"eSIM4Travel","United Kingdom (O2, EE, Vodafone) - 100MB/1Days",0.1,1,0.84,8.4,,yes
 uk,"Connect Me Guru","United Kingdom 100MB 7Days",0.1,7,0.85,8.5,,yes
 uk,"Roamix","United Kingdom 100MB 7Days",0.1,7,0.85,8.5,,yes
-uk,"Stellar eSim","United Kingdom 100MB 7Days + Free Stellar VPN",0.1,7,0.90371502,9.037,,no
+uk,"Stellar eSim","United Kingdom 100MB 7Days + Free Stellar VPN",0.1,7,0.8573706600000001,8.574,,no
 uk,"eSIMNow","United Kingdom 100MB 7Days",0.1,7,0.91,9.1,,yes
 uk,"IbridMarket","United Kingdom 100MB 7Days",0.1,7,0.92,9.2,,no
 uk,"Zwitchy","United Kingdom · 100 MB · 1 day",0.1,1,1,10,,yes
@@ -4761,28 +4761,28 @@ uk,"ESIM.DOG 🐶","🛜 EE/H3G United Kingdom - Essential Coverage (100MB/30Day
 uk,"PikaSim","United Kingdom 100MB 7Days",0.1,7,1.5,15,,no
 uk,"Simsima","United Kingdom 100MB 7Days",0.1,7,1.5,15,,yes
 uk,"eSIM Hero","United Kingdom 100MB 7 Days",0.1,7,1.5,15,,yes
-usa,"Stellar eSim","United States 3GB 30Days + Free Stellar VPN",3,30,0.46344360000000007,0.154,,no
+usa,"Stellar eSim","United States 3GB 30Days + Free Stellar VPN",3,30,0.44027142,0.147,,no
 usa,"ESIM.DOG 🐶","🛜 AT&amp;T USA - Essential Coverage (5GB/1Days) - Amber route",5,1,1.99,0.398,,yes
 usa,"Superalink","United States - 2GB/day",2,1,0.91,0.455,,yes
+usa,"Stellar eSim","United States 3GB 15Days (USIP) + Free Stellar VPN",3,15,1.37874471,0.46,,no
+usa,"Stellar eSim","United States 3GB 15Days + Free Stellar VPN",3,15,1.37874471,0.46,,no
+usa,"Stellar eSim","United States 4GB 30Days + Free Stellar VPN",4,30,1.8537744000000003,0.463,,no
 usa,"ESIM.DOG 🐶","🛜 AT&amp;T United States - Essential Coverage (4GB/1Days) - Amber route",4,1,1.89,0.472,,yes
-usa,"Stellar eSim","United States 3GB 15Days (USIP) + Free Stellar VPN",3,15,1.44826125,0.483,,no
-usa,"Stellar eSim","United States 3GB 15Days + Free Stellar VPN",3,15,1.44826125,0.483,,no
-usa,"Stellar eSim","United States 4GB 30Days + Free Stellar VPN",4,30,1.94646312,0.487,,no
+usa,"Stellar eSim","United States 3GB 30Days (USIP) + Free Stellar VPN",3,30,1.44826125,0.483,,no
 usa,"ESIM.DOG 🐶","🛜 AT&amp;T United States - Essential Coverage (4GB/2Days) - Amber route",4,2,1.99,0.497,,yes
 usa,"Simbye","USA Unlimited 10 Days with Real US Phone Number on ATT 5G",50,10,24.99,0.5,,no
-usa,"Stellar eSim","United States 3GB 30Days (USIP) + Free Stellar VPN",3,30,1.51777779,0.506,,no
 usa,"Superalink","United States - 3GB/day",3,1,1.54,0.513,,yes
+usa,"Stellar eSim","United States eSIM Unlimited - 1 day",3,1,1.59888042,0.533,,no
 usa,"abesteSIM","eSIM United States - 1 Day / Daily 1GB",1,1,0.5496646205708872,0.55,,yes
 usa,"Billion Connect","Global eSIM [45 Countries] 1 Day 3GB/Day",3,1,1.67,0.557,,yes
-usa,"Stellar eSim","United States eSIM Unlimited - 1 day",3,1,1.67998305,0.56,,no
 usa,"abesteSIM","eSIM United States - 1 Day / Daily 3GB",3,1,1.6804032686024266,0.56,,yes
 usa,"thirr.com","US 3GB 7D",3,7,1.78425786,0.595,,yes
 usa,"ASIMGO","eSIM United States - 1 Day / Daily 3GB",3,1,1.79,0.597,,yes
+usa,"Stellar eSim","United States 2GB 30Days + Free Stellar VPN",2,30,1.2049533600000002,0.602,,no
+usa,"Stellar eSim","United States 2GB 15Days + Free Stellar VPN",2,15,1.2281255400000002,0.614,,no
 usa,"MicroEsim","United States eSIM - 1 Day / Daily 3GB",3,1,1.87,0.623,,yes
 usa,"Billion Connect","Global eSIM [45 Countries] 1 Day 2GB/Day",2,1,1.25,0.625,,yes
-usa,"Stellar eSim","United States 2GB 30Days + Free Stellar VPN",2,30,1.2628838100000002,0.631,,no
 usa,"abesteSIM","eSIM United States - 3 Days / Total 3GB",3,3,1.9081214685532228,0.636,,yes
-usa,"Stellar eSim","United States 2GB 15Days + Free Stellar VPN",2,15,1.2860559900000001,0.643,,no
 usa,"ASIMGO","eSIM World - 45 Countries - 1 Day / Daily 3GB",3,1,1.97,0.657,,yes
 usa,"abesteSIM","eSIM World 45 Regions - 1 Day / Daily 3GB",3,1,1.9787926340551938,0.66,,yes
 usa,"ESIM.DOG 🐶","🛜 AT&amp;T USA - Essential Coverage (3GB/1Days) - Amber route",3,1,1.99,0.663,,yes
@@ -4798,6 +4798,7 @@ usa,"ASIMGO","eSIM World - 45 Countries - 1 Day / Daily 2GB",2,1,1.62,0.81,,yes
 usa,"abesteSIM","eSIM World 45 Regions - 1 Day / Daily 500MB",0.5,1,0.4083222895669448,0.817,,yes
 usa,"TravelGator eSIM","United States eSIM Roaming Data",1,1,0.8244969308563308,0.824,,no
 usa,"RedEx eSIM","Unlimited Data - 1 Days (2 GB / 384 KBPS)",2,1,1.71,0.855,,no
+usa,"Stellar eSim","United States 1GB 7Days (USIP) + Free Stellar VPN",1,7,0.8573706600000001,0.857,,no
 usa,"abesteSIM","eSIM Global (66 Destinations) - 1 Day / Daily 500MB",0.5,1,0.43187934473426853,0.864,,yes
 usa,"abesteSIM","eSIM United States - 1 Day / Daily 500MB",0.5,1,0.43187934473426853,0.864,,yes
 usa,"Superalink","United States - Regular",2,1,1.74,0.87,,yes
@@ -4807,7 +4808,6 @@ usa,"Superalink","United States - Regular",2,3,1.76,0.88,,yes
 usa,"RedEx eSIM","Unlimited Data - 1 Days (2 GB / 384 KBPS)",2,1,1.77,0.885,,no
 usa,"eSIM4Travel","USA (AT&amp;T) - 1GB/7Days",1,7,0.89,0.89,,yes
 usa,"Superalink","United States - Regular",2,5,1.79,0.895,,yes
-usa,"Stellar eSim","United States 1GB 7Days (USIP) + Free Stellar VPN",1,7,0.90371502,0.904,,no
 usa,"Superalink","United States - 1GB/day",1,1,0.91,0.91,,yes
 usa,"MicroEsim","United States eSIM - 1 Day / Daily 1GB",1,1,0.91,0.91,,yes
 usa,"Superalink","United States - Regular",2,7,1.82,0.91,,yes
@@ -4821,6 +4821,7 @@ usa,"Superalink","United States - Regular",1,1,0.96,0.96,,yes
 usa,"Tripuck eSIM","Europe 2 GB/day / 1 Days",2,1,1.92,0.96,,yes
 usa,"ASIMGO","eSIM World - 45 Countries - 1 Day / Daily 1GB",1,1,0.98,0.98,,yes
 usa,"Superalink","United States - Regular",1,3,0.98,0.98,,yes
+usa,"Stellar eSim","United States 1GB 7Days + Free Stellar VPN",1,7,0.98481765,0.985,,no
 usa,"Tripuck eSIM","United States 2 GB/day / 1 Days",2,1,1.97,0.985,,yes
 usa,"Billion Connect","USA eSIM 1 Day 1GB/Day",1,1,0.99,0.99,,yes
 usa,"ESIM.DOG 🐶","🛜 AT&amp;T United States - Essential Coverage (2GB/15Days) - Amber route",2,15,1.99,0.995,,yes
@@ -4835,7 +4836,6 @@ usa,"esimzon","USA 1GB 30Days",1,30,1,1,,yes
 usa,"Orbit Mobile","Global Pass",1,1,1,1,,no
 usa,"Superalink","United States - Regular",1,5,1.01,1.01,,yes
 usa,"Superalink","United States - Regular",1,7,1.03,1.03,,yes
-usa,"Stellar eSim","United States 1GB 7Days + Free Stellar VPN",1,7,1.03116201,1.031,,no
 usa,"Superalink","United States - Regular",1,10,1.04,1.04,,yes
 usa,"Yesim","United States",0.5,1,0.52137405,1.043,,yes
 usa,"Superalink","United States - Regular",1,15,1.06,1.06,,yes
@@ -4856,13 +4856,13 @@ usa,"Orange Travel","United States 20GB",20,30,22.99,1.149,,no
 usa,"abesteSIM","eSIM America (20 Destinations) - 1 Day / Daily 500MB",0.5,1,0.5810740274606522,1.162,,yes
 usa,"abesteSIM","eSIM United States (Local IP) - 5 Days / Total 1GB",1,5,1.1700004066437455,1.17,,yes
 usa,"nadanada","eSIM, 1GB, 7 Days, North America",1,7,1.19,1.19,,no
+usa,"Stellar eSim","USA &amp; Canada 1GB 7Days + Free Stellar VPN",1,7,1.19336727,1.193,,no
 usa,"Ubigi","USA",10,7,12,1.2,,yes
 usa,"Bloomy eSIM","United States Unlimited (1GB/day) 1 Day",1,1,1.2,1.2,,yes
 usa,"ASIMGO","eSIM United States - 3 Days / Total 1GB",1,3,1.21,1.21,,yes
 usa,"TravelGator eSIM","United States eSIM Roaming Data",1,5,1.217114516978393,1.217,,no
 usa,"abesteSIM","eSIM United States (Local IP) - 7 Days / Total 1GB",1,7,1.2406715721457169,1.241,,yes
 usa,"Bloomy eSIM","United States 1GB 7 Days",1,7,1.25,1.25,,yes
-usa,"Stellar eSim","USA &amp; Canada 1GB 7Days + Free Stellar VPN",1,7,1.2512977200000002,1.251,,no
 usa,"Superalink","United States - 500MB/day",0.5,1,0.63,1.26,,yes
 usa,"MicroEsim","United States eSIM - 3 Days / Total 1GB",1,3,1.26,1.26,,yes
 usa,"TravelGator eSIM","United States eSIM Roaming Data",1,7,1.2799333307579228,1.28,,no
@@ -4886,6 +4886,7 @@ usa,"Yoho Mobile","US eSIM 1GB/Day 1Day",1,1,1.4,1.4,,yes
 usa,"EZsim","USA (ATT+Verizon) - 1GB/7Days",1,7,1.4,1.4,,no
 usa,"ESIM888","USA (ATT+Verizon) (1GB/7DAYS)",1,7,1.4,1.4,,no
 usa,"Textr eSIM","United States 1GB",1,7,1.41,1.41,,no
+usa,"Stellar eSim","North America 1GB 30Days + Free Stellar VPN",1,30,1.41350298,1.414,,no
 usa,"Superalink","United States - Regular",0.5,7,0.71,1.42,,yes
 usa,"ASIMGO","eSIM United States - Local IP - 10 Days / Total 1GB",1,10,1.42,1.42,,yes
 usa,"GoMoWorld","United States",9,30,12.99,1.443,,no
@@ -4893,7 +4894,7 @@ usa,"ASIMGO","eSIM United States - 1 Day / Daily 1GB",1,1,1.45,1.45,,yes
 usa,"Billion Connect","USA eSIM 3 Days 1GB",1,3,1.45,1.45,,yes
 usa,"abesteSIM","eSIM United States (Local IP) - 30 Days / Total 1GB",1,30,1.4526850686516304,1.453,,yes
 usa,"MicroEsim","US &amp; Canada eSIM - 1 Day / Daily 1GB",1,1,1.46,1.46,,yes
-usa,"Stellar eSim","North America 1GB 30Days + Free Stellar VPN",1,30,1.48301952,1.483,,no
+usa,"Stellar eSim","North America 1GB 7Days + Free Stellar VPN",1,7,1.48301952,1.483,,no
 usa,"ASIMGO","eSIM United States - Local IP - 15 Days / Total 1GB",1,15,1.49,1.49,,yes
 usa,"SimSmash","United States 1GB for 7 Days",1,7,1.49,1.49,,yes
 usa,"MegaEsim","United States (USA) 1 GB, 7 days",1,7,1.49,1.49,,yes
@@ -4912,7 +4913,6 @@ usa,"eSIM4Travel","Canada &amp; USA - 1GB/7Days",1,7,1.54,1.54,,yes
 usa,"IbridMarket","United States 1GB/Day",1,1,1.55,1.55,,no
 usa,"RedEx eSIM","United States 1GB/Day (USIP)",1,1,1.55,1.55,,yes
 usa,"Ozly eSIM","United States 1GB 7Days (USIP)",1,7,1.55,1.55,,yes
-usa,"Stellar eSim","North America 1GB 7Days + Free Stellar VPN",1,7,1.5525360600000002,1.553,,no
 usa,"ASIMGO","eSIM United States - 30 Days / Total 1GB",1,30,1.56,1.56,,yes
 usa,"Connect Me Guru","United States 1GB/Day (USIP)",1,1,1.57,1.57,,yes
 usa,"MicroEsim","United States eSIM - 10 Days / Total 1GB",1,10,1.59,1.59,,yes
@@ -4934,7 +4934,9 @@ usa,"MicroEsim","United States eSIM - 15 Days / Total 1GB",1,15,1.67,1.67,,yes
 usa,"Yatelo","USA 1GB 7 Days",1,7,1.68,1.68,,yes
 usa,"MicroEsim","United States eSIM - 1 Day / Daily 500MB",0.5,1,0.85,1.7,,yes
 usa,"iRoamly","United States-eSIM-1GB-5 Days-Total",1,5,1.7,1.7,,yes
+usa,"Stellar eSim","United States 500MB 7Days + Free Stellar VPN",0.5,7,0.8573706600000001,1.715,,no
 usa,"eSimy","United States - 1 GB - 7 Days",1,7,1.7263274100000001,1.726,,no
+usa,"Stellar eSim","North America (3 areas) 750MB 7Days + Free Stellar VPN",0.75,7,1.2976420800000001,1.73,,no
 usa,"Connect Me Guru","United States 1GB 7Days",1,7,1.75,1.75,,yes
 usa,"MicroEsim","United States eSIM - 30 Days / Total 1GB",1,30,1.76,1.76,,yes
 usa,"IbridMarket","United States 1GB 7Days",1,7,1.76,1.76,,no
@@ -4944,10 +4946,8 @@ usa,"Connect Me Guru","United States 1GB/Day FUP1Mbps (USIP)",1,1,1.79,1.79,,yes
 usa,"iRoamly","United States-eSIM-1GB-7 Days-Total",1,7,1.8,1.8,,yes
 usa,"eSIM4Travel","Global 72 - 1GB/7Days",1,7,1.8,1.8,,yes
 usa,"voilà","",1,7,1.8,1.8,,yes
-usa,"Stellar eSim","United States 500MB 7Days + Free Stellar VPN",0.5,7,0.90371502,1.807,,no
 usa,"abesteSIM","eSIM United States - 3 Days / Daily 1GB",1,3,1.8138932478839278,1.814,,yes
 usa,"Tripuck eSIM","United States 1 GB / 7 Days",1,7,1.82,1.82,,no
-usa,"Stellar eSim","North America (3 areas) 750MB 7Days + Free Stellar VPN",0.75,7,1.3671586199999999,1.823,,no
 usa,"AdventureSIMs","United States 1GB 7 Days",1,7,1.8234663786661514,1.823,,yes
 usa,"Hiroaming","United States 500MB 7Days",0.5,7,0.92,1.84,,no
 usa,"Cellesim","United States 1GB/day 1d",1,1,1.84,1.84,,no
@@ -5053,8 +5053,8 @@ usa,"BlueSky eSIM","🔷 [5G] Worldwide (201 countries) Best Coverage (300MB/3d)
 usa,"Superalink","United States - Regular",0.1,7,0.67,6.7,,yes
 usa,"Connect Me Guru","United States 100MB 7Days",0.1,7,0.85,8.5,,yes
 usa,"Roamix","United States 100MB 7Days",0.1,7,0.85,8.5,,yes
+usa,"Stellar eSim","United States 100MB 7Days + Free Stellar VPN",0.1,7,0.8573706600000001,8.574,,no
 usa,"LATAM Travellers","United States eSIM - 100MB / 7 Days",0.1,7,0.88,8.8,,no
-usa,"Stellar eSim","United States 100MB 7Days + Free Stellar VPN",0.1,7,0.90371502,9.037,,no
 usa,"IbridMarket","United States 100MB 7Days",0.1,7,0.92,9.2,,no
 usa,"BlueSky eSIM","✈️ [5G] Worldwide (201 countries) Best Coverage (200MB/30d)",0.2,30,1.97,9.85,,yes
 usa,"Zwitchy","United States · 100 MB · 1 day",0.1,1,1,10,,yes

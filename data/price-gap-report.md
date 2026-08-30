@@ -6,9 +6,9 @@
 
 | Страна | Наш тариф | Наша цена | Лучшая цена | Чья | Их план | Разрыв |
 |---|---|---|---|---|---|---|
-| Франция | Airalo 5GB/15d | $10.00 | $0.46 | Stellar eSim (eSIMDB) | 3GB/30d | 21.6x KRIT |
+| Франция | Airalo 5GB/15d | $10.00 | $0.44 | Stellar eSim (eSIMDB) | 3GB/30d | 22.7x KRIT |
+| Индонезия | Saily 10GB/30d | $21.99 | $1.77 | Stellar eSim (eSIMDB) | 5GB/30d | 12.4x KRIT |
 | Великобритания | Saily 20GB/30d | $30.99 | $2.57 | eSIM.dog (eSIM.dog) | 10GB/30d | 12.1x KRIT |
-| Индонезия | Saily 10GB/30d | $21.99 | $1.87 | Stellar eSim (eSIMDB) | 5GB/30d | 11.8x KRIT |
 | Италия | Saily 20GB/30d | $28.99 | $2.57 | eSIM.dog (eSIM.dog) | 10GB/30d | 11.3x KRIT |
 | США | Saily 20GB/30d | $36.99 | $3.57 | eSIM.dog (eSIM.dog) | 10GB/30d | 10.4x KRIT |
 | Малайзия | Saily 20GB/30d | $35.99 | $3.48 | eSIM.dog (eSIM.dog) | 10GB/30d | 10.3x KRIT |
