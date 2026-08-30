@@ -1,6 +1,6 @@
 name: Track competitor benchmark
 
-# Цены eSIM.dog — наш ориентир по всей ценовой стратегии, и они меняются
+# Цены eSIM.dog - наш ориентир по всей ценовой стратегии, и они меняются
 # без предупреждения. Раз в сутки складываем их таблицу в data/, чтобы видеть
 # реальный разрыв на сегодня, а не на день последней ручной проверки.
 on:
@@ -28,15 +28,36 @@ jobs:
         run: node scripts/fetch-competitors.mjs
 
       # Карта рынка по прямым фидам провайдеров. Отдельно от дампа агрегатора:
-      # тот показывает, кто вообще есть на направлении, а эта таблица — по каким
+      # тот показывает, кто вообще есть на направлении, а эта таблица - по каким
       # ценам мы реально можем продавать и где у нас нет партнёра.
       - name: Build market map
         run: node scripts/build-market.mjs
 
+      # Оптовый каталог Stellar - закупочные цены. В публичный репозиторий они не попадают:
+      # скрипт пишет в data/*.local.* (эти маски в .gitignore), результат уходит только
+      # приватным артефактом workflow. Шаг не роняет весь прогон, если API недоступен.
+      - name: Fetch Stellar wholesale catalogue
+        continue-on-error: true
+        env:
+          STELLAR_WHOLESALE_KEY: ${{ secrets.STELLAR_WHOLESALE_KEY }}
+          STELLAR_WHOLESALE_BASE: ${{ secrets.STELLAR_WHOLESALE_BASE }}
+        run: node scripts/fetch-stellar-wholesale.mjs
+
+      - name: Upload Stellar wholesale as private artifact
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: stellar-wholesale
+          retention-days: 90
+          if-no-files-found: warn
+          path: |
+            data/stellar-wholesale.local.csv
+            data/stellar-wholesale.local.json
+
       - name: Commit if prices moved
         run: |
           if git diff --quiet -- data/; then
-            echo "Цены конкурента не изменились — коммита нет."
+            echo "Цены конкурента не изменились - коммита нет."
             exit 0
           fi
           git config user.name  "github-actions[bot]"

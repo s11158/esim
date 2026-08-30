@@ -9,14 +9,22 @@ const ECB = 'https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml';
 const PER_PAGE = 100;
 const PAUSE_MS = 1100; // лимит ключа 60 запросов в минуту
 
-const env = Object.fromEntries(
-  fs.readFileSync(path.join(root, '.env'), 'utf8')
-    .split(/\r?\n/)
-    .filter((l) => l.includes('='))
-    .map((l) => [l.slice(0, l.indexOf('=')).trim(), l.slice(l.indexOf('=') + 1).trim()])
-);
-const base = env.STELLAR_WHOLESALE_BASE;
-const headers = { Authorization: 'Bearer ' + env.STELLAR_WHOLESALE_KEY };
+// В CI ключ приходит из secrets через переменные окружения, локально - из .env.
+const fileEnv = fs.existsSync(path.join(root, '.env'))
+  ? Object.fromEntries(
+      fs.readFileSync(path.join(root, '.env'), 'utf8')
+        .split(/\r?\n/)
+        .filter((l) => l.includes('='))
+        .map((l) => [l.slice(0, l.indexOf('=')).trim(), l.slice(l.indexOf('=') + 1).trim()])
+    )
+  : {};
+const base = process.env.STELLAR_WHOLESALE_BASE || fileEnv.STELLAR_WHOLESALE_BASE;
+const key = process.env.STELLAR_WHOLESALE_KEY || fileEnv.STELLAR_WHOLESALE_KEY;
+if (!base || !key) {
+  console.error('Нет STELLAR_WHOLESALE_BASE или STELLAR_WHOLESALE_KEY (env или .env) - выходим');
+  process.exit(1);
+}
+const headers = { Authorization: 'Bearer ' + key };
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
