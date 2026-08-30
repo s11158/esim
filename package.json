@@ -1,0 +1,10 @@
+{
+  "name": "esim-vitrina",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "analytics": "node scripts/build-analytics.mjs",
+    "export-plans": "node scripts/export-plans.mjs",
+    "maya-prices": "node scripts/update-maya-prices.mjs"
+  }
+}

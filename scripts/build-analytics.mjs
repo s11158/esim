@@ -4,7 +4,11 @@
 // прайсы поставщиков, считает места 1-2-3 по каждому направлению и выдаёт локальную
 // HTML-страницу с фильтрами. Наружу ничего не публикуется: в данных наша себестоимость.
 //
-// Запуск: node scripts/build-analytics.mjs
+// В CI и на Pages этот дашборд НЕ собирается и НЕ публикуется: входные файлы
+// *-dealer.local.csv, market-wholesale.local.csv и zesimo-packages.local.json содержат
+// оптовые закупочные цены, репозиторий публичный. Пересборка только локальная.
+//
+// Запуск: npm run analytics (или node scripts/build-analytics.mjs)
 // Выход:  data/analytics.local.html (плюс копия в Downloads делается вручную)
 import { readFileSync, writeFileSync } from 'node:fs';
 
