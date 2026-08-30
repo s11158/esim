@@ -18,8 +18,11 @@ const fileEnv = fs.existsSync(path.join(root, '.env'))
         .map((l) => [l.slice(0, l.indexOf('=')).trim(), l.slice(l.indexOf('=') + 1).trim()])
     )
   : {};
-const base = process.env.STELLAR_WHOLESALE_BASE || fileEnv.STELLAR_WHOLESALE_BASE;
-const key = process.env.STELLAR_WHOLESALE_KEY || fileEnv.STELLAR_WHOLESALE_KEY;
+// Секреты GitHub иногда сохраняются с BOM или невидимыми пробелами - fetch на таком
+// заголовке падает (ByteString > 255). Чистим значения от BOM, zero-width и пробелов.
+const clean = (s) => (s || '').replace(/[\u{FEFF}\u{200B}\u{00A0}\s]/gu, '');
+const base = clean(process.env.STELLAR_WHOLESALE_BASE || fileEnv.STELLAR_WHOLESALE_BASE).replace(/\/$/, '');
+const key = clean(process.env.STELLAR_WHOLESALE_KEY || fileEnv.STELLAR_WHOLESALE_KEY);
 if (!base || !key) {
   console.error('Нет STELLAR_WHOLESALE_BASE или STELLAR_WHOLESALE_KEY (env или .env) - выходим');
   process.exit(1);
