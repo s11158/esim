@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   track:
@@ -53,6 +54,39 @@ jobs:
           path: |
             data/stellar-wholesale.local.csv
             data/stellar-wholesale.local.json
+
+      # Сверка наших витринных цен с эталонами (eSIM.dog и eSIMDB). Пишет
+      # data/price-gap-report.md и data/price-gap-critical.txt. Перед запуском
+      # запоминаем прошлый список критичных разрывов, чтобы алертить только на новые.
+      - name: Build price gap report
+        continue-on-error: true
+        run: |
+          cp data/price-gap-critical.txt /tmp/prev-critical.txt 2>/dev/null || touch /tmp/prev-critical.txt
+          node scripts/price-gap-alert.mjs
+
+      # Алерт: если появились критичные разрывы (больше 3x), которых не было в прошлом
+      # прогоне, создаём или обновляем issue "Price gap alert". Дубли не плодим:
+      # ищем открытый issue с этим заголовком и добавляем комментарий.
+      - name: Alert on new critical gaps
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -f data/price-gap-critical.txt ] || exit 0
+          NEW=$(grep -Fxv -f /tmp/prev-critical.txt data/price-gap-critical.txt || true)
+          if [ -z "$NEW" ]; then
+            echo "Новых критичных разрывов нет - алерт не нужен."
+            exit 0
+          fi
+          BODY=$(printf 'Новые критичные разрывы (больше 3x) за %s:\n\n```\n%s\n```\n\nПолный отчёт: data/price-gap-report.md\n\n%s' \
+            "$(date -u +%F)" "$NEW" "$(head -n 5 data/price-gap-report.md)")
+          NUM=$(gh issue list --state open --search 'in:title "Price gap alert"' --json number,title \
+            --jq '.[] | select(.title == "Price gap alert") | .number' | head -n 1)
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "$BODY"
+          else
+            gh issue create --title "Price gap alert" --body "$BODY"
+          fi
 
       - name: Commit if prices moved
         run: |
