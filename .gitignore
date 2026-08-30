@@ -5,3 +5,5 @@
 esimerge_catalog.json
 esimerge_key.txt
 .env
+rdap_*.json
+*.local.*
