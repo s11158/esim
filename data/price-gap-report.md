@@ -1,15 +1,15 @@
-# Price gap report - 2026-09-01
+# Price gap report - 2026-09-02
 
 Проверено тарифов: 32 из 63 витринных (по странам с эталонными данными).
 С разрывом больше 1.5x: 28, из них критичных (больше 3x): 21.
-Медианный разрыв по всем проверенным: 6.39x.
+Медианный разрыв по всем проверенным: 6.41x.
 
 | Страна | Наш тариф | Наша цена | Лучшая цена | Чья | Их план | Разрыв |
 |---|---|---|---|---|---|---|
 | Индонезия | Saily 10GB/30d | $21.99 | $1.72 | Stellar eSim (eSIMDB) | 5GB/30d | 12.8x KRIT |
 | Малайзия | Saily 20GB/30d | $35.99 | $3.17 | eSIM.dog (eSIM.dog) | 10GB/30d | 11.4x KRIT |
 | Турция | Saily 20GB/30d | $22.99 | $2.13 | eSIM.dog (eSIM.dog) | 10GB/30d | 10.8x KRIT |
-| Турция | Saily 10GB/30d | $15.99 | $1.55 | Stellar eSim (eSIMDB) | 5GB/30d | 10.3x KRIT |
+| Турция | Saily 10GB/30d | $15.99 | $1.54 | Stellar eSim (eSIMDB) | 5GB/30d | 10.4x KRIT |
 | Великобритания | Saily 20GB/30d | $30.99 | $3.17 | eSIM.dog (eSIM.dog) | 10GB/30d | 9.8x KRIT |
 | Франция | Airalo 5GB/15d | $10.00 | $1.08 | Stellar eSim (eSIMDB) | 3GB/15d | 9.3x KRIT |
 | Италия | Saily 20GB/30d | $28.99 | $3.17 | eSIM.dog (eSIM.dog) | 10GB/30d | 9.1x KRIT |
