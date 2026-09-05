@@ -1,7 +1,7 @@
 country,title,marketBest,marketBestProvider,oursBest,oursBestProvider,ratio,action
 "canada","Канада","0.283","Stellar","0.283","Stellar","1","ок"
 "turkey","Турция","0.208","Stellar","0.208","Stellar","1","ок"
-"thailand","Таиланд","0.295","Stellar","0.295","Stellar","1","ок"
+"thailand","Таиланд","0.296","Stellar","0.296","Stellar","1","ок"
 "georgia","Грузия","0.372","eSIM.dog","0.609","Stellar","1.64","написать eSIM.dog"
 "vietnam","Вьетнам","0.284","eSIM.dog","0.471","Stellar","1.66","написать eSIM.dog"
 "japan","Япония","0.295","Stellar","0.295","Stellar","1","ок"
@@ -18,4 +18,4 @@ country,title,marketBest,marketBestProvider,oursBest,oursBestProvider,ratio,acti
 "mexico","Мексика","0.762","Stellar","0.762","Stellar","1","ок"
 "egypt","Египет","0.579","eSIM.dog","0.766","Stellar","1.32","написать eSIM.dog"
 "greece","Греция","0.225","eSIM.dog","0.281","Stellar","1.25","написать eSIM.dog"
-"china","Китай","0.331","eSIM.dog","0.339","Stellar","1.02","ок"
+"china","Китай","0.331","eSIM.dog","0.34","Stellar","1.03","ок"
