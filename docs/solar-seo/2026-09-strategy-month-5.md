@@ -92,7 +92,7 @@ Health Score Ahrefs снизился с 26 (2 августа) до 23 (16 авг
 - 17 страниц в нескольких sitemap одновременно, 2 неканонических URL в sitemap.
 - 39 слишком длинных meta-description, 313 изображений без alt.
 - Search Console: ошибки структурированных данных товаров (10 августа), дубли без выбранного канонического URL (23 августа), страницы "проиндексированы, несмотря на блокировку в robots.txt" (6 сентября).
-- Скорость: видео 5,1 МБ на главной и 4 системы аналитики по-прежнему в списке тормозов.
+- Скорость: видео 4,97 МБ на главной (замер 7 сентября) и 4 системы аналитики по-прежнему в списке тормозов.
 
 ---
 
@@ -119,15 +119,23 @@ Health Score Ahrefs снизился с 26 (2 августа) до 23 (16 авг
 
 ### 4.2. Направление 1. Техническая гигиена (около 5 часов)
 
-| Задача | Что делаем | Результат |
-|---|---|---|
-| 4XX в sitemap | Найти 7 URL по отчёту Ahrefs, убрать из sitemap или настроить 301 на ближайшую страницу | 0 ошибок 4XX в sitemap |
-| Дубли sitemap | Оставить один sitemap на URL, убрать неканонические адреса | Ahrefs: "Page in multiple sitemaps" 17, становится 0 |
-| Robots и индексация | Разобрать список "проиндексировано, несмотря на блокировку", открыть страницы доверия (/ru/policy, /ru/oferta, /ru/licenses), удалить устаревшие правила /page...html | Чистый robots.txt, нет конфликта с индексом |
-| Структурированные данные | Исправить или отключить разметку товаров Tilda, вызывающую ошибки в Search Console | 0 ошибок в отчёте "Описания товара" |
-| Сироты | Добавить блок "Другие процедуры" и "Статьи по теме" на страницы парка и блога, ссылки из главной на 5 денежных страниц, из футера на блог | Сироты с 239 до менее 100 |
-| Вес страниц | Заменить видео 5,1 МБ на главной на постер + отложенную загрузку, сжать 10 тяжёлых JPG | Страниц тяжелее 2 МБ с 12 до не более 3, LCP главной ниже 8 с |
-| Alt-тексты | Заполнить alt на 5 денежных страницах и главной (около 60 изображений) | Старт по 313 пропущенным alt |
+Сверка по живому сайту 7 сентября 2026 (robots.txt, три sitemap, коды ответа всех 319 URL из карт, HTML главной, /park, /aesthetic-services/hydra-facial и карточки товара). Статус: сделано, частично, не сделано.
+
+| Задача | Статус на 7 сентября | Что найдено | Что делаем | Результат |
+|---|---|---|---|---|
+| 4XX в sitemap | Не сделано | Ровно 7 адресов отдают 404, все в фид-карте блога sitemap-feeds.xml: 6 английских адресов /blog/... у статей, которые существуют только на русском (botoks-ot-pota-podmyshki, icoone-robotizirovannyj-massazh, nofilters-omolozhenie-harmony, tesla-former-trenirovka-bez-sportzala, virtue-rf-rastyazhki-posle-rodov, morpheus-8-ili-virtue-rf), плюс /ru/blog/morpheus-8-ili-virtue-rf (статья удалена в обеих версиях) | В Tilda в настройках фида блога снять генерацию EN-адресов для RU-статей либо создать EN-версии; удалённую статью morpheus-8 убрать из фида | 0 ошибок 4XX в sitemap |
+| Дубли sitemap | Не сделано | 17 URL блога одновременно в sitemap.xml и в фид-картах (цифра совпадает с Ahrefs). В основной карте 105 URL, в карте магазина 207, в фидах 24 | Оставить статьи блога только в одной карте: отключить фид-карты блога или исключить блог из основной карты | "Page in multiple sitemaps" 17, становится 0 |
+| Robots и индексация | Не сделано | В robots.txt 79 правил Disallow: 34 устаревших правила вида /pageNNN.html, закрыты /ru/policy и /ru/oferta (EN-версии открыты и в sitemap), /ru/licenses в sitemap отсутствует. Раздел /park: страницы /park/tesla-former, /park/accent и другие закрыты в robots, но хаб /park и /ru/park открыты, есть в sitemap, без noindex, и ссылаются на закрытые адреса. Именно эти ссылки дают предупреждение "проиндексировано, несмотря на блокировку" | Убрать правила /pageNNN.html, открыть /ru/policy и /ru/oferta, добавить /ru/licenses в sitemap. Для /park и /ru/park по решению клиента: noindex, убрать из sitemap, снять ссылки на закрытые /park/... со страниц | Чистый robots.txt, нет конфликта с индексом |
+| Структурированные данные | Частично | На всех страницах есть корректная JSON-LD разметка HealthAndBeautyBusiness, на страницах услуг добавлены BreadcrumbList и Service. Разметка товаров Tilda (Product и Offer в microdata) активна на 207 карточках магазина, без description и отзывов, meta description у карточек пустой | Отключить microdata товаров в настройках магазина Tilda либо заполнить обязательные поля | 0 ошибок в отчёте "Описания товара" |
+| Сироты | Частично | Главная ссылается на 5 страниц услуг (hydra-facial, smas-lifting-ultraformer-mpt, lifting-virtue-rf, botox, harmony-xl) и на /blog. Со страницы /park есть ссылки на 5 страниц услуг. Статьи блога и 207 карточек товаров входящих ссылок из контента не имеют, цифра 239 у Ahrefs не проверяется без Ahrefs | Добавить блок "Другие процедуры" и "Статьи по теме" на страницы услуг и блога, ссылки из футера на блог. Карточки магазина: оставить как есть, они не цель продвижения | Сироты с 239 до менее 100 |
+| Вес страниц | Не сделано | На главной видео 4,97 МБ с autoplay, без постера и отложенной загрузки. Плюс PNG 1,47 МБ. Всего медиа на главной 7,9 МБ. HTML главной 1,2 МБ, страницы hydra-facial 1,5 МБ | Заменить видео на постер с отложенной загрузкой, PNG перевести в WebP, сжать 10 тяжёлых JPG | Страниц тяжелее 2 МБ с 12 до не более 3, LCP главной ниже 8 с |
+| Alt-тексты | Не сделано | Главная: 15 из 19 изображений с пустым alt. Страница hydra-facial: 19 из 20. Карточки товаров: все без alt | Заполнить alt на 5 денежных страницах и главной (около 60 изображений) | Старт по 313 пропущенным alt |
+
+Дополнительно найдено при сверке:
+
+- На главной два тега H1 с одинаковым текстом. Оставить один.
+- На странице hydra-facial теги hreflang не выводятся в HTML (на главной выводятся). Проверить настройку языковых версий на страницах услуг.
+- Обе версии страницы /park (EN и RU) ссылаются на закрытые в robots адреса /park/tesla-former, /park/ulfit, /park/accent, /park/beautylizer, /park/dermadrop-tda, /park/icoon-laser, /park/janus3, /park/skinova-pro.
 
 ### 4.3. Направление 2. Пять денежных страниц (около 6 часов)
 
@@ -135,11 +143,11 @@ Health Score Ahrefs снизился с 26 (2 августа) до 23 (16 авг
 
 | Страница | Основной запрос | Дополнительные |
 |---|---|---|
-| /park/hydrafacial | hydrafacial dubai | hydra facial dubai price, hydrafacial sobha hartland |
-| /park/ultraformer-classys | smas lifting dubai | hifu smas lifting dubai, non surgical facelift dubai |
+| /aesthetic-services/hydra-facial | hydrafacial dubai | hydra facial dubai price, hydrafacial sobha hartland |
+| /aesthetic-services/smas-lifting-ultraformer-mpt | smas lifting dubai | hifu smas lifting dubai, non surgical facelift dubai |
 | /aesthetic-services/lifting-virtue-rf | rf microneedling dubai | rf lifting dubai, virtue rf dubai |
-| /park/heleo4 | heleo 4 dubai | photofacial dubai, skin rejuvenation dubai |
-| /park/tesla-former | tesla former dubai | body contouring dubai, muscle stimulation dubai |
+| /aesthetic-services/therapy-heleo4 | heleo 4 dubai | photofacial dubai, skin rejuvenation dubai |
+| /aesthetic-services/body-sculpting-tesla-former | tesla former dubai | body contouring dubai, muscle stimulation dubai |
 
 Для каждой страницы единый чек-лист:
 
@@ -204,10 +212,10 @@ Health Score Ahrefs снизился с 26 (2 августа) до 23 (16 авг
 | "aesthetic clinic sobha hartland", "beauty clinic sobha hartland" | вне топ-100 | топ-5 | Topvisor |
 | Health Score Ahrefs | 23 | 40+ | Ahrefs |
 | Ошибок Ahrefs | 264 | менее 150 | Ahrefs |
-| 4XX в sitemap | 7 | 0 | Ahrefs |
-| Страницы-сироты | 239 | менее 100 | Ahrefs |
-| Страницы тяжелее 2 МБ | 12 | не более 3 | Ahrefs |
-| Ошибки структурированных данных | 2 типа | 0 | Search Console |
+| 4XX в sitemap | 7 (подтверждено 7 сентября, все в фид-карте блога) | 0 | Ahrefs, проверка кодов ответа |
+| Страницы-сироты | 239 (из них 207 карточек магазина) | менее 100 | Ahrefs |
+| Страницы тяжелее 2 МБ | 12 (главная: медиа 7,9 МБ, видео 4,97 МБ) | не более 3 | Ahrefs, замер 7 сентября |
+| Ошибки структурированных данных | 2 типа (microdata товаров активна на 207 карточках) | 0 | Search Console |
 | Новые проиндексированные страницы | - | 9 (4 статьи x2 языка + локальная) | Search Console |
 | Посты в GBP | 0 | 4 | GBP |
 | Новые отзывы | - | +10 | GBP |
