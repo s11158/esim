@@ -20,20 +20,20 @@
 
 ## 10 новых ключевиков
 
-Объёмы: оценка по рынку ОАЭ (EN, месяц), сверить в Google Keyword Planner или Ahrefs перед стартом.
+Объёмы: Semrush, база ОАЭ, 8 сентября 2026 (см. semrush-2026-09-08.md). В скобках KD.
 
 | # | Основной запрос (EN) | RU-пара | Объём, оценка | Конкуренция | Аппарат или услуга в клинике | URL (EN) |
 |---|---|---|---|---|---|---|
-| 1 | dermal fillers dubai | филлеры дубай | 1 500 - 2 000 | Высокая | Инъекции, врачи клиники | /aesthetic-services/dermal-fillers |
-| 2 | lip fillers dubai | увеличение губ дубай | 2 000 - 3 000 | Высокая | Инъекции | /aesthetic-services/lip-fillers |
-| 3 | skin booster dubai | скинбустеры дубай | 800 - 1 200 | Средняя | Virtue Aura (уже даёт показы в Search Console), другие бустеры | /aesthetic-services/skin-boosters |
-| 4 | pigmentation treatment dubai | лечение пигментации дубай | 1 000 - 1 500 | Средняя | Harmony XL Pro, Heleo4, пилинги | /aesthetic-services/pigmentation-treatment |
-| 5 | acne scar treatment dubai | лечение постакне дубай | 700 - 1 000 | Средняя | Harmony XL Pro, Virtue RF, Dermadrop | /aesthetic-services/acne-scar-treatment |
-| 6 | skin tightening dubai | подтяжка кожи тела дубай | 800 - 1 200 | Средняя | Accent Prime, Ultraformer (тело) | /aesthetic-services/skin-tightening |
-| 7 | double chin treatment dubai | второй подбородок дубай | 500 - 800 | Низкая | Ulfit, Ultraformer MPT (субментальная зона) | /aesthetic-services/double-chin-treatment |
-| 8 | chemical peel dubai | химический пилинг дубай | 1 000 - 1 500 | Средняя | Косметология лица | /aesthetic-services/chemical-peel |
-| 9 | mesotherapy dubai | мезотерапия дубай | 400 - 600 | Низкая | Инъекционная и безыгольная (Dermadrop TDA) | /aesthetic-services/mesotherapy |
-| 10 | hair loss treatment dubai | лечение выпадения волос дубай | 1 500 - 2 000 | Средняя | Мезотерапия кожи головы, Dermadrop, уходы (уточнить наличие PRP) | /aesthetic-services/hair-loss-treatment |
+| 1 | dermal fillers dubai | филлеры дубай | 2 400 (KD 16) | Высокая | Инъекции, врачи клиники | /aesthetic-services/dermal-fillers |
+| 2 | lip fillers dubai | увеличение губ дубай | 1 300 (KD 18) | Высокая | Инъекции | /aesthetic-services/lip-fillers |
+| 3 | skin booster dubai | скинбустеры дубай | 110 (KD 11) | Средняя | Virtue Aura (уже даёт показы в Search Console), другие бустеры | /aesthetic-services/skin-boosters |
+| 4 | pigmentation treatment dubai | лечение пигментации дубай | 260 | Средняя | Harmony XL Pro, Heleo4, пилинги | /aesthetic-services/pigmentation-treatment |
+| 5 | acne scar treatment dubai | лечение постакне дубай | 170 | Средняя | Harmony XL Pro, Virtue RF, Dermadrop | /aesthetic-services/acne-scar-treatment |
+| 6 | skin tightening dubai | подтяжка кожи тела дубай | 40 (KD 8) | Средняя | Accent Prime, Ultraformer (тело) | /aesthetic-services/skin-tightening |
+| 7 | double chin treatment dubai | второй подбородок дубай | 20 | Низкая | Ulfit, Ultraformer MPT (субментальная зона) | /aesthetic-services/double-chin-treatment |
+| 8 | chemical peel dubai | химический пилинг дубай | 320 (KD 15) | Средняя | Косметология лица | /aesthetic-services/chemical-peel |
+| 9 | mesotherapy dubai | мезотерапия дубай | 210 (KD 12) | Низкая | Инъекционная и безыгольная (Dermadrop TDA) | /aesthetic-services/mesotherapy |
+| 10 | hair loss treatment dubai | лечение выпадения волос дубай | 390 (KD 11) | Средняя | Мезотерапия кожи головы, Dermadrop, уходы (уточнить наличие PRP) | /aesthetic-services/hair-loss-treatment |
 
 Запасные варианты, если какая-то услуга не оказывается: laser tattoo removal dubai (Harmony XL Pro, уточнить модуль), stretch marks removal dubai, profhilo dubai, best facial in dubai, medical pedicure dubai (подология уже даёт лиды).
 
