@@ -88,6 +88,36 @@ jobs:
             gh issue create --title "Price gap alert" --body "$BODY"
           fi
 
+      # Гарантия низкой цены esim.free: сверяем публичный каталог витрины с розницей
+      # из карты рынка. Ценовая дыра (чужой тариф не больше нашего по объёму и сроку,
+      # но дешевле) - нарушение обещания, о новых дырах заводим или дополняем issue.
+      - name: Audit esim.free price guarantee
+        continue-on-error: true
+        run: |
+          cp data/esim-free-guarantee-holes.txt /tmp/prev-holes.txt 2>/dev/null || touch /tmp/prev-holes.txt
+          node scripts/esim-free-guarantee.mjs
+
+      - name: Alert on new price holes in the esim.free guarantee
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -f data/esim-free-guarantee-holes.txt ] || exit 0
+          NEW=$(grep -Fxv -f /tmp/prev-holes.txt data/esim-free-guarantee-holes.txt || true)
+          if [ -z "$NEW" ]; then
+            echo "Новых ценовых дыр в гарантии esim.free нет - алерт не нужен."
+            exit 0
+          fi
+          BODY=$(printf 'Новые ценовые дыры в гарантии низкой цены esim.free за %s:\n\n```\n%s\n```\n\nПолный отчёт: data/esim-free-guarantee.md' \
+            "$(date -u +%F)" "$NEW")
+          NUM=$(gh issue list --state open --search 'in:title "esim.free price guarantee"' --json number,title \
+            --jq '.[] | select(.title == "esim.free price guarantee") | .number' | head -n 1)
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "$BODY"
+          else
+            gh issue create --title "esim.free price guarantee" --body "$BODY"
+          fi
+
       - name: Commit if prices moved
         run: |
           if git diff --quiet -- data/; then
