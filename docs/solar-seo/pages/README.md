@@ -11,11 +11,15 @@
 | 3 | Skin boosters и Profhilo | 03-skin-boosters.md | готов | нет | нет | нет |
 | 4 | Pigmentation treatment | 04-pigmentation-treatment.md | готов | нет | нет | нет |
 | 5 | Acne scar treatment | 05-acne-scar-treatment.md | готов | нет | нет | нет |
-| 6 | Laser skin tightening | 06-laser-skin-tightening.md | нет | нет | нет | нет |
-| 7 | Chemical peel | 07-chemical-peel.md | нет | нет | нет | нет |
-| 8 | Mesotherapy | 08-mesotherapy.md | нет | нет | нет | нет |
-| 9 | Hair loss treatment | 09-hair-loss-treatment.md | нет | нет | нет | нет |
-| 10 | Laser tattoo removal | 10-laser-tattoo-removal.md | нет | нет | нет | нет |
+| 6 | Laser skin tightening | 06-laser-skin-tightening.md | готов | нет | нет | нет |
+| 7 | Chemical peel | 07-chemical-peel.md | готов | нет | нет | нет |
+| 8 | Mesotherapy | 08-mesotherapy.md | готов | нет | нет | нет |
+| 9 | Hair loss treatment | 09-hair-loss-treatment.md | готов | нет | нет | нет |
+| 10 | Laser tattoo removal | 10-laser-tattoo-removal.md | готов | нет | нет | нет |
+
+Порядок публикации не совпадает с нумерацией. Первой выпускаем страницу 6, laser skin tightening: у неё запрос на 5 400 показов в месяц, это больше, чем у всех остальных страниц спринта вместе взятых. Дальше идут филлеры и губы, затем сезонная пигментация, остальные по плану спринта.
+
+Страница 10, удаление тату, публикуется только после того, как клиника подтвердит наличие модуля на Harmony XL Pro. До подтверждения текст лежит готовым, но не выходит.
 
 Таблицу обновлять по мере переноса, чтобы было видно, где спринт стоит.
 
