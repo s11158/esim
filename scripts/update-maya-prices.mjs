@@ -1,17 +1,33 @@
 // Синхронизирует цены тарифов Maya в data/plans.json с их живым affiliate-фидом.
-// Источник истины: https://assets.maya.net/affiliates/plans.json (USD, priceDiscounted).
+// Источник истины: живой JSON https://affiliates.maya.net/ (USD, priceDiscounted).
+// Старый статичный https://assets.maya.net/affiliates/plans.json объявлен устаревшим 17.08.2026
+// (письмо Bart от 19.08, отключение через 30 дней) и остаётся только запасным адресом.
+// Структура ответа у обоих одинаковая: plans[], supportedCurrencies[], provider{}.
 // index.html подтягивает data/plans.json fetch-ом и перекрывает цены Maya поверх
 // встроенного массива, поэтому правки HTML регэкспом больше не нужны.
 // Меняет ТОЛЬКО поле price у записей provider:'Maya'; ссылки, промокоды и флаги не трогает.
 // Правило проекта: никаких выдуманных цен - если фид недоступен или отдал мусор, выходим без правок.
 import { readFileSync, writeFileSync } from 'node:fs';
 
-const FEED = 'https://assets.maya.net/affiliates/plans.json';
+const FEEDS = [
+  'https://affiliates.maya.net/',
+  'https://assets.maya.net/affiliates/plans.json',
+];
 const FILE = new URL('../data/plans.json', import.meta.url);
 
-const res = await fetch(FEED, { headers: { 'User-Agent': 'esim.pizza price sync' } });
-if (!res.ok) { console.error(`feed HTTP ${res.status} - выходим без правок`); process.exit(1); }
-const feed = await res.json();
+let feed = null;
+for (const url of FEEDS) {
+  try {
+    const res = await fetch(url, { headers: { 'User-Agent': 'esim.pizza price sync', Accept: 'application/json' } });
+    if (!res.ok) { console.error(`${url}: HTTP ${res.status}`); continue; }
+    feed = await res.json();
+    console.log(`фид: ${url}`);
+    break;
+  } catch (e) {
+    console.error(`${url}: ${e?.cause?.code || e.message}`);
+  }
+}
+if (!feed) { console.error('ни один адрес фида не ответил - выходим без правок'); process.exit(1); }
 const feedPlans = Array.isArray(feed?.plans) ? feed.plans : null;
 if (!feedPlans?.length) { console.error('фид без plans[] - выходим без правок'); process.exit(1); }
 
