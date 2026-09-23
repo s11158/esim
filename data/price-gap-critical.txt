@@ -1,5 +1,5 @@
-Турция Saily 10GB/30d $15.99 vs $0.76 (ESIM.DOG 🐶) = 21.0x
-Франция Airalo 5GB/15d $10.00 vs $0.60 (ESIM.DOG 🐶) = 16.7x
+Турция Saily 10GB/30d $15.99 vs $0.65 (Stellar eSim) = 24.5x
+Франция Airalo 5GB/15d $10.00 vs $0.49 (Stellar eSim) = 20.3x
 Италия Saily 20GB/30d $28.99 vs $1.85 (eSIM.dog) = 15.7x
 Малайзия Saily 20GB/30d $35.99 vs $2.73 (eSIM.dog) = 13.2x
 Турция Saily 20GB/30d $22.99 vs $1.82 (eSIM.dog) = 12.6x
@@ -8,7 +8,7 @@
 Индонезия Saily 10GB/30d $21.99 vs $1.94 (eSIM.dog) = 11.3x
 Франция Saily 20GB/30d $22.99 vs $2.06 (eSIM.dog) = 11.2x
 Великобритания Saily 20GB/30d $30.99 vs $2.94 (eSIM.dog) = 10.5x
-Таиланд Saily 10GB/30d $10.99 vs $1.29 (ESIM.DOG 🐶) = 8.5x
+Таиланд Saily 10GB/30d $10.99 vs $1.18 (Stellar eSim) = 9.3x
 Сингапур Saily 20GB/30d $22.99 vs $2.73 (eSIM.dog) = 8.4x
 Германия Saily 20GB/30d $22.99 vs $2.94 (eSIM.dog) = 7.8x
 Грузия Airalo 5GB/30d $17.00 vs $2.24 (ESIM.DOG 🐶) = 7.6x
@@ -19,3 +19,4 @@
 Грузия Saily 10GB/30d $30.99 vs $5.62 (eSIM.dog) = 5.5x
 Мексика Saily 20GB/30d $37.99 vs $7.78 (eSIM.dog) = 4.9x
 Египет Saily 10GB/30d $33.99 vs $8.02 (eSIM.dog) = 4.2x
+Турция Stellar 10GB/30d $2.15 vs $0.65 (Stellar eSim) = 3.3x
