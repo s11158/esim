@@ -29,11 +29,11 @@ italy,"Jetpac","Italy 15GB",15,7,12,0.8,ESIMDB15,no
 italy,"GlobaleSIM","Italy",10,30,10,1,,no
 italy,"Orange Travel","Italy 20GB",20,14,21.99,1.099,,no
 italy,"Ubigi","",10,30,12,1.2,,yes
+japan,"Orange Travel","Japan 20GB",20,14,17.99,0.899,,no
+japan,"GlobaleSIM","Japan",20,30,25,1.25,,no
 japan,"Ubigi","",10,7,14,1.4,,yes
-japan,"GlobaleSIM","Far East",10,30,17,1.7,,no
 japan,"Sim Local","Japan eSIM – Unlimited Data for 10 Days",10,10,26,2.6,,yes
-japan,"Superalink","Japan - 2GB/day",2,15,14.79,7.395,,yes
-malaysia,"BNESIM","Surf 20 GB in Malaysia for 30 days",20,30,10.11,0.505,,yes
+malaysia,"BNESIM","Surf 20 GB in Malaysia for 30 days",20,30,10.12,0.506,,yes
 malaysia,"eSIMX","Malaysia 20GB 7Days",20,7,10.8,0.54,,yes
 malaysia,"Ubigi","",10,7,11,1.1,,yes
 malaysia,"Jetpac","Malaysia 10GB",10,7,14,1.4,ESIMDB15,no
@@ -43,8 +43,8 @@ mexico,"Sim Local","Mexico 20 GB for 30 Days",20,30,24,1.2,,yes
 mexico,"Breeze","Mexico",10,30,14.99,1.499,,yes
 mexico,"Nomad","Local Mexico - 30 Days - 10 GB",10,30,15.5,1.55,ESIMDB3,yes
 mexico,"Airalo","Chido - Unlimited",3,7,23.5,7.833,ESIMDB15,yes
-singapore,"EtravelSIM","Singapore eSIM 20 GB - 10 Days",20,10,9.99,0.499,,no
 singapore,"eSIMX","Singapore 20GB 7Days",20,7,10.8,0.54,,yes
+singapore,"BNESIM","Surf 10 GB in Singapore for 30 days",10,30,6.74,0.674,,yes
 singapore,"Ubigi","",10,7,11,1.1,,yes
 singapore,"Nomad","Local Singapore - 30 Days - 10 GB",10,30,14,1.4,ESIMDB3,yes
 singapore,"Superalink","Singapore - 3GB/day",3,5,6.69,2.23,,yes
@@ -57,7 +57,7 @@ thailand,"EtravelSIM","Travel eSIM for Bangkok 50 GB - 10 Days",50,10,8.49,0.17,
 thailand,"Esimtrav","7 Days - Unlimited data | 4G/5G DTAC (Best Coverage)",50,7,8.99,0.18,,yes
 thailand,"Nomad","Local Thailand - 10 Days - 50 GB",50,10,12,0.24,ESIMDB3,yes
 turkey,"eSIMX","Turkey 10GB 7Days",10,7,4.8,0.48,,yes
-turkey,"BNESIM","Surf 20 GB in Turkey for 30 days",20,30,12.81,0.641,,yes
+turkey,"BNESIM","Surf 20 GB in Turkey for 30 days",20,30,12.82,0.641,,yes
 turkey,"Roamix","Turkey 20GB 30Days",20,30,15.55,0.778,,yes
 turkey,"Jetpac","Turkey 15GB",15,7,14.5,0.967,ESIMDB15,no
 turkey,"GlobaleSIM","Turkey",15,30,16,1.067,,no
@@ -66,7 +66,7 @@ uae,"Superalink","United Arab Emirates - Regular",15,30,19.63,1.309,,yes
 uae,"GlobaleSIM","Dubai, Abu Dhabi &amp; UAE",10,30,17,1.7,,no
 uae,"Orange Travel","World - Zone 1",20,30,35.99,1.8,ESIMDBWRLD,no
 uae,"Nomad","Local United Arab Emirates - 30 Days - 10 GB",10,30,18.5,1.85,ESIMDB3,no
-uk,"Sim Local","United Kingdom eSIM – 100GB for 30 Days",100,30,19.75,0.198,,yes
+uk,"Sim Local","United Kingdom eSIM – 80GB for 30 Days",80,30,19.75,0.247,,yes
 uk,"Amigo eSIM","Three 40GB 30Days",40,30,13,0.325,,yes
 uk,"Ubigi","",10,7,9,0.9,,yes
 uk,"Orange Travel","United Kingdom 20GB",20,14,21.99,1.099,,no
