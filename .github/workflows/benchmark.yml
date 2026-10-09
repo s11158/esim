@@ -34,26 +34,9 @@ jobs:
       - name: Build market map
         run: node scripts/build-market.mjs
 
-      # Оптовый каталог Stellar - закупочные цены. В публичный репозиторий они не попадают:
-      # скрипт пишет в data/*.local.* (эти маски в .gitignore), результат уходит только
-      # приватным артефактом workflow. Шаг не роняет весь прогон, если API недоступен.
-      - name: Fetch Stellar wholesale catalogue
-        continue-on-error: true
-        env:
-          STELLAR_WHOLESALE_KEY: ${{ secrets.STELLAR_WHOLESALE_KEY }}
-          STELLAR_WHOLESALE_BASE: ${{ secrets.STELLAR_WHOLESALE_BASE }}
-        run: node scripts/fetch-stellar-wholesale.mjs
-
-      - name: Upload Stellar wholesale as private artifact
-        continue-on-error: true
-        uses: actions/upload-artifact@v4
-        with:
-          name: stellar-wholesale
-          retention-days: 90
-          if-no-files-found: warn
-          path: |
-            data/stellar-wholesale.local.csv
-            data/stellar-wholesale.local.json
+      # Оптовый каталог Stellar (закупочные цены) здесь не качаем: репозиторий публичный,
+      # и артефакты его workflow может скачать любой пользователь GitHub. Закупку снимаем
+      # только локально: node scripts/fetch-stellar-wholesale.mjs (ключ в .env).
 
       # Сверка наших витринных цен с эталонами (eSIM.dog и eSIMDB). Пишет
       # data/price-gap-report.md и data/price-gap-critical.txt. Перед запуском
