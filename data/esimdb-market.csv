@@ -7,17 +7,17 @@ egypt,"Breeze","Egypt",10,30,23.99,2.399,ESIMDB10OFF,no
 france,"Sim Local","France eSIM – 70 GB for 15 Days + EU Roaming",70,15,17,0.243,,yes
 france,"Ubigi","",10,7,8,0.8,,yes
 france,"GlobaleSIM","France",15,30,13,0.867,,no
-france,"BNESIM","Surf 10 GB in Europe for 30 days",10,30,10.07,1.007,,yes
+france,"BNESIM","Surf 10 GB in Europe for 30 days",10,30,10.06,1.006,,yes
 france,"Orange Travel","France 20GB",20,14,25.99,1.299,,no
 georgia,"GoMoWorld","Georgia",19,30,12.99,0.684,,no
 georgia,"4S eSIM","Georgia 10GB - 7 Days",10,7,7.25,0.725,,no
 georgia,"GlobaleSIM","Georgia",10,30,13,1.3,,no
-georgia,"BNESIM","Surf 10 GB in Georgia for 30 days",10,30,13.43,1.343,,yes
+georgia,"BNESIM","Surf 10 GB in Georgia for 30 days",10,30,13.42,1.342,,yes
 georgia,"Orange Travel","World - Zone 1",20,30,35.99,1.8,ESIMDBWRLD,no
 germany,"GoMoWorld","Germany",50,30,24.99,0.5,,no
 germany,"Sim Local","Germany 20 GB for 30 Days",20,30,16.5,0.825,,yes
 germany,"GlobaleSIM","Germany",10,30,9,0.9,,no
-germany,"BNESIM","Surf 10 GB in Europe for 30 days",10,30,10.07,1.007,,yes
+germany,"BNESIM","Surf 10 GB in Europe for 30 days",10,30,10.06,1.006,,yes
 germany,"Orange Travel","Germany 20GB",20,14,21.99,1.099,,no
 indonesia,"eSIMX","Indonesia 10GB 7Days",10,7,5.8,0.58,,yes
 indonesia,"MobiMatter","Indonesia 15 GB",15,30,9.99,0.666,,no
@@ -26,14 +26,14 @@ indonesia,"Ubigi","",10,30,16,1.6,,yes
 indonesia,"GIGAGO","Indonesia eSIM",2,7,11.5,5.75,,no
 italy,"Jetpac","Italy 15GB",15,7,12,0.8,ESIMDB15,no
 italy,"GlobaleSIM","Europe",15,30,13,0.867,,no
-italy,"BNESIM","Surf 10 GB in Europe for 30 days",10,30,10.07,1.007,,yes
+italy,"BNESIM","Surf 10 GB in Europe for 30 days",10,30,10.06,1.006,,yes
 italy,"Orange Travel","Italy 20GB",20,14,21.99,1.099,,no
 italy,"Ubigi","",10,30,12,1.2,,yes
 japan,"Orange Travel","Japan 20GB",20,14,17.99,0.899,,no
 japan,"GlobaleSIM","Japan",20,30,25,1.25,,no
 japan,"Ubigi","",10,7,14,1.4,,yes
 japan,"Sim Local","Japan eSIM – Unlimited Data for 10 Days",10,10,26,2.6,,yes
-malaysia,"BNESIM","Surf 20 GB in Malaysia for 30 days",20,30,10.07,0.504,,yes
+malaysia,"BNESIM","Surf 20 GB in Malaysia for 30 days",20,30,10.06,0.503,,yes
 malaysia,"eSIMX","Malaysia 20GB 7Days",20,7,10.8,0.54,,yes
 malaysia,"Ubigi","",10,7,11,1.1,,yes
 malaysia,"Jetpac","Malaysia 10GB",10,7,14,1.4,ESIMDB15,no
@@ -44,7 +44,7 @@ mexico,"Breeze","Mexico",10,30,14.99,1.499,,yes
 mexico,"Nomad","Local Mexico - 30 Days - 10 GB",10,30,15.5,1.55,ESIMDB3,yes
 mexico,"Airalo","Chido - Unlimited",3,7,23.5,7.833,ESIMDB15,yes
 singapore,"eSIMX","Singapore 20GB 7Days",20,7,10.8,0.54,,yes
-singapore,"BNESIM","Surf 10 GB in Singapore for 30 days",10,30,6.71,0.671,,yes
+singapore,"BNESIM","Surf 10 GB in Singapore for 30 days",10,30,6.7,0.67,,yes
 singapore,"Ubigi","",10,7,11,1.1,,yes
 singapore,"Nomad","Local Singapore - 30 Days - 10 GB",10,30,14,1.4,ESIMDB3,yes
 singapore,"Superalink","Singapore - 3GB/day",3,5,6.69,2.23,,yes
@@ -57,7 +57,7 @@ thailand,"EtravelSIM","Travel eSIM for Bangkok 50 GB - 10 Days",50,10,8.49,0.17,
 thailand,"Esimtrav","7 Days - Unlimited data | 4G/5G DTAC (Best Coverage)",50,7,8.99,0.18,,yes
 thailand,"Nomad","Local Thailand - 10 Days - 50 GB",50,10,15,0.3,ESIMDB3,yes
 turkey,"eSIMX","Turkey 10GB 7Days",10,7,4.8,0.48,,yes
-turkey,"BNESIM","Surf 20 GB in Turkey for 30 days",20,30,12.75,0.637,,yes
+turkey,"BNESIM","Surf 20 GB in Turkey for 30 days",20,30,12.74,0.637,,yes
 turkey,"Roamix","Turkey 20GB 30Days",20,30,15.55,0.778,,yes
 turkey,"GlobaleSIM","Turkey",15,30,13,0.867,,no
 turkey,"Jetpac","Turkey 15GB",15,7,14.5,0.967,ESIMDB15,no
