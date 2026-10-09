@@ -1,0 +1,14 @@
+# GitHub Pages (Jekyll): на esim.pizza публикуем только витрину.
+# Витрина грузит лишь data/plans.json; скрипты, бот, инструкции и внутренние
+# отчёты по ценам остаются в репозитории, но не раздаются с сайта.
+exclude:
+  - scripts
+  - bot
+  - docs
+  - package.json
+  - data/esimdb-market.csv
+  - data/esimdog-benchmark-10gb-30d.csv
+  - data/market-gaps.csv
+  - data/market-map.csv
+  - data/price-gap-critical.txt
+  - data/price-gap-report.md
