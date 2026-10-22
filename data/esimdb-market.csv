@@ -1,5 +1,5 @@
 country,provider,plan,gb,days,price_usd,price_per_gb,promo_code,5g
-egypt,"BNESIM","Surf 20 GB in Egypt for 30 days",20,30,13.45,0.672,,no
+egypt,"BNESIM","Surf 20 GB in Egypt for 30 days",20,30,13.46,0.673,,no
 egypt,"4S eSIM","Egypt 20GB - 15 Days",20,15,15.04,0.752,,no
 egypt,"GlobaleSIM","Egypt",10,30,13,1.3,,no
 egypt,"GoMoWorld","Egypt",8,30,12.99,1.624,,no
@@ -12,7 +12,7 @@ france,"Orange Travel","France 20GB",20,14,25.99,1.299,,no
 georgia,"GoMoWorld","Georgia",19,30,12.99,0.684,,no
 georgia,"4S eSIM","Georgia 10GB - 7 Days",10,7,7.25,0.725,,no
 georgia,"GlobaleSIM","Georgia",10,30,13,1.3,,no
-georgia,"BNESIM","Surf 10 GB in Georgia for 30 days",10,30,13.45,1.345,,yes
+georgia,"BNESIM","Surf 10 GB in Georgia for 30 days",10,30,13.46,1.346,,yes
 georgia,"Orange Travel","World - Zone 1",20,30,35.99,1.8,ESIMDBWRLD,no
 germany,"GoMoWorld","Germany",50,30,24.99,0.5,,no
 germany,"GlobaleSIM","Germany",10,30,9,0.9,,no
@@ -39,7 +39,7 @@ malaysia,"Ubigi","",10,7,11,1.1,,yes
 malaysia,"Jetpac","Malaysia 10GB",10,7,14,1.4,ESIMDB15,no
 malaysia,"MicroEsim","Malaysia eSIM - Umobile 5G - 10 Days / Daily 3GB",3,10,9.47,3.157,ESIMDB,yes
 mexico,"Orange Travel","Mexico 20GB",20,30,22.99,1.149,,no
-mexico,"Breeze","Mexico",10,30,14.99,1.499,,yes
+mexico,"Breeze","Mexico",10,30,14.99,1.499,,no
 mexico,"Nomad","Local Mexico - 30 Days - 10 GB",10,30,15.5,1.55,ESIMDB3,yes
 mexico,"Sim Local","Mexico Unlimited Data for 7 Days",5,7,19.75,3.95,,yes
 mexico,"Airalo","Chido - Unlimited",3,7,23.5,7.833,ESIMDB15,yes
