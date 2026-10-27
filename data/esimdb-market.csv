@@ -76,7 +76,7 @@ usa,"eSIMX","United States 20GB 30Days",20,30,21,1.05,,yes
 usa,"Jetpac","USA 15GB",15,7,16.5,1.1,ESIMDB15,no
 usa,"Ubigi","USA",10,7,12,1.2,,yes
 usa,"GoMoWorld","United States",9,30,12.99,1.443,,no
-vietnam,"Ubigi","",10,7,10.9,1.09,,yes
+vietnam,"Ubigi","",10,7,10,1,,yes
 vietnam,"eSIMX","Vietnam Daily 5GB 30Days",5,30,9.8,1.96,,yes
 vietnam,"BambooSIM","Vietnam MobiFone eSIM (Single Use)",8,15,17.68,2.21,,yes
 vietnam,"GIGAGO","Vietnam eSIM - 5GB/day (Vinaphone)",5,10,12.9,2.58,,yes
