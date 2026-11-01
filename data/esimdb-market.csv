@@ -1,5 +1,5 @@
 country,provider,plan,gb,days,price_usd,price_per_gb,promo_code,5g
-egypt,"BNESIM","Surf 20 GB in Egypt for 30 days",20,30,13.43,0.671,,no
+egypt,"BNESIM","Surf 20 GB in Egypt for 30 days",20,30,13.44,0.672,,no
 egypt,"4S eSIM","Egypt 20GB - 15 Days",20,15,15.04,0.752,,no
 egypt,"GlobaleSIM","Egypt",10,30,9,0.9,,no
 egypt,"GoMoWorld","Egypt",8,30,12.99,1.624,,no
@@ -12,7 +12,7 @@ france,"Orange Travel","France 20GB",20,14,25.99,1.299,,no
 georgia,"GoMoWorld","Georgia",19,30,12.99,0.684,,no
 georgia,"4S eSIM","Georgia 10GB - 7 Days",10,7,7.25,0.725,,no
 georgia,"GlobaleSIM","Georgia",10,30,13,1.3,,no
-georgia,"BNESIM","Surf 10 GB in Georgia for 30 days",10,30,13.43,1.343,,yes
+georgia,"BNESIM","Surf 10 GB in Georgia for 30 days",10,30,13.44,1.344,,yes
 georgia,"Orange Travel","World - Zone 1",20,30,35.99,1.8,ESIMDBWRLD,no
 germany,"GoMoWorld","Germany",50,30,24.99,0.5,,no
 germany,"GlobaleSIM","Germany",10,30,9,0.9,,no
@@ -56,7 +56,7 @@ thailand,"EtravelSIM","Travel eSIM for Bangkok 50 GB - 10 Days",50,10,8.49,0.17,
 thailand,"Esimtrav","7 Days - Unlimited data | 4G/5G DTAC (Best Coverage)",50,7,8.99,0.18,,yes
 thailand,"Nomad","Local Thailand - 10 Days - 50 GB",50,10,17,0.34,ESIMDB3,yes
 turkey,"eSIMX","Turkey 10GB 7Days",10,7,4.8,0.48,,yes
-turkey,"BNESIM","Surf 20 GB in Turkey for 30 days",20,30,12.75,0.637,,yes
+turkey,"BNESIM","Surf 20 GB in Turkey for 30 days",20,30,12.76,0.638,,yes
 turkey,"Roamix","Turkey 20GB 30Days",20,30,15.55,0.778,,yes
 turkey,"GlobaleSIM","Turkey",15,30,13,0.867,,no
 turkey,"Jetpac","Turkey 15GB",15,7,14.5,0.967,ESIMDB15,no
