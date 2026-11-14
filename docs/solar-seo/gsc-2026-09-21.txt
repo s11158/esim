@@ -1,0 +1,104 @@
+GSC отчёт: 2026-09-21
+Текущее окно:  2026-09-12 … 2026-09-18  (7 дн)
+Предыдущее:    2026-09-05 … 2026-09-11
+
+ИТОГО (Δ к предыдущему окну):
+  Клики   50  (▲12)
+  Показы  2996  (▲488)
+  CTR     1.7%  (▲0.2 п.п.)
+  Поз.    12.9  (▲2.3)
+
+ТОП-25 ЗАПРОСОВ (по кликам, тек. окно):
+  solar beauty and aesthetics                кл   3 (   ▲3)  поз  1.8 (▼0.8)
+  solar medical clinic                       кл   3 (   ▲1)  поз  1.1 (▲0.4)
+  aesthetic clinic dubai                     кл   1 (   ▲1)  поз 101.0 (▲60)
+  beauty salon sobha hartland                кл   1 (   ▲1)  поз  5.5 (▲4.8)
+  la biosthetique curl protecting spray      кл   1 (   ▲1)  поз 13.0 (=)
+  laser hair removal sobha hartland          кл   1 (    =)  поз  1.0 (=)
+  massage sobha hartland                     кл   1 (   ▲1)  поз  7.0 (=)
+  solar                                      кл   1 (    =)  поз  1.0 (=)
+  solar aesthetics                           кл   1 (    =)  поз  4.0 (▲19.6)
+  solar beauty and aesthetics clinic         кл   1 (   ▼3)  поз  4.0 (▼2.2)
+  solar beauty and aesthetics clinic dubai r кл   1 (   ▲1)  поз  1.8 (▲0.4)
+  tesla former                               кл   1 (   ▲1)  поз  9.7 (▲0.1)
+  tesla former machine                       кл   1 (   ▲1)  поз  8.5 (▼0.4)
+  trichoscopy dubai                          кл   1 (   ▲1)  поз 10.2 (▲1.3)
+  virtue rf                                  кл   1 (   ▲1)  поз  4.5 (▲2.4)
+  2                                          кл   0 (    =)  поз  4.0 (=)
+  3 years, yes                               кл   0 (    =)  поз  3.0 (=)
+  abdomen                                    кл   0 (    =)  поз 13.0 (=)
+  aesthetic clinic                           кл   0 (    =)  поз 45.0 (=)
+  aesthetic clinic business bay              кл   0 (    =)  поз 43.0 (=)
+  aesthetic clinic in dubai                  кл   0 (    =)  поз 97.0 (=)
+  aesthetic clinic near me                   кл   0 (    =)  поз  1.0 (=)
+  aesthetic cosmetology dubai                кл   0 (    =)  поз 25.3 (▼2)
+  aesthetic salon                            кл   0 (    =)  поз  8.0 (▼1.5)
+  aesthetic shop near me                     кл   0 (    =)  поз 10.0 (=)
+
+ЗАПРОСЫ — РОСТ КЛИКОВ:
+  ▲ solar beauty and aesthetics                0→3
+  ▲ trichoscopy dubai                          0→1
+  ▲ beauty salon sobha hartland                0→1
+  ▲ solar medical clinic                       2→3
+  ▲ virtue rf                                  0→1
+  ▲ la biosthetique curl protecting spray      0→1
+  ▲ tesla former machine                       0→1
+  ▲ aesthetic clinic dubai                     0→1
+ЗАПРОСЫ — ПАДЕНИЕ КЛИКОВ:
+  ▼ solar beauty and aesthetics clinic         4→1
+  ▼ solar clinic                               2→0
+  ▼ solar beauty clinic                        1→0
+  ▼ ultraformer mpt                            1→0
+
+ТОП-10 СТРАНИЦ (по кликам):
+  /                                              кл  14 (   ▼2)  CTR  2.5%
+  /?utm_source=google.maps                       кл   9 (   ▲3)  CTR  5.0%
+  /blog/tesla-former-muscle-training             кл   6 (   ▲6)  CTR  1.1%
+  /ru                                            кл   4 (   ▲2)  CTR  7.3%
+  /catalog                                       кл   3 (   ▲3)  CTR  4.1%
+  /aesthetic-services/harmony-xl                 кл   2 (    =)  CTR  2.5%
+  /blog/bezinekcionnaya-mezoterapiya-dermadrop-d кл   2 (   ▲2)  CTR  3.2%
+  /aesthetic-services/hydra-facial               кл   1 (   ▲1)  CTR  0.6%
+  /aesthetic-services/lifting-virtue-rf          кл   1 (   ▼2)  CTR  1.2%
+  /aesthetic-services/massage-spa                кл   1 (   ▲1)  CTR  2.7%
+
+СТРАНЫ (тек. окно): ARE 29, RUS 5, GEO 2, NLD 2, PAK 2, CHN 1
+УСТРОЙСТВА: MOBILE 34, DESKTOP 16, TABLET 0
+
+================================================
+TOPVISOR (позиции Dubai/mobile, top-100):
+Дата отчёта: 2026-09-21
+Ранжируется (в проверенной глубине): 5/31  ·  топ-3: 1  ·  топ-10: 2  ·  топ-30: 4  ·  средняя поз.: 22.6
+
+Позиции (по приоритету):
+  [P1   ] laser hair removal dubai           спрос  2400  поз --
+  [P1   ] aesthetic clinic dubai             спрос  1900  поз --
+  [P1   ] hydra facial dubai                 спрос  1900  поз --
+  [P1   ] botox dubai                        спрос  1300  поз --
+  [P2   ] beauty clinic dubai                спрос   260  поз 27 (Δ +1)
+  [P2   ] smas lifting dubai                 спрос    40  поз 15 (Δ +0)
+  [P3   ] body contouring dubai              спрос    90  поз --
+  [P3   ] skin tightening dubai              спрос    40  поз --
+  [hold ] rf lifting dubai                   спрос    50  поз --
+  [hold ] heleo 4                            спрос    30  поз --
+  [hold ] rf microneedling dubai             спрос     0  поз --
+  [low  ] hifu smas lifting dubai            спрос     0  поз 5 (Δ +0)
+  [low  ] acne treatment dubai               спрос     0  поз --
+  [low  ] non surgical facelift dubai        спрос     0  поз --
+  [new  ] beauty clinic business bay         спрос   н/д  поз --
+  [new  ] aesthetic clinic mbr city          спрос   н/д  поз --
+  [new  ] laser hair removal sobha hartland  спрос   н/д  поз 1 (Δ +0)
+  [new  ] stretch marks removal dubai        спрос   н/д  поз --
+  [new  ] skin booster dubai                 спрос   н/д  поз --
+  [new  ] hyperhidrosis treatment dubai      спрос   н/д  поз --
+  [new  ] masseter botox dubai               спрос   н/д  поз --
+  [new  ] double chin removal dubai          спрос   н/д  поз --
+  [new  ] cellulite treatment dubai          спрос   н/д  поз --
+  [new  ] acne scars treatment dubai         спрос   н/д  поз --
+  [new  ] pigmentation treatment dubai       спрос   н/д  поз --
+  [new  ] ultherapy dubai                    спрос   н/д  поз --
+  [new  ] profhilo dubai                     спрос   н/д  поз --
+  [new  ] hydrafacial dubai                  спрос   н/д  поз 65 (Δ +2)
+  [new  ] endosphere dubai                   спрос   н/д  поз --
+  [new  ] bbl dubai                          спрос   н/д  поз --
+  [new  ] morpheus 8 dubai                   спрос   н/д  поз --
