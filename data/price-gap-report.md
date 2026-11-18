@@ -1,4 +1,4 @@
-# Price gap report - 2026-11-17
+# Price gap report - 2026-11-18
 
 Проверено тарифов: 30 из 63 витринных (по странам с эталонными данными).
 С разрывом больше 1.5x: 27, из них критичных (больше 3x): 19.
@@ -22,7 +22,7 @@
 | Индонезия | Saily 10GB/30d | $21.99 | $4.39 | eSIM.dog (eSIM.dog) | 10GB/30d | 5.0x KRIT |
 | Турция | Saily 10GB/30d | $15.99 | $3.44 | eSIM.dog (eSIM.dog) | 10GB/30d | 4.6x KRIT |
 | Египет | Saily 10GB/30d | $33.99 | $7.68 | eSIM.dog (eSIM.dog) | 10GB/30d | 4.4x KRIT |
-| Турция | eSIMCard 25GB/30d | $46.65 | $12.54 | BNESIM (eSIMDB) | 20GB/30d | 3.7x KRIT |
+| Турция | eSIMCard 25GB/30d | $46.65 | $12.53 | BNESIM (eSIMDB) | 20GB/30d | 3.7x KRIT |
 | Мексика | Saily 20GB/30d | $37.99 | $10.82 | eSIM.dog (eSIM.dog) | 10GB/30d | 3.5x KRIT |
 | Грузия | Airalo 5GB/30d | $17.00 | $5.45 | eSIM.dog (eSIM.dog) | 10GB/30d | 3.1x KRIT |
 | Франция | Airalo 5GB/15d | $10.00 | $3.42 | eSIM.dog (eSIM.dog) | 10GB/30d | 2.9x |
